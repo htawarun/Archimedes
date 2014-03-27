@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/C:/projects/Archimedes/Repository.xsd" UseQuotedIdentifiers="True" CustomJavaArchetypeDirectory="CustomJavaArchetypeDirectory0" CustomHTMLArchetypeDirectory="CustomHTMLArchetypeDirectory0"
+     RepositoryVersion="RepositoryVersion0" DTDVersion="DTDVersion0">
+    <Relationships>
+        <Relationship>Relationship0</Relationship>
+        <Relationship>Relationship1</Relationship>
+        <Relationship>Relationship2</Relationship>
+        <Relationship>Relationship3</Relationship>
+        <Relationship>Relationship4</Relationship>
+    </Relationships>
+    <JavaApplications>
+        <Application>Application0</Application>
+        <Application>Application1</Application>
+        <Application>Application2</Application>
+        <Application>Application3</Application>
+        <Application>Application4</Application>
+    </JavaApplications>
+    <QueryObjects>
+        <QueryObject>QueryObject0</QueryObject>
+        <QueryObject>QueryObject1</QueryObject>
+        <QueryObject>QueryObject2</QueryObject>
+        <QueryObject>QueryObject3</QueryObject>
+        <QueryObject>QueryObject4</QueryObject>
+    </QueryObjects>
+    <HTMLApplications>
+        <Application>Application5</Application>
+        <Application>Application6</Application>
+        <Application>Application7</Application>
+        <Application>Application8</Application>
+        <Application>Application9</Application>
+    </HTMLApplications>
+    <Groups>
+    </Groups>
+</Repository>

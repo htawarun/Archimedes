@@ -1,0 +1,14 @@
+Add help for relationship stuff.
+
+Add Advisor to comment on the repository
+	- warning : query object has N objects but less than N - 1 joins ! DONE
+	- warning : query join is done on a non-indexed attribute
+	- for apps, count number of lines between //DELETED_BEGIN and // DELETED_END, report if too high
+	- count unused query objects, picks, data sources
+	- count possibly unused methods in data and query objects
+	- warn if very large data object is used directly in app
+	- warn if non-persistent parent replicates, counts and sums
+	- report on comment/code ratio for user code
+	- warn if a very large data object (> 100? attributes) is used directly in a form or in a VSQuery
+
+Version : $Id$

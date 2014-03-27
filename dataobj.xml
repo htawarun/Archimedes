@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <define name="DataObject">
+    <element name="DataObject">
+      <ref name="attlist.DataObject"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="ExtendedProperties"/>
+          <ref name="HiddenProperties"/>
+          <ref name="Attributes"/>
+          <ref name="Constraints"/>
+          <ref name="Actions"/>
+          <ref name="Indexes"/>
+          <ref name="PluralCaption"/>
+          <ref name="SingularCaption"/>
+          <ref name="Description"/>
+          <ref name="Comments"/>
+          <ref name="CodedValuesList"/>
+          <ref name="VLSDeployment"/>
+          <ref name="AttributeGroupInstances"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.DataObject" combine="interleave">
+    <optional>
+      <attribute name="XdaConnector"/>
+    </optional>
+    <optional>
+      <attribute name="UseQuotedIdentifiers">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="CodedValuesList">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="SurrId"/>
+    </optional>
+    <optional>
+      <attribute name="LockMode">
+        <choice>
+          <value>NoOptimisticLocking</value>
+          <value>ChangedAttributes</value>
+          <value>AllApplicableAttributes</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="SuperClass"/>
+    </optional>
+    <optional>
+      <attribute name="ImageReference"/>
+    </optional>
+    <optional>
+      <attribute name="IsRemoteAccessible">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <attribute name="DTDVersion"/>
+  </define>
+  <define name="AttributeGroupInstances">
+    <element name="AttributeGroupInstances">
+      <ref name="attlist.AttributeGroupInstances"/>
+      <zeroOrMore>
+        <ref name="AttributeGroupInstance"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.AttributeGroupInstances" combine="interleave">
+    <empty/>
+  </define>
+  <define name="OverriddenAttributes">
+    <element name="OverriddenAttributes">
+      <ref name="attlist.OverriddenAttributes"/>
+      <zeroOrMore>
+        <ref name="Override"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.OverriddenAttributes" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Attributes">
+    <element name="Attributes">
+      <ref name="attlist.Attributes"/>
+      <zeroOrMore>
+        <ref name="Attribute"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Attributes" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Constraints">
+    <element name="Constraints">
+      <ref name="attlist.Constraints"/>
+      <zeroOrMore>
+        <ref name="Constraint"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Constraints" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Actions">
+    <element name="Actions">
+      <ref name="attlist.Actions"/>
+      <zeroOrMore>
+        <ref name="Action"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Actions" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Indexes">
+    <element name="Indexes">
+      <ref name="attlist.Indexes"/>
+      <zeroOrMore>
+        <ref name="Index"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Indexes" combine="interleave">
+    <empty/>
+  </define>
+  <define name="PluralCaption">
+    <element name="PluralCaption">
+      <ref name="attlist.PluralCaption"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.PluralCaption" combine="interleave">
+    <empty/>
+  </define>
+  <define name="SingularCaption">
+    <element name="SingularCaption">
+      <ref name="attlist.SingularCaption"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.SingularCaption" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Description">
+    <element name="Description">
+      <ref name="attlist.Description"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.Description" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Comments">
+    <element name="Comments">
+      <ref name="attlist.Comments"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.Comments" combine="interleave">
+    <empty/>
+  </define>
+  <define name="HiddenProperties">
+    <element name="HiddenProperties">
+      <ref name="attlist.HiddenProperties"/>
+      <zeroOrMore>
+        <ref name="Property"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.HiddenProperties" combine="interleave">
+    <empty/>
+  </define>
+  <define name="ExtendedProperties">
+    <element name="ExtendedProperties">
+      <ref name="attlist.ExtendedProperties"/>
+      <zeroOrMore>
+        <ref name="Property"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.ExtendedProperties" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Property">
+    <element name="Property">
+      <ref name="attlist.Property"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="attlist.Property" combine="interleave">
+    <attribute name="Name"/>
+    <attribute name="Value"/>
+  </define>
+  <define name="Override">
+    <element name="Override">
+      <ref name="attlist.Override"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="attlist.Override" combine="interleave">
+    <attribute name="Name"/>
+  </define>
+  <define name="AttributeGroupInstance">
+    <element name="AttributeGroupInstance">
+      <ref name="attlist.AttributeGroupInstance"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="attlist.AttributeGroupInstance" combine="interleave">
+    <attribute name="Name"/>
+    <attribute name="AttributeGroupTemplate"/>
+    <optional>
+      <attribute name="InheritGrouping">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="InheritOrder">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="Prefix"/>
+    </optional>
+  </define>
+  <define name="CodedValuesList">
+    <element name="CodedValuesList">
+      <ref name="attlist.CodedValuesList"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="attlist.CodedValuesList" combine="interleave">
+    <optional>
+      <attribute name="DisplayAttribute"/>
+    </optional>
+    <optional>
+      <attribute name="StoredAttribute"/>
+    </optional>
+  </define>
+  <define name="VLSDeployment">
+    <element name="VLSDeployment">
+      <ref name="attlist.VLSDeployment"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="attlist.VLSDeployment" combine="interleave">
+    <optional>
+      <attribute name="DeploySecurityInfo">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="Attribute">
+    <element name="Attribute">
+      <ref name="attlist.Attribute"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="DataType"/>
+          <ref name="ServerDataType"/>
+          <ref name="Derivation"/>
+          <ref name="Validation"/>
+          <ref name="ExtendedProperties"/>
+          <ref name="HiddenProperties"/>
+          <ref name="Caption"/>
+          <ref name="MicroHelp"/>
+          <ref name="Description"/>
+          <ref name="Comments"/>
+          <ref name="Format"/>
+          <ref name="OverriddenAttributes"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Attribute" combine="interleave">
+    <attribute name="Name"/>
+    <optional>
+      <attribute name="Persistent">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="ValueRequired">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="ArchetypeName"/>
+    </optional>
+    <optional>
+      <attribute name="LayoutByDefault">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="PreventUserUpdates">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="InstanceOf"/>
+    </optional>
+  </define>
+  <define name="DataType">
+    <element name="DataType">
+      <ref name="attlist.DataType"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="attlist.DataType" combine="interleave">
+    <optional>
+      <attribute name="DataType">
+        <choice>
+          <value>Char</value>
+          <value>VarChar</value>
+          <value>Memo</value>
+          <value>Byte</value>
+          <value>AutoNumber</value>
+          <value>Integer</value>
+          <value>Long</value>
+          <value>Double</value>
+          <value>Single</value>
+          <value>Decimal</value>
+          <value>Float</value>
+          <value>Date</value>
+          <value>Time</value>
+          <value>DateTime</value>
+          <value>Boolean</value>
+          <value>Currency</value>
+          <value>LongBinary</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="Size"/>
+    </optional>
+    <optional>
+      <attribute name="Precision"/>
+    </optional>
+    <optional>
+      <attribute name="Scale"/>
+    </optional>
+  </define>
+  <define name="ServerDataType">
+    <element name="ServerDataType">
+      <ref name="attlist.ServerDataType"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="attlist.ServerDataType" combine="interleave">
+    <optional>
+      <attribute name="Type"/>
+    </optional>
+    <optional>
+      <attribute name="Size"/>
+    </optional>
+    <optional>
+      <attribute name="ServerOfOrigin">
+        <choice>
+          <value>Oracle7</value>
+          <value>SQLServer</value>
+          <value>Sybase11</value>
+          <value>Informix</value>
+          <value>DB2UDB</value>
+          <value>BLANK</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="Derivation">
+    <element name="Derivation">
+      <ref name="attlist.Derivation"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="DefaultValue"/>
+          <ref name="Formula"/>
+          <ref name="QualificationExpression"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Derivation" combine="interleave">
+    <optional>
+      <attribute name="DerivationType">
+        <choice>
+          <value>None</value>
+          <value>Sum</value>
+          <value>Count</value>
+          <value>ParentReplicate</value>
+          <value>Formula</value>
+          <value>Default</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="SourceDataObject"/>
+    </optional>
+    <optional>
+      <attribute name="ParentReplicateIsMaintained">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="SourceAttribute"/>
+    </optional>
+  </define>
+  <define name="Validation">
+    <element name="Validation">
+      <ref name="attlist.Validation"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="Condition"/>
+          <ref name="ErrorMessage"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Validation" combine="interleave">
+    <optional>
+      <attribute name="ValidationType">
+        <choice>
+          <value>Condition</value>
+          <value>CodedValuesList</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="CodedValuesList"/>
+    </optional>
+  </define>
+  <define name="Caption">
+    <element name="Caption">
+      <ref name="attlist.Caption"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.Caption" combine="interleave">
+    <empty/>
+  </define>
+  <define name="MicroHelp">
+    <element name="MicroHelp">
+      <ref name="attlist.MicroHelp"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.MicroHelp" combine="interleave">
+    <empty/>
+  </define>
+  <define name="DefaultValue">
+    <element name="DefaultValue">
+      <ref name="attlist.DefaultValue"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.DefaultValue" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Formula">
+    <element name="Formula">
+      <ref name="attlist.Formula"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.Formula" combine="interleave">
+    <empty/>
+  </define>
+  <define name="QualificationExpression">
+    <element name="QualificationExpression">
+      <ref name="attlist.QualificationExpression"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.QualificationExpression" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Format">
+    <element name="Format">
+      <ref name="attlist.Format"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.Format" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Constraint">
+    <element name="Constraint">
+      <ref name="attlist.Constraint"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="Condition"/>
+          <ref name="ErrorMessage"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Constraint" combine="interleave">
+    <attribute name="Name"/>
+    <attribute name="ConditionType">
+      <choice>
+        <value>RejectWhen</value>
+        <value>AcceptWhen</value>
+      </choice>
+    </attribute>
+    <optional>
+      <attribute name="ErrorAttribute"/>
+    </optional>
+  </define>
+  <define name="Condition">
+    <element name="Condition">
+      <ref name="attlist.Condition"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.Condition" combine="interleave">
+    <empty/>
+  </define>
+  <define name="ErrorMessage">
+    <element name="ErrorMessage">
+      <ref name="attlist.ErrorMessage"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.ErrorMessage" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Action">
+    <element name="Action">
+      <ref name="attlist.Action"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="ActionToPerform"/>
+          <ref name="Condition"/>
+          <ref name="Description"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Action" combine="interleave">
+    <attribute name="Name"/>
+  </define>
+  <define name="ActionToPerform">
+    <element name="ActionToPerform">
+      <ref name="attlist.ActionToPerform"/>
+      <text/>
+    </element>
+  </define>
+  <define name="attlist.ActionToPerform" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Index">
+    <element name="Index">
+      <ref name="attlist.Index"/>
+      <zeroOrMore>
+        <ref name="Index_Attribute"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="attlist.Index" combine="interleave">
+    <attribute name="IgnoreNulls">
+      <choice>
+        <value>True</value>
+        <value>False</value>
+      </choice>
+    </attribute>
+    <attribute name="Name"/>
+    <attribute name="Primary">
+      <choice>
+        <value>True</value>
+        <value>False</value>
+      </choice>
+    </attribute>
+    <attribute name="Unique">
+      <choice>
+        <value>True</value>
+        <value>False</value>
+      </choice>
+    </attribute>
+    <optional>
+      <attribute name="AttributeGroupInstance"/>
+    </optional>
+  </define>
+  <define name="Index_Attribute">
+    <element name="Index_Attribute">
+      <ref name="attlist.Index_Attribute"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="attlist.Index_Attribute" combine="interleave">
+    <attribute name="Name"/>
+    <optional>
+      <attribute name="Descending">
+        <choice>
+          <value>True</value>
+          <value>False</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+</grammar>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/C:/projects/Archimedes/DataObject.xsd" XdaConnector="XdaConnector0" UseQuotedIdentifiers="True" CodedValuesList="True" SurrId="SurrId0" LockMode="NoOptimisticLocking"
+     SuperClass="SuperClass0" ImageReference="ImageReference0" IsRemoteAccessible="True" DTDVersion="DTDVersion0">
+    <HiddenProperties>
+        <Property Name="Name0" Value="Value0"/>
+        <Property Name="Name1" Value="Value1"/>
+    </HiddenProperties>
+    <Description>Description0</Description>
+</DataObject>

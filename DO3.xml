@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/C:/projects/Archimedes/DataObject.xsd" XdaConnector="XdaConnector0" UseQuotedIdentifiers="True" CodedValuesList="True" SurrId="SurrId0" LockMode="NoOptimisticLocking"
+     SuperClass="SuperClass0" ImageReference="ImageReference0" IsRemoteAccessible="True" DTDVersion="DTDVersion0">
+    <Constraints>
+        <Constraint Name="Name0" ConditionType="RejectWhen" ErrorAttribute="ErrorAttribute0">
+            <Condition>Condition0</Condition>
+            <ErrorMessage>ErrorMessage0</ErrorMessage>
+        </Constraint>
+        <Constraint Name="Name1" ConditionType="RejectWhen" ErrorAttribute="ErrorAttribute1">
+            <Condition>Condition1</Condition>
+            <Condition>Condition2</Condition>
+        </Constraint>
+    </Constraints>
+    <AttributeGroupInstances>
+        <AttributeGroupInstance Name="Name2" AttributeGroupTemplate="AttributeGroupTemplate0" InheritGrouping="True" InheritOrder="True"
+             Prefix="Prefix0"/>
+        <AttributeGroupInstance Name="Name3" AttributeGroupTemplate="AttributeGroupTemplate1" InheritGrouping="True" InheritOrder="True"
+             Prefix="Prefix1"/>
+    </AttributeGroupInstances>
+</DataObject>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Relationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/C:/projects/Archimedes/Relation.xsd" DTDVersion="DTDVersion0">
+    <Relationship CountAggregates="CountAggregates0" CountReplicates="CountReplicates0" OnParentUpdate="PreventIfChildren"
+         OnParentDelete="PreventIfChildren" IsEnforce="True" OnChildInsertOrUpdate="PreventIfNoParent"
+         ChildRoleName="ChildRoleName0" ParentRoleName="ParentRoleName0" ParentAttributeGroupInstance="ParentAttributeGroupInstance0"
+         ChildAttributeGroupInstance="ChildAttributeGroupInstance0">
+        <DescendCaption>DescendCaption0</DescendCaption>
+        <AttributePairs>
+            <AttributePair ParentAttribute="ParentAttribute0" ChildAttribute="ChildAttribute0"/>
+            <AttributePair ParentAttribute="ParentAttribute1" ChildAttribute="ChildAttribute1"/>
+        </AttributePairs>
+    </Relationship>
+    <Relationship CountAggregates="CountAggregates1" CountReplicates="CountReplicates1" OnParentUpdate="PreventIfChildren"
+         OnParentDelete="PreventIfChildren" IsEnforce="True" OnChildInsertOrUpdate="PreventIfNoParent"
+         ChildRoleName="ChildRoleName1" ParentRoleName="ParentRoleName1" ParentAttributeGroupInstance="ParentAttributeGroupInstance1"
+         ChildAttributeGroupInstance="ChildAttributeGroupInstance1">
+        <ExtendedProperties>
+            <Property Name="Name0" Value="Value0"/>
+            <Property Name="Name1" Value="Value1"/>
+        </ExtendedProperties>
+        <ErrPreventDeleteParent>ErrPreventDeleteParent0</ErrPreventDeleteParent>
+    </Relationship>
+</Relationships>

@@ -1,0 +1,22 @@
+History for the Versata Automation Analyzer
+
+
+2001-12-11 : version 0.5 released to a handful of brave souls
+
+Version 0.6 :
+
+- expanded acceptable arguments, now accepts :
+    + single argument with fully qualified name of repository XML file
+	+ two arguments, first being the root directory for the repository, which
+	  can now include a trailing slash
+
+- relationships are now fully examined, giving you :
+    + total number of relationships in repository
+	+ total number of enforced and unenforced relationships in the repository
+	+ same for each data object, plus a list of all children and parents
+
+- the RepositoryAnalysis object now remembers when the analysis was run, where and by whom
+
+- HTML report can now be generated
+
+This document's version tag : $Id: History.txt,v 1.1 2001/12/13 21:56:10 mtardiveau Exp mtardiveau $

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xs:schema SYSTEM "C:\projects\Archimedes\DataObject.dtd">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="DataObject">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="ExtendedProperties"/>
+				<xs:element ref="HiddenProperties"/>
+				<xs:element ref="Attributes"/>
+				<xs:element ref="Constraints"/>
+				<xs:element ref="Actions"/>
+				<xs:element ref="Indexes"/>
+				<xs:element ref="PluralCaption"/>
+				<xs:element ref="SingularCaption"/>
+				<xs:element ref="Description"/>
+				<xs:element ref="Comments"/>
+				<xs:element ref="CodedValuesList"/>
+				<xs:element ref="VLSDeployment"/>
+				<xs:element ref="AttributeGroupInstances"/>
+			</xs:choice>
+			<xs:attributeGroup ref="attlist.DataObject"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.DataObject">
+		<xs:attribute name="XdaConnector"/>
+		<xs:attribute name="UseQuotedIdentifiers">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="CodedValuesList">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="SurrId"/>
+		<xs:attribute name="LockMode">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="NoOptimisticLocking"/>
+					<xs:enumeration value="ChangedAttributes"/>
+					<xs:enumeration value="AllApplicableAttributes"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="SuperClass"/>
+		<xs:attribute name="ImageReference"/>
+		<xs:attribute name="IsRemoteAccessible">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="DTDVersion" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="AttributeGroupInstances">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="AttributeGroupInstance" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OverriddenAttributes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Override" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Attributes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Attribute" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Constraints">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Actions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Action" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Indexes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Index" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PluralCaption" type="xs:string"/>
+	<xs:element name="SingularCaption" type="xs:string"/>
+	<xs:element name="Description" type="xs:string"/>
+	<xs:element name="Comments" type="xs:string"/>
+	<xs:element name="HiddenProperties">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Property" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ExtendedProperties">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Property" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Property">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.Property"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.Property">
+		<xs:attribute name="Name" use="required"/>
+		<xs:attribute name="Value" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="Override">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.Override"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.Override">
+		<xs:attribute name="Name" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="AttributeGroupInstance">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.AttributeGroupInstance"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.AttributeGroupInstance">
+		<xs:attribute name="Name" use="required"/>
+		<xs:attribute name="AttributeGroupTemplate" use="required"/>
+		<xs:attribute name="InheritGrouping">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="InheritOrder">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Prefix"/>
+	</xs:attributeGroup>
+	<xs:element name="CodedValuesList">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.CodedValuesList"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.CodedValuesList">
+		<xs:attribute name="DisplayAttribute"/>
+		<xs:attribute name="StoredAttribute"/>
+	</xs:attributeGroup>
+	<xs:element name="VLSDeployment">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.VLSDeployment"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.VLSDeployment">
+		<xs:attribute name="DeploySecurityInfo">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:element name="Attribute">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="DataType"/>
+				<xs:element ref="ServerDataType"/>
+				<xs:element ref="Derivation"/>
+				<xs:element ref="Validation"/>
+				<xs:element ref="ExtendedProperties"/>
+				<xs:element ref="HiddenProperties"/>
+				<xs:element ref="Caption"/>
+				<xs:element ref="MicroHelp"/>
+				<xs:element ref="Description"/>
+				<xs:element ref="Comments"/>
+				<xs:element ref="Format"/>
+				<xs:element ref="OverriddenAttributes"/>
+			</xs:choice>
+			<xs:attributeGroup ref="attlist.Attribute"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Constraint">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Condition"/>
+				<xs:element ref="ErrorMessage"/>
+			</xs:choice>
+			<xs:attributeGroup ref="attlist.Constraint"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.Attribute">
+		<xs:attribute name="Name" use="required"/>
+		<xs:attribute name="Persistent">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ValueRequired">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ArchetypeName"/>
+		<xs:attribute name="LayoutByDefault">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="PreventUserUpdates">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="InstanceOf"/>
+	</xs:attributeGroup>
+	<xs:element name="DataType">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.DataType"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.DataType">
+		<xs:attribute name="DataType">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="Char"/>
+					<xs:enumeration value="VarChar"/>
+					<xs:enumeration value="Memo"/>
+					<xs:enumeration value="Byte"/>
+					<xs:enumeration value="AutoNumber"/>
+					<xs:enumeration value="Integer"/>
+					<xs:enumeration value="Long"/>
+					<xs:enumeration value="Double"/>
+					<xs:enumeration value="Single"/>
+					<xs:enumeration value="Decimal"/>
+					<xs:enumeration value="Float"/>
+					<xs:enumeration value="Date"/>
+					<xs:enumeration value="Time"/>
+					<xs:enumeration value="DateTime"/>
+					<xs:enumeration value="Boolean"/>
+					<xs:enumeration value="Currency"/>
+					<xs:enumeration value="LongBinary"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Size"/>
+		<xs:attribute name="Precision"/>
+		<xs:attribute name="Scale"/>
+	</xs:attributeGroup>
+	<xs:element name="ServerDataType">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.ServerDataType"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.ServerDataType">
+		<xs:attribute name="Type"/>
+		<xs:attribute name="Size"/>
+		<xs:attribute name="ServerOfOrigin">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="Oracle7"/>
+					<xs:enumeration value="SQLServer"/>
+					<xs:enumeration value="Sybase11"/>
+					<xs:enumeration value="Informix"/>
+					<xs:enumeration value="DB2UDB"/>
+					<xs:enumeration value="BLANK"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:element name="Derivation">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="DefaultValue"/>
+				<xs:element ref="Formula"/>
+				<xs:element ref="QualificationExpression"/>
+			</xs:choice>
+			<xs:attributeGroup ref="attlist.Derivation"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.Derivation">
+		<xs:attribute name="DerivationType">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="None"/>
+					<xs:enumeration value="Sum"/>
+					<xs:enumeration value="Count"/>
+					<xs:enumeration value="ParentReplicate"/>
+					<xs:enumeration value="Formula"/>
+					<xs:enumeration value="Default"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="SourceDataObject"/>
+		<xs:attribute name="ParentReplicateIsMaintained">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="SourceAttribute"/>
+	</xs:attributeGroup>
+	<xs:element name="Validation">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Condition"/>
+				<xs:element ref="ErrorMessage"/>
+			</xs:choice>
+			<xs:attributeGroup ref="attlist.Validation"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.Validation">
+		<xs:attribute name="ValidationType">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="Condition"/>
+					<xs:enumeration value="CodedValuesList"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="CodedValuesList"/>
+	</xs:attributeGroup>
+	<xs:element name="Caption" type="xs:string"/>
+	<xs:element name="MicroHelp" type="xs:string"/>
+	<xs:element name="DefaultValue" type="xs:string"/>
+	<xs:element name="Formula" type="xs:string"/>
+	<xs:element name="QualificationExpression" type="xs:string"/>
+	<xs:element name="Format" type="xs:string"/>
+	<xs:attributeGroup name="attlist.Constraint">
+		<xs:attribute name="Name" use="required"/>
+		<xs:attribute name="ConditionType" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="RejectWhen"/>
+					<xs:enumeration value="AcceptWhen"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ErrorAttribute"/>
+	</xs:attributeGroup>
+	<xs:element name="Condition" type="xs:string"/>
+	<xs:element name="ErrorMessage" type="xs:string"/>
+	<xs:element name="Action">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="ActionToPerform"/>
+				<xs:element ref="Condition"/>
+				<xs:element ref="Description"/>
+			</xs:choice>
+			<xs:attributeGroup ref="attlist.Action"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.Action">
+		<xs:attribute name="Name" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="ActionToPerform" type="xs:string"/>
+	<xs:element name="Index">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Index_Attribute" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="attlist.Index"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.Index">
+		<xs:attribute name="IgnoreNulls" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Name" use="required"/>
+		<xs:attribute name="Primary" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="Unique" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="AttributeGroupInstance"/>
+	</xs:attributeGroup>
+	<xs:element name="Index_Attribute">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.Index_Attribute"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.Index_Attribute">
+		<xs:attribute name="Name" use="required"/>
+		<xs:attribute name="Descending">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="True"/>
+					<xs:enumeration value="False"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+</xs:schema>

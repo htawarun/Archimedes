@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Relationships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Relationship"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.Relationships"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.Relationships">
+    <xs:attribute name="DTDVersion" use="required"/>
+  </xs:attributeGroup>
+  <xs:element name="Relationship">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="AttributePairs"/>
+        <xs:element ref="AscendCaption"/>
+        <xs:element ref="DescendCaption"/>
+        <xs:element ref="ErrPreventInsertOrUpdateChild"/>
+        <xs:element ref="ErrPreventDeleteParent"/>
+        <xs:element ref="ErrPreventUpdateParent"/>
+        <xs:element ref="ExtendedProperties"/>
+        <xs:element ref="HiddenProperties"/>
+      </xs:choice>
+      <xs:attributeGroup ref="attlist.Relationship"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.Relationship">
+    <xs:attribute name="CountAggregates"/>
+    <xs:attribute name="CountReplicates"/>
+    <xs:attribute name="OnParentUpdate">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="PreventIfChildren"/>
+          <xs:enumeration value="UpdateChildren"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="OnParentDelete">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="PreventIfChildren"/>
+          <xs:enumeration value="DeleteChildren"/>
+          <xs:enumeration value="NullChildrenForeignKey"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="IsEnforce" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="True"/>
+          <xs:enumeration value="False"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="OnChildInsertOrUpdate">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="PreventIfNoParent"/>
+          <xs:enumeration value="InsertParentIfNone"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="ChildRoleName"/>
+    <xs:attribute name="ParentRoleName"/>
+    <xs:attribute name="ParentAttributeGroupInstance"/>
+    <xs:attribute name="ChildAttributeGroupInstance"/>
+  </xs:attributeGroup>
+  <xs:element name="AttributePairs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="AttributePair"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AttributePair">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.AttributePair"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.AttributePair">
+    <xs:attribute name="ParentAttribute" use="required"/>
+    <xs:attribute name="ChildAttribute" use="required"/>
+  </xs:attributeGroup>
+  <xs:element name="AscendCaption" type="xs:string"/>
+  <xs:element name="DescendCaption" type="xs:string"/>
+  <xs:element name="ErrPreventInsertOrUpdateChild" type="xs:string"/>
+  <xs:element name="ErrPreventDeleteParent" type="xs:string"/>
+  <xs:element name="ErrPreventUpdateParent" type="xs:string"/>
+  <xs:element name="ExtendedProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Property"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HiddenProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Property"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Property">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.Property"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.Property">
+    <xs:attribute name="Name" use="required"/>
+    <xs:attribute name="Value" use="required"/>
+  </xs:attributeGroup>
+</xs:schema>

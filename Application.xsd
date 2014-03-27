@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Application">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="ServerLocation"/>
+        <xs:element ref="Description"/>
+        <xs:element ref="ApplicationArchetypesFolder"/>
+        <xs:element ref="Forms"/>
+        <xs:element ref="References"/>
+        <xs:element ref="SourceFiles"/>
+      </xs:choice>
+      <xs:attributeGroup ref="attlist.Application"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.Application">
+    <xs:attribute name="SurrId"/>
+    <xs:attribute name="ZoomFactor"/>
+    <xs:attribute name="TargetLanguage" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="HTML"/>
+          <xs:enumeration value="Java"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="DefaultLogonUserId"/>
+    <xs:attribute name="ExecutionEnvironment">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="Applet"/>
+          <xs:enumeration value="Browser"/>
+          <xs:enumeration value="Application"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="AppletHeight"/>
+    <xs:attribute name="AppletWidth"/>
+    <xs:attribute name="ClassId"/>
+    <xs:attribute name="CabVersion"/>
+    <xs:attribute name="SuppressDefaultLoginScreen">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="True"/>
+          <xs:enumeration value="False"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="InitialFramesetPage"/>
+    <xs:attribute name="StartupPageFrameName"/>
+    <xs:attribute name="InitialFrameNameForStartupTrans"/>
+    <xs:attribute name="AppRepositoryVersion"/>
+    <xs:attribute name="DeploySecurityInfo">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="True"/>
+          <xs:enumeration value="False"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="DTDVersion" use="required"/>
+    <xs:attribute name="isMDIApp">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="True"/>
+          <xs:enumeration value="False"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="Forms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Form"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="References">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Reference"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SourceFiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SourceFile"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ServerLocation" type="xs:string"/>
+  <xs:element name="Description" type="xs:string"/>
+  <xs:element name="ApplicationArchetypesFolder" type="xs:string"/>
+  <xs:element name="Form" type="xs:string"/>
+  <xs:element name="Reference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="FileName"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.Reference"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.Reference">
+    <xs:attribute name="IsRemote" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="True"/>
+          <xs:enumeration value="False"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="VersataFoundationClasses"/>
+          <xs:enumeration value="VersataVLSClasses"/>
+          <xs:enumeration value="JDKClasses"/>
+          <xs:enumeration value="JavaBeans"/>
+          <xs:enumeration value="CORBAObjects"/>
+          <xs:enumeration value="COMWrapperObjects"/>
+          <xs:enumeration value="JavaClasses"/>
+          <xs:enumeration value="CommonClientandServerClasses"/>
+          <xs:enumeration value="ClientClasses"/>
+          <xs:enumeration value="ServerClasses"/>
+          <xs:enumeration value="ORBClasses"/>
+          <xs:enumeration value="JavaInterfaceFiles"/>
+          <xs:enumeration value="SwingClasses"/>
+          <xs:enumeration value="GennedComponentInterface"/>
+          <xs:enumeration value="GennedEnterpriseBean"/>
+          <xs:enumeration value="EnterpriseJavaBeans"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="FileName" type="xs:string"/>
+  <xs:element name="Path" type="xs:string"/>
+  <xs:element name="SourceFile">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="FileName"/>
+        <xs:element ref="Path"/>
+        <xs:element ref="ClassPath"/>
+      </xs:choice>
+      <xs:attributeGroup ref="attlist.SourceFile"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.SourceFile">
+    <xs:attribute name="PackageName"/>
+  </xs:attributeGroup>
+  <xs:element name="ClassPath" type="xs:string"/>
+</xs:schema>

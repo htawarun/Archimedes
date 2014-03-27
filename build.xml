@@ -1,0 +1,15 @@
+<project name="DataObject" default="test" basedir=".">
+	<target name="compile">
+		<javac srcdir="." classpath="."/>
+	</target>
+	<target name="test" depends="compile">
+		<java classname="com.DataObjectTest.DataObjectTest" fork="true" failonerror="true" classpath="."/>
+	</target>
+	<target name="clean">
+		<delete>
+			<fileset dir=".">
+				<include name="**/*.class"/>
+			</fileset>
+		</delete>
+	</target>
+</project>

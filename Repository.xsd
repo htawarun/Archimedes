@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+  vc:minVersion="1.1" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning">
+  <xs:element name="Repository">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="DataObjects"/>
+        <xs:element ref="QueryObjects"/>
+        <xs:element ref="ProcessModels"/>
+        <xs:element ref="Relationships"/>
+        <xs:element ref="References"/>
+        <xs:element ref="JavaApplications"/>
+        <xs:element ref="HTMLApplications"/>
+        <xs:element ref="SourceFiles"/>
+        <xs:element ref="Groups"/>
+      </xs:choice>
+      <xs:attributeGroup ref="attlist.Repository"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.Repository">
+    <xs:attribute name="UseQuotedIdentifiers">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="True"/>
+          <xs:enumeration value="False"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="CustomJavaArchetypeDirectory"/>
+    <xs:attribute name="CustomHTMLArchetypeDirectory"/>
+    <xs:attribute name="RepositoryVersion" use="required"/>
+    <xs:attribute name="DTDVersion" use="required"/>
+  </xs:attributeGroup>
+  <xs:element name="DataObjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="DataObject"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Relationship" type="xs:string"/>
+  <xs:element name="QueryObjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="QueryObject"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessModels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ProcessModel"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Relationships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Relationship"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JavaApplications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Application"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HTMLApplications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Application"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="References">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Reference"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SourceFiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SourceFile"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataObject" type="xs:string"/>
+  <xs:element name="QueryObject" type="xs:string"/>
+  <xs:element name="ProcessModel" type="xs:string"/>
+  <xs:element name="Application" type="xs:string"/>
+  <xs:element name="Reference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="FileName"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.Reference"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.Reference">
+    <xs:attribute name="IsRemote" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="True"/>
+          <xs:enumeration value="False"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="VersataVLSClasses"/>
+          <xs:enumeration value="JDKClasses"/>
+          <xs:enumeration value="JavaBeans"/>
+          <xs:enumeration value="CORBAObjects"/>
+          <xs:enumeration value="COMWrapperObjects"/>
+          <xs:enumeration value="JavaClasses"/>
+          <xs:enumeration value="CommonClientandServerClasses"/>
+          <xs:enumeration value="ServerClasses"/>
+          <xs:enumeration value="ORBClasses"/>
+          <xs:enumeration value="JavaInterfaceFiles"/>
+          <xs:enumeration value="SwingClasses"/>
+          <xs:enumeration value="EnterpriseJavaBeans"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="FileName" type="xs:string"/>
+  <xs:element name="Path" type="xs:string"/>
+  <xs:element name="SourceFile">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="FileName"/>
+        <xs:element ref="Path"/>
+        <xs:element ref="ClassPath"/>
+      </xs:choice>
+      <xs:attributeGroup ref="attlist.SourceFile"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.SourceFile">
+    <xs:attribute name="FileType" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="DataManager"/>
+          <xs:enumeration value="Interface"/>
+          <xs:enumeration value="Other"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="PackageName"/>
+    <xs:attribute name="IsRemoteAccessible">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="True"/>
+          <xs:enumeration value="False"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="ClassPath" type="xs:string"/>
+  <xs:element name="Groups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Group"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Group">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Group"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.Group"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.Group">
+    <xs:attribute name="Name" use="required"/>
+  </xs:attributeGroup>
+</xs:schema>
