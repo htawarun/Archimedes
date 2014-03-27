@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+	<head>
+		<title>
+		Data Objects Analysis
+		</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<h1>Data Objects Analysis</h1>
+		This subtree contains information about all the data objects in the repository.
+
+		<a name="dataobject_numDataObjects"></a>
+		<h3>Number of data objects</h3>
+		This is the total number of data objects present in the repository.
+
+		<a name="dataobject_totalNumAttribs"></a>
+		<h3>Total number of attributes</h3>
+		This is the total number of attributes across all data objects (but not
+		query objects) in the repository.
+
+		<a name="dataobject_attribs_largestNumAttribs"></a>
+		<h3>Largest number of attributes</h3>
+		This points out which data object has the largest number of attributes -- the name
+		in parentheses is the name of the data object which has that many attributes.
+		This is intended to point out any data object that might be abnormally large.
+
+		<a name="dataobject_attribs_totalNumPersAttribs"></a>
+		<h3>Total number of persistent attributes</h3>
+		The total number of data object attributes in the repository that are actually
+		persisted in the database, as opposed to calculated on the fly.
+
+		<a name="dataobject_attribs_totalNumNonPersAttribs"></a>
+		<h3>Total number of non-persistent attributes</h3>
+		The number of data object attributes in the repository that are not persisted in the
+		database, but instead are calculated on the fly when needed.<br>
+		Non-persistent attributes can be parent replicates, formulas, sum or counts.
+
+		<a name="dataobject_attribs_totalNumPreventUserUpdateAttribs"></a>
+		<h3>Total number of prevent user update attributes</h3>
+		The number of data object attributes in the repository that are marked as
+		&quot;Prevent user update&quot;. This means that these attributes cannot
+		be updated by the GUI. This is commonly used for derived attributes.
+
+		<a name="dataobject_attribs_totalNumCVLAttribs"></a>
+		<h3>Total number of coded value list attributes</h3>
+		The number of data object attributes in the repository that must take their
+		value from a list of acceptable values (called a Coded Value List) that is
+		stored in another table. This is commonly used for enumerated types of
+		attributes.<br>
+		These attributes are often exposed as drop-down combo boxes, or radio buttons.
+
+		<a name="dataobject_attribs_totalNumValidationAttribs"></a>
+		<h3>Total number of validation attributes</h3>
+		The number of data object attributes in the repository that have a validation
+		rule attached. This rule is automatically fired whenever the value of the
+		attribute changes, so that it can validate the new value -- if it rejects it,
+		the change will not be applied.
+
+		<a name="dataobject_attribs_totalNumDerivedAttribs"></a>
+		<h3>Total number of derived attributes</h3>
+		The number of data object attributes in the repository that are derived. This
+		includes all parent replicates, sums, counts and formulas, regardless of whether
+		they are persistent on not.
+
+		<!-------------------------------------->
+
+		<a name="dataobject_totalNumRules"></a>
+		<h3>Total number of rules</h3>
+		The total number of rules across all data objects in the repository. This includes :
+		<ul>
+		<li>relationships
+		<li>constraints
+		<li>actions
+		<li>sums and counts
+		<li>parent replicates
+		<li>formulas
+		<li>defaults
+		<li>coded value lists
+		<li>validations
+		</ul>
+
+		<a name="dataobject_rules_totalNumConstraints"></a>
+		<h3>Total number of constraints</h3>
+		The total number of constraints across all data objects in the repository.
+
+		<a name="dataobject_rules_totalNumActions"></a>
+		<h3>Total number of actions</h3>
+		The total number of actions across all data objects in the repository.
+
+		<a name="dataobject_rules_totalNumSums"></a>
+		<h3>Total number of sum attributes</h3>
+		The total number of sum attributes across all data objects in the repository.
+		Sum attributes are attributes whose value is calculated by adding up the values
+		of one attribute for all the object's children.
+
+		<a name="dataobject_rules_totalNumCount"></a>
+		<h3>Total number of count attributes</h3>
+		The total number of count attributes across all data objects in the repository.
+		Count attributes are attributes whose value is calculated by counting how many
+		children of the object satisfy a condition.
+
+		<a name="dataobject_rules_totalNumparentReplicates"></a>
+		<h3>Total number of parent replicate attributes</h3>
+		The total number of parent replicate attributes across all data objects in the repository.
+
+		<a name="dataobject_rules_totalNumFormulas"></a>
+		<h3>Total number of formula attributes</h3>
+		The total number of formula attributes across all data objects in the repository.
+		A formula attribute is an attribute whose value is computed using a specified formula.
+
+		<a name="dataobject_rules_totalNumDefaults"></a>
+		<h3>Total number of default attributes</h3>
+		The total number of default attributes across all data objects in the repository.
+		A default attribute is an attribute which defaults to a given value when a new object
+		is created.
+
+		<!----------------------------------->
+
+		<a name="dataobject_totalAmtCode"></a>
+		<h3>Total amount of code</h3>
+		The number of Java code lines across all data objects in the repository.
+
+		<a name="dataobject_totalAmtGenCode"></a>
+		<h3>Total amount of generated code</h3>
+		The number of Java code lines generated by Versata across all data objects in the repository.
+
+		<a name="dataobject_totalAmtUserCode"></a>
+		<h3>Total amount of user code</h3>
+		The number of Java code lines not generated by Versata across all data objects in the repository.
+
+		<!------------------------------------>
+
+		<a name="dataobject_dataObjects"></a>
+		<h3>Data objects</h3>
+		This node contains details on each data object in the repository.
+
+		<a name="dataobject_do_dataObject"></a>
+		<h3>Data object</h3>
+		This node contains details on a specific data object.
+
+		<a name="dataobject_do_numAttribs"></a>
+		<h3>Number of attributes</h3>
+		The number of attributes in the data object.
+
+		<a name="dataobject_do_totalLines"></a>
+		<h3>Total lines of code</h3>
+		The number of lines of Java code for that data object.
+
+		<a name="dataobject_do_code_genLines"></a>
+		<h3>Total generated lines</h3>
+		The number of lines of Java code that were generated by Versata for that data object.
+
+		<a name="dataobject_do_code_userLines"></a>
+		<h3>Total user lines</h3>
+		The number of lines of Java code  for that data object that were not generated by Versata,
+		i.e. that were written by hand or copied from a third party.
+
+		<!-------------------------------------->
+		<a name="dataobject_do_rules"></a>
+		<h3>Rules statistics</h3>
+		This node contains details on all the business rules in this data object.
+
+		<a name="dataobject_do_rules_numPersAttribs"></a>
+		<h3>Number of persistent attributes</h3>
+		The number of attributes for this data object that are actually persisted in the database.
+
+		<a name="dataobject_do_rules_numNonPersAttribs"></a>
+		<h3>Number of non-persistent attributes</h3>
+		The number of attributes for this data object that are not persisted in the database, i.e.
+		are computed on the fly as needed.
+
+		<a name="dataobject_do_rules_numReqAttribs"></a>
+		<h3>Number of required attributes</h3>
+		The number of attributes for this data object that are required, i.e. are not allowed to have
+		a null or empty value.
+
+		<a name="dataobject_do_rules_numRules"></a>
+		<h3>Number of rules</h3>
+		The number of business rules in this data object. This includes actions, constraints, coded value attributes,
+		validations, and derived attributes.
+
+		<a name="dataobject_do_rules_numActions"></a>
+		<h3>Number of actions</h3>
+		The number of action business rules for this data object.
+
+		<a name="dataobject_do_rules_numConstraints"></a>
+		<h3>Number of constraints</h3>
+		The number of constraints for this data object.
+
+		<a name="dataobject_do_rules_numCVLs"></a>
+		<h3>Number of coded value attributes</h3>
+		The number of attributes for this data object, that have an associated coded value list.
+
+		<a name="dataobject_do_rules_numValids"></a>
+		<h3>Number of validated attributes</h3>
+		The number of attributes for this data object, that have a validation.
+
+		<a name="dataobject_do_rules_numDerivedAttribs"></a>
+		<h3>Number of derived attributes</h3>
+		The number of attributes for this data object, whose value is computed.
+
+		<a name="dataobject_do_rules_derive_count"></a>
+		<h3>Number of count attributes</h3>
+		The number of attributes for this data object, whose value is computed by
+		counting certain child objects.
+
+		<a name="dataobject_do_rules_derive_sum"></a>
+		<h3>Number of sum attributes</h3>
+		The number of attributes for this data object, whose value is computed by
+		summing an attribute of certain child objects.
+
+		<a name="dataobject_do_rules_derive_default"></a>
+		<h3>Number of defaults</h3>
+		The number of attributes for this data object, whose value is defaulted
+		when a new object is created.
+
+		<a name="dataobject_do_rules_derive_formula"></a>
+		<h3>Number of formula attributes</h3>
+		The number of attributes for this data object, whose value is computed by
+		a free-form formula.
+
+		<a name="dataobject_do_rules_derive_replicate"></a>
+		<h3>Number of parent replicate attributes</h3>
+		The number of attributes for this data object, whose value is computed by
+		copying it from a parent object.
+
+		<!------------------------------------------->
+
+		<a name="dataobject_do_files"></a>
+		<h3>Files</h3>
+		This node contains information about the Java files for this data object.
+
+		<a name="dataobject_do_files_base"></a>
+		<h3>Base file</h3>
+		This node contains information about the base Java file for this data object.
+		The base Java file contains all the code that is generated by Versata to enforce
+		the business rules, provide access to attributes, enforce the relationships, etc...
+
+		<a name="dataobject_do_files_base_lines"></a>
+		<h3>Total code lines</h3>
+		The number of lines of Java code for the base Java file for this data object.
+
+		<a name="dataobject_do_files_user"></a>
+		<h3>User file</h3>
+		This node contains information about the user Java file for this data object.
+		The user Java file contains all the code that is created by Versata users.
+
+		<a name="dataobject_do_files_user_totalLines"></a>
+		<h3>Total code lines</h3>
+		The number of Java code lines in the user Java file.
+
+		<a name="dataobject_do_files_user_totalGenLines"></a>
+		<h3>Total generated lines</h3>
+		The number of generated Java code lines in the user Java file. Versata generates
+		a very small amount of code in user files, so this number is typically low.
+
+		<a name="dataobject_do_files_user_totalUserLines"></a>
+		<h3>Total user lines</h3>
+		The number of Java code lines that were not generated by Versata, and therefore
+		were entered by the user.
+
+		<a name="dataobject_do_files_user_totalRawLines"></a>
+		<h3>Total raw lines</h3>
+		The number of raw lines in the user file, i.e. the number of individual lines of text
+		including blank lines, comments, etc...
+
+		<a name="dataobject_do_files_user_totalNonBlankLines"></a>
+		<h3>Total non-blank lines</h3>
+		The number of non-blank lines in the user file. This is equal to the number of raw lines
+		minus the blank lines.
+
+		<a name="dataobject_do_files_user_totalCommentLines"></a>
+		<h3>Total comment lines</h3>
+		The number of lines in the user file that are comments, either Versata-generated or
+		user-created.
+
+		<a name="dataobject_do_files_user_totalMiscLines"></a>
+		<h3>Total misc. lines</h3>
+		This is the number of lines that are neither blank, nor comments, nor code. This is mostly
+		lines that contain nothing but an open brace or close brace.
+	</body>
+</html>

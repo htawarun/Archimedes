@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+	<mapID target="top" url="Main.html" />
+	<mapID target="opening_repository" url="Main.html#opening_repository" />
+	<mapID target="saving_report" url="Main.html#saving_report" />
+	<mapID target="errors" url="Errors.html" />
+
+	<mapID target="repository_analysis" url="RepositoryAnalysis.html" />
+	<mapID target="repository_analysis_top" url="RepositoryAnalysis.html" />
+	<mapID target="repository_analysis_totalCode" url="RepositoryAnalysis.html#topLevelTotalCode" />
+	<mapID target="repository_analysis_totalGenCode" url="RepositoryAnalysis.html#topLevelTotalGeneratedCode" />
+	<mapID target="repository_analysis_totalUserCode" url="RepositoryAnalysis.html#topLevelTotalUserCode" />
+
+	<!-- Data object -->
+	<mapID target="dataobject" url="DataObjectAnalysis.html" />
+	<mapID target="dataobject_numDataObjects" url="DataObjectAnalysis.html#dataobject_numDataObjects" />
+
+	<mapID target="dataobject_totalNumAttribs" url="DataObjectAnalysis.html#dataobject_totalNumAttribs" />
+	<mapID target="dataobject_attribs_largestNumAttribs" url="DataObjectAnalysis.html#dataobject_attribs_largestNumAttribs" />
+	<mapID target="dataobject_attribs_totalNumPersAttribs" url="DataObjectAnalysis.html#dataobject_attribs_totalNumPersAttribs" />
+	<mapID target="dataobject_attribs_totalNumNonPersAttribs" url="DataObjectAnalysis.html#dataobject_attribs_totalNumNonPersAttribs" />
+	<mapID target="dataobject_attribs_totalNumPreventUserUpdateAttribs" url="DataObjectAnalysis.html#dataobject_attribs_totalNumPreventUserUpdateAttribs" />
+	<mapID target="dataobject_attribs_totalNumCVLAttribs" url="DataObjectAnalysis.html#dataobject_attribs_totalNumCVLAttribs" />
+	<mapID target="dataobject_attribs_totalNumValidationAttribs" url="DataObjectAnalysis.html#dataobject_attribs_totalNumValidationAttribs" />
+	<mapID target="dataobject_attribs_totalNumDerivedAttribs" url="DataObjectAnalysis.html#dataobject_attribs_totalNumDerivedAttribs" />
+
+    <mapID target="dataobject_totalNumRules" url="DataObjectAnalysis.html#dataobject_totalNumRules" />
+    <mapID target="dataobject_rules_totalNumConstraints" url="DataObjectAnalysis.html#dataobject_rules_totalNumConstraints" />
+    <mapID target="dataobject_rules_totalNumActions" url="DataObjectAnalysis.html#dataobject_rules_totalNumActions" />
+    <mapID target="dataobject_rules_totalNumSums" url="DataObjectAnalysis.html#dataobject_rules_totalNumSums" />
+    <mapID target="dataobject_rules_totalNumCount" url="DataObjectAnalysis.html#dataobject_rules_totalNumCount" />
+    <mapID target="dataobject_rules_totalNumparentReplicates" url="DataObjectAnalysis.html#dataobject_rules_totalNumparentReplicates" />
+    <mapID target="dataobject_rules_totalNumFormulas" url="DataObjectAnalysis.html#dataobject_rules_totalNumFormulas" />
+    <mapID target="dataobject_rules_totalNumDefaults" url="DataObjectAnalysis.html#dataobject_rules_totalNumDefaults" />
+
+    <mapID target="dataobject_totalAmtCode" url="DataObjectAnalysis.html#dataobject_totalAmtCode" />
+    <mapID target="dataobject_totalAmtGenCode" url="DataObjectAnalysis.html#dataobject_totalAmtGenCode" />
+    <mapID target="dataobject_totalAmtUserCode" url="DataObjectAnalysis.html#dataobject_totalAmtUserCode" />
+
+    <mapID target="dataobject_dataObjects" url="DataObjectAnalysis.html#dataobject_dataObjects" />
+    <mapID target="dataobject_do_dataObject" url="DataObjectAnalysis.html#dataobject_do_dataObject" />
+    <mapID target="dataobject_do_numAttribs" url="DataObjectAnalysis.html#dataobject_do_numAttribs" />
+    <mapID target="dataobject_do_totalLines" url="DataObjectAnalysis.html#dataobject_do_totalLines" />
+    <mapID target="dataobject_do_code_genLines" url="DataObjectAnalysis.html#dataobject_do_code_genLines" />
+    <mapID target="dataobject_do_code_userLines" url="DataObjectAnalysis.html#dataobject_do_code_userLines" />
+
+    <mapID target="dataobject_do_rules" url="DataObjectAnalysis.html#dataobject_do_rules" />
+    <mapID target="dataobject_do_rules_numPersAttribs" url="DataObjectAnalysis.html#dataobject_do_rules_numPersAttribs" />
+    <mapID target="dataobject_do_rules_numNonPersAttribs" url="DataObjectAnalysis.html#dataobject_do_rules_numNonPersAttribs" />
+    <mapID target="dataobject_do_rules_numReqAttribs" url="DataObjectAnalysis.html#dataobject_do_rules_numReqAttribs" />
+    <mapID target="dataobject_do_rules_numRules" url="DataObjectAnalysis.html#dataobject_do_rules_numRules" />
+    <mapID target="dataobject_do_rules_numActions" url="DataObjectAnalysis.html#dataobject_do_rules_numActions" />
+    <mapID target="dataobject_do_rules_numConstraints" url="DataObjectAnalysis.html#dataobject_do_rules_numConstraints" />
+    <mapID target="dataobject_do_rules_numCVLs" url="DataObjectAnalysis.html#dataobject_do_rules_numCVLs" />
+    <mapID target="dataobject_do_rules_numValids" url="DataObjectAnalysis.html#dataobject_do_rules_numValids" />
+    <mapID target="dataobject_do_rules_numDerivedAttribs" url="DataObjectAnalysis.html#dataobject_do_rules_numDerivedAttribs" />
+    <mapID target="dataobject_do_rules_derive_count" url="DataObjectAnalysis.html#dataobject_do_rules_derive_count" />
+    <mapID target="dataobject_do_rules_derive_sum" url="DataObjectAnalysis.html#dataobject_do_rules_derive_sum" />
+    <mapID target="dataobject_do_rules_derive_default" url="DataObjectAnalysis.html#dataobject_do_rules_derive_default" />
+    <mapID target="dataobject_do_rules_derive_formula" url="DataObjectAnalysis.html#dataobject_do_rules_derive_formula" />
+    <mapID target="dataobject_do_rules_derive_replicate" url="DataObjectAnalysis.html#dataobject_do_rules_derive_replicate" />
+
+    <mapID target="dataobject_do_files" url="DataObjectAnalysis.html#dataobject_do_files" />
+    <mapID target="dataobject_do_files_base" url="DataObjectAnalysis.html#dataobject_do_files_base" />
+    <mapID target="dataobject_do_files_base_lines" url="DataObjectAnalysis.html#dataobject_do_files_base_lines" />
+    <mapID target="dataobject_do_files_user" url="DataObjectAnalysis.html#dataobject_do_files_user" />
+    <mapID target="dataobject_do_files_user_totalLines" url="DataObjectAnalysis.html#dataobject_do_files_user_totalLines" />
+    <mapID target="dataobject_do_files_user_totalGenLines" url="DataObjectAnalysis.html#dataobject_do_files_user_totalGenLines" />
+    <mapID target="dataobject_do_files_user_totalUserLines" url="DataObjectAnalysis.html#dataobject_do_files_user_totalUserLines" />
+    <mapID target="dataobject_do_files_user_totalRawLines" url="DataObjectAnalysis.html#dataobject_do_files_user_totalRawLines" />
+    <mapID target="dataobject_do_files_user_totalNonBlankLines" url="DataObjectAnalysis.html#dataobject_do_files_user_totalNonBlankLines" />
+    <mapID target="dataobject_do_files_user_totalCommentLines" url="DataObjectAnalysis.html#dataobject_do_files_user_totalCommentLines" />
+    <mapID target="dataobject_do_files_user_totalMiscLines" url="DataObjectAnalysis.html#dataobject_do_files_user_totalMiscLines" />
+
+	<!-- HTML apps -->
+    <mapID target="html_top" url="HTMLAppAnalysis.html" />
+    <mapID target="html" url="HTMLAppAnalysis.html#html" />
+    <mapID target="html_numApps" url="HTMLAppAnalysis.html#html_numApps" />
+    <mapID target="html_numPages" url="HTMLAppAnalysis.html#html_numPages" />
+    <mapID target="html_numRegenPages" url="HTMLAppAnalysis.html#html_numRegenPages" />
+    <mapID target="html_totalCode" url="HTMLAppAnalysis.html#html_totalCode" />
+    <mapID target="html_totalGenCode" url="HTMLAppAnalysis.html#html_totalGenCode" />
+    <mapID target="html_totalUserCode" url="HTMLAppAnalysis.html#html_totalUserCode" />
+    <mapID target="html_apps" url="HTMLAppAnalysis.html#html_apps" />
+    <mapID target="html_app" url="HTMLAppAnalysis.html#html_app" />
+    <mapID target="html_app_numPages" url="HTMLAppAnalysis.html#html_app_numPages" />
+    <mapID target="html_app_numRegenPages" url="HTMLAppAnalysis.html#html_app_numRegenPages" />
+    <mapID target="html_app_numLines" url="HTMLAppAnalysis.html#html_app_numLines" />
+    <mapID target="html_app_numGenLines" url="HTMLAppAnalysis.html#html_app_numGenLines" />
+    <mapID target="html_app_numUserLines" url="HTMLAppAnalysis.html#html_app_numUserLines" />
+</map>
