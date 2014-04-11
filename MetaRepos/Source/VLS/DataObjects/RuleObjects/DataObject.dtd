@@ -1,0 +1,134 @@
+<!ELEMENT DataObject ( ExtendedProperties | HiddenProperties | Attributes | Constraints | Actions | Indexes | PluralCaption| SingularCaption| Description| Comments | CodedValuesList | VLSDeployment | AttributeGroupInstances )* >
+<!ATTLIST DataObject
+	XdaConnector CDATA #IMPLIED
+	UseQuotedIdentifiers (True|False) #IMPLIED
+	CodedValuesList (True|False) #IMPLIED
+	SurrId CDATA #IMPLIED
+      	LockMode (NoOptimisticLocking|ChangedAttributes|AllApplicableAttributes) #IMPLIED
+	SuperClass CDATA #IMPLIED
+      	ImageReference CDATA #IMPLIED
+      	IsRemoteAccessible (True|False) #IMPLIED
+	DTDVersion CDATA #REQUIRED
+>
+
+<!ELEMENT AttributeGroupInstances (AttributeGroupInstance)* >
+<!ELEMENT OverriddenAttributes (Override)* >
+<!ELEMENT Attributes (Attribute)* >
+<!ELEMENT Constraints (Constraint)* >
+<!ELEMENT Actions (Action)* >
+<!ELEMENT Indexes (Index)* >
+<!ELEMENT PluralCaption (#PCDATA )>
+<!ELEMENT SingularCaption (#PCDATA )>
+<!ELEMENT Description (#PCDATA )>
+<!ELEMENT Comments (#PCDATA )>
+<!ELEMENT HiddenProperties (Property )* >
+<!ELEMENT ExtendedProperties (Property )* >
+<!ELEMENT Property EMPTY >
+<!ATTLIST Property
+	Name CDATA #REQUIRED
+	Value CDATA #REQUIRED
+>
+<!ELEMENT Override EMPTY >
+<!ATTLIST Override 
+	Name CDATA #REQUIRED
+>
+<!ELEMENT AttributeGroupInstance EMPTY>
+<!ATTLIST AttributeGroupInstance
+	Name CDATA #REQUIRED
+	AttributeGroupTemplate CDATA #REQUIRED
+	InheritGrouping (True|False) #IMPLIED
+	InheritOrder (True|False) #IMPLIED
+	Prefix CDATA #IMPLIED
+>
+<!ELEMENT CodedValuesList EMPTY>
+<!ATTLIST CodedValuesList
+	DisplayAttribute CDATA #IMPLIED
+	StoredAttribute CDATA #IMPLIED
+>
+
+<!ELEMENT VLSDeployment EMPTY>
+<!ATTLIST VLSDeployment
+	DeploySecurityInfo (True | False) #IMPLIED
+>
+
+<!ELEMENT Attribute (DataType | ServerDataType | Derivation | Validation | ExtendedProperties | HiddenProperties | Caption | MicroHelp | Description | Comments | Format| OverriddenAttributes)* >
+<!ATTLIST Attribute 
+	Name CDATA #REQUIRED
+	Persistent (True|False) #IMPLIED 
+	ValueRequired (True|False) #IMPLIED
+	ArchetypeName CDATA #IMPLIED
+	LayoutByDefault (True|False) #IMPLIED
+      PreventUserUpdates (True|False) #IMPLIED
+	InstanceOf CDATA #IMPLIED
+>
+
+<!ELEMENT DataType EMPTY>
+<!ATTLIST DataType
+	DataType (Char|VarChar|Memo|Byte|AutoNumber|Integer|Long|Double|Single|Decimal|Float|Date|Time|DateTime|Boolean|Currency|LongBinary) #IMPLIED 
+	Size CDATA #IMPLIED
+	Precision CDATA #IMPLIED
+	Scale CDATA #IMPLIED
+
+>
+
+<!ELEMENT ServerDataType EMPTY>
+<!ATTLIST ServerDataType
+	Type CDATA #IMPLIED
+	Size CDATA #IMPLIED
+	ServerOfOrigin (Oracle7|SQLServer|Sybase11|Informix|DB2UDB|BLANK) #IMPLIED
+>
+<!ELEMENT Derivation (DefaultValue | Formula | QualificationExpression )*>
+<!ATTLIST Derivation
+	DerivationType (None|Sum|Count|ParentReplicate|Formula|Default) #IMPLIED 
+	SourceDataObject CDATA #IMPLIED
+     	ParentReplicateIsMaintained (True|False) #IMPLIED
+     	SourceAttribute CDATA #IMPLIED
+>
+<!ELEMENT Validation (Condition | ErrorMessage )*>
+<!ATTLIST Validation
+	ValidationType (Condition|CodedValuesList) #IMPLIED
+	CodedValuesList CDATA #IMPLIED
+>
+
+<!ELEMENT Caption (#PCDATA )>
+<!ELEMENT MicroHelp (#PCDATA )>
+<!ELEMENT DefaultValue (#PCDATA )>
+<!ELEMENT Formula (#PCDATA )>
+<!ELEMENT QualificationExpression (#PCDATA )>
+<!ELEMENT Format (#PCDATA )>
+
+
+<!ELEMENT Constraint (  Condition | ErrorMessage )* >
+<!ATTLIST Constraint 
+	Name CDATA #REQUIRED
+	ConditionType (RejectWhen|AcceptWhen) #REQUIRED
+	ErrorAttribute CDATA #IMPLIED
+>
+
+
+<!ELEMENT Condition (#PCDATA )>
+<!ELEMENT ErrorMessage (#PCDATA )>
+
+<!ELEMENT Action ( ActionToPerform |Condition|Description )* >
+<!ATTLIST Action 
+
+	Name CDATA #REQUIRED
+>
+
+<!ELEMENT ActionToPerform (#PCDATA )>
+
+ 
+<!ELEMENT Index ( Index_Attribute )* >
+<!ATTLIST Index 
+	IgnoreNulls (True|False) #REQUIRED
+	Name CDATA #REQUIRED
+	Primary (True|False) #REQUIRED
+	Unique (True|False) #REQUIRED
+	AttributeGroupInstance CDATA #IMPLIED
+>
+<!ELEMENT Index_Attribute EMPTY >
+<!ATTLIST Index_Attribute
+	Name CDATA #REQUIRED
+	Descending (True|False) #IMPLIED
+>
+

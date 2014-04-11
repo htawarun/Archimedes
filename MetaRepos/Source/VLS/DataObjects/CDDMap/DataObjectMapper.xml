@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	SurrId="04445674550039"
+	CodedValuesList="False"
+	ImageReference=" "
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	XdaConnector="SQL"
+	DTDVersion="05.05.12"
+	>
+	<CodedValuesList
+		DisplayAttribute=" "
+		StoredAttribute=" "
+	/>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<SingularCaption><![CDATA[Data Object Mapper]]> </SingularCaption>
+	<PluralCaption><![CDATA[Data Object Mapper]]> </PluralCaption>
+	<Description><![CDATA[ This project can have many mappings between 2 or more DataObjects from multiple Repository projects]]> </Description>
+	<Comments><![CDATA[ How to handle case where multiple source tables are needed to map to single target?  [Handle with QueryObjects and GUI]? vice versa]]> </Comments>
+	<Attributes>
+		<Attribute
+			Name="ProjectName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Project Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="SourceRepositoryName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Source Repository Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="TargetRepositoryName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Target Repository Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="SourceDataObjectName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Source DataObject Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="TargetDataObjectName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Target DataObject Name]]></Caption>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="PkeyDOMapper"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="ProjectName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="SourceRepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="TargetRepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="SourceDataObjectName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="TargetDataObjectName"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+</DataObject>

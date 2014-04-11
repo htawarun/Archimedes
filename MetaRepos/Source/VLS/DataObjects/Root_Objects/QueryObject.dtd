@@ -1,0 +1,110 @@
+<!ELEMENT QueryObject ( DataObjects | Attributes | Joins | Where | OrderBy | GroupBy | Having | RuntimeSql |  Description | Comments | ExtendedProperties | HiddenProperties | RelsToChildDataObjects | RelsToParentDataObjects | PickSupportedRels )* >
+<!ATTLIST QueryObject
+	IsRemoteAccessible 	( True | False) #IMPLIED
+	SqlTextModified		( True | False) #IMPLIED
+	SqlDialect		(SQLStandard | Oracle | Sybase | Informix | ODBC | DB2UDB) #IMPLIED
+	SuperClass		CDATA #IMPLIED
+	SurrId			CDATA #IMPLIED
+	ChildMostDataObject 	CDATA #IMPLIED
+	DistinctRowsOnly	( True | False) #IMPLIED
+	DeploySecurityInfo ( True | False) #IMPLIED
+	DTDVersion		CDATA #REQUIRED
+>
+
+<!ELEMENT DataObjects (DataObject )*>
+<!ELEMENT Attributes (Attribute )*>
+
+<!ELEMENT Description (#PCDATA )>
+<!ELEMENT Caption (#PCDATA )>
+<!ELEMENT Comments (#PCDATA )>
+<!ELEMENT Where (#PCDATA )>
+<!ELEMENT OrderBy (OrderByAttribute)*>
+<!ELEMENT GroupBy (GroupByAttribute)*>
+
+<!ELEMENT Having (#PCDATA )>
+<!ELEMENT RuntimeSql (#PCDATA )>
+<!ELEMENT HiddenProperties (Property )* >
+<!ELEMENT ExtendedProperties (Property )* >
+<!ELEMENT Property EMPTY >
+<!ATTLIST Property
+	Name CDATA #REQUIRED
+	Value CDATA #IMPLIED
+>
+<!ELEMENT GroupByAttribute EMPTY >
+<!ATTLIST GroupByAttribute 
+		Name CDATA #REQUIRED
+>
+<!ELEMENT OrderByAttribute EMPTY >
+<!ATTLIST OrderByAttribute 
+		Name CDATA #REQUIRED
+		Direction (Ascending|Descending) #IMPLIED 
+>
+
+<!ELEMENT DataObject (Description )* >
+<!ATTLIST DataObject
+	DataObjectName CDATA #REQUIRED
+	Alias CDATA #IMPLIED
+>
+
+<!ELEMENT Attribute (DataType | Formula | Description | Caption )* >
+<!ATTLIST Attribute 
+	Name CDATA #IMPLIED
+	Alias CDATA #REQUIRED
+	AggregationType ( None | Count | Max | Min | Sum | Avg) #IMPLIED 
+	SourceDataObject CDATA #IMPLIED 
+	Persistent	CDATA #IMPLIED
+	InstanceOf  CDATA #IMPLIED
+>
+<!ELEMENT DataType EMPTY >
+<!ATTLIST DataType 
+	Type (Char |VarChar| Memo | Byte | Integer | Long | Double | Single | Decimal | Float | Date | Time | DateTime | Boolean | Currency | LongBinary) #REQUIRED 
+	Size CDATA #IMPLIED
+	Precision CDATA #IMPLIED
+	Scale CDATA #IMPLIED
+>
+
+<!ELEMENT Formula (#PCDATA )>
+
+<!ELEMENT Joins ( ColumnSet )* >
+<!ATTLIST Joins 
+	LeftDataObject CDATA #REQUIRED
+	RightDataObject CDATA #REQUIRED
+	JoinType ( Equal | Left | Right ) #IMPLIED
+>
+
+<!ELEMENT ColumnSet EMPTY >
+<!ATTLIST ColumnSet 
+	LeftAttribute CDATA #REQUIRED
+	RightAttribute CDATA #REQUIRED
+>
+
+
+<!ELEMENT PickSupportedRels (PickSupportedRel)*>
+<!ELEMENT PickSupportedRel EMPTY >
+<!ATTLIST PickSupportedRel 
+	PickSupportedRel CDATA #REQUIRED
+>
+
+<!ELEMENT RelsToChildDataObjects (RelToChildDO)*>
+<!ELEMENT RelToChildDO (Aliases)>
+<!ATTLIST RelToChildDO 
+	RelToChildDO CDATA #REQUIRED
+>
+
+<!ELEMENT RelsToParentDataObjects (RelToParentDO)*>
+<!ELEMENT RelToParentDO (Aliases)>
+<!ATTLIST RelToParentDO 
+	RelToParentDO CDATA #REQUIRED
+>
+
+<!ELEMENT Aliases (Alias)*>
+<!ELEMENT Alias (AttributePairs)>
+<!ATTLIST Alias
+	Name CDATA #REQUIRED
+>
+<!ELEMENT AttributePairs (AttributePair)*>
+<!ELEMENT AttributePair EMPTY >
+<!ATTLIST AttributePair 
+	ParentAttribute CDATA #REQUIRED
+	ChildAttribute CDATA #REQUIRED
+>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE Application SYSTEM "Application.dtd">
+<Application
+	SurrId="0444596735.Tyler.0005"
+	TargetLanguage="Java"
+	DefaultLogonUserId="sa"
+	ExecutionEnvironment="Applet"
+	AppletHeight="575"
+	AppletWidth="725"
+	ClassId="54564933-E671-4BA6-9FEF-E05FE9CFA067"
+	SuppressDefaultLoginScreen="False"
+	InitialFramesetPage=""
+	StartupPageFrameName=""
+	InitialFrameNameForStartupTrans=""
+	AppRepositoryVersion="05.05.15"
+	isMDIApp="False"
+	DeploySecurityInfo="False"
+	DTDVersion="05.05.12"
+	>
+	<ServerLocation><![CDATA[<localVLSServer>]]></ServerLocation>
+	<ApplicationArchetypesFolder><![CDATA[CoolBlueArchetypes]]></ApplicationArchetypesFolder>
+	<!-- APPLICATION FORMS -->
+	<Forms>
+		<Form>StartupForm</Form>
+		<Form>fProject</Form>
+		<Form>fDataObjectMapper</Form>
+		<Form>fAttrObjectMapper</Form>
+	</Forms>
+	<SourceFiles>
+	</SourceFiles>
+</Application>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	SurrId="0413978431.tband.0007"
+	CodedValuesList="False"
+	ImageReference=" "
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	XdaConnector="SQL"
+	DTDVersion="05.05.12"
+	>
+	<CodedValuesList
+		DisplayAttribute=" "
+		StoredAttribute=" "
+	/>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<SingularCaption><![CDATA[*]]> </SingularCaption>
+	<PluralCaption><![CDATA[*]]> </PluralCaption>
+	<Description><![CDATA[ Constraints are used by DataObjects to prevent or accept state change.  Rules that test state change are fired at the DataObject level only.]]> </Description>
+	<Comments><![CDATA[ ]]> </Comments>
+	<Attributes>
+		<Attribute
+			Name="RepositoryName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="False"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Repository Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="DataObjectName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Data Object]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ConstraintName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Constraint Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ConditionType"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Type]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Condition"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Memo"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="ErrorMessage"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Memo"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Error Message]]></Caption>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="ConstraintPkey"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="RepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="DataObjectName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="ConstraintName"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+</DataObject>

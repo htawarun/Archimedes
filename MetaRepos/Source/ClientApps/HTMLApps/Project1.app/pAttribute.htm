@@ -1,0 +1,522 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+	<title>Find Attributes</title>
+	<base href="#default">
+	<link rel="stylesheet" type="text/css" href="images/style.css">
+	<script LANGUAGE="JavaScript" vsscript="true">
+<!--
+-->
+	</script>
+	<script language="JavaScript" src="images/PDXPopupPickScript.js">
+<!--
+-->
+	</script>
+</head>
+
+<body>
+
+<form action="this" method="post" vsform="true" name="pAttribute">
+
+<!-- Borders begin start -->
+<!-- Borders begin stop -->
+
+			<table width="100%" border="0">
+				<tr>
+					<td class="CrumbTrail"><vstext name="jtCrumbTrail" vsclass="versata.pdx.html.CrumbTrailTextContentElement" vsds="(None)"></td>
+				</tr>
+			</table>
+
+			<table class="PageHeader" width="100%" border="0" cellspacing="0" cellpadding="2">
+				<tr>
+					<td class="PageCaption" nowrap>
+<vstitle vstitle="Find Attributes">Find Attributes</vstitle>
+</td>
+				</tr>
+			</table>
+
+			<table class="JadeError" width="100%" border="0" cellspacing="0" cellpadding="2">
+				<tr>
+					<td class="JadeError"><vserror 
+ vsclass="versata.pdx.html.PopupErrorElement" 
+		onscreen="false"
+></td>
+				</tr>
+			</table>
+
+			<table class="RecSrcAll" width="100%" border="0" cellspacing="0" cellpadding="2">
+				<tr>
+					<td class="RecSrcAll">
+					
+<!-- Div Start Tag  for Tab Hide/Show  -->
+  <div name="divTabRST1Attribute" vsds="T1Attribute" vsvisible="true">
+        <!-- RecSrc Caption / Comments-->
+        <table class="RecSrcCaptionAndComments" width="100%" border="0" cellspacing="0" cellpadding="2">
+        </table>
+        <!-- RecSrcScalarToolbar (in GridSelect) -->
+        <table class="RecSrcScalarToolbar" width="100%" border="0" cellspacing="1" cellpadding="2">
+          <tr>
+            <td class="ToolbarTrans">
+<a class="ToolbarTrans" href="this" vsds="T1Attribute" vsaction="query" name="T1Attributequery">Find</a>&nbsp;
+<a class="ToolbarTrans" href="this" vsds="T1Attribute" vsaction="clearquery" name="T1Attributeclearquery">Clear</a>&nbsp;
+</td>
+            <td class="ToolbarTransRight" nowrap>
+<a class="ToolbarTrans" href="this" vsaction="ok" name="pAttribute_return" vsclass="versata.pdx.html.ReturnHyperlinkActionElement">Return</a>&nbsp;
+            </td>
+          </tr>
+        </table>
+        <!-- RecSrcScalar (in GridSelect) -->
+        <table class="RecSrcScalar" width="100%" border="0" cellspacing="0" cellpadding="2"><tr valign="top"><td>
+          
+            <table><tr valign="top"><td>
+              <table>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Repository Name
+</td>
+            <td class="AttrField" width="90%" nowrap>
+              <input class="AttrField" type="text" name="txtT1RepositoryName" 
+		       size="50"
+ vsds="T1Attribute" vsdf="RepositoryName" vsdisplaymode="Query" 
+ value="RepositoryName"><a vspick="T3DataObject" vspicktext="txtT1RepositoryName" vsds="T1Attribute" vsaction="pick" name="pckT1RepositoryName" href="pckT1RepositoryName" 
+		onclick="return showPopupPick(document.forms[0],this,600,400);"
+><img src="images/pull_dwn.gif" align="absmiddle" border="0"></a>
+            </td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Data Object
+</td>
+            <td class="AttrField" width="90%" nowrap>
+              <input class="AttrField" type="text" name="txtT1DataObjectName" 
+		       size="50"
+ vsds="T1Attribute" vsdf="DataObjectName" vsdisplaymode="Query" 
+ value="DataObjectName"><a vspick="T3DataObject" vspicktext="txtT1DataObjectName" vsds="T1Attribute" vsaction="pick" name="pckT1DataObjectName" href="pckT1DataObjectName" 
+		onclick="return showPopupPick(document.forms[0],this,600,400);"
+><img src="images/pull_dwn.gif" align="absmiddle" border="0"></a>
+            </td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Attribute
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1AttrName" 
+		       size="50"
+ vsds="T1Attribute" vsdf="AttrName" vsdisplaymode="Query" 
+ value="AttrName">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Is Persistent?
+</td>
+            <td class="AttrField" width="90%" nowrap>
+              <select class="AttrField" name="txtT1Persistent" vsds="T1Attribute" vsdf="Persistent" vsdisplaymode="Query" size="1" vscodetable=" ">
+                <option value="JADEStored">JADEDisplayed</option>
+              </select>
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Is Value Required?
+</td>
+            <td class="AttrField" width="90%" nowrap>
+              <select class="AttrField" name="txtT1ValueRequired" vsds="T1Attribute" vsdf="ValueRequired" vsdisplaymode="Query" size="1" vscodetable=" ">
+                <option value="JADEStored">JADEDisplayed</option>
+              </select>
+</td>
+          </tr>
+              </table>
+            </td><td>
+              <table>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Internal Datatype
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1DataType" 
+		       size="50"
+ vsds="T1Attribute" vsdf="DataType" vsdisplaymode="Query" 
+ value="DataType">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Number Of Derviations
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1Derivation_Cnt" 
+			size="5"
+ vsds="T1Attribute" vsdf="Derivation_Cnt" vsdisplaymode="Query" 
+ value="Derivation_Cnt">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Number Of Validations
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1Validation_Cnt" 
+			size="5"
+ vsds="T1Attribute" vsdf="Validation_Cnt" vsdisplaymode="Query" 
+ value="Validation_Cnt">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Number Of Formula
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1Formula_Cnt" 
+			size="5"
+ vsds="T1Attribute" vsdf="Formula_Cnt" vsdisplaymode="Query" 
+ value="Formula_Cnt">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Number Of Sums
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1Sum_Cnt" 
+			size="5"
+ vsds="T1Attribute" vsdf="Sum_Cnt" vsdisplaymode="Query" 
+ value="Sum_Cnt">
+</td>
+          </tr>
+              </table>
+            </td><td>
+              <table>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Number Of Counts
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1Count_Cnt" 
+			size="5"
+ vsds="T1Attribute" vsdf="Count_Cnt" vsdisplaymode="Query" 
+ value="Count_Cnt">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Number Of Parent Replicates
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1ParentRepl_Cnt" 
+			size="5"
+ vsds="T1Attribute" vsdf="ParentRepl_Cnt" vsdisplaymode="Query" 
+ value="ParentRepl_Cnt">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+AttrSize
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1AttrSize" 
+			size="5"
+ vsds="T1Attribute" vsdf="AttrSize" vsdisplaymode="Query" 
+ value="AttrSize">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Precision
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1Precision" 
+			size="5"
+ vsds="T1Attribute" vsdf="Precision" vsdisplaymode="Query" 
+ value="Precision">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Scale
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1Scale" 
+			size="5"
+ vsds="T1Attribute" vsdf="Scale" vsdisplaymode="Query" 
+ value="Scale">
+</td>
+          </tr>
+              </table>
+            </td><td>
+              <table>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+SQL Datatype
+</td>
+            <td class="AttrField" width="90%" nowrap>
+              <select class="AttrField" name="txtT1SQLDataType" vsds="T1Attribute" vsdf="SQLDataType" vsdisplaymode="Query" size="1" vscodetable="Valid_SQLTypes">
+                <option value="JADEStored">JADEDisplayed</option>
+              </select>
+</td>
+          </tr>
+              </table>
+            </td></tr></table>
+        </td></tr></table>
+<!-- Div Tag for RecSrc Properties -->
+  <div name="divGridPropsT1Attribute" vsds=" " vsvisible="true"
+    Cond0HideRecSrc=""
+    Cond1=""
+    Cond1Actions=""
+    Cond2=""
+    Cond2Actions=""
+    Cond3=""
+    Cond3Actions=""
+    Cond4=""
+    Cond4Actions=""
+    Cond5=""
+    Cond5Actions=""
+  >
+  </div>
+<!-- Div Start Tag for Hide/Show of RecSrc -->
+        <!-- RecSrcGrid (in GridSelect) -->
+        <table class="RecSrcGrid" width="100%" border="0" cellspacing="1" cellpadding="2" name="tblT1Attribute" vsds="T1Attribute" vsclass="versata.pdx.html.CustomTableElement">
+          <tr>
+            <td class="RecSrcGridHeaderSpacer" width="2%" nowrap>&nbsp; &nbsp;</td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="RepositoryName" name="T1RepositoryNamesort">Repository Name</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="DataObjectName" name="T1DataObjectNamesort">Data Object</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="AttrName" name="T1AttrNamesort">Attribute</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="Persistent" name="T1Persistentsort">Is Persistent?</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="PreventUserUpdate" name="T1PreventUserUpdatesort">Prevent User Update?</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="ValueRequired" name="T1ValueRequiredsort">Is Value Required?</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="DataType" name="T1DataTypesort">Internal Datatype</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="Derivation_Cnt" name="T1Derivation_Cntsort">Number Of Derviations</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="Validation_Cnt" name="T1Validation_Cntsort">Number Of Validations</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="Formula_Cnt" name="T1Formula_Cntsort">Number Of Formula</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="Sum_Cnt" name="T1Sum_Cntsort">Number Of Sums</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="Count_Cnt" name="T1Count_Cntsort">Number Of Counts</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="ParentRepl_Cnt" name="T1ParentRepl_Cntsort">Number Of Parent Replicates</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="AttrSize" name="T1AttrSizesort">AttrSize</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="Precision" name="T1Precisionsort">Precision</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="Scale" name="T1Scalesort">Scale</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Attribute" vsdf="SQLDataType" name="T1SQLDataTypesort">SQL Datatype</a></td>
+          </tr>
+          <tr vsprototyperow="true" vsaltbgcolor="#EFEFEF">
+            <td class="RecSrcGridRowSelector"><input type="radio" value="1" checked name="T1Attributevscurrency" vsds="T1Attribute" vsaction="Currency"></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1RepositoryName" vsds="T1Attribute" vsdf="RepositoryName" 
+></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1DataObjectName" vsds="T1Attribute" vsdf="DataObjectName" 
+></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1AttrName" vsds="T1Attribute" vsdf="AttrName" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1Persistent" vsds="T1Attribute" vsdf="Persistent" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1PreventUserUpdate" vsds="T1Attribute" vsdf="PreventUserUpdate" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1ValueRequired" vsds="T1Attribute" vsdf="ValueRequired" 
+></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1DataType" vsds="T1Attribute" vsdf="DataType" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1Derivation_Cnt" vsds="T1Attribute" vsdf="Derivation_Cnt" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1Validation_Cnt" vsds="T1Attribute" vsdf="Validation_Cnt" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1Formula_Cnt" vsds="T1Attribute" vsdf="Formula_Cnt" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1Sum_Cnt" vsds="T1Attribute" vsdf="Sum_Cnt" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1Count_Cnt" vsds="T1Attribute" vsdf="Count_Cnt" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1ParentRepl_Cnt" vsds="T1Attribute" vsdf="ParentRepl_Cnt" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1AttrSize" vsds="T1Attribute" vsdf="AttrSize" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1Precision" vsds="T1Attribute" vsdf="Precision" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1Scale" vsds="T1Attribute" vsdf="Scale" 
+></td>
+            <td class="GridAttrField"><vstext vsds="T1Attribute" vsdf="SQLDataType" vscodetable="Valid_SQLTypes"></td>
+          </tr>
+        </table>
+
+    <!-- NoDataFound Message here -->
+    
+        <div name="divNoDataMsgT1Attribute" vsds=" " vsvisible="false">
+        <table class="RecSrcNoDataMessage" width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td class="RecSrcNoDataMessage"><br><center><b>No records found!</b></center><br></td>
+          </tr>
+        </table>
+        </div>
+
+        <!-- RecSrcGridToolbar (in GridSelect) -->
+        <table class="RecSrcGridToolbar" width="100%" border="0" cellspacing="1" cellpadding="2">
+          <tr>
+            <td class="GridToolbarNav" width="5%" nowrap>
+<a class="GridToolbarNav" href="this" vsds="T1Attribute" vsaction="firstpage" name="T1Attributefirstpage">&lt;&lt;</a>&nbsp;
+<a class="GridToolbarNav" href="this" vsds="T1Attribute" vsaction="prevpage" name="T1Attributeprevpage">&nbsp;&lt;&nbsp;</a>&nbsp;
+<a class="GridToolbarNav" href="this" vsds="T1Attribute" vsaction="nextpage" name="T1Attributenextpage">&nbsp;&gt;&nbsp;</a>&nbsp;
+<a class="GridToolbarNav" href="this" vsds="T1Attribute" vsaction="lastpage" name="T1Attributelastpage">&gt;&gt;</a>&nbsp;
+</td>
+            <td class="GridToolbarUpdate" width="5%" nowrap>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</td>
+            <td class="RecSrcGridQueryStatus" width="5%" nowrap>
+<vsquerystatus vsds="T1Attribute">
+</td>
+            <td class="GridToolbarTrans" nowrap>
+<a class="GridToolbarTrans" name="btnT2pAttribute_Grid" href="this" vsaction="pagetransition" 
+			vsds="T1Attribute"
+ vsnavigation="T2pAttribute_Grid" 
+>Attribute</a>&nbsp;
+&nbsp;</td>
+          </tr>
+        </table>
+        <table class="RecSrcCommentsTrailing" width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td class="RecSrcCommentsTrailing"><br></td>
+          </tr>
+        </table>
+<!-- Div End Tag for RecSrc Show/Hide -->
+<!-- Div End Tag for Tab Hide/Show  -->
+  </div>
+					</td>
+				</tr>
+			</table>
+
+
+<!-- CrumbTrail hidden elements -->
+			<input type="hidden" name="CrumbTrailEnabled" value="true">
+			<input type="hidden" name="CrumbTrailIncludesThisPage" value="true">
+			<input type="hidden" name="CrumbTrailRestartsHere" value="false">
+			<input type="hidden" name="CrumbTrailSeparator" value=">">
+
+<!-- Borders end start -->
+<!-- Borders end stop -->
+
+</form>
+
+</body>
+</html>
+
+
+

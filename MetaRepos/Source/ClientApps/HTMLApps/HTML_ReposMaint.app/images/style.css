@@ -1,0 +1,679 @@
+/***********************************************************
+styleCoolBlue.css
+*/
+
+/***********************************************************
+* Owner: Versata, Inc (www.versata.com)
+* Author: Ian Trimble (ian_trimble@versata.com)
+* Description: CSS for PDXSystemHTMLArchetypes
+* Date: September 18 2000
+*/
+
+/***********************************************************
+COMPATIBILITY NOTES:
+Whenever possible, style attributes that are supported by all popular browsers have been used;
+whenever attributes that are specific to browser(s) have been used, this is noted in the style description.
+*/
+
+/***********************************************************
+EDITING THIS FILE:
+A CSS file contains only 7-bit ASCII characters, and therefore can be edited with any text editor, such
+as Notepad or EMACS. CSS editing capabilities are also present in certain software packages such as
+DevStudio and Dreamweaver. Special-purpose CSS editors are available, one of which is Bradbury
+Software's TopStyle, available at http://www.bradsoft.com/topstyle/.
+*/
+
+/***********************************************************
+APPLYING THIS STYLESHEET MANUALLY TO A VERSATA APPLICATION:
+When a page is rebuilt in Versata Studio, as long as the form archetype contains a "CopyFile"
+directive to copy this file (all PDXSystemHTMLArchetypes form archetypes do), it will be copied from
+the archetype's images folder to the application's images folder. This is, perhaps, the easiest way to
+get the CSS file into the correct folder. If this is not the preferred method, then the file must be manually
+copied to the application's images folder. No further action is required; the next time that the browser
+loads a page that references the stylesheet, it will read the new stylesheet (in some cases, the
+browser may retrieve the stylesheet from its cache; closing and restarting the browser remedies this).
+If the application is deployed to the webserver, it is necessary to replace the webserver's copy of the
+stylesheet. Re-deploying the application (after having used one of the above methods to get the new
+stylesheet into the application's images folder) from the Studio will accomplish this, or a manual copy
+can be performed.
+*/
+
+/***********************************************************
+QUICK GUIDE TO MAKING CHANGES:
+Each style definition contained in this file will have an effect on the PDXSystemHTMLArchetypes. It
+is recommended that a copy be made before making changes. There follows a quick list of the styles
+and attributes that will have most immediate impact on the appearance of a pages:
+   - BODY
+      - background
+   - TD.PageCaption
+      - font
+	  - color
+   - TABLE.RecSrcScalar (scalar recordsource)
+      - background
+   - TD.AttrCaption (scalar attribute caption)
+      - font
+	  - color
+   - TD.AttrField (scalar attribute field)
+      - font
+   - TD.RecSrcCaption (recordsource caption)
+      - color
+	  - font
+      - background
+   - TD.RecSrcComments (recordsource comments)
+      - color
+	  - font
+      - background
+   - TABLE.RecSrcGrid
+      - background
+   - TD.RecSrcGridHeader
+      - font
+	  - color
+	  - background
+   - TD.GridAttrField
+      - font
+	  - color
+   - TD.RecSrcGridQueryStatus
+      - font
+	  - color
+*/
+
+/***********************************************************
+CSS RESOURCES:
+   - http://www.w3.org/TR/REC-CSS1
+   - http://www.blooberry.com/indexdot/css/index.html
+*/
+
+
+
+/***********************************************************
+* Page
+*/
+
+/* BODY */
+BODY {
+	background : #dcdcdc;
+}
+
+/* StartupPage BODY */
+BODY.StartupPage {
+	background : #dcdcdc;
+}
+
+/* cell containing crumbtrail */
+TD.CrumbTrail {
+	font : 9pt Arial, Helvetica, sans-serif;
+	color : #003366;
+}
+
+/* crumbtrail transition */
+A.CrumbTrail {
+	color : #003366;
+	text-decoration : underline;
+}
+
+/* crumbtrail transition, mouseover (IE only) */
+A.CrumbTrail:HOVER {
+	color : maroon;
+}
+
+/* table containing caption and independent transitions */
+TABLE.PageHeader {
+}
+
+/* cell containing page logo (pick, qbf) */
+TD.PageLogo {
+}
+
+/* cell containing page caption */
+TD.PageCaption {
+	font : bold 18pt Verdana, Arial, Helvetica, sans-serif;
+	color : #003366;
+}
+
+/* cell containing page comments (top of page) */
+TD.PageComments {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+	color : #003366;
+}
+
+/* table containing page comments (bottom of page) */
+TABLE.PageCommentsTrailing {
+}
+
+/* cell containing page comments (bottom of page) */
+TD.PageCommentsTrailing {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+	color : #003366;
+}
+
+/* cell containing page transitions */
+TD.PageTrans {
+	font : bold 10pt Verdana, Arial, Helvetica, sans-serif;
+	color : #003366;
+	text-align : right;
+}
+
+/* page transition */
+A.PageTrans {
+	color : #4682B4;
+	text-decoration : underline;
+}
+
+/* page transition (while mouseover, IE only) */
+A.PageTrans:HOVER {
+	color : Maroon;
+}
+
+/* table containing <vserror> element */
+TABLE.JadeError {
+}
+
+/* cell containing <vserror> element */
+TD.JadeError {
+	font : bold 10pt Verdana, Arial, Helvetica, sans-serif;
+	color : red;
+	text-align : center;
+}
+
+/* table containing startup page cells */
+TABLE.StartupPage {
+}
+
+/* cell containing startup page logo */
+TD.StartupLogo {
+}
+
+/* cell containing startup page caption */
+TD.StartupCaption {
+	font : bold 18pt Verdana, Arial, Helvetica, sans-serif;
+	color : #003366;
+}
+
+/* cell containing startup page transitions */
+TD.StartupTrans {
+	font : bold 11pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* startup page transition */
+A.StartupTrans {
+	color : #003366;
+	text-decoration : underline;
+}
+
+/* startup page transition (while mouseover, IE only) */
+A.StartupTrans:HOVER {
+	color : Maroon;
+}
+
+
+
+/***********************************************************
+* RecordSource
+*/
+
+/* table containing all recordsources */
+TABLE.RecSrcAll {
+}
+
+/* cell containing all recordsources */
+TD.RecSrcAll {
+}
+
+/* table containing scalar recordsource */
+TABLE.RecSrcScalar {
+	background : #dcdcdc;
+}
+
+/* cell containing attribute spacer */
+TD.AttrSpacer {
+}
+
+/* cell containing attribute caption */
+TD.AttrCaption {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+	color : #003366;
+}
+
+/* cell containing attribute field */
+TD.AttrField {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* input GUI controls (IE only) */
+INPUT.AttrField {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* input GUI controls (IE only) */
+SELECT.AttrField {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* table containing recordsource caption and comments */
+TABLE.RecSrcCaptionAndComments {
+	background : #003366;
+}
+
+/* cell containing recordsource caption */
+TD.RecSrcCaption {
+	font : bold 12pt Verdana, Arial, Helvetica, sans-serif;
+	color : #ffffff;
+	background : #003366;
+}
+
+/* cell containing recordsource comments */
+TD.RecSrcComments {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+	color : #ffffff;
+	background : #003366;
+}
+
+/* table containing recordsource trailing comments (following recordsource) */
+TABLE.RecSrcCommentsTrailing {
+}
+
+/* cell containing recordsource trailing comments (following recordsource) */
+TD.RecSrcCommentsTrailing {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+	color : #003366;
+}
+
+/* table containing a message if no records are found */
+TABLE.RecSrcNoDataMessage {
+}
+
+/* cell containing a message if no records are found */
+TD.RecSrcNoDataMessage {
+	font : 9pt Arial, Helvetica, sans-serif;
+	color : #004070;
+}
+
+/* table containing grid recordsource */
+/*    - when changing the background attribute, user may wish to also change the archetype property "AltRowColor" */
+TABLE.RecSrcGrid {
+	background : #dcdcdc;
+}
+
+/* cell containing grid header spacer */
+TD.RecSrcGridHeaderSpacer {
+	background : #003366;
+}
+
+/* cell containing grid header */
+TD.RecSrcGridHeader {
+	font : bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	color : #ffffff;
+	background : #003366;
+}
+
+/* sortable grid header transition */
+A.RecSrcGridHeader {
+	color : #ffffff;
+	text-decoration : underline;
+}
+
+/* sortable grid header transition (while mouseover, IE only) */
+A.RecSrcGridHeader:HOVER {
+	color : ffffcc;
+}
+
+/* cell containing grid row selector (radio button / checkbox) */
+TD.RecSrcGridRowSelector {
+}
+
+/* cell containing grid attribute field */
+TD.GridAttrField {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+	color : #003366;
+}
+
+TD.MenuList {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+}
+
+A.MenuListNav {
+	color : #ffffff;
+	text-decoration : underline;
+}
+
+A.MenuListNav:HOVER {
+	color : ffffcc;
+}
+
+A.RecSrcScalarHyperlink {
+	color : #003366;
+	text-decoration : underline;
+}
+
+A.RecSrcScalarHyperlink:HOVER {
+	color : Maroon;
+}
+
+A.RecSrcGridHyperlink {
+	color : #003366;
+	text-decoration : underline;
+}
+
+A.RecSrcGridHyperlink:HOVER {
+	color : Maroon;
+}
+
+
+
+/***********************************************************
+* Toolbar
+*/
+
+/* table containing scalar recordsource toolbar */
+TABLE.RecSrcScalarToolbar {
+	background : #dcdcdc;
+}
+
+/* cell containing attribute spacer */
+TD.ToolbarSpacer {
+	background : #003366;
+	text-align : center;
+}
+
+/* cell containing toolbar nav transitions */
+TD.ToolbarNav {
+	font : bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+	text-align : center;
+}
+
+/* toolbar nav transition */
+A.ToolbarNav {
+	color : #ffffff;
+	text-decoration : underline;
+	font-weight: bold;
+}
+
+/* toolbar nav transition (while mouseover, IE only) */
+A.ToolbarNav:HOVER {
+	color : ffffcc;
+}
+
+/* cell containing toolbar update transitions */
+TD.ToolbarUpdate {
+	font : bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+	text-align : center;
+}
+
+/* toolbar nav transition */
+A.ToolbarUpdate {
+	color : #ffffff;
+	text-decoration : underline;
+	font-weight: bold;
+}
+
+/* toolbar nav transition (while mouseover, IE only) */
+A.ToolbarUpdate:HOVER {
+	color : #ffffcc;
+}
+
+/* cell containing toolbar transitions */
+TD.ToolbarTrans {
+	font : bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+}
+
+/* cell containing toolbar transitions (right-aligned) */
+TD.ToolbarTransRight {
+	font : bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+	text-align : right;
+}
+
+/* toolbar transition */
+A.ToolbarTrans {
+	color : #ffffff;
+	text-decoration : underline;
+	font-weight: bold;
+}
+
+/* toolbar transition (while mouseover, IE only) */
+A.ToolbarTrans:HOVER {
+	color : #ffffcc;
+}
+
+/* table containing grid recordsource toolbar */
+TABLE.RecSrcGridToolbar {
+	background : #dcdcdc;
+}
+
+/* cell containing grid toolbar nav transitions */
+TD.GridToolbarNav {
+	font : bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+	text-align : center;
+}
+
+/* toolbar nav transition */
+A.GridToolbarNav {
+	color : #ffffff;
+	text-decoration : underline;
+	font-weight: bold;
+}
+
+/* toolbar nav transition (while mouseover, IE only) */
+A.GridToolbarNav:HOVER {
+	color : ffffcc;
+}
+
+/* cell containing query status */
+TD.RecSrcGridQueryStatus {
+	font : bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	color : #ffffff;
+	background : #003366;
+	text-align : center;
+}
+
+/* cell containing toolbar update transitions */
+TD.GridToolbarUpdate {
+	font :bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+	text-align : center;
+}
+
+/* toolbar nav transition */
+A.GridToolbarUpdate {
+	color : #ffffff;
+	text-decoration : underline;
+	font-weight: bold;
+}
+
+/* toolbar nav transition (while mouseover, IE only) */
+A.GridToolbarUpdate:HOVER {
+	color : ffffcc;
+}
+
+/* cell containing toolbar transitions */
+TD.GridToolbarTrans {
+	font : bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+}
+
+/* cell containing toolbar transitions (right-aligned) */
+TD.GridToolbarTransRight {
+	font : bold 9pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+	text-align : right;
+}
+
+
+/* toolbar transition */
+A.GridToolbarTrans {
+	color : #ffffff;
+	text-decoration : underline;
+	font-weight: bold;
+}
+
+/* toolbar transition (while mouseover, IE only) */
+A.GridToolbarTrans:HOVER {
+	color : ffffcc;
+}
+
+/* dialog-style form toolbar */
+TD.DialogToolbarTrans {
+	font : bold 10pt Verdana, Arial, Helvetica, sans-serif;
+	background : #003366;
+	text-align : center;
+}
+
+/* dialog-style form OK/Cancel transition */
+A.DialogToolbarTrans {
+	color : #ffffff;
+	text-decoration : underline;
+	font-weight: bold;
+}
+
+/* dialog-style form OK/Cancel transition (while mouseover, IE only) */
+A.DialogToolbarTrans:HOVER {
+	color : ffffcc;
+}
+
+
+
+/***********************************************************
+* Login page
+*/
+
+/* table containing all other tables */
+TABLE.LoginOuterPane {
+	background : #003366;
+}
+
+/* cell containing title table */
+TD.LoginTitle {
+}
+
+/* table containing title cells */
+TABLE.LoginTitlePanes {
+	background : 003366;
+}
+
+/* cell containing logo */
+TD.LoginTitlePaneLogo {
+	text-align : center;
+}
+
+/* cell containing application name */
+TD.LoginTitlePaneAppName {
+	font : bold 18pt Verdana, Arial, Helvetica, sans-serif;
+	color : #ffffff;
+	text-align : center;
+}
+
+/* cell containing app description */
+TD.LoginDescription {
+	font : 10pt Verdana, Arial, Helvetica, sans-serif;
+	color : #003366;
+	background : #dcdcdc;
+	text-align : center;
+}
+
+/* cell containing login form table */
+TD.LoginForm {
+}
+
+/* table containing login form */
+TABLE.LoginFormPanes {
+	background : #003366;
+}
+
+/* cell containing input field caption ("Login", "Password", "Server Name") */
+TD.LoginFormPaneCaption {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+	color : #dcdcdc;
+	text-align : right;
+}
+
+/* cell containing input field */
+TD.LoginFormPaneField {
+	font : 9pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* cell containing submit and reset buttons */
+TD.LoginFormPaneButtons {
+	text-align : center;
+}
+
+/* text of an inactive-tab in the tabsheet */
+.menuBarText
+{
+    COLOR: #ffffff;
+    font : 9pt Verdana, Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    TEXT-DECORATION: none
+}
+
+.menuBarText:HOVER {
+	color : #ffffcc;
+}
+
+/* text of an active-tab in the tabsheet */
+.menuBarTextSelect
+{
+    COLOR: #ffffff;
+    font : 9pt Verdana, Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    TEXT-DECORATION: none
+}
+
+/* color of the inactive tab in the tabsheet */
+.tabColor  
+{
+    background:#336699;
+	/* border items in IE and Opera only */
+	border-right-color: #dcdcdc;
+	border-right-style: solid;
+	border-right-width : medium;
+}
+
+/* color of the active tab in the tabsheet */
+.tabColorSelect
+{
+    background:#003366;	
+	/* border items in IE and Opera only */
+	border-right-color: #dcdcdc;
+	border-right-style: solid;
+	border-right-width : thick;
+}
+
+/* text of an inactive-tab in the startup tabsheet */
+.StartupMenuBarText
+{
+    COLOR: #ffffff;
+    font : 11pt Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration : underline;
+}
+
+.StartupMenuBarText:HOVER {
+	color : #ffffcc;
+}
+
+/* text of an active-tab in the startup tabsheet */
+.StartupMenuBarTextSelect
+{
+    COLOR: #ffffff;
+    font : 11pt Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    TEXT-DECORATION: none
+}
+
+/* color of the inactive tab in the startup tabsheet */
+.StartupTabColor  
+{
+    background-color:#336699;
+}
+
+/* color of the active tab in the startup tabsheet */
+.StartupTabColorSelect
+{
+    background-color:#003366;
+}
+

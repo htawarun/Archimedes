@@ -1,0 +1,91 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+  <title>Login</title>
+  <base href="#default">
+  <link rel="stylesheet" href="images/style.css" type="text/css">
+  <script language="javascript">
+<!--
+    function putAtTop() {
+      if ( self != top ) {
+        top.location.href = self.location.href;
+        alert("Your browser has been idle for more than the maximum time, please log on again.");
+      }
+    }
+    function setFocus() {
+      //by setting focus to the login button THEN to the first textfield,
+      //  the button remains focused for an "Enter" keypress while the caret
+      //  appears in the textfield (in IE only)
+      document.forms[0].vslogin.focus();
+      document.forms[0].login.focus();
+    }
+//-->
+  </script>
+</head>
+
+<body target="_top" onload="putAtTop(); setFocus();">
+
+<vserror>
+
+<form METHOD="POST" action="vs" vsloginform>
+
+  <input type="hidden" name="vsparams" value>
+
+  <!-- outer table to center login table in both dirs (1 row, 1 col) -->
+  <table width="100%" height="100%"><tr><td valign="middle" align="center">
+
+    <!-- inner table (3 rows, 1 col) -->
+    <table class="LoginOuterPane" width="60%" border="0" cellspacing="0">
+      <tr>
+        <td class="LoginTitle">
+
+          <!-- title table (2 horiz cells) -->
+          <table class="LoginTitlePanes" width="100%" border="0" cellspacing="0" cellpadding="3">
+            <tr>
+              <td class="LoginTitlePaneAppName" width="90%">Application Name</td>
+              <td class="LoginTitlePaneLogo" width="10%" nowrap><img src="images/automated_by.gif" border="0"></td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="LoginDescription">
+
+          <!-- description -->
+          Using Versata Studio, edit this application's "login.html" file to replace the above Application Name and to supply an appropriate description here.
+
+        </td>
+      </tr>
+      <tr>
+        <td class="LoginForm">
+
+          <!-- login table (4 rows, 2 cols) -->
+          <table class="LoginFormPanes" width="100%" border="0" cellspacing="0" cellpadding="3">
+            <tr>
+              <td class="LoginFormPaneCaption">Login</td>
+              <td class="LoginFormPaneField"><input TYPE="text" VALUE="sa" SIZE="25" NAME="login" vlsuserid></td>
+            </tr>
+            <tr>
+              <td class="LoginFormPaneCaption">Password</td>
+              <td class="LoginFormPaneField"><input TYPE="password" SIZE="25" NAME="password"></td>
+            </tr>
+            <tr>
+              <td class="LoginFormPaneCaption">Server Name</td>
+              <td class="LoginFormPaneField"><input TYPE="text" VALUE="BLS_?" SIZE="25" NAME="serverName" vlsname></td>
+            </tr>
+            <tr>
+              <td class="LoginFormPaneButtons" colspan="2"><input TYPE="submit" VALUE="Login" NAME="vslogin" tabindex="1">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset"></td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+
+  </td></tr></table>
+
+</form>
+</body>
+</html>

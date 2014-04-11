@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	SurrId="0416912984.tband.0000"
+	CodedValuesList="False"
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	ImageReference=" "
+	XdaConnector="SQL"
+	DTDVersion="05.05.12"
+	>
+	<CodedValuesList
+		DisplayAttribute=" "
+		StoredAttribute=" "
+	/>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<SingularCaption><![CDATA[Application]]> </SingularCaption>
+	<PluralCaption><![CDATA[Applications]]> </PluralCaption>
+	<Description><![CDATA[ A Repository will have one or more <b>Applications </b> (abstract) of type HTML or Java. The isJava flag is the type differentiator and is used to tell what the subtype of application.]]> </Description>
+	<Comments><![CDATA[ ]]> </Comments>
+	<Attributes>
+		<Attribute
+			Name="RepositoryName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Repository Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="RepositoryVersion"
+			Persistent="True"
+			PreventUserUpdates="True"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Derivation
+				DerivationType="ParentReplicate"
+				ParentReplicateIsMaintained="False"
+				SourceAttribute="RepositoryVersion"
+				SourceDataObject="AppRepos(Repository)"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Version]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Form_Cnt"
+			Persistent="True"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Count"
+				SourceDataObject="Forms(Form)"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Number of Forms/Pages]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ApplicationName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="100"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Application Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="isJava"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Boolean"
+			/>
+			<Derivation
+				DerivationType="Default"
+				>
+				<DefaultValue><![CDATA[false]]> </DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="Gen_Lines_Cnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Sum"
+				SourceDataObject="Forms(Form)"
+				SourceAttribute="Gen_Lines_Cnt"
+				>
+				<DefaultValue><![CDATA[]]></DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Generated Lines of Code]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="User_Line_Cnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Sum"
+				SourceDataObject="Forms(Form)"
+				SourceAttribute="User_Line_Cnt"
+				>
+				<DefaultValue><![CDATA[]]></DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[User Lines of Code]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Gen_Method_Cnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Sum"
+				SourceDataObject="Forms(Form)"
+				SourceAttribute="Gen_Method_Cnt"
+				>
+				<DefaultValue><![CDATA[]]></DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Generated Methods]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="User_Method_Cnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Sum"
+				SourceDataObject="Forms(Form)"
+				SourceAttribute="Gen_Method_Cnt"
+				>
+				<DefaultValue><![CDATA[]]></DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[User Methods]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Total_Line_Cnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ Gen_Lines_Cnt  +  User_Line_Cnt ]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Total Lines of Code]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Total_Method_Cnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ Gen_Method_Cnt  +  User_Method_Cnt ]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Total Method Count]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Gen_Line_Pct"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Decimal"
+				Precision="10"
+				Scale="2"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ If ( Total_Line_Cnt  = 0) Then
+	$value = 0
+Else
+	$value =  (Gen_Lines_Cnt  /  Total_Line_Cnt ) * 100
+End If ]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[% Generated Lines]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="User_Line_Pct"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Decimal"
+				Precision="10"
+				Scale="2"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ If ( Total_Line_Cnt  = 0) Then
+   $value = 0
+Else
+       $value = ( User_Line_Cnt / Total_Line_Cnt ) * 100
+end if]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[% User Lines]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Gen_Method_Pct"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Decimal"
+				Precision="10"
+				Scale="2"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ If ( Total_Method_Cnt = 0) Then
+   $value = 0
+Else
+  $value= (Gen_Method_Cnt  /  Total_Method_Cnt ) * 100
+end if]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[% Generated Methods]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="User_Method_Pct"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Decimal"
+				Precision="10"
+				Scale="2"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ If ( Total_Method_Cnt = 0) Then
+   $value = 0
+Else
+  $value= (User_Method_Cnt / Total_Method_Cnt ) * 100
+end if]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[% User Methods]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="TransitionCnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				SourceDataObject="Forms(Form)"
+				SourceAttribute="TransitionCount"
+				DerivationType="Sum"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="ApplicationPkey"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="RepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="ApplicationName"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+</DataObject>

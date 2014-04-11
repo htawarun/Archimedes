@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="HTML"
+	Archetype="Startup"
+	PositionTop="7.5"
+	PositionLeft="210"
+	PositionWidth="187.5"
+	PositionHeight="55"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="False"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	ClassName="VSPage"
+	ObjectsRemovedFromLayout="False"
+	HTMLFileCheckSum="-1500960574"
+	>
+	<FormCaption><![CDATA[StartupPage]]></FormCaption>
+	<ArchetypeExtendedProperties>
+		<Property
+			Name="ErrorStyle"
+			Value="Popup"
+		/>
+		<Property
+			Name="LogoImage"
+			Value="images/logo.gif"
+		/>
+		<Property
+			Name="MenuTabsEnabled"
+			Value="false"
+		/>
+		<Property
+			Name="TransitionsToHide"
+			Value=""
+		/>
+	</ArchetypeExtendedProperties>
+	<Transition
+		FormTransNum="1"
+		Prefix="T1"
+		TargetFormName="pReposName_Grid"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		ClassName="PageNavigation"
+		TargetFramesetPage=""
+		TargetFrame="Display"
+		FrameNameInFramesetPage=""
+		RSID="1"
+		BusinessObject="ReposName"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T2"
+		TargetFormName="pReposVersion_Grid"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		ClassName="PageNavigation"
+		TargetFramesetPage=""
+		TargetFrame="Display"
+		FrameNameInFramesetPage=""
+		RSID="2"
+		BusinessObject="ReposVersion"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+</Form>

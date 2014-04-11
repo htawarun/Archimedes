@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Application SYSTEM "Application.dtd">
+<Application
+	SurrId="0423874075.Tyler.0002"
+	ZoomFactor="3"
+	TargetLanguage="Java"
+	DefaultLogonUserId="sa"
+	ExecutionEnvironment="Application"
+	AppletHeight="575"
+	AppletWidth="725"
+	ClassId="0F4295BF-19E7-4255-8B33-79E052EDDAFA"
+	SuppressDefaultLoginScreen="False"
+	InitialFramesetPage=""
+	StartupPageFrameName=""
+	InitialFrameNameForStartupTrans=""
+	AppRepositoryVersion="05.05.15"
+	isMDIApp="False"
+	DeploySecurityInfo="False"
+	DTDVersion="05.05.12"
+	>
+	<ServerLocation><![CDATA[<localVLSServer>]]></ServerLocation>
+	<ApplicationArchetypesFolder><![CDATA[C:\Versata_55\Samples\SampDB1\Source\ClientApps\JavaApps\CoolBlueArchetypes]]></ApplicationArchetypesFolder>
+	<!-- APPLICATION FORMS -->
+	<Forms>
+		<Form>StartupForm</Form>
+		<Form>fRepository</Form>
+		<Form>fAttribute_Grid</Form>
+		<Form>fForm_Grid</Form>
+		<Form>fQry_AttrCount_Grid</Form>
+		<Form>fQry_AttrFormula_Grid</Form>
+		<Form>fQry_AttrParentRepl_Grid</Form>
+		<Form>fQry_AttrSum_Grid</Form>
+		<Form>fReposDiff</Form>
+		<Form>fRecordSource_Grid</Form>
+		<Form>fOtherFile_Grid</Form>
+		<Form>fRSAttribute_Grid</Form>
+		<Form>fQueryDataObject_Grid</Form>
+		<Form>fMethod_Grid</Form>
+		<Form>fReposName</Form>
+		<Form>fReposGroups</Form>
+		<Form>fRelationshipRole_Grid</Form>
+		<Form>fRelationship</Form>
+		<Form>fTransition_Grid</Form>
+		<Form>fQueryAttr_Grid</Form>
+	</Forms>
+	<SourceFiles>
+		<SourceFile
+			PackageName=""
+			>
+			<FileName><![CDATA[JavaSample.HTML]]></FileName>
+			<Path><![CDATA[]]></Path>
+		</SourceFile>
+	</SourceFiles>
+</Application>

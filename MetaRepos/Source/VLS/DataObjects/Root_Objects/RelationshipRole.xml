@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	SurrId="0413978431.tband.0009"
+	CodedValuesList="False"
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	ImageReference=" "
+	XdaConnector="SQL"
+	DTDVersion="05.05.12"
+	>
+	<CodedValuesList
+		DisplayAttribute=" "
+		StoredAttribute=" "
+	/>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<SingularCaption><![CDATA[Role]]> </SingularCaption>
+	<PluralCaption><![CDATA[Roles]]> </PluralCaption>
+	<Description><![CDATA[ A relationship (association) allows the navigation between 2 dataobjects (role-players).  These roles are usually defined by cardinality with a starting point (the parent role) and the end point (the child role).]]> </Description>
+	<Comments><![CDATA[ ]]> </Comments>
+	<Attributes>
+		<Attribute
+			Name="RepositoryName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Repository Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="RelationshipName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="150"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Relationship Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ParentDOName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Parent Data Object]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ParentRoleName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Parent Role Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ChildDOName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Child Data Object]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ChildRoleName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Child Role Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="isEnforce"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Boolean"
+			/>
+			<Derivation
+				DerivationType="Default"
+				>
+				<DefaultValue><![CDATA[true]]> </DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Is Relationship Enforced?]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ParentAttribute"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="250"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Parent Attribute]]></Caption>
+			<Description><![CDATA[This is a comma separated field of all parent/child attribute pairs]]></Description>
+		</Attribute>
+		<Attribute
+			Name="ChildAttribute"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="250"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Child Attribute]]></Caption>
+			<Description><![CDATA[This is a comma separated field of all parent/child attribute pairs]]></Description>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="PRKY_RELROLE"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="RepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="RelationshipName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="ParentRoleName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="ChildRoleName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="ParentDOName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="ChildDOName"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+</DataObject>

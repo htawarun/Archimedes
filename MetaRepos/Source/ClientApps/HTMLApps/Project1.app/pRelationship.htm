@@ -1,0 +1,297 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+	<title>Find Relationships</title>
+	<base href="#default">
+	<link rel="stylesheet" type="text/css" href="images/style.css">
+	<script LANGUAGE="JavaScript" vsscript="true">
+<!--
+-->
+	</script>
+	<script language="JavaScript" src="images/PDXPopupPickScript.js">
+<!--
+-->
+	</script>
+</head>
+
+<body>
+
+<form action="this" method="post" vsform="true" name="pRelationship">
+
+<!-- Borders begin start -->
+<!-- Borders begin stop -->
+
+			<table width="100%" border="0">
+				<tr>
+					<td class="CrumbTrail"><vstext name="jtCrumbTrail" vsclass="versata.pdx.html.CrumbTrailTextContentElement" vsds="(None)"></td>
+				</tr>
+			</table>
+
+			<table class="PageHeader" width="100%" border="0" cellspacing="0" cellpadding="2">
+				<tr>
+					<td class="PageCaption" nowrap>
+<vstitle vstitle="Find Relationships">Find Relationships</vstitle>
+</td>
+				</tr>
+			</table>
+
+			<table class="JadeError" width="100%" border="0" cellspacing="0" cellpadding="2">
+				<tr>
+					<td class="JadeError"><vserror 
+ vsclass="versata.pdx.html.PopupErrorElement" 
+		onscreen="false"
+></td>
+				</tr>
+			</table>
+
+			<table class="RecSrcAll" width="100%" border="0" cellspacing="0" cellpadding="2">
+				<tr>
+					<td class="RecSrcAll">
+					
+<!-- Div Start Tag  for Tab Hide/Show  -->
+  <div name="divTabRST1Relationship" vsds="T1Relationship" vsvisible="true">
+        <!-- RecSrc Caption / Comments-->
+        <table class="RecSrcCaptionAndComments" width="100%" border="0" cellspacing="0" cellpadding="2">
+        </table>
+        <!-- RecSrcScalarToolbar (in GridSelect) -->
+        <table class="RecSrcScalarToolbar" width="100%" border="0" cellspacing="1" cellpadding="2">
+          <tr>
+            <td class="ToolbarTrans">
+<a class="ToolbarTrans" href="this" vsds="T1Relationship" vsaction="query" name="T1Relationshipquery">Find</a>&nbsp;
+<a class="ToolbarTrans" href="this" vsds="T1Relationship" vsaction="clearquery" name="T1Relationshipclearquery">Clear</a>&nbsp;
+</td>
+            <td class="ToolbarTransRight" nowrap>
+<a class="ToolbarTrans" href="this" vsaction="ok" name="pRelationship_return" vsclass="versata.pdx.html.ReturnHyperlinkActionElement">Return</a>&nbsp;
+            </td>
+          </tr>
+        </table>
+        <!-- RecSrcScalar (in GridSelect) -->
+        <table class="RecSrcScalar" width="100%" border="0" cellspacing="0" cellpadding="2"><tr valign="top"><td>
+          
+            <table><tr valign="top"><td>
+              <table>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Repository Name
+</td>
+            <td class="AttrField" width="90%" nowrap>
+              <input class="AttrField" type="text" name="txtT1RepositoryName" 
+		       size="50"
+ vsds="T1Relationship" vsdf="RepositoryName" vsdisplaymode="Query" 
+ value="RepositoryName"><a vspick="T3Repository" vspicktext="txtT1RepositoryName" vsds="T1Relationship" vsaction="pick" name="pckT1RepositoryName" href="pckT1RepositoryName" 
+		onclick="return showPopupPick(document.forms[0],this,600,400);"
+><img src="images/pull_dwn.gif" align="absmiddle" border="0"></a>
+            </td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Parent Data Object
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1ParentDOName" 
+		       size="50"
+ vsds="T1Relationship" vsdf="ParentDOName" vsdisplaymode="Query" 
+ value="ParentDOName">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Child Data Object
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1ChildDOName" 
+		       size="50"
+ vsds="T1Relationship" vsdf="ChildDOName" vsdisplaymode="Query" 
+ value="ChildDOName">
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+Is Relationship Enforced?
+</td>
+            <td class="AttrField" width="90%" nowrap>
+              <select class="AttrField" name="txtT1isEnforce" vsds="T1Relationship" vsdf="isEnforce" vsdisplaymode="Query" size="1" vscodetable=" ">
+                <option value="JADEStored">JADEDisplayed</option>
+              </select>
+</td>
+          </tr>
+
+          <tr valign="top">
+            <td class="AttrSpacer" width="5%" nowrap>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td class="AttrCaption" width="5%" nowrap>
+RolePlayer_CNT
+</td>
+            <td class="AttrField" width="90%" nowrap>
+<input class="AttrField" type="text" name="txtT1RolePlayer_CNT" 
+			size="5"
+ vsds="T1Relationship" vsdf="RolePlayer_CNT" vsdisplaymode="Query" 
+ value="RolePlayer_CNT">
+</td>
+          </tr>
+              </table>
+            </td></tr></table>
+        </td></tr></table>
+<!-- Div Tag for RecSrc Properties -->
+  <div name="divGridPropsT1Relationship" vsds=" " vsvisible="true"
+    Cond0HideRecSrc=""
+    Cond1=""
+    Cond1Actions=""
+    Cond2=""
+    Cond2Actions=""
+    Cond3=""
+    Cond3Actions=""
+    Cond4=""
+    Cond4Actions=""
+    Cond5=""
+    Cond5Actions=""
+  >
+  </div>
+<!-- Div Start Tag for Hide/Show of RecSrc -->
+        <!-- RecSrcGrid (in GridSelect) -->
+        <table class="RecSrcGrid" width="100%" border="0" cellspacing="1" cellpadding="2" name="tblT1Relationship" vsds="T1Relationship" vsclass="versata.pdx.html.CustomTableElement">
+          <tr>
+            <td class="RecSrcGridHeaderSpacer" width="2%" nowrap>&nbsp; &nbsp;</td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Relationship" vsdf="RelationshipName" name="T1RelationshipNamesort">Relationship Name</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Relationship" vsdf="ParentDOName" name="T1ParentDONamesort">Parent Data Object</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Relationship" vsdf="ParentRoleName" name="T1ParentRoleNamesort">Parent Role Name</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Relationship" vsdf="ChildDOName" name="T1ChildDONamesort">Child Data Object</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Relationship" vsdf="ChildRoleName" name="T1ChildRoleNamesort">Child Role Name</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Relationship" vsdf="isEnforce" name="T1isEnforcesort">Is Relationship Enforced?</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Relationship" vsdf="ParentAttribute" name="T1ParentAttributesort">Parent Attribute</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Relationship" vsdf="ChildAttribute" name="T1ChildAttributesort">Child Attribute</a></td>
+            <td 
+ class="RecSrcGridHeader" nowrap 
+		align="right"
+><a class="RecSrcGridHeader" href="this" vsaction="sort" vsds="T1Relationship" vsdf="RolePlayer_CNT" name="T1RolePlayer_CNTsort">RolePlayer_CNT</a></td>
+          </tr>
+          <tr vsprototyperow="true" vsaltbgcolor="#EFEFEF">
+            <td class="RecSrcGridRowSelector"><input type="radio" value="1" checked name="T1Relationshipvscurrency" vsds="T1Relationship" vsaction="Currency"></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1RelationshipName" vsds="T1Relationship" vsdf="RelationshipName" 
+></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1ParentDOName" vsds="T1Relationship" vsdf="ParentDOName" 
+></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1ParentRoleName" vsds="T1Relationship" vsdf="ParentRoleName" 
+></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1ChildDOName" vsds="T1Relationship" vsdf="ChildDOName" 
+></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1ChildRoleName" vsds="T1Relationship" vsdf="ChildRoleName" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1isEnforce" vsds="T1Relationship" vsdf="isEnforce" 
+></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1ParentAttribute" vsds="T1Relationship" vsdf="ParentAttribute" 
+></td>
+            <td 
+ class="GridAttrField" 
+><vstext name="txtT1ChildAttribute" vsds="T1Relationship" vsdf="ChildAttribute" 
+></td>
+            <td 
+ class="GridAttrField" 
+		align="right"
+><vstext name="txtT1RolePlayer_CNT" vsds="T1Relationship" vsdf="RolePlayer_CNT" 
+></td>
+          </tr>
+        </table>
+
+    <!-- NoDataFound Message here -->
+    
+        <div name="divNoDataMsgT1Relationship" vsds=" " vsvisible="false">
+        <table class="RecSrcNoDataMessage" width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td class="RecSrcNoDataMessage"><br><center><b>No records found!</b></center><br></td>
+          </tr>
+        </table>
+        </div>
+
+        <!-- RecSrcGridToolbar (in GridSelect) -->
+        <table class="RecSrcGridToolbar" width="100%" border="0" cellspacing="1" cellpadding="2">
+          <tr>
+            <td class="GridToolbarNav" width="5%" nowrap>
+<a class="GridToolbarNav" href="this" vsds="T1Relationship" vsaction="firstpage" name="T1Relationshipfirstpage">&lt;&lt;</a>&nbsp;
+<a class="GridToolbarNav" href="this" vsds="T1Relationship" vsaction="prevpage" name="T1Relationshipprevpage">&nbsp;&lt;&nbsp;</a>&nbsp;
+<a class="GridToolbarNav" href="this" vsds="T1Relationship" vsaction="nextpage" name="T1Relationshipnextpage">&nbsp;&gt;&nbsp;</a>&nbsp;
+<a class="GridToolbarNav" href="this" vsds="T1Relationship" vsaction="lastpage" name="T1Relationshiplastpage">&gt;&gt;</a>&nbsp;
+</td>
+            <td class="GridToolbarUpdate" width="5%" nowrap>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</td>
+            <td class="RecSrcGridQueryStatus" width="5%" nowrap>
+<vsquerystatus vsds="T1Relationship">
+</td>
+            <td class="GridToolbarTrans" nowrap>
+<a class="GridToolbarTrans" name="btnT2pRelationship_Grid" href="this" vsaction="pagetransition" 
+			vsds="T1Relationship"
+ vsnavigation="T2pRelationship_Grid" 
+>Relationship</a>&nbsp;
+&nbsp;</td>
+          </tr>
+        </table>
+        <table class="RecSrcCommentsTrailing" width="100%" border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td class="RecSrcCommentsTrailing"><br></td>
+          </tr>
+        </table>
+<!-- Div End Tag for RecSrc Show/Hide -->
+<!-- Div End Tag for Tab Hide/Show  -->
+  </div>
+					</td>
+				</tr>
+			</table>
+
+
+<!-- CrumbTrail hidden elements -->
+			<input type="hidden" name="CrumbTrailEnabled" value="true">
+			<input type="hidden" name="CrumbTrailIncludesThisPage" value="true">
+			<input type="hidden" name="CrumbTrailRestartsHere" value="false">
+			<input type="hidden" name="CrumbTrailSeparator" value=">">
+
+<!-- Borders end start -->
+<!-- Borders end stop -->
+
+</form>
+
+</body>
+</html>
+
+
+

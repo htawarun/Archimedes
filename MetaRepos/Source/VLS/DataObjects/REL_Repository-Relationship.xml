@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		IsEnforce="True"
+		OnParentUpdate="PreventIfChildren"
+		OnParentDelete="DeleteChildren"
+		OnChildInsertOrUpdate="InsertParentIfNone"
+		CountAggregates="1"
+		CountReplicates="0"
+		ChildRoleName="Relationships"
+		ParentRoleName="RelnReposiotry"
+		>
+		<AscendCaption><![CDATA[Repository]]> </AscendCaption>
+		<DescendCaption><![CDATA[Relationship(s)]]> </DescendCaption>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]> </ErrPreventInsertOrUpdateChild>
+		<ErrPreventDeleteParent><![CDATA[ ]]> </ErrPreventDeleteParent>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]> </ErrPreventUpdateParent>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="RepositoryName"
+			/>
+		</AttributePairs>
+	</Relationship>
+</Relationships>

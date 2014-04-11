@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		ParentRoleName="SourceActivity"
+		ChildRoleName="WFTransition"
+		IsEnforce="True"
+		OnParentDelete="DeleteChildren"
+		>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="TemplateName"
+				ChildAttribute="TemplateName"
+			/>
+			<AttributePair
+				ParentAttribute="ActivityName"
+				ChildAttribute="SourceActivityName"
+			/>
+		</AttributePairs>
+		<AscendCaption><![CDATA[Activity]]></AscendCaption>
+		<DescendCaption><![CDATA[WFTransition(s)]]></DescendCaption>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]></ErrPreventUpdateParent>
+		<ErrPreventDeleteParent><![CDATA[]]></ErrPreventDeleteParent>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]></ErrPreventInsertOrUpdateChild>
+	</Relationship>
+	<Relationship
+		ParentRoleName="TargetActivity"
+		ChildRoleName="WFTransition_1"
+		IsEnforce="True"
+		OnParentDelete="DeleteChildren"
+		>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="TemplateName"
+				ChildAttribute="TemplateName"
+			/>
+			<AttributePair
+				ParentAttribute="ActivityName"
+				ChildAttribute="TargetActivityName"
+			/>
+		</AttributePairs>
+		<AscendCaption><![CDATA[Activity]]></AscendCaption>
+		<DescendCaption><![CDATA[WFTransition(s)]]></DescendCaption>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]></ErrPreventUpdateParent>
+		<ErrPreventDeleteParent><![CDATA[<System Supplied>]]></ErrPreventDeleteParent>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]></ErrPreventInsertOrUpdateChild>
+	</Relationship>
+</Relationships>

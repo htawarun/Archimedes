@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		IsEnforce="True"
+		OnParentUpdate="PreventIfChildren"
+		OnParentDelete="DeleteChildren"
+		OnChildInsertOrUpdate="PreventIfNoParent"
+		CountAggregates="0"
+		CountReplicates="9"
+		ChildRoleName="ReposDiff1"
+		ParentRoleName="ReposSource"
+		>
+		<AscendCaption><![CDATA[Repository]]> </AscendCaption>
+		<DescendCaption><![CDATA[ReposDiff(s)]]> </DescendCaption>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]> </ErrPreventInsertOrUpdateChild>
+		<ErrPreventDeleteParent><![CDATA[]]> </ErrPreventDeleteParent>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]> </ErrPreventUpdateParent>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="ReposName1"
+			/>
+		</AttributePairs>
+	</Relationship>
+	<Relationship
+		IsEnforce="True"
+		OnParentUpdate="PreventIfChildren"
+		OnParentDelete="DeleteChildren"
+		OnChildInsertOrUpdate="PreventIfNoParent"
+		CountAggregates="0"
+		CountReplicates="9"
+		ChildRoleName="ReposDiff2"
+		ParentRoleName="ReposSource2"
+		>
+		<AscendCaption><![CDATA[Repository]]> </AscendCaption>
+		<DescendCaption><![CDATA[ReposDiff(s)]]> </DescendCaption>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]> </ErrPreventInsertOrUpdateChild>
+		<ErrPreventDeleteParent><![CDATA[]]> </ErrPreventDeleteParent>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]> </ErrPreventUpdateParent>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="ReposName2"
+			/>
+		</AttributePairs>
+	</Relationship>
+</Relationships>

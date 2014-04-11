@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		ParentRoleName="Relationship"
+		ChildRoleName="DataObject_Jn_Reln"
+		IsEnforce="True"
+		OnParentDelete="DeleteChildren"
+		>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="RepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="RelationshipName"
+				ChildAttribute="RelationshipName"
+			/>
+		</AttributePairs>
+		<AscendCaption><![CDATA[Relationship]]></AscendCaption>
+		<DescendCaption><![CDATA[DataObject_Jn_Reln(s)]]></DescendCaption>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]></ErrPreventUpdateParent>
+		<ErrPreventDeleteParent><![CDATA[<System Supplied>]]></ErrPreventDeleteParent>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]></ErrPreventInsertOrUpdateChild>
+	</Relationship>
+</Relationships>

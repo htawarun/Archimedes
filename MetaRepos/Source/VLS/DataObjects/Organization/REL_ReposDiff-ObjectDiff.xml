@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		ParentRoleName="ReposDiff"
+		ChildRoleName="ObjectDiff"
+		IsEnforce="True"
+		OnParentDelete="DeleteChildren"
+		>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="ReposName1"
+				ChildAttribute="ReposName1"
+			/>
+			<AttributePair
+				ParentAttribute="ReposName2"
+				ChildAttribute="ReposName2"
+			/>
+		</AttributePairs>
+		<AscendCaption><![CDATA[ReposDiff]]></AscendCaption>
+		<DescendCaption><![CDATA[Object Differences]]></DescendCaption>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]></ErrPreventUpdateParent>
+		<ErrPreventDeleteParent><![CDATA[<System Supplied>]]></ErrPreventDeleteParent>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]></ErrPreventInsertOrUpdateChild>
+	</Relationship>
+</Relationships>

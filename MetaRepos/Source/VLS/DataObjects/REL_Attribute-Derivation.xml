@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		IsEnforce="True"
+		OnParentUpdate="PreventIfChildren"
+		OnParentDelete="DeleteChildren"
+		OnChildInsertOrUpdate="InsertParentIfNone"
+		CountAggregates="5"
+		CountReplicates="0"
+		ChildRoleName="Derivations"
+		ParentRoleName="DerivationAttr"
+		>
+		<AscendCaption><![CDATA[Attribute]]> </AscendCaption>
+		<DescendCaption><![CDATA[Derivation(s)]]> </DescendCaption>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]> </ErrPreventInsertOrUpdateChild>
+		<ErrPreventDeleteParent><![CDATA[]]> </ErrPreventDeleteParent>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]> </ErrPreventUpdateParent>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="RepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="DataObjectName"
+				ChildAttribute="DataObjectName"
+			/>
+			<AttributePair
+				ParentAttribute="AttrName"
+				ChildAttribute="AttrName"
+			/>
+		</AttributePairs>
+	</Relationship>
+	<Relationship
+		IsEnforce="False"
+		OnParentUpdate="PreventIfChildren"
+		OnParentDelete="PreventIfChildren"
+		OnChildInsertOrUpdate="PreventIfNoParent"
+		CountAggregates="0"
+		CountReplicates="0"
+		ParentRoleName="Attribute"
+		ChildRoleName="Derivation"
+		>
+		<AscendCaption><![CDATA[*]]> </AscendCaption>
+		<DescendCaption><![CDATA[*]]> </DescendCaption>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]> </ErrPreventInsertOrUpdateChild>
+		<ErrPreventDeleteParent><![CDATA[<System Supplied>]]> </ErrPreventDeleteParent>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]> </ErrPreventUpdateParent>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="RepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="DataObjectName"
+				ChildAttribute="SourceDataObject"
+			/>
+			<AttributePair
+				ParentAttribute="AttrName"
+				ChildAttribute="AttrName"
+			/>
+		</AttributePairs>
+	</Relationship>
+</Relationships>

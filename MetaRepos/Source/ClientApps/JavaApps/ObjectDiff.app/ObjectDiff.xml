@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Application SYSTEM "Application.dtd">
+<Application
+	SurrId="0445211779.Tyler.0005"
+	TargetLanguage="Java"
+	DefaultLogonUserId="sa"
+	ExecutionEnvironment="Applet"
+	AppletHeight="575"
+	AppletWidth="725"
+	ClassId="FB6F3AB9-AA71-4945-845D-36EE54EE384C"
+	SuppressDefaultLoginScreen="False"
+	InitialFramesetPage=""
+	StartupPageFrameName=""
+	InitialFrameNameForStartupTrans=""
+	AppRepositoryVersion="05.05.15"
+	isMDIApp="False"
+	DeploySecurityInfo="False"
+	DTDVersion="05.05.12"
+	>
+	<ServerLocation><![CDATA[<localVLSServer>]]></ServerLocation>
+	<!-- APPLICATION FORMS -->
+	<Forms>
+		<Form>StartupForm</Form>
+		<Form>fReposDiff</Form>
+		<Form>fReposDiff2DataObject</Form>
+		<Form>fQueryDiff</Form>
+		<Form>fAppDiff</Form>
+		<Form>fMethodDiff</Form>
+		<Form>fFormDiff</Form>
+	</Forms>
+	<SourceFiles>
+	</SourceFiles>
+</Application>

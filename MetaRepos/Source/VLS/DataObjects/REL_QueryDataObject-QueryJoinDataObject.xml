@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		IsEnforce="False"
+		OnParentUpdate="PreventIfChildren"
+		OnParentDelete="DeleteChildren"
+		OnChildInsertOrUpdate="PreventIfNoParent"
+		CountAggregates="0"
+		CountReplicates="0"
+		ChildRoleName="LeftQueryJoinDataObjects"
+		ParentRoleName="QueryDataObject"
+		>
+		<AscendCaption><![CDATA[QueryDataObject]]> </AscendCaption>
+		<DescendCaption><![CDATA[LeftQueryJoinDataObject(s)]]> </DescendCaption>
+		<ErrPreventInsertOrUpdateChild><![CDATA[]]> </ErrPreventInsertOrUpdateChild>
+		<ErrPreventDeleteParent><![CDATA[]]> </ErrPreventDeleteParent>
+		<ErrPreventUpdateParent><![CDATA[]]> </ErrPreventUpdateParent>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="RepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="QueryObjectName"
+				ChildAttribute="QueryObjectName"
+			/>
+			<AttributePair
+				ParentAttribute="Alias"
+				ChildAttribute="LeftDataObjectName"
+			/>
+		</AttributePairs>
+	</Relationship>
+	<Relationship
+		IsEnforce="False"
+		OnParentUpdate="PreventIfChildren"
+		OnParentDelete="DeleteChildren"
+		OnChildInsertOrUpdate="PreventIfNoParent"
+		CountAggregates="0"
+		CountReplicates="0"
+		ChildRoleName="RightQueryJoinDataObjects"
+		ParentRoleName="QueryDataObject1"
+		>
+		<AscendCaption><![CDATA[QueryDataObject]]> </AscendCaption>
+		<DescendCaption><![CDATA[RightQueryJoinDataObject(s)]]> </DescendCaption>
+		<ErrPreventInsertOrUpdateChild><![CDATA[]]> </ErrPreventInsertOrUpdateChild>
+		<ErrPreventDeleteParent><![CDATA[]]> </ErrPreventDeleteParent>
+		<ErrPreventUpdateParent><![CDATA[]]> </ErrPreventUpdateParent>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="RepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="QueryObjectName"
+				ChildAttribute="QueryObjectName"
+			/>
+			<AttributePair
+				ParentAttribute="Alias"
+				ChildAttribute="RightDataObjectName"
+			/>
+		</AttributePairs>
+	</Relationship>
+</Relationships>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="Java"
+	Archetype="Startup"
+	PositionTop="0"
+	PositionLeft="0"
+	PositionWidth="188"
+	PositionHeight="55"
+	IsAddedAfterGen="True"
+	HasCustomFormLayout="False"
+	ObjectsUnusedByFormLayout="True"
+	External="False"
+	NoDataForm="False"
+	>
+	<FormCaption><![CDATA[StartupForm]]></FormCaption>
+	<Transition
+		FormTransNum="1"
+		Prefix="T1"
+		TargetFormName="fReposDiff"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="True"
+		ClassName="PageNavigation"
+		RSID="1"
+		BusinessObject="ReposDiff"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+</Form>

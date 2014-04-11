@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	SurrId="0413978431.tband.0015"
+	CodedValuesList="False"
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	ImageReference=" "
+	XdaConnector="SQL"
+	DTDVersion="05.05.12"
+	>
+	<CodedValuesList
+		DisplayAttribute=" "
+		StoredAttribute=" "
+	/>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<SingularCaption><![CDATA[*]]> </SingularCaption>
+	<PluralCaption><![CDATA[*]]> </PluralCaption>
+	<Description><![CDATA[ This allows a many to many relationship between dataobjects, relationships, and roles.]]> </Description>
+	<Comments><![CDATA[ ]]> </Comments>
+	<Attributes>
+		<Attribute
+			Name="RepositoryName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="DataObjectName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="RelationshipName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="150"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="isParentRole"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Boolean"
+			/>
+			<Derivation
+				DerivationType="Default"
+				>
+				<DefaultValue><![CDATA[true]]> </DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[IsParent  Role?]]> </Caption>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="DOJNRELNPKEY"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="RepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="DataObjectName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="RelationshipName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="isParentRole"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+</DataObject>

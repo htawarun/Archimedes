@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	SurrId="04405093650000"
+	CodedValuesList="False"
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	ImageReference=" "
+	XdaConnector="SQL"
+	DTDVersion="05.05.12"
+	>
+	<CodedValuesList
+		DisplayAttribute=" "
+		StoredAttribute=" "
+	/>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<SingularCaption><![CDATA[*]]> </SingularCaption>
+	<PluralCaption><![CDATA[*]]> </PluralCaption>
+	<Description><![CDATA[ A relationship (association) allows the navigation between 2 dataobjects (role-players).  These roles are usually defined by cardinality with a starting point (the parent role) and the end point (the child role).]]> </Description>
+	<Comments><![CDATA[ For Most single relationships between parent and child - the values on this object will be correct.  If there are more than 1 role player between parent and child - these will be found in the RelationshipRole object (with the correct values)]]> </Comments>
+	<Attributes>
+		<Attribute
+			Name="RepositoryName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Repository Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="RelationshipName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="150"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Relationship Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ParentDOName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Parent Data Object]]></Caption>
+			<Description><![CDATA[IFF there is only a single role this value is valid , else navigate to RelationshipRole for details]]></Description>
+		</Attribute>
+		<Attribute
+			Name="ParentRoleName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Parent Role Name]]></Caption>
+			<Description><![CDATA[IFF there is only a single role this value is valid , else navigate to RelationshipRole for details]]></Description>
+		</Attribute>
+		<Attribute
+			Name="ChildDOName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Child Data Object]]></Caption>
+			<Description><![CDATA[IFF there is only a single role this value is valid , else navigate to RelationshipRole for details]]></Description>
+		</Attribute>
+		<Attribute
+			Name="ChildRoleName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Child Role Name]]></Caption>
+			<Description><![CDATA[IFF there is only a single role this value is valid , else navigate to RelationshipRole for details]]></Description>
+		</Attribute>
+		<Attribute
+			Name="isEnforce"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Boolean"
+			/>
+			<Derivation
+				DerivationType="Default"
+				>
+				<DefaultValue><![CDATA[true]]> </DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Is Relationship Enforced?]]></Caption>
+			<Description><![CDATA[IFF there is only a single role this value is valid , else navigate to RelationshipRole for details]]></Description>
+		</Attribute>
+		<Attribute
+			Name="ParentAttribute"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Parent Attribute]]></Caption>
+			<Description><![CDATA[IFF there is only a single role this value is valid , else navigate to RelationshipRole for details]]></Description>
+		</Attribute>
+		<Attribute
+			Name="ChildAttribute"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Child Attribute]]></Caption>
+			<Description><![CDATA[IFF there is only a single role this value is valid , else navigate to RelationshipRole for details]]></Description>
+		</Attribute>
+		<Attribute
+			Name="RolePlayer_CNT"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				SourceDataObject="RelationshipRole(RelationshipRole)"
+				DerivationType="Count"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Description><![CDATA[This tells us if there is more than 1 role player - if so - then use the RelationshipRole for actual metadata information.]]></Description>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="RelnPkey"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="RepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="RelationshipName"
+				Descending="False"
+			/>
+		</Index>
+		<Index
+			Name="KeyRelToRelRole"
+			Primary="False"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="RepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="RelationshipName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="ParentDOName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="ChildDOName"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+</DataObject>

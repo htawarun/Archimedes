@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="HTML"
+	Archetype="Startup"
+	PositionTop="5"
+	PositionLeft="12.5"
+	PositionWidth="150"
+	PositionHeight="43.75"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="False"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	ClassName="versata.pdx.html.VSPagePDX"
+	ObjectsRemovedFromLayout="False"
+	HTMLFileCheckSum="854827790"
+	>
+	<FormCaption><![CDATA[StartupPage]]></FormCaption>
+	<ArchetypeExtendedProperties>
+		<Property
+			Name="LogoImage"
+			Value="images/logo.gif"
+		/>
+		<Property
+			Name="MenuTabsEnabled"
+			Value="true"
+		/>
+		<Property
+			Name="TransitionsToHide"
+			Value=""
+		/>
+	</ArchetypeExtendedProperties>
+	<ExtendedProperties>
+		<Property
+			Name="ContainerPageElement"
+			Value=""
+		/>
+		<Property
+			Name="Title"
+			Value=""
+		/>
+	</ExtendedProperties>
+	<Transition
+		FormTransNum="1"
+		Prefix="T2"
+		TargetFormName="pReposVersion"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		FormTransCaption=" "
+		ClassName="PageNavigation"
+		TargetFramesetPage=""
+		TargetFrame="Display"
+		FrameNameInFramesetPage=""
+		RSID="2"
+		BusinessObject="ReposVersion"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T1"
+		TargetFormName="pDataObject"
+		IsTargetInitialQueryMode="True"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		FormTransCaption=" "
+		ClassName="PageNavigation"
+		TargetFramesetPage=""
+		TargetFrame="Display"
+		FrameNameInFramesetPage=""
+		RSID="3"
+		BusinessObject="DataObject"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T3"
+		TargetFormName="pAttribute"
+		IsTargetInitialQueryMode="True"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		FormTransCaption=" "
+		ClassName="PageNavigation"
+		TargetFramesetPage=""
+		TargetFrame="Display"
+		FrameNameInFramesetPage=""
+		RSID="4"
+		BusinessObject="Attribute"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T4"
+		TargetFormName="pRelationship"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		ClassName="PageNavigation"
+		TargetFramesetPage=""
+		TargetFrame="Display"
+		FrameNameInFramesetPage=""
+		RSID="5"
+		BusinessObject="Relationship"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T5"
+		TargetFormName="pApplication"
+		IsTargetInitialQueryMode="True"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		FormTransCaption="Application"
+		ClassName="PageNavigation"
+		TargetFramesetPage=""
+		TargetFrame="Display"
+		FrameNameInFramesetPage=""
+		RSID="6"
+		BusinessObject="Application"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T6"
+		TargetFormName="pQueryObject_Grid"
+		IsTargetInitialQueryMode="True"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		FormTransCaption=" "
+		ClassName="PageNavigation"
+		TargetFramesetPage=""
+		TargetFrame="Display"
+		FrameNameInFramesetPage=""
+		RSID="7"
+		BusinessObject="QueryObject"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+</Form>

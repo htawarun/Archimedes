@@ -1,0 +1,115 @@
+<!ELEMENT Form ( FormCaption | Description | ArchetypeExtendedProperties | ExtendedProperties | FormLayout | RecordSource | Transition  )* >
+<!ATTLIST Form 
+	TargetLanguage CDATA #REQUIRED 
+	Archetype CDATA #IMPLIED 
+	PositionTop CDATA   #IMPLIED
+	PositionLeft CDATA   #IMPLIED
+	PositionWidth CDATA  #IMPLIED
+	PositionHeight CDATA   #IMPLIED
+	IsAddedAfterGen (True|False) #IMPLIED
+	DirtyFlag (b|d|i|BLANK)  #IMPLIED 
+	HasCustomFormLayout (True|False)  #IMPLIED
+	ObjectsUnusedByFormLayout (True|False) #IMPLIED
+	ClassName CDATA #IMPLIED
+	ObjectsRemovedFromLayout  (True|False) #IMPLIED
+	External (True|False) #IMPLIED
+	NoDataForm (True|False) #IMPLIED
+	DTDVersion CDATA #REQUIRED
+	HTMLFileCheckSum CDATA #IMPLIED
+>
+
+<!ELEMENT FormCaption (#PCDATA) >
+<!ELEMENT Description (#PCDATA) >
+<!ELEMENT ArchetypeExtendedProperties (Property)* >
+<!ELEMENT ExtendedProperties (Property)* >
+<!ELEMENT FormLayout (#PCDATA) >
+
+<!ELEMENT Property EMPTY>
+<!ATTLIST Property 
+	Name CDATA #REQUIRED
+	Value CDATA #REQUIRED
+>
+
+<!ELEMENT RecordSource (OrderByClause | ParameterizedWhereClause | AdditionalWhereClause | ArchetypeExtendedProperties | ExtendedProperties | Description | RSAttributesMeta | RecordSource | PickObject | Transition )* >
+<!ATTLIST RecordSource 
+	RSID CDATA #REQUIRED
+	Prefix CDATA #REQUIRED
+	BusinessObject CDATA #REQUIRED
+	RecordSourceArchetype CDATA #REQUIRED
+	Relationship CDATA #IMPLIED
+	RelnIsFromParent (True|False) #IMPLIED
+	DoesSourceAffectMe (True|False) #IMPLIED
+	DoIAffectSource (True|False) #IMPLIED
+	IsAddedAfterGen (True|False) #IMPLIED
+	RsAttributesDefault (True|False) #IMPLIED
+	ClassName   CDATA  #IMPLIED
+	MaxGridRowCount CDATA  #IMPLIED   
+	FetchedBlockRowCount CDATA  #IMPLIED
+	AllowDelete  (True|False) #IMPLIED
+	AllowInsert  (True|False) #IMPLIED
+	AllowUpdate  (True|False) #IMPLIED
+	SaveMode (Buffered|Immediate) #IMPLIED
+	PreFetchRowCount  (True|False) #IMPLIED
+	ParentAlias  CDATA  #IMPLIED
+	ChildAlias   CDATA  #IMPLIED
+>
+
+<!ELEMENT OrderByClause  (#PCDATA)>
+<!ELEMENT ParameterizedWhereClause  (#PCDATA)>
+<!ELEMENT AdditionalWhereClause  (#PCDATA)>
+<!ELEMENT RSAttributesMeta  ( DefaultAttributes | ScalerAttributes | GridAttributes )* >
+<!ELEMENT DefaultAttributes (RSDefaultAttribute)* >
+<!ELEMENT ScalerAttributes (RSAttribute)* >
+<!ELEMENT GridAttributes (RSAttribute)* >
+<!ELEMENT RSDefaultAttribute EMPTY >
+<!ATTLIST RSDefaultAttribute
+	ID CDATA #REQUIRED
+	Name CDATA #REQUIRED
+>
+<!ELEMENT RSAttribute EMPTY >
+<!ATTLIST RSAttribute
+	Name CDATA #REQUIRED
+	Displayed CDATA #IMPLIED
+	UnPlaced CDATA #IMPLIED
+	Archetype CDATA #IMPLIED
+	TransitionToUse CDATA #IMPLIED
+>
+
+<!ELEMENT Transition (OrderByClause | ParameterizedWhereClause | AdditionalWhereClause | ExtendedProperties | Description)* >
+<!ATTLIST Transition
+	FormTransNum  CDATA #IMPLIED
+	BusinessObject CDATA #IMPLIED
+	RSID CDATA #IMPLIED
+	Prefix CDATA #REQUIRED
+	TargetFormName CDATA #REQUIRED
+	IsTargetInitialQueryMode  (True|False) #IMPLIED
+	IsTargetInitialAddMode (True|False) #IMPLIED
+	IsVisibleAppline (True|False) #IMPLIED
+	Relationship CDATA #IMPLIED
+	RelnIsFromParent CDATA #IMPLIED
+	IsAddedAfterGen (True|False) #IMPLIED
+	FormTransCaption CDATA  #IMPLIED
+	ClassName CDATA #IMPLIED
+	TargetFramesetPage CDATA #IMPLIED  
+	TargetFrame CDATA #IMPLIED   
+	FrameNameInFramesetPage CDATA #IMPLIED
+>
+
+<!ELEMENT PickObject (OrderByClause | FKeyParamsClause | AdditionalWhereClause | ExtendedProperties | Description | RSAttributesMeta )* >
+<!ATTLIST PickObject 
+	RSID CDATA #REQUIRED
+	Prefix CDATA #REQUIRED
+	BusinessObject CDATA #REQUIRED
+	Relationship CDATA #IMPLIED
+	RelnIsFromParent (True|False) #IMPLIED
+	OrderByClause CDATA   #IMPLIED
+	PickTargetFormName CDATA #IMPLIED
+	DoesSourceAffectMe CDATA   #IMPLIED
+	DoIAffectSource CDATA   #IMPLIED
+	IsAddedAfterGen (True|False) #IMPLIED
+	RsAttributesDefault (True|False) #IMPLIED
+	OnScreenPick (True|False) #IMPLIED
+	ClassName  CDATA   #IMPLIED
+>
+<!ELEMENT FKeyParamsClause  (#PCDATA)>
+

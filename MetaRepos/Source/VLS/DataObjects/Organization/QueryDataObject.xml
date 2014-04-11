@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	SurrId="0417538787.tband.0002"
+	CodedValuesList="False"
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	ImageReference=" "
+	XdaConnector="SQL"
+	DTDVersion="05.05.12"
+	>
+	<CodedValuesList
+		DisplayAttribute=" "
+		StoredAttribute=" "
+	/>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<SingularCaption><![CDATA[*]]> </SingularCaption>
+	<PluralCaption><![CDATA[*]]> </PluralCaption>
+	<Description><![CDATA[ Each QueryObject will have at least 1 DataObject as a child and be joined to that object via a relationship.]]> </Description>
+	<Comments><![CDATA[ ]]> </Comments>
+	<Attributes>
+		<Attribute
+			Name="RepositoryName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="QueryObjectName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="DataObjectName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="Alias"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="QueryDataObjPkey"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="RepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="QueryObjectName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="DataObjectName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="Alias"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+</DataObject>

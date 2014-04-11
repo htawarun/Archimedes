@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Application SYSTEM "Application.dtd">
+<Application
+	SurrId="0413978431.tband.0020"
+	ZoomFactor="2"
+	TargetLanguage="HTML"
+	DefaultLogonUserId="eop"
+	ExecutionEnvironment="Browser"
+	AppletHeight="575"
+	AppletWidth="725"
+	ClassId="9475D7C9-3DAC-4A23-856B-46436C2792F2"
+	SuppressDefaultLoginScreen="False"
+	InitialFramesetPage="FramesetPage"
+	StartupPageFrameName="Startup"
+	InitialFrameNameForStartupTrans="Display"
+	AppRepositoryVersion="05.05.15"
+	DeploySecurityInfo="False"
+	DTDVersion="05.05.12"
+	>
+	<ServerLocation><![CDATA[<localVLSServer>]]></ServerLocation>
+	<Description><![CDATA[tband application 1]]></Description>
+	<ApplicationArchetypesFolder><![CDATA[..\..\..\..\Versata_55\Pdx\PDXSystemHTMLArchetypes]]></ApplicationArchetypesFolder>
+	<!-- APPLICATION FORMS -->
+	<Forms>
+		<Form>StartupPage</Form>
+		<Form>pReposVersion</Form>
+		<Form>pDataObject_Grid</Form>
+		<Form>pAttribute_Grid</Form>
+		<Form>pAction_Grid</Form>
+		<Form>pValidation_Grid</Form>
+		<Form>pDerivation_Grid</Form>
+		<Form>pConstraint_Grid</Form>
+		<Form>pDataObject_Jn_Reln_Grid</Form>
+		<Form>pRelationship_Grid</Form>
+		<Form>pRelationship_Grid11</Form>
+		<Form>pDataObject</Form>
+		<Form>FramesetPage</Form>
+		<Form>pIndexDO_Grid</Form>
+		<Form>pIndexAttr_Grid</Form>
+		<Form>pAttribute</Form>
+		<Form>pRelationship</Form>
+		<Form>pAttribute18_Grid</Form>
+		<Form>pQry_AttrCount_Grid</Form>
+		<Form>pQry_AttrFormula_Grid</Form>
+		<Form>pQry_AttrParentRepl_Grid</Form>
+		<Form>pQry_AttrSum_Grid</Form>
+		<Form>pReposDiff</Form>
+		<Form>pApplication</Form>
+		<Form>pForm_Grid</Form>
+		<Form>pRecordSource</Form>
+		<Form>pQueryObject_Grid</Form>
+		<Form>pQueryDataObject_Grid</Form>
+		<Form>pQueryJoinDataObject_Grid</Form>
+		<Form>pRelationshipRole_Grid</Form>
+	</Forms>
+	<SourceFiles>
+	</SourceFiles>
+</Application>

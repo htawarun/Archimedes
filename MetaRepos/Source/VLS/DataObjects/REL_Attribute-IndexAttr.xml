@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		IsEnforce="False"
+		OnParentUpdate="PreventIfChildren"
+		OnParentDelete="PreventIfChildren"
+		OnChildInsertOrUpdate="PreventIfNoParent"
+		CountAggregates="0"
+		CountReplicates="0"
+		ParentRoleName="Attribute1"
+		ChildRoleName="IndexAttr"
+		>
+		<AscendCaption><![CDATA[*]]> </AscendCaption>
+		<DescendCaption><![CDATA[*]]> </DescendCaption>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]> </ErrPreventInsertOrUpdateChild>
+		<ErrPreventDeleteParent><![CDATA[<System Supplied>]]> </ErrPreventDeleteParent>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]> </ErrPreventUpdateParent>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="RepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="DataObjectName"
+				ChildAttribute="DataObjectName"
+			/>
+			<AttributePair
+				ParentAttribute="AttrName"
+				ChildAttribute="IndexAttrName"
+			/>
+		</AttributePairs>
+	</Relationship>
+</Relationships>

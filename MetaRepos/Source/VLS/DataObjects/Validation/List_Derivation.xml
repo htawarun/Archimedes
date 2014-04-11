@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	SurrId="0414502734.tband.0000"
+	CodedValuesList="True"
+	ImageReference=" "
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	XdaConnector="SQL"
+	DTDVersion="05.05.12"
+	>
+	<CodedValuesList
+		DisplayAttribute="DerivationName"
+		StoredAttribute="DerivationType"
+	/>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<SingularCaption><![CDATA[*]]> </SingularCaption>
+	<PluralCaption><![CDATA[*]]> </PluralCaption>
+	<Description><![CDATA[ ]]> </Description>
+	<Comments><![CDATA[ ]]> </Comments>
+	<Attributes>
+		<Attribute
+			Name="DerivationType"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Derivation Type]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="DerivationName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Derivation Desc]]></Caption>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="ListDerivationPkey"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="DerivationType"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+</DataObject>

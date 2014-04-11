@@ -1,0 +1,4456 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="Java"
+	Archetype="Default"
+	PositionTop="132.8125"
+	PositionLeft="340.625"
+	PositionWidth="187.5"
+	PositionHeight="54.6875"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="True"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	>
+	<FormCaption><![CDATA[Repository]]></FormCaption>
+	<RecordSource
+		RSID="1"
+		Prefix="T1"
+		BusinessObject="Repository"
+		RelnIsFromParent="False"
+		DoesSourceAffectMe="False"
+		DoIAffectSource="False"
+		IsAddedAfterGen="False"
+		RsAttributesDefault="False"
+		ClassName="VSJavaDataControl"
+		RecordSourceArchetype="Display"
+		>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<RSAttributesMeta>
+			<DefaultAttributes>
+				<RSDefaultAttribute ID="1" Name="RepositoryName" />
+				<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+				<RSDefaultAttribute ID="3" Name="DataObject_Cnt" />
+				<RSDefaultAttribute ID="4" Name="Relationship_Cnt" />
+				<RSDefaultAttribute ID="5" Name="Attr_Cnt" />
+				<RSDefaultAttribute ID="6" Name="Action_Cnt" />
+				<RSDefaultAttribute ID="7" Name="Constraint_Cnt" />
+				<RSDefaultAttribute ID="8" Name="Java_App_Cnt" />
+				<RSDefaultAttribute ID="9" Name="HTML_App_Cnt" />
+				<RSDefaultAttribute ID="10" Name="Gen_Lines_Cnt" />
+				<RSDefaultAttribute ID="11" Name="User_Line_Cnt" />
+				<RSDefaultAttribute ID="12" Name="Gen_Method_Cnt" />
+				<RSDefaultAttribute ID="13" Name="User_Method_Cnt" />
+				<RSDefaultAttribute ID="14" Name="Total_Line_Cnt" />
+				<RSDefaultAttribute ID="15" Name="Total_Method_Cnt" />
+				<RSDefaultAttribute ID="16" Name="Gen_Line_Pct" />
+				<RSDefaultAttribute ID="17" Name="User_Line_Pct" />
+				<RSDefaultAttribute ID="18" Name="Gen_Method_Pct" />
+				<RSDefaultAttribute ID="19" Name="User_Method_Pct" />
+				<RSDefaultAttribute ID="20" Name="Comments" />
+				<RSDefaultAttribute ID="21" Name="Other_File_Cnt" />
+				<RSDefaultAttribute ID="22" Name="Other_File_Lines" />
+				<RSDefaultAttribute ID="23" Name="Other_File_Method_Cnt" />
+				<RSDefaultAttribute ID="24" Name="QueryObject_Cnt" />
+				<RSDefaultAttribute ID="25" Name="JavaForm_Cnt" />
+				<RSDefaultAttribute ID="26" Name="HTML_Form_Cnt" />
+				<RSDefaultAttribute ID="27" Name="ReposInternalName" />
+				<RSDefaultAttribute ID="28" Name="RootDirectory" />
+				<RSDefaultAttribute ID="29" Name="Description" />
+				<RSDefaultAttribute ID="30" Name="Database" />
+			</DefaultAttributes>
+			<ScalerAttributes>
+				<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RepositoryVersion" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Relationship_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Java_App_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="HTML_App_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="User_Line_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Gen_Method_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Gen_Line_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="User_Line_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Gen_Method_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="User_Method_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Comments" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Other_File_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Other_File_Lines" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Other_File_Method_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="QueryObject_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="JavaForm_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="HTML_Form_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ReposInternalName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RootDirectory" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Description" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Database" Displayed="False" UnPlaced="False" />
+			</ScalerAttributes>
+		</RSAttributesMeta>
+		<PickObject
+			RSID="2"
+			Prefix="T2"
+			BusinessObject="ReposVersion"
+			Relationship="Version(ReposVersion)-Repositories(Repository)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [Version] = [?RepositoryVersion]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="Version" />
+					<RSDefaultAttribute ID="2" Name="Comments" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="Version" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Comments" Displayed="True" UnPlaced="True" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+		<RecordSource
+			RSID="3"
+			Prefix="T3"
+			BusinessObject="DataObject"
+			Relationship="Repository(Repository)-DataObjects(DataObject)"
+			RelnIsFromParent="True"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="True"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="DataSource"
+			RecordSourceArchetype="Grid"
+			ParentAlias=""
+			ChildAlias=""
+			>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="DataObjectName" />
+					<RSDefaultAttribute ID="3" Name="isCodedValueList" />
+					<RSDefaultAttribute ID="4" Name="SuperClass" />
+					<RSDefaultAttribute ID="5" Name="SingularCaption" />
+					<RSDefaultAttribute ID="6" Name="PluralCaption" />
+					<RSDefaultAttribute ID="7" Name="Description" />
+					<RSDefaultAttribute ID="8" Name="Attr_Cnt" />
+					<RSDefaultAttribute ID="9" Name="Constraint_Cnt" />
+					<RSDefaultAttribute ID="10" Name="Action_Cnt" />
+					<RSDefaultAttribute ID="11" Name="ParentReln_Cnt" />
+					<RSDefaultAttribute ID="12" Name="ChildReln_Cnt" />
+					<RSDefaultAttribute ID="13" Name="CountQueryObj" />
+					<RSDefaultAttribute ID="14" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="15" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="16" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="17" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="18" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="19" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="20" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="21" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="22" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="23" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="24" Name="InternalPathName" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="DataObjectName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="isCodedValueList" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="SuperClass" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="SingularCaption" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="PluralCaption" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Description" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ParentReln_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ChildReln_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="CountQueryObj" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="InternalPathName" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+			<PickObject
+				RSID="4"
+				Prefix="T4"
+				BusinessObject="Repository"
+				Relationship="Repository(Repository)-DataObjects(DataObject)"
+				RelnIsFromParent="False"
+				DoesSourceAffectMe="True"
+				DoIAffectSource="False"
+				IsAddedAfterGen="False"
+				RsAttributesDefault="False"
+				ClassName="Pick"
+				OnScreenPick="False"
+				>
+				<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName]]]></FKeyParamsClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<RSAttributesMeta>
+					<DefaultAttributes>
+						<RSDefaultAttribute ID="1" Name="RepositoryName" />
+						<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+						<RSDefaultAttribute ID="3" Name="DataObject_Cnt" />
+						<RSDefaultAttribute ID="4" Name="Relationship_Cnt" />
+						<RSDefaultAttribute ID="5" Name="Attr_Cnt" />
+						<RSDefaultAttribute ID="6" Name="Action_Cnt" />
+						<RSDefaultAttribute ID="7" Name="Constraint_Cnt" />
+						<RSDefaultAttribute ID="8" Name="Java_App_Cnt" />
+						<RSDefaultAttribute ID="9" Name="HTML_App_Cnt" />
+						<RSDefaultAttribute ID="10" Name="Gen_Lines_Cnt" />
+						<RSDefaultAttribute ID="11" Name="User_Line_Cnt" />
+						<RSDefaultAttribute ID="12" Name="Gen_Method_Cnt" />
+						<RSDefaultAttribute ID="13" Name="User_Method_Cnt" />
+						<RSDefaultAttribute ID="14" Name="Total_Line_Cnt" />
+						<RSDefaultAttribute ID="15" Name="Total_Method_Cnt" />
+						<RSDefaultAttribute ID="16" Name="Gen_Line_Pct" />
+						<RSDefaultAttribute ID="17" Name="User_Line_Pct" />
+						<RSDefaultAttribute ID="18" Name="Gen_Method_Pct" />
+						<RSDefaultAttribute ID="19" Name="User_Method_Pct" />
+						<RSDefaultAttribute ID="20" Name="Comments" />
+						<RSDefaultAttribute ID="21" Name="Other_File_Cnt" />
+						<RSDefaultAttribute ID="22" Name="Other_File_Lines" />
+						<RSDefaultAttribute ID="23" Name="Other_File_Method_Cnt" />
+						<RSDefaultAttribute ID="24" Name="QueryObject_Cnt" />
+						<RSDefaultAttribute ID="25" Name="JavaForm_Cnt" />
+						<RSDefaultAttribute ID="26" Name="HTML_Form_Cnt" />
+						<RSDefaultAttribute ID="27" Name="ReposInternalName" />
+						<RSDefaultAttribute ID="28" Name="RootDirectory" />
+						<RSDefaultAttribute ID="29" Name="Description" />
+						<RSDefaultAttribute ID="30" Name="Database" />
+					</DefaultAttributes>
+					<GridAttributes>
+						<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="RepositoryVersion" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Relationship_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Java_App_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="HTML_App_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Comments" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Other_File_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Other_File_Lines" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Other_File_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="QueryObject_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="JavaForm_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="HTML_Form_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="ReposInternalName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="RootDirectory" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Description" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Database" Displayed="True" UnPlaced="True" />
+					</GridAttributes>
+				</RSAttributesMeta>
+			</PickObject>
+			<Transition
+				FormTransNum="1"
+				Prefix="T9"
+				TargetFormName="fAttribute_Grid"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption=" "
+				ClassName="PageNavigation"
+				RSID="9"
+				BusinessObject="Attribute"
+				Relationship="DataObject(DataObject)-Attributes(Attribute)"
+				RelnIsFromParent="True"
+				>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [DataObjectName] = [?DataObjectName]]]></ParameterizedWhereClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			</Transition>
+			<Transition
+				FormTransNum="1"
+				Prefix="T12"
+				TargetFormName="fQry_AttrCount_Grid"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption="Counts"
+				ClassName="VSFormNavigation"
+				RSID="12"
+				BusinessObject="Qry_AttrCount"
+				Relationship="DataObject(DataObject)-Attributes(Attribute)"
+				RelnIsFromParent="True"
+				>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [DataObjectName] = [?DataObjectName]]]></ParameterizedWhereClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			</Transition>
+			<Transition
+				FormTransNum="1"
+				Prefix="T13"
+				TargetFormName="fQry_AttrFormula_Grid"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption="Formula"
+				ClassName="PageNavigation"
+				RSID="13"
+				BusinessObject="Qry_AttrFormula"
+				Relationship="DataObject(DataObject)-Attributes(Attribute)"
+				RelnIsFromParent="True"
+				>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [DataObjectName] = [?DataObjectName]]]></ParameterizedWhereClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			</Transition>
+			<Transition
+				FormTransNum="1"
+				Prefix="T14"
+				TargetFormName="fQry_AttrParentRepl_Grid"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption=" "
+				ClassName="VSFormNavigation"
+				RSID="14"
+				BusinessObject="Qry_AttrParentRepl"
+				Relationship="DataObject(DataObject)-Attributes(Attribute)"
+				RelnIsFromParent="True"
+				>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [DataObjectName] = [?DataObjectName]]]></ParameterizedWhereClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			</Transition>
+			<Transition
+				FormTransNum="1"
+				Prefix="T15"
+				TargetFormName="fQry_AttrSum_Grid"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption=" "
+				ClassName="PageNavigation"
+				RSID="15"
+				BusinessObject="Qry_AttrSum"
+				Relationship="DataObject(DataObject)-Attributes(Attribute)"
+				RelnIsFromParent="True"
+				>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [DataObjectName] = [?DataObjectName]]]></ParameterizedWhereClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			</Transition>
+			<Transition
+				FormTransNum="1"
+				Prefix="T17"
+				TargetFormName="fMethod_Grid"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption="Methods"
+				ClassName="PageNavigation"
+				RSID="17"
+				BusinessObject="Method"
+				Relationship="ThisDataObject(DataObject)-DataMethods(Method)"
+				RelnIsFromParent="True"
+				>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [ObjectName] = [?DataObjectName]]]></ParameterizedWhereClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			</Transition>
+		</RecordSource>
+		<RecordSource
+			RSID="5"
+			Prefix="T5"
+			BusinessObject="QueryObject"
+			Relationship="Repository2(Repository)-QueryObjects(QueryObject)"
+			RelnIsFromParent="True"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="True"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="DataSource"
+			RecordSourceArchetype="Grid"
+			ParentAlias=""
+			ChildAlias=""
+			>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="QueryObjectName" />
+					<RSDefaultAttribute ID="3" Name="SuperClass" />
+					<RSDefaultAttribute ID="4" Name="Description" />
+					<RSDefaultAttribute ID="5" Name="DataObject_Cnt" />
+					<RSDefaultAttribute ID="6" Name="Reln_Cnt" />
+					<RSDefaultAttribute ID="7" Name="RuntimeSql" />
+					<RSDefaultAttribute ID="8" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="9" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="10" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="11" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="13" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="14" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="15" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="16" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="17" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="18" Name="InternalPathName" />
+					<RSDefaultAttribute ID="19" Name="Attr_Cnt" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="QueryObjectName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="SuperClass" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Description" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Reln_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RuntimeSql" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="InternalPathName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+			<PickObject
+				RSID="6"
+				Prefix="T6"
+				BusinessObject="Repository"
+				Relationship="Repository2(Repository)-QueryObjects(QueryObject)"
+				RelnIsFromParent="False"
+				DoesSourceAffectMe="True"
+				DoIAffectSource="False"
+				IsAddedAfterGen="False"
+				RsAttributesDefault="False"
+				ClassName="Pick"
+				OnScreenPick="False"
+				>
+				<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName]]]></FKeyParamsClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<RSAttributesMeta>
+					<DefaultAttributes>
+						<RSDefaultAttribute ID="1" Name="RepositoryName" />
+						<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+						<RSDefaultAttribute ID="3" Name="DataObject_Cnt" />
+						<RSDefaultAttribute ID="4" Name="Relationship_Cnt" />
+						<RSDefaultAttribute ID="5" Name="Attr_Cnt" />
+						<RSDefaultAttribute ID="6" Name="Action_Cnt" />
+						<RSDefaultAttribute ID="7" Name="Constraint_Cnt" />
+						<RSDefaultAttribute ID="8" Name="Java_App_Cnt" />
+						<RSDefaultAttribute ID="9" Name="HTML_App_Cnt" />
+						<RSDefaultAttribute ID="10" Name="Gen_Lines_Cnt" />
+						<RSDefaultAttribute ID="11" Name="User_Line_Cnt" />
+						<RSDefaultAttribute ID="12" Name="Gen_Method_Cnt" />
+						<RSDefaultAttribute ID="13" Name="User_Method_Cnt" />
+						<RSDefaultAttribute ID="14" Name="Total_Line_Cnt" />
+						<RSDefaultAttribute ID="15" Name="Total_Method_Cnt" />
+						<RSDefaultAttribute ID="16" Name="Gen_Line_Pct" />
+						<RSDefaultAttribute ID="17" Name="User_Line_Pct" />
+						<RSDefaultAttribute ID="18" Name="Gen_Method_Pct" />
+						<RSDefaultAttribute ID="19" Name="User_Method_Pct" />
+						<RSDefaultAttribute ID="20" Name="Comments" />
+						<RSDefaultAttribute ID="21" Name="Other_File_Cnt" />
+						<RSDefaultAttribute ID="22" Name="Other_File_Lines" />
+						<RSDefaultAttribute ID="23" Name="Other_File_Method_Cnt" />
+						<RSDefaultAttribute ID="24" Name="QueryObject_Cnt" />
+						<RSDefaultAttribute ID="25" Name="JavaForm_Cnt" />
+						<RSDefaultAttribute ID="26" Name="HTML_Form_Cnt" />
+						<RSDefaultAttribute ID="27" Name="ReposInternalName" />
+						<RSDefaultAttribute ID="28" Name="RootDirectory" />
+						<RSDefaultAttribute ID="29" Name="Description" />
+						<RSDefaultAttribute ID="30" Name="Database" />
+					</DefaultAttributes>
+					<GridAttributes>
+						<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="RepositoryVersion" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Relationship_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Java_App_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="HTML_App_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Comments" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Other_File_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Other_File_Lines" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Other_File_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="QueryObject_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="JavaForm_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="HTML_Form_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="ReposInternalName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="RootDirectory" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Description" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Database" Displayed="True" UnPlaced="True" />
+					</GridAttributes>
+				</RSAttributesMeta>
+			</PickObject>
+			<Transition
+				FormTransNum="1"
+				Prefix="T16"
+				TargetFormName="fQueryDataObject_Grid"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption="Data Objects"
+				ClassName="PageNavigation"
+				RSID="16"
+				BusinessObject="QueryDataObject"
+				Relationship="QueryObject(QueryObject)-QueryDataObjects1(QueryDataObject)"
+				RelnIsFromParent="True"
+				>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [QueryObjectName] = [?QueryObjectName]]]></ParameterizedWhereClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			</Transition>
+			<Transition
+				FormTransNum="1"
+				Prefix="T19"
+				TargetFormName="fQueryAttr_Grid"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption="Attributes"
+				ClassName="PageNavigation"
+				RSID="18"
+				BusinessObject="QueryAttr"
+				Relationship="QueryObject(QueryObject)-QueryAttr(QueryAttr)"
+				RelnIsFromParent="True"
+				>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [QueryObjectName] = [?QueryObjectName]]]></ParameterizedWhereClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			</Transition>
+		</RecordSource>
+		<RecordSource
+			RSID="7"
+			Prefix="T7"
+			BusinessObject="Application"
+			Relationship="AppRepos(Repository)-Applications(Application)"
+			RelnIsFromParent="True"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="True"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="VSJavaDataControl"
+			RecordSourceArchetype="Grid"
+			ParentAlias=""
+			ChildAlias=""
+			>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+					<RSDefaultAttribute ID="3" Name="Form_Cnt" />
+					<RSDefaultAttribute ID="4" Name="ApplicationName" />
+					<RSDefaultAttribute ID="5" Name="isJava" />
+					<RSDefaultAttribute ID="6" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="7" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="8" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="9" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="10" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="11" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="13" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="14" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="15" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="16" Name="TransitionCnt" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="RepositoryVersion" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Form_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ApplicationName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="isJava" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="TransitionCnt" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+			<PickObject
+				RSID="8"
+				Prefix="T8"
+				BusinessObject="Repository"
+				Relationship="AppRepos(Repository)-Applications(Application)"
+				RelnIsFromParent="False"
+				DoesSourceAffectMe="True"
+				DoIAffectSource="False"
+				IsAddedAfterGen="False"
+				RsAttributesDefault="False"
+				ClassName="VSPick"
+				OnScreenPick="False"
+				>
+				<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName]]]></FKeyParamsClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<RSAttributesMeta>
+					<DefaultAttributes>
+						<RSDefaultAttribute ID="1" Name="RepositoryName" />
+						<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+						<RSDefaultAttribute ID="3" Name="DataObject_Cnt" />
+						<RSDefaultAttribute ID="4" Name="Relationship_Cnt" />
+						<RSDefaultAttribute ID="5" Name="Attr_Cnt" />
+						<RSDefaultAttribute ID="6" Name="Action_Cnt" />
+						<RSDefaultAttribute ID="7" Name="Constraint_Cnt" />
+						<RSDefaultAttribute ID="8" Name="Java_App_Cnt" />
+						<RSDefaultAttribute ID="9" Name="HTML_App_Cnt" />
+						<RSDefaultAttribute ID="10" Name="Gen_Lines_Cnt" />
+						<RSDefaultAttribute ID="11" Name="User_Line_Cnt" />
+						<RSDefaultAttribute ID="12" Name="Gen_Method_Cnt" />
+						<RSDefaultAttribute ID="13" Name="User_Method_Cnt" />
+						<RSDefaultAttribute ID="14" Name="Total_Line_Cnt" />
+						<RSDefaultAttribute ID="15" Name="Total_Method_Cnt" />
+						<RSDefaultAttribute ID="16" Name="Gen_Line_Pct" />
+						<RSDefaultAttribute ID="17" Name="User_Line_Pct" />
+						<RSDefaultAttribute ID="18" Name="Gen_Method_Pct" />
+						<RSDefaultAttribute ID="19" Name="User_Method_Pct" />
+						<RSDefaultAttribute ID="20" Name="Comments" />
+						<RSDefaultAttribute ID="21" Name="Other_File_Cnt" />
+						<RSDefaultAttribute ID="22" Name="Other_File_Lines" />
+						<RSDefaultAttribute ID="23" Name="Other_File_Method_Cnt" />
+						<RSDefaultAttribute ID="24" Name="QueryObject_Cnt" />
+						<RSDefaultAttribute ID="25" Name="JavaForm_Cnt" />
+						<RSDefaultAttribute ID="26" Name="HTML_Form_Cnt" />
+						<RSDefaultAttribute ID="27" Name="ReposInternalName" />
+						<RSDefaultAttribute ID="28" Name="RootDirectory" />
+						<RSDefaultAttribute ID="29" Name="Description" />
+						<RSDefaultAttribute ID="30" Name="Database" />
+					</DefaultAttributes>
+					<GridAttributes>
+						<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="RepositoryVersion" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Relationship_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Java_App_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="HTML_App_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Comments" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Other_File_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Other_File_Lines" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="Other_File_Method_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="QueryObject_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="JavaForm_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="HTML_Form_Cnt" Displayed="True" UnPlaced="False" />
+						<RSAttribute Name="ReposInternalName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="RootDirectory" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Description" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Database" Displayed="True" UnPlaced="True" />
+					</GridAttributes>
+				</RSAttributesMeta>
+			</PickObject>
+			<Transition
+				FormTransNum="1"
+				Prefix="T10"
+				TargetFormName="fForm_Grid"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption=" "
+				ClassName="PageNavigation"
+				RSID="10"
+				BusinessObject="Form"
+				Relationship="MyApplication(Application)-Forms(Form)"
+				RelnIsFromParent="True"
+				>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [ApplicationName] = [?ApplicationName]]]></ParameterizedWhereClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			</Transition>
+		</RecordSource>
+		<RecordSource
+			RSID="11"
+			Prefix="T11"
+			BusinessObject="Relationship"
+			Relationship="RelnReposiotry(Repository)-Relationships(Relationship)"
+			RelnIsFromParent="True"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="True"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="DataSource"
+			RecordSourceArchetype="Grid"
+			ParentAlias=""
+			ChildAlias=""
+			>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="RelationshipName" />
+					<RSDefaultAttribute ID="3" Name="ParentDOName" />
+					<RSDefaultAttribute ID="4" Name="ParentRoleName" />
+					<RSDefaultAttribute ID="5" Name="ChildDOName" />
+					<RSDefaultAttribute ID="6" Name="ChildRoleName" />
+					<RSDefaultAttribute ID="7" Name="isEnforce" />
+					<RSDefaultAttribute ID="8" Name="ParentAttribute" />
+					<RSDefaultAttribute ID="9" Name="ChildAttribute" />
+					<RSDefaultAttribute ID="10" Name="RolePlayer_CNT" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="RelationshipName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ParentDOName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ParentRoleName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ChildDOName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ChildRoleName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="isEnforce" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ParentAttribute" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="ChildAttribute" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="RolePlayer_CNT" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+			<Transition
+				FormTransNum="1"
+				Prefix="T18"
+				TargetFormName="fRelationship"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption=" "
+				ClassName="PageNavigation"
+				>
+			</Transition>
+		</RecordSource>
+	</RecordSource>
+	<FormLayout><![CDATA[BEGIN .VSForm fRepository
+  ImageFile = "BACKGROUND.GIF"
+  ClassName = "CoolVSForm"
+  BackColor = 0xc0c0c0
+  Width = 905
+  ImageDisplayStyle = Tiled
+  Title = ""
+  Enable = True
+  ForeColor = 0x000000
+  HelpURL = ""
+  ToolTip = ""
+  Visible = True
+  Tag = "_$$_"
+  Height = 517
+  AnchorForm = "NONE"
+  Constraint = "null"
+  Layout = ""
+  Style = "Child"
+  Name = "fRepository"
+  Extended = ""
+  DisplayTitleBar = False
+  BeginProperty VSFont 
+    FontName  = "Helvetica"
+    FontSize  = 12
+    FontStyleBold  = False
+    FontStyleItalic  = False
+  EndProperty 
+  BEGIN .VSImageButton btnMovePrev
+    ImageFile = "blue_move_previous.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Repository"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Previous"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_previous"
+    TabOrder = 0
+    Height = 32
+    Left = 36
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMovePrev"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveFirst
+    ImageFile = "blue_move_first.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Repository"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move First"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_first"
+    TabOrder = 8
+    Height = 32
+    Left = 1
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveFirst"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSLabel VSLabel11
+    Top = 4
+    ClassName = "VSLabel"
+    Opaque = False
+    StatusBarText = ""
+    BorderStyle = "NO_BORDER"
+    DataSource = ""
+    HorizAlign = "LEFT"
+    BackColor = 0xebebeb
+    Width = 156
+    Enable = True
+    VertTextPos = "BOTTOM"
+    DisplayedMnemonic = ""
+    ForeColor = 0x0038bb
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    Height = 42
+    Left = 73
+    DataField = 0
+    Icon = ""
+    Constraint = "null"
+    VertAlign = "CENTER"
+    HorizTextPos = "RIGHT"
+    Extended = ""
+    Name = "VSLabel11"
+    LabelFor = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 26
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "Repository"
+    END
+  BEGIN .VSImageButton btnMoveNext
+    ImageFile = "blue_move_next.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Repository"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Next"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_next"
+    TabOrder = 9
+    Height = 32
+    Left = 231
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveNext"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveLast
+    ImageFile = "blue_move_last.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Repository"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Last"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_last"
+    TabOrder = 12
+    Height = 32
+    Left = 266
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveLast"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnSave
+    ImageFile = "blue_save.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Save Changes"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_saveAll"
+    TabOrder = 14
+    Height = 32
+    Left = 393
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnSave"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnUndo
+    ImageFile = "blue_undo.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = False
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Undo Changes"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_undoResultSet"
+    TabOrder = 15
+    Height = 32
+    Left = 427
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnUndo"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnDelete
+    ImageFile = "blue_delete.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Repository"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Delete"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_delete"
+    TabOrder = 16
+    Height = 32
+    Left = 353
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnDelete"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnAdd
+    ImageFile = "blue_new.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Repository"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Add New"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_insert"
+    TabOrder = 17
+    Height = 32
+    Left = 319
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnAdd"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton VSImageButton2
+    ImageFile = ""
+    Top = 6
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 18
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x0038bb
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$anchorTopRight$_"
+    Action = "ok"
+    TabOrder = 18
+    Height = 16
+    Left = 873
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = False
+    Border = "RAISED_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "VSImageButton2"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Stretched
+    Label = "X"
+    END
+  BEGIN .VSTab tabT1Repository
+    Top = 217
+    ClassName = "VSTab"
+    BackColor = 0xebebeb
+    Width = 874
+    Enable = True
+    ForeColor = 0x0038bb
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    TabOrder = 19
+    Height = 272
+    Left = 16
+    TabPlacement = "TOP"
+    Constraint = "null"
+    TabStop = True
+    Extended = ""
+    Name = "tabT1Repository"
+    Tabs = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    BEGIN .VSTabSheet "DataObject(s)"
+      TabSheetIcon = ""
+              BEGIN .VSImageButton btnT12fQry_AttrCount_Grid
+          ImageFile = ""
+          Top = 41
+          ClassName = "VSImageButton"
+          Opaque = True
+          BorderPainted = True
+          ReportTarget = ""
+          StatusBarText = ""
+          FormTransitionProperties = ""
+          DataSource = "datT3DataObject"
+          BackColor = 0xebebeb
+          Width = 74
+          ReportURL = ""
+          Enable = True
+          VertTextPos = "BOTTOM"
+          ForeColor = 0x0038bb
+          AutoToolTip = False
+          HelpURL = ""
+          ToolTip = "See Counts"
+          Visible = True
+          Tag = "_$$_"
+          Action = ""
+          TabOrder = 44
+          Height = 32
+          Left = 782
+          AutoSize = False
+          Constraint = "null"
+          HorizTextPos = "RIGHT"
+          TabStop = True
+          Border = "RAISED_BORDER"
+          Mnemonic = ""
+          Extended = ""
+          Name = "btnT12fQry_AttrCount_Grid"
+          AutoLabel = False
+          FormTransition = 120001,""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = True
+            FontStyleItalic  = False
+          EndProperty 
+          DisplayStyle = Stretched
+          Label = "Counts"
+          END
+        BEGIN .VSImageButton btnT13fQry_AttrFormula_Grid
+          ImageFile = ""
+          Top = 78
+          ClassName = "VSImageButton"
+          Opaque = True
+          BorderPainted = True
+          ReportTarget = ""
+          StatusBarText = ""
+          FormTransitionProperties = ""
+          DataSource = "datT3DataObject"
+          BackColor = 0xebebeb
+          Width = 74
+          ReportURL = ""
+          Enable = True
+          VertTextPos = "BOTTOM"
+          ForeColor = 0x0038bb
+          AutoToolTip = False
+          HelpURL = ""
+          ToolTip = "See Formula"
+          Visible = True
+          Tag = "_$$_"
+          Action = ""
+          TabOrder = 43
+          Height = 32
+          Left = 782
+          AutoSize = False
+          Constraint = "null"
+          HorizTextPos = "RIGHT"
+          TabStop = True
+          Border = "RAISED_BORDER"
+          Mnemonic = ""
+          Extended = ""
+          Name = "btnT13fQry_AttrFormula_Grid"
+          AutoLabel = False
+          FormTransition = 130001,""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = True
+            FontStyleItalic  = False
+          EndProperty 
+          DisplayStyle = Stretched
+          Label = "Formula"
+          END
+        BEGIN .VSImageButton btnT14fQry_AttrParentRepl_Grid
+          ImageFile = ""
+          Top = 114
+          ClassName = "VSImageButton"
+          Opaque = True
+          BorderPainted = True
+          ReportTarget = ""
+          StatusBarText = ""
+          FormTransitionProperties = ""
+          DataSource = "datT3DataObject"
+          BackColor = 0xebebeb
+          Width = 74
+          ReportURL = ""
+          Enable = True
+          VertTextPos = "BOTTOM"
+          ForeColor = 0x0038bb
+          AutoToolTip = False
+          HelpURL = ""
+          ToolTip = "See fQry_AttrParentRepl_Grid"
+          Visible = True
+          Tag = "_$$_"
+          Action = ""
+          TabOrder = 42
+          Height = 32
+          Left = 782
+          AutoSize = False
+          Constraint = "null"
+          HorizTextPos = "RIGHT"
+          TabStop = True
+          Border = "RAISED_BORDER"
+          Mnemonic = ""
+          Extended = ""
+          Name = "btnT14fQry_AttrParentRepl_Grid"
+          AutoLabel = False
+          FormTransition = 140001,""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = True
+            FontStyleItalic  = False
+          EndProperty 
+          DisplayStyle = Stretched
+          Label = "Parent Repl"
+          END
+        BEGIN .VSImageButton btnT15fQry_AttrSum_Grid
+          ImageFile = ""
+          Top = 151
+          ClassName = "VSImageButton"
+          Opaque = True
+          BorderPainted = True
+          ReportTarget = ""
+          StatusBarText = ""
+          FormTransitionProperties = ""
+          DataSource = "datT3DataObject"
+          BackColor = 0xebebeb
+          Width = 74
+          ReportURL = ""
+          Enable = True
+          VertTextPos = "BOTTOM"
+          ForeColor = 0x0038bb
+          AutoToolTip = False
+          HelpURL = ""
+          ToolTip = "See fQry_AttrSum_Grid"
+          Visible = True
+          Tag = "_$$_"
+          Action = ""
+          TabOrder = 41
+          Height = 32
+          Left = 782
+          AutoSize = False
+          Constraint = "null"
+          HorizTextPos = "RIGHT"
+          TabStop = True
+          Border = "RAISED_BORDER"
+          Mnemonic = ""
+          Extended = ""
+          Name = "btnT15fQry_AttrSum_Grid"
+          AutoLabel = False
+          FormTransition = 150001,""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = True
+            FontStyleItalic  = False
+          EndProperty 
+          DisplayStyle = Stretched
+          Label = "Sum"
+          END
+        BEGIN .VSImageButton ibtT9fAttribute_Grid
+          ImageFile = ""
+          Top = 231
+          ClassName = "VSImageButton"
+          Opaque = True
+          BorderPainted = True
+          ReportTarget = ""
+          StatusBarText = ""
+          FormTransitionProperties = ""
+          DataSource = "datT3DataObject"
+          BackColor = 0xffffff
+          Width = 106
+          ReportURL = ""
+          Enable = True
+          VertTextPos = "BOTTOM"
+          ForeColor = 0x0038bb
+          AutoToolTip = False
+          HelpURL = ""
+          ToolTip = "Attribute(s)"
+          Visible = True
+          Tag = "_$$_"
+          Action = ""
+          TabOrder = 39
+          Height = 32
+          Left = 761
+          AutoSize = False
+          Constraint = "null"
+          HorizTextPos = "RIGHT"
+          TabStop = True
+          Border = "RAISED_BORDER"
+          Mnemonic = ""
+          Extended = ""
+          Name = "ibtT9fAttribute_Grid"
+          AutoLabel = False
+          FormTransition = 90001,""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = True
+            FontStyleItalic  = False
+          EndProperty 
+          DisplayStyle = Stretched
+          Label = "Attribute(s)"
+          END
+        BEGIN .VSJavaDataControl datT3DataObject
+          Top = 194
+          ClassName = "VSJavaDataControl"
+          RecordSourceProperties = ""
+          StatusBarText = ""
+          AllowInsert = True
+          BackColor = 0xffffff
+          Width = 150
+          AllowUpdate = True
+          RecordSource = 3,"T3DataObject"
+          Enable = True
+          ForeColor = 0x000000
+          AllowDelete = True
+          HelpURL = ""
+          ToolTip = ""
+          Visible = False
+          Tag = "_$$_"
+          MaxRowsPerFetch = 16
+          TabOrder = 20
+          Height = 27
+          Left = 3
+          SaveMode = "buffered"
+          Constraint = "null"
+          TabStop = False
+          Extended = ""
+          Name = "datT3DataObject"
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = False
+            FontStyleItalic  = False
+          EndProperty 
+          Label = "DataObject(s)"
+          END
+        BEGIN .VSGrid grdT3DataObject
+          RowSelectMode = "SINGLE_SELECTION"
+          HiliteForeColor = 0xffffff
+          Top = 23
+          ClassName = "VSGrid"
+          DisplayHeader = True
+          BorderStyle = "PLAIN_BORDER"
+          DataSource = "datT3DataObject"
+          BackColor = 0xffffff
+          Width = 731
+          RowSelectionAllowed = False
+          DisplayGridLines = True
+          Enable = True
+          ForeColor = 0x000000
+          HelpURL = ""
+          ToolTip = ""
+          Visible = True
+          Tag = "_$$_"
+          RowHeaderBackColor = 0x004080
+          Columns = ""
+          TabOrder = 21
+          Height = 237
+          Left = 16
+          ColumnHeaderBackColor = 0x004080
+          ShowVerticalLines = True
+          RowHeight = 20
+          RowHeaderForeColor = 0xebebeb
+          DisableBackColor = 0xffffff
+          BeginProperty VSHeaderFont
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = False
+            FontStyleItalic  = False
+          EndProperty 
+          ColumnHeaderForeColor = 0xebebeb
+          Constraint = "null"
+          TabStop = True
+          ColResizeMode = "AUTO_RESIZE_OFF"
+          LineColor = 0xc0c0c0
+          DisableForeColor = 0xc0c0c0
+          Editable = True
+          Extended = ""
+          Name = "grdT3DataObject"
+          RowHeaderWidth = 25
+          HiliteBackColor = 0x004080
+          ColumnHeaderHeight = 17
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = False
+            FontStyleItalic  = False
+          EndProperty 
+          ShowStarRow = True
+          ShowHorizontalLines = True
+          BEGIN .VSGridColumn "DataObject Name"            
+            GridColumnLabel = "DataObject Name"
+            GridColumnWidth = 0x7D
+            GridColumnDataField = 2
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "isCodedValueList"            
+            GridColumnLabel = "isCodedValueList"
+            GridColumnWidth = 0x72
+            GridColumnDataField = 3
+            GridColumnEditType = "VSChoice"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "SuperClass"            
+            GridColumnLabel = "SuperClass"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 4
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Singular Caption"            
+            GridColumnLabel = "Singular Caption"
+            GridColumnWidth = 0x72
+            GridColumnDataField = 5
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Plural Caption"            
+            GridColumnLabel = "Plural Caption"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 6
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Description"            
+            GridColumnLabel = "Description"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 7
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Number of Attributes"            
+            GridColumnLabel = "Number of Attributes"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 8
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Number of Constraints"            
+            GridColumnLabel = "Number of Constraints"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 9
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Number of Actions"            
+            GridColumnLabel = "Number of Actions"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 10
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Parent Reln Count"            
+            GridColumnLabel = "Parent Reln Count"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 11
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Child Reln Count"            
+            GridColumnLabel = "Child Reln Count"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 12
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Query Count"            
+            GridColumnLabel = "Query Count"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 13
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Generated Lines of Code"            
+            GridColumnLabel = "Generated Lines of Code"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 14
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "User Lines of Code"            
+            GridColumnLabel = "User Lines of Code"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 15
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Generated Methods"            
+            GridColumnLabel = "Generated Methods"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 16
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "User Methods"            
+            GridColumnLabel = "User Methods"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 17
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Total Lines of Code"            
+            GridColumnLabel = "Total Lines of Code"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 18
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "Total Method Count"            
+            GridColumnLabel = "Total Method Count"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 19
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "% Generated Lines"            
+            GridColumnLabel = "% Generated Lines"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 20
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "% User Lines"            
+            GridColumnLabel = "% User Lines"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 21
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "% Generated Methods"            
+            GridColumnLabel = "% Generated Methods"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 22
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "% User Methods"            
+            GridColumnLabel = "% User Methods"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 23
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "InternalPathName"            
+            GridColumnLabel = "InternalPathName"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 24
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          END
+        BEGIN .VSImageButton btnT17fMethod_Grid
+          ImageFile = ""
+          Top = 186
+          ClassName = "VSImageButton"
+          Opaque = True
+          BorderPainted = True
+          ReportTarget = ""
+          StatusBarText = ""
+          FormTransitionProperties = ""
+          DataSource = "datT3DataObject"
+          BackColor = 0xebebeb
+          Width = 74
+          ReportURL = ""
+          Enable = True
+          VertTextPos = "BOTTOM"
+          ForeColor = 0x0038bb
+          AutoToolTip = False
+          HelpURL = ""
+          ToolTip = "See Methods"
+          Visible = True
+          Tag = "_$$_"
+          Action = ""
+          TabOrder = 1
+          Height = 32
+          Left = 781
+          AutoSize = False
+          Constraint = "null"
+          HorizTextPos = "RIGHT"
+          TabStop = True
+          Border = "RAISED_BORDER"
+          Mnemonic = ""
+          Extended = ""
+          Name = "btnT17fMethod_Grid"
+          AutoLabel = False
+          FormTransition = 170001,""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = True
+            FontStyleItalic  = False
+          EndProperty 
+          DisplayStyle = Stretched
+          Label = "Methods"
+          END
+        ENDTABSHEET
+      BEGIN .VSTabSheet "QueryObject(s)"
+        TabSheetIcon = ""
+                  BEGIN .VSImageButton btnT19fQueryAttr_Grid
+            ImageFile = ""
+            Top = 193
+            ClassName = "VSImageButton"
+            Opaque = True
+            BorderPainted = True
+            ReportTarget = ""
+            StatusBarText = ""
+            FormTransitionProperties = ""
+            DataSource = "datT5QueryObject"
+            BackColor = 0xebebeb
+            Width = 77
+            ReportURL = ""
+            Enable = True
+            VertTextPos = "CENTER"
+            ForeColor = 0x0038bb
+            AutoToolTip = False
+            HelpURL = ""
+            ToolTip = "See Attributes"
+            Visible = True
+            Tag = "_$$_"
+            Action = ""
+            TabOrder = 46
+            Height = 32
+            Left = 786
+            AutoSize = False
+            Constraint = "null"
+            HorizTextPos = "CENTER"
+            TabStop = True
+            Border = "RAISED_BORDER"
+            Mnemonic = ""
+            Extended = ""
+            Name = "btnT19fQueryAttr_Grid"
+            AutoLabel = False
+            FormTransition = 180001,""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            DisplayStyle = Stretched
+            Label = "Attributes"
+            END
+          BEGIN .VSJavaDataControl datT5QueryObject
+            Top = 194
+            ClassName = "VSJavaDataControl"
+            RecordSourceProperties = ""
+            StatusBarText = ""
+            AllowInsert = True
+            BackColor = 0xffffff
+            Width = 150
+            AllowUpdate = True
+            RecordSource = 5,"T5QueryObject"
+            Enable = True
+            ForeColor = 0x000000
+            AllowDelete = True
+            HelpURL = ""
+            ToolTip = ""
+            Visible = False
+            Tag = "_$$_"
+            MaxRowsPerFetch = 16
+            TabOrder = 22
+            Height = 27
+            Left = 3
+            SaveMode = "buffered"
+            Constraint = "null"
+            TabStop = False
+            Extended = ""
+            Name = "datT5QueryObject"
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "QueryObject(s)"
+            END
+          BEGIN .VSGrid grdT5QueryObject
+            RowSelectMode = "SINGLE_SELECTION"
+            HiliteForeColor = 0xffffff
+            Top = 25
+            ClassName = "VSGrid"
+            DisplayHeader = True
+            BorderStyle = "PLAIN_BORDER"
+            DataSource = "datT5QueryObject"
+            BackColor = 0xffffff
+            Width = 768
+            RowSelectionAllowed = False
+            DisplayGridLines = True
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            RowHeaderBackColor = 0x004080
+            Columns = ""
+            TabOrder = 23
+            Height = 233
+            Left = 7
+            ColumnHeaderBackColor = 0x004080
+            ShowVerticalLines = True
+            RowHeight = 20
+            RowHeaderForeColor = 0xebebeb
+            DisableBackColor = 0xffffff
+            BeginProperty VSHeaderFont
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            ColumnHeaderForeColor = 0xebebeb
+            Constraint = "null"
+            TabStop = True
+            ColResizeMode = "AUTO_RESIZE_OFF"
+            LineColor = 0xc0c0c0
+            DisableForeColor = 0xc0c0c0
+            Editable = True
+            Extended = ""
+            Name = "grdT5QueryObject"
+            RowHeaderWidth = 25
+            HiliteBackColor = 0x004080
+            ColumnHeaderHeight = 17
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            ShowStarRow = True
+            ShowHorizontalLines = True
+            BEGIN .VSGridColumn "Query Object Name"              
+              GridColumnLabel = "Query Object Name"
+              GridColumnWidth = 0xB5
+              GridColumnDataField = 2
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "SuperClass"              
+              GridColumnLabel = "SuperClass"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 3
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "Description"              
+              GridColumnLabel = "Description"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 4
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "Count of DataObjects"              
+              GridColumnLabel = "Count of DataObjects"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 5
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "Count of Relationships"              
+              GridColumnLabel = "Count of Relationships"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 6
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "Runtime SQL"              
+              GridColumnLabel = "Runtime SQL"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 7
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "Generated Lines of Code"              
+              GridColumnLabel = "Generated Lines of Code"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 8
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "User Lines of Code"              
+              GridColumnLabel = "User Lines of Code"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 9
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "Generated Methods"              
+              GridColumnLabel = "Generated Methods"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 10
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "User Methods"              
+              GridColumnLabel = "User Methods"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 11
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "Total Lines of Code"              
+              GridColumnLabel = "Total Lines of Code"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 12
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "Total Method Count"              
+              GridColumnLabel = "Total Method Count"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 13
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "% Generated Lines"              
+              GridColumnLabel = "% Generated Lines"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 14
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "% User Lines"              
+              GridColumnLabel = "% User Lines"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 15
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "% Generated Methods"              
+              GridColumnLabel = "% Generated Methods"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 16
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "% User Methods"              
+              GridColumnLabel = "% User Methods"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 17
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "InternalPathName"              
+              GridColumnLabel = "InternalPathName"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 18
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            BEGIN .VSGridColumn "Attribute Count"              
+              GridColumnLabel = "Attribute Count"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 19
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            END
+          BEGIN .VSImageButton btnT16fQueryDataObject_Grid
+            ImageFile = ""
+            Top = 229
+            ClassName = "VSImageButton"
+            Opaque = True
+            BorderPainted = True
+            ReportTarget = ""
+            StatusBarText = ""
+            FormTransitionProperties = ""
+            DataSource = "datT5QueryObject"
+            BackColor = 0xebebeb
+            Width = 83
+            ReportURL = ""
+            Enable = True
+            VertTextPos = "BOTTOM"
+            ForeColor = 0x0038bb
+            AutoToolTip = False
+            HelpURL = ""
+            ToolTip = "See Data Objects"
+            Visible = True
+            Tag = "_$$_"
+            Action = ""
+            TabOrder = 2
+            Height = 32
+            Left = 785
+            AutoSize = False
+            Constraint = "null"
+            HorizTextPos = "RIGHT"
+            TabStop = True
+            Border = "RAISED_BORDER"
+            Mnemonic = ""
+            Extended = ""
+            Name = "btnT16fQueryDataObject_Grid"
+            AutoLabel = False
+            FormTransition = 160001,""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            DisplayStyle = Stretched
+            Label = "Data Objects"
+            END
+          ENDTABSHEET
+        BEGIN .VSTabSheet "Application(s)"
+          TabSheetIcon = ""
+                      BEGIN .VSImageButton ibtT10fForm_Grid
+              ImageFile = ""
+              Top = 218
+              ClassName = "VSImageButton"
+              Opaque = True
+              BorderPainted = True
+              ReportTarget = ""
+              StatusBarText = ""
+              FormTransitionProperties = ""
+              DataSource = "datT7Application"
+              BackColor = 0xffffff
+              Width = 74
+              ReportURL = ""
+              Enable = True
+              VertTextPos = "BOTTOM"
+              ForeColor = 0x0038bb
+              AutoToolTip = False
+              HelpURL = ""
+              ToolTip = "Form(s)"
+              Visible = True
+              Tag = "_$$_"
+              Action = ""
+              TabOrder = 40
+              Height = 33
+              Left = 784
+              AutoSize = False
+              Constraint = "null"
+              HorizTextPos = "RIGHT"
+              TabStop = True
+              Border = "RAISED_BORDER"
+              Mnemonic = ""
+              Extended = ""
+              Name = "ibtT10fForm_Grid"
+              AutoLabel = False
+              FormTransition = 100001,""
+              BeginProperty VSFont 
+                FontName  = "Helvetica"
+                FontSize  = 12
+                FontStyleBold  = True
+                FontStyleItalic  = False
+              EndProperty 
+              DisplayStyle = Stretched
+              Label = "Form(s)"
+              END
+            BEGIN .VSJavaDataControl datT7Application
+              Top = 194
+              ClassName = "VSJavaDataControl"
+              RecordSourceProperties = ""
+              StatusBarText = ""
+              AllowInsert = True
+              BackColor = 0xffffff
+              Width = 150
+              AllowUpdate = True
+              RecordSource = 7,"T7Application"
+              Enable = True
+              ForeColor = 0x000000
+              AllowDelete = True
+              HelpURL = ""
+              ToolTip = ""
+              Visible = False
+              Tag = "_$$_"
+              MaxRowsPerFetch = 16
+              TabOrder = 24
+              Height = 27
+              Left = 3
+              SaveMode = "buffered"
+              Constraint = "null"
+              TabStop = False
+              Extended = ""
+              Name = "datT7Application"
+              BeginProperty VSFont 
+                FontName  = "Helvetica"
+                FontSize  = 12
+                FontStyleBold  = False
+                FontStyleItalic  = False
+              EndProperty 
+              Label = "Application(s)"
+              END
+            BEGIN .VSGrid grdT7Application
+              RowSelectMode = "SINGLE_SELECTION"
+              HiliteForeColor = 0xffffff
+              Top = 28
+              ClassName = "VSGrid"
+              DisplayHeader = True
+              BorderStyle = "PLAIN_BORDER"
+              DataSource = "datT7Application"
+              BackColor = 0xffffff
+              Width = 767
+              RowSelectionAllowed = False
+              DisplayGridLines = True
+              Enable = True
+              ForeColor = 0x000000
+              HelpURL = ""
+              ToolTip = ""
+              Visible = True
+              Tag = "_$$_"
+              RowHeaderBackColor = 0x004080
+              Columns = ""
+              TabOrder = 25
+              Height = 233
+              Left = 11
+              ColumnHeaderBackColor = 0x004080
+              ShowVerticalLines = True
+              RowHeight = 20
+              RowHeaderForeColor = 0xebebeb
+              DisableBackColor = 0xffffff
+              BeginProperty VSHeaderFont
+                FontName  = "Helvetica"
+                FontSize  = 12
+                FontStyleBold  = False
+                FontStyleItalic  = False
+              EndProperty 
+              ColumnHeaderForeColor = 0xebebeb
+              Constraint = "null"
+              TabStop = True
+              ColResizeMode = "AUTO_RESIZE_OFF"
+              LineColor = 0xc0c0c0
+              DisableForeColor = 0xc0c0c0
+              Editable = True
+              Extended = ""
+              Name = "grdT7Application"
+              RowHeaderWidth = 25
+              HiliteBackColor = 0x004080
+              ColumnHeaderHeight = 17
+              BeginProperty VSFont 
+                FontName  = "Helvetica"
+                FontSize  = 12
+                FontStyleBold  = False
+                FontStyleItalic  = False
+              EndProperty 
+              ShowStarRow = True
+              ShowHorizontalLines = True
+              BEGIN .VSGridColumn "Application Name"                
+                GridColumnLabel = "Application Name"
+                GridColumnWidth = 0x7D
+                GridColumnDataField = 4
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "Number of Forms/Pages"                
+                GridColumnLabel = "Number of Forms/Pages"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 3
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "TransitionCnt"                
+                GridColumnLabel = "TransitionCnt"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 16
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "isJava"                
+                GridColumnLabel = "isJava"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 5
+                GridColumnEditType = "VSChoice"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "Generated Lines of Code"                
+                GridColumnLabel = "Generated Lines of Code"
+                GridColumnWidth = 0x66
+                GridColumnDataField = 6
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "User Lines of Code"                
+                GridColumnLabel = "User Lines of Code"
+                GridColumnWidth = 0x4F
+                GridColumnDataField = 7
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "Generated Methods"                
+                GridColumnLabel = "Generated Methods"
+                GridColumnWidth = 0x74
+                GridColumnDataField = 8
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "User Methods"                
+                GridColumnLabel = "User Methods"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 9
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "Total Lines of Code"                
+                GridColumnLabel = "Total Lines of Code"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 10
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "Total Method Count"                
+                GridColumnLabel = "Total Method Count"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 11
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "% Generated Lines"                
+                GridColumnLabel = "% Generated Lines"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 12
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "% User Lines"                
+                GridColumnLabel = "% User Lines"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 13
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "% Generated Methods"                
+                GridColumnLabel = "% Generated Methods"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 14
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "% User Methods"                
+                GridColumnLabel = "% User Methods"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 15
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              END
+            ENDTABSHEET
+          BEGIN .VSTabSheet "Relationship(s)"
+            TabSheetIcon = ""
+                          BEGIN .VSImageButton btnT18fRelationship
+                ImageFile = ""
+                Top = 231
+                ClassName = "VSImageButton"
+                Opaque = True
+                BorderPainted = True
+                ReportTarget = ""
+                StatusBarText = ""
+                FormTransitionProperties = ""
+                DataSource = "datT11Relationship"
+                BackColor = 0xebebeb
+                Width = 92
+                ReportURL = ""
+                Enable = True
+                VertTextPos = "BOTTOM"
+                ForeColor = 0x0038bb
+                AutoToolTip = False
+                HelpURL = ""
+                ToolTip = "See Relationship"
+                Visible = True
+                Tag = "_$$_"
+                Action = ""
+                TabOrder = 45
+                Height = 32
+                Left = 23
+                AutoSize = False
+                Constraint = "null"
+                HorizTextPos = "RIGHT"
+                TabStop = True
+                Border = "RAISED_BORDER"
+                Mnemonic = ""
+                Extended = ""
+                Name = "btnT18fRelationship"
+                AutoLabel = False
+                FormTransition = 110001,""
+                BeginProperty VSFont 
+                  FontName  = "Helvetica"
+                  FontSize  = 12
+                  FontStyleBold  = True
+                  FontStyleItalic  = False
+                EndProperty 
+                DisplayStyle = Stretched
+                Label = "Relationship"
+                END
+              BEGIN .VSJavaDataControl datT11Relationship
+                Top = 194
+                ClassName = "VSJavaDataControl"
+                RecordSourceProperties = ""
+                StatusBarText = ""
+                AllowInsert = True
+                BackColor = 0xffffff
+                Width = 150
+                AllowUpdate = True
+                RecordSource = 11,"T11Relationship"
+                Enable = True
+                ForeColor = 0x000000
+                AllowDelete = True
+                HelpURL = ""
+                ToolTip = ""
+                Visible = False
+                Tag = "_$$_"
+                MaxRowsPerFetch = 16
+                TabOrder = 26
+                Height = 27
+                Left = 3
+                SaveMode = "buffered"
+                Constraint = "null"
+                TabStop = False
+                Extended = ""
+                Name = "datT11Relationship"
+                BeginProperty VSFont 
+                  FontName  = "Helvetica"
+                  FontSize  = 12
+                  FontStyleBold  = False
+                  FontStyleItalic  = False
+                EndProperty 
+                Label = "Relationship(s)"
+                END
+              BEGIN .VSGrid grdT11Relationship
+                RowSelectMode = "SINGLE_SELECTION"
+                HiliteForeColor = 0xffffff
+                Top = 25
+                ClassName = "VSGrid"
+                DisplayHeader = True
+                BorderStyle = "PLAIN_BORDER"
+                DataSource = "datT11Relationship"
+                BackColor = 0xffffff
+                Width = 848
+                RowSelectionAllowed = False
+                DisplayGridLines = True
+                Enable = True
+                ForeColor = 0x000000
+                HelpURL = ""
+                ToolTip = ""
+                Visible = True
+                Tag = "_$$_"
+                RowHeaderBackColor = 0x004080
+                Columns = ""
+                TabOrder = 27
+                Height = 203
+                Left = 7
+                ColumnHeaderBackColor = 0x004080
+                ShowVerticalLines = True
+                RowHeight = 20
+                RowHeaderForeColor = 0xebebeb
+                DisableBackColor = 0xffffff
+                BeginProperty VSHeaderFont
+                  FontName  = "Helvetica"
+                  FontSize  = 12
+                  FontStyleBold  = False
+                  FontStyleItalic  = False
+                EndProperty 
+                ColumnHeaderForeColor = 0xebebeb
+                Constraint = "null"
+                TabStop = True
+                ColResizeMode = "AUTO_RESIZE_OFF"
+                LineColor = 0xc0c0c0
+                DisableForeColor = 0xc0c0c0
+                Editable = True
+                Extended = ""
+                Name = "grdT11Relationship"
+                RowHeaderWidth = 25
+                HiliteBackColor = 0x004080
+                ColumnHeaderHeight = 17
+                BeginProperty VSFont 
+                  FontName  = "Helvetica"
+                  FontSize  = 12
+                  FontStyleBold  = False
+                  FontStyleItalic  = False
+                EndProperty 
+                ShowStarRow = True
+                ShowHorizontalLines = True
+                BEGIN .VSGridColumn "RolePlayer_CNT"                  
+                  GridColumnLabel = "RolePlayer_CNT"
+                  GridColumnWidth = 0x4B
+                  GridColumnDataField = 10
+                  GridColumnEditType = "VSTextField"
+                  GridColumnControlStyle = ""
+                  JUSTIFY = "JUSTIFY_LEFT"
+                  VALIGN = "VALIGN_CENTER"
+                  GRIDCOLUMNBACKCOLOR = "0xffffff"
+                  GRIDCOLUMNFORECOLOR = "0x000000"
+                  GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                  GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                  GridColumnEnable = True
+                  GridColumnSortAllowed = True
+                  GridColumnFormat = ""
+                  GridColumnPickObject = 0
+                                ENDGRIDCOLUMN
+                BEGIN .VSGridColumn "Relationship Name"                  
+                  GridColumnLabel = "Relationship Name"
+                  GridColumnWidth = 0x94
+                  GridColumnDataField = 2
+                  GridColumnEditType = "VSTextField"
+                  GridColumnControlStyle = ""
+                  JUSTIFY = "JUSTIFY_LEFT"
+                  VALIGN = "VALIGN_CENTER"
+                  GRIDCOLUMNBACKCOLOR = "0xffffff"
+                  GRIDCOLUMNFORECOLOR = "0x000000"
+                  GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                  GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                  GridColumnEnable = True
+                  GridColumnSortAllowed = True
+                  GridColumnFormat = ""
+                  GridColumnPickObject = 0
+                                ENDGRIDCOLUMN
+                BEGIN .VSGridColumn "Parent Data Object"                  
+                  GridColumnLabel = "Parent Data Object"
+                  GridColumnWidth = 0x86
+                  GridColumnDataField = 3
+                  GridColumnEditType = "VSTextField"
+                  GridColumnControlStyle = ""
+                  JUSTIFY = "JUSTIFY_LEFT"
+                  VALIGN = "VALIGN_CENTER"
+                  GRIDCOLUMNBACKCOLOR = "0xffffff"
+                  GRIDCOLUMNFORECOLOR = "0x000000"
+                  GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                  GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                  GridColumnEnable = True
+                  GridColumnSortAllowed = True
+                  GridColumnFormat = ""
+                  GridColumnPickObject = 0
+                                ENDGRIDCOLUMN
+                BEGIN .VSGridColumn "Child Data Object"                  
+                  GridColumnLabel = "Child Data Object"
+                  GridColumnWidth = 0x84
+                  GridColumnDataField = 5
+                  GridColumnEditType = "VSTextField"
+                  GridColumnControlStyle = ""
+                  JUSTIFY = "JUSTIFY_LEFT"
+                  VALIGN = "VALIGN_CENTER"
+                  GRIDCOLUMNBACKCOLOR = "0xffffff"
+                  GRIDCOLUMNFORECOLOR = "0x000000"
+                  GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                  GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                  GridColumnEnable = True
+                  GridColumnSortAllowed = True
+                  GridColumnFormat = ""
+                  GridColumnPickObject = 0
+                                ENDGRIDCOLUMN
+                BEGIN .VSGridColumn "Parent Role Name"                  
+                  GridColumnLabel = "Parent Role Name"
+                  GridColumnWidth = 0x4B
+                  GridColumnDataField = 4
+                  GridColumnEditType = "VSTextField"
+                  GridColumnControlStyle = ""
+                  JUSTIFY = "JUSTIFY_LEFT"
+                  VALIGN = "VALIGN_CENTER"
+                  GRIDCOLUMNBACKCOLOR = "0xffffff"
+                  GRIDCOLUMNFORECOLOR = "0x000000"
+                  GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                  GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                  GridColumnEnable = True
+                  GridColumnSortAllowed = True
+                  GridColumnFormat = ""
+                  GridColumnPickObject = 0
+                                ENDGRIDCOLUMN
+                BEGIN .VSGridColumn "Child Role Name"                  
+                  GridColumnLabel = "Child Role Name"
+                  GridColumnWidth = 0x4B
+                  GridColumnDataField = 6
+                  GridColumnEditType = "VSTextField"
+                  GridColumnControlStyle = ""
+                  JUSTIFY = "JUSTIFY_LEFT"
+                  VALIGN = "VALIGN_CENTER"
+                  GRIDCOLUMNBACKCOLOR = "0xffffff"
+                  GRIDCOLUMNFORECOLOR = "0x000000"
+                  GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                  GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                  GridColumnEnable = True
+                  GridColumnSortAllowed = True
+                  GridColumnFormat = ""
+                  GridColumnPickObject = 0
+                                ENDGRIDCOLUMN
+                BEGIN .VSGridColumn "Is Relationship Enforced?"                  
+                  GridColumnLabel = "Is Relationship Enforced?"
+                  GridColumnWidth = 0x4B
+                  GridColumnDataField = 7
+                  GridColumnEditType = "VSChoice"
+                  GridColumnControlStyle = ""
+                  JUSTIFY = "JUSTIFY_LEFT"
+                  VALIGN = "VALIGN_CENTER"
+                  GRIDCOLUMNBACKCOLOR = "0xffffff"
+                  GRIDCOLUMNFORECOLOR = "0x000000"
+                  GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                  GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                  GridColumnEnable = True
+                  GridColumnSortAllowed = True
+                  GridColumnFormat = ""
+                  GridColumnPickObject = 0
+                                ENDGRIDCOLUMN
+                END
+              ENDTABSHEET
+            END
+          BEGIN .VSLabel lblT1RepositoryName
+            Top = 61
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 102
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 16
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1RepositoryName"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Repository Name"
+            END
+          BEGIN .VSTextField txtT1RepositoryName
+            Top = 60
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 114
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 28
+            Height = 20
+            Left = 120
+            DataField = 1,"RepositoryName"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1RepositoryName"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSPickChoice pckT1RepositoryVersion
+            Top = 89
+            ClassName = "VSPickChoice"
+            StatusBarText = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 120
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = "Repository Version"
+            Visible = True
+            Tag = "_$$_"
+            TabOrder = 29
+            Height = 20
+            Left = 120
+            PickObjectProperties = ""
+            DataField = 2,"RepositoryVersion"
+            PickObject = 2,"T2ReposVersion"
+            Constraint = "null"
+            AllowMultipleValue = True
+            TabStop = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "pckT1RepositoryVersion"
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1RepositoryVersion
+            Top = 89
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 102
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 16
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1RepositoryVersion"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Repository Version"
+            END
+          BEGIN .VSLabel lblT1DataObject_Cnt
+            Top = 114
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 102
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 16
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1DataObject_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Data Objects"
+            END
+          BEGIN .VSTextField txtT1DataObject_Cnt
+            Top = 113
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 30
+            Height = 20
+            Left = 120
+            DataField = 3,"DataObject_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1DataObject_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1Relationship_Cnt
+            Top = 142
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 102
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 16
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1Relationship_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Relationships"
+            END
+          BEGIN .VSTextField txtT1Relationship_Cnt
+            Top = 141
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 31
+            Height = 20
+            Left = 120
+            DataField = 4,"Relationship_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1Relationship_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1Attr_Cnt
+            Top = 170
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 102
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 16
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1Attr_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Attribute Count"
+            END
+          BEGIN .VSTextField txtT1Attr_Cnt
+            Top = 169
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 32
+            Height = 20
+            Left = 120
+            DataField = 5,"Attr_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1Attr_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1Action_Cnt
+            Top = 61
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 165
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 246
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1Action_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Number of Actions"
+            END
+          BEGIN .VSTextField txtT1Action_Cnt
+            Top = 60
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 33
+            Height = 20
+            Left = 412
+            DataField = 6,"Action_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1Action_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1Constraint_Cnt
+            Top = 89
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 165
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 246
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1Constraint_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Number of Constraints"
+            END
+          BEGIN .VSTextField txtT1Constraint_Cnt
+            Top = 88
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 34
+            Height = 20
+            Left = 412
+            DataField = 7,"Constraint_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1Constraint_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1Java_App_Cnt
+            Top = 117
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 165
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 246
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1Java_App_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Java Applications"
+            END
+          BEGIN .VSTextField txtT1Java_App_Cnt
+            Top = 116
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 35
+            Height = 20
+            Left = 412
+            DataField = 8,"Java_App_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1Java_App_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1HTML_App_Cnt
+            Top = 145
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 165
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 246
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1HTML_App_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "HTML Applications"
+            END
+          BEGIN .VSTextField txtT1HTML_App_Cnt
+            Top = 144
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 36
+            Height = 20
+            Left = 412
+            DataField = 9,"HTML_App_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1HTML_App_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1Gen_Lines_Cnt
+            Top = 89
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 165
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 477
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1Gen_Lines_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Generated Lines of Code"
+            END
+          BEGIN .VSTextField txtT1Gen_Lines_Cnt
+            Top = 87
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 37
+            Height = 20
+            Left = 664
+            DataField = 10,"Gen_Lines_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1Gen_Lines_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSJavaDataControl datT1Repository
+            Top = 214
+            ClassName = "VSJavaDataControl"
+            RecordSourceProperties = ""
+            StatusBarText = ""
+            AllowInsert = True
+            BackColor = 0xffffff
+            Width = 146
+            AllowUpdate = True
+            RecordSource = 1,"T1Repository"
+            Enable = True
+            ForeColor = 0x000000
+            AllowDelete = True
+            HelpURL = ""
+            ToolTip = ""
+            Visible = False
+            Tag = "_$$_"
+            MaxRowsPerFetch = 16
+            TabOrder = 38
+            Height = 25
+            Left = 181
+            SaveMode = "immediate"
+            Constraint = "null"
+            TabStop = False
+            Extended = ""
+            Name = "datT1Repository"
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Repository"
+            END
+          BEGIN .VSLabel lblT1Total_Line_Cnt
+            Top = 61
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 165
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 477
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1Total_Line_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Total Lines of Code"
+            END
+          BEGIN .VSTextField txtT1Total_Line_Cnt
+            Top = 60
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 6
+            Height = 20
+            Left = 665
+            DataField = 14,"Total_Line_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1Total_Line_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1Total_Method_Cnt
+            Top = 90
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 110
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 23
+            Left = 725
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1Total_Method_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Total Method Count"
+            END
+          BEGIN .VSTextField txtT1Total_Method_Cnt
+            Top = 92
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 7
+            Height = 20
+            Left = 838
+            DataField = 15,"Total_Method_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1Total_Method_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1QueryObject_Cnt
+            Top = 117
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 165
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 477
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1QueryObject_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Query Objects"
+            END
+          BEGIN .VSTextField txtT1QueryObject_Cnt
+            Top = 116
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 10
+            Height = 20
+            Left = 665
+            DataField = 24,"QueryObject_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1QueryObject_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1JavaForm_Cnt
+            Top = 145
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 165
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 477
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1JavaForm_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "Java Forms"
+            END
+          BEGIN .VSTextField txtT1JavaForm_Cnt
+            Top = 144
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 11
+            Height = 20
+            Left = 665
+            DataField = 25,"JavaForm_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1JavaForm_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1HTML_Form_Cnt
+            Top = 173
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 165
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 477
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1HTML_Form_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "HTML Forms"
+            END
+          BEGIN .VSTextField txtT1HTML_Form_Cnt
+            Top = 172
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 13
+            Height = 20
+            Left = 665
+            DataField = 26,"HTML_Form_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1HTML_Form_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1ReposInternalName
+            Top = 7
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 120
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 507
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1ReposInternalName"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "ReposInternalName"
+            END
+          BEGIN .VSTextField txtT1ReposInternalName
+            Top = 5
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 114
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 5
+            Height = 20
+            Left = 630
+            DataField = 27,"ReposInternalName"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1ReposInternalName"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1User_Method_Cnt
+            Top = 70
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 102
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 749
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1User_Method_Cnt"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "User Methods"
+            END
+          BEGIN .VSTextField txtT1User_Method_Cnt
+            Top = 69
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 50
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 4
+            Height = 20
+            Left = 836
+            DataField = 13,"User_Method_Cnt"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1User_Method_Cnt"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          BEGIN .VSLabel lblT1RootDirectory
+            Top = 31
+            ClassName = "VSLabel"
+            Opaque = False
+            StatusBarText = ""
+            BorderStyle = "NO_BORDER"
+            DataSource = ""
+            HorizAlign = "LEFT"
+            BackColor = 0xebebeb
+            Width = 102
+            Enable = True
+            VertTextPos = "BOTTOM"
+            DisplayedMnemonic = ""
+            ForeColor = 0x0038bb
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Height = 18
+            Left = 528
+            DataField = 0
+            Icon = ""
+            Constraint = "null"
+            VertAlign = "CENTER"
+            HorizTextPos = "RIGHT"
+            Extended = ""
+            Name = "lblT1RootDirectory"
+            LabelFor = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = True
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "RootDirectory"
+            END
+          BEGIN .VSTextField txtT1RootDirectory
+            Top = 30
+            ClassName = "VSTextField"
+            StatusBarText = ""
+            HorizAlign = "LEFT"
+            EchoChar = ""
+            DataSource = "datT1Repository"
+            BackColor = 0xffffff
+            Width = 114
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            Format = ""
+            Columns = 0
+            TabOrder = 3
+            Height = 20
+            Left = 632
+            DataField = 28,"RootDirectory"
+            Constraint = "null"
+            TabStop = True
+            Editable = True
+            DisplayMode = "Data/Query"
+            Extended = ""
+            Name = "txtT1RootDirectory"
+            Text = ""
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            END
+          END
+        ]]></FormLayout>
+</Form>

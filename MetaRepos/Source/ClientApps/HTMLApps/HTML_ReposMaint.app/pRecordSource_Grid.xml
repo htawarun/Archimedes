@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="HTML"
+	Archetype="Default"
+	PositionTop="125"
+	PositionLeft="959.375"
+	PositionWidth="220.3125"
+	PositionHeight="54.6875"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="False"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	ClassName="versata.pdx.html.VSPagePDX"
+	ObjectsRemovedFromLayout="False"
+	HTMLFileCheckSum="583835313"
+	>
+	<FormCaption><![CDATA[RecordSource(s)]]></FormCaption>
+	<ArchetypeExtendedProperties>
+		<Property
+			Name="Comments"
+			Value=""
+		/>
+		<Property
+			Name="CommentsTrailing"
+			Value=""
+		/>
+		<Property
+			Name="CrumbTrailEnabled"
+			Value="true"
+		/>
+		<Property
+			Name="CrumbTrailIncludesThisPage"
+			Value="true"
+		/>
+		<Property
+			Name="CrumbTrailRestartsHere"
+			Value="false"
+		/>
+		<Property
+			Name="CrumbTrailSeparator"
+			Value="&gt;"
+		/>
+		<Property
+			Name="ErrorStyle"
+			Value="Popup"
+		/>
+		<Property
+			Name="IncludeFooter"
+			Value="false"
+		/>
+		<Property
+			Name="IncludeHeader"
+			Value="false"
+		/>
+		<Property
+			Name="IncludeLeftBar"
+			Value="false"
+		/>
+		<Property
+			Name="IncludeRightBar"
+			Value="false"
+		/>
+		<Property
+			Name="ShowCancelButton"
+			Value="true"
+		/>
+		<Property
+			Name="ShowFormCaption"
+			Value="true"
+		/>
+		<Property
+			Name="ShowReturnButton"
+			Value="true"
+		/>
+		<Property
+			Name="TransitionsToHide"
+			Value=""
+		/>
+	</ArchetypeExtendedProperties>
+	<RecordSource
+		RSID="1"
+		Prefix="T1"
+		BusinessObject="RecordSource"
+		RelnIsFromParent="False"
+		DoesSourceAffectMe="False"
+		DoIAffectSource="False"
+		IsAddedAfterGen="False"
+		RsAttributesDefault="True"
+		ClassName="versata.pdx.html.DataSourcePDX"
+		RecordSourceArchetype="GridUpdatable"
+		MaxGridRowCount="10"
+		FetchedBlockRowCount="16"
+		AllowDelete="True"
+		AllowInsert="True"
+		AllowUpdate="True"
+		SaveMode="Immediate"
+		PreFetchRowCount="False"
+		>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<RSAttributesMeta>
+			<DefaultAttributes>
+				<RSDefaultAttribute ID="1" Name="RepositoryName" />
+				<RSDefaultAttribute ID="2" Name="ApplicationName" />
+				<RSDefaultAttribute ID="3" Name="FormName" />
+				<RSDefaultAttribute ID="4" Name="Attr_Cnt" />
+				<RSDefaultAttribute ID="5" Name="BusinessObject" />
+				<RSDefaultAttribute ID="6" Name="PlacedAttrCnt" />
+				<RSDefaultAttribute ID="7" Name="DisplayedAttrCnt" />
+				<RSDefaultAttribute ID="8" Name="ScalarGrid" />
+				<RSDefaultAttribute ID="9" Name="AllowInsert" />
+				<RSDefaultAttribute ID="10" Name="AllowUpdate" />
+				<RSDefaultAttribute ID="11" Name="AllowDelete" />
+				<RSDefaultAttribute ID="12" Name="Relationship" />
+				<RSDefaultAttribute ID="13" Name="ClassName" />
+				<RSDefaultAttribute ID="14" Name="RSID" />
+				<RSDefaultAttribute ID="15" Name="TransitionCnt" />
+				<RSDefaultAttribute ID="16" Name="RecordSourceArchetype" />
+			</DefaultAttributes>
+			<GridAttributes>
+				<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ApplicationName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="FormName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="BusinessObject" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="PlacedAttrCnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="DisplayedAttrCnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ScalarGrid" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="AllowInsert" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="AllowUpdate" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="AllowDelete" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Relationship" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ClassName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RSID" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="TransitionCnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RecordSourceArchetype" Displayed="True" UnPlaced="False" />
+			</GridAttributes>
+		</RSAttributesMeta>
+		<ArchetypeExtendedProperties>
+			<Property
+				Name="AltRowColor"
+				Value="#EFEFEF"
+			/>
+			<Property
+				Name="Caption"
+				Value=""
+			/>
+			<Property
+				Name="Comments"
+				Value=""
+			/>
+			<Property
+				Name="CommentsTrailing"
+				Value="&lt;br&gt;"
+			/>
+			<Property
+				Name="Cond0HideRecSrc"
+				Value=""
+			/>
+			<Property
+				Name="Cond1"
+				Value=""
+			/>
+			<Property
+				Name="Cond1Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond2"
+				Value=""
+			/>
+			<Property
+				Name="Cond2Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond3"
+				Value=""
+			/>
+			<Property
+				Name="Cond3Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond4"
+				Value=""
+			/>
+			<Property
+				Name="Cond4Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond5"
+				Value=""
+			/>
+			<Property
+				Name="Cond5Actions"
+				Value=""
+			/>
+			<Property
+				Name="ConfirmDeleteMsg"
+				Value="Delete record?"
+			/>
+			<Property
+				Name="NoDataMessage"
+				Value="&lt;br&gt;&lt;center&gt;&lt;b&gt;No records found!&lt;/b&gt;&lt;/center&gt;&lt;br&gt;"
+			/>
+			<Property
+				Name="ShowHeader"
+				Value="true"
+			/>
+			<Property
+				Name="ShowRowCount"
+				Value="true"
+			/>
+			<Property
+				Name="ShowRowSelector"
+				Value="true"
+			/>
+			<Property
+				Name="SortableHeader"
+				Value="true"
+			/>
+			<Property
+				Name="TabCaption"
+				Value=""
+			/>
+			<Property
+				Name="TabGenerated"
+				Value="true"
+			/>
+			<Property
+				Name="TabImageHeight"
+				Value=""
+			/>
+			<Property
+				Name="TabImageOff"
+				Value=""
+			/>
+			<Property
+				Name="TabImageOn"
+				Value=""
+			/>
+			<Property
+				Name="TabImageWidth"
+				Value=""
+			/>
+			<Property
+				Name="UsePopupPicks"
+				Value="true"
+			/>
+		</ArchetypeExtendedProperties>
+		<PickObject
+			RSID="2"
+			Prefix="T2"
+			BusinessObject="DataObject"
+			Relationship="DataObject3(DataObject)-RecordSource(RecordSource)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="True"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [DataObjectName] = [?BusinessObject]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="DataObjectName" />
+					<RSDefaultAttribute ID="3" Name="isCodedValueList" />
+					<RSDefaultAttribute ID="4" Name="SuperClass" />
+					<RSDefaultAttribute ID="5" Name="SingularCaption" />
+					<RSDefaultAttribute ID="6" Name="PluralCaption" />
+					<RSDefaultAttribute ID="7" Name="Description" />
+					<RSDefaultAttribute ID="8" Name="Attr_Cnt" />
+					<RSDefaultAttribute ID="9" Name="Constraint_Cnt" />
+					<RSDefaultAttribute ID="10" Name="Action_Cnt" />
+					<RSDefaultAttribute ID="11" Name="ParentReln_Cnt" />
+					<RSDefaultAttribute ID="12" Name="ChildReln_Cnt" />
+					<RSDefaultAttribute ID="13" Name="CountQueryObj" />
+					<RSDefaultAttribute ID="14" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="15" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="16" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="17" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="18" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="19" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="20" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="21" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="22" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="23" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="24" Name="InternalPathName" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DataObjectName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="isCodedValueList" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="SuperClass" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="SingularCaption" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="PluralCaption" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Description" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ParentReln_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ChildReln_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="CountQueryObj" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="InternalPathName" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+		<PickObject
+			RSID="3"
+			Prefix="T3"
+			BusinessObject="Form"
+			Relationship="MyForm(Form)-RecordSources(RecordSource)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="True"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="True"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [ApplicationName] = [?ApplicationName] and [FormName] = [?FormName]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="RecordSource_Cnt" />
+					<RSDefaultAttribute ID="3" Name="ApplicationName" />
+					<RSDefaultAttribute ID="4" Name="isJava" />
+					<RSDefaultAttribute ID="5" Name="FormName" />
+					<RSDefaultAttribute ID="6" Name="RecordSourceCnt" />
+					<RSDefaultAttribute ID="7" Name="FormCaption" />
+					<RSDefaultAttribute ID="8" Name="FormLayout" />
+					<RSDefaultAttribute ID="9" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="10" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="11" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="12" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="13" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="14" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="15" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="16" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="17" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="18" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="19" Name="TransitionCount" />
+					<RSDefaultAttribute ID="20" Name="HasCustomFormLayout" />
+					<RSDefaultAttribute ID="21" Name="ClassName" />
+					<RSDefaultAttribute ID="22" Name="Archetype" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RecordSource_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ApplicationName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="isJava" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="FormName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RecordSourceCnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="FormCaption" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="FormLayout" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="TransitionCount" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="HasCustomFormLayout" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ClassName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Archetype" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+		<PickObject
+			RSID="4"
+			Prefix="T4"
+			BusinessObject="QueryObject"
+			Relationship="QueryObject2(QueryObject)-RecordSource1(RecordSource)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="True"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [QueryObjectName] = [?BusinessObject]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="QueryObjectName" />
+					<RSDefaultAttribute ID="3" Name="SuperClass" />
+					<RSDefaultAttribute ID="4" Name="Description" />
+					<RSDefaultAttribute ID="5" Name="DataObject_Cnt" />
+					<RSDefaultAttribute ID="6" Name="Reln_Cnt" />
+					<RSDefaultAttribute ID="7" Name="RuntimeSql" />
+					<RSDefaultAttribute ID="8" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="9" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="10" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="11" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="13" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="14" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="15" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="16" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="17" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="18" Name="InternalPathName" />
+					<RSDefaultAttribute ID="19" Name="Attr_Cnt" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="QueryObjectName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="SuperClass" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Description" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Reln_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RuntimeSql" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="InternalPathName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+		<Transition
+			FormTransNum="1"
+			Prefix="T5"
+			TargetFormName="pRSAttribute_Grid"
+			IsTargetInitialQueryMode="False"
+			IsTargetInitialAddMode="False"
+			IsVisibleAppline="True"
+			IsAddedAfterGen="False"
+			ClassName="PageNavigation"
+			TargetFramesetPage=""
+			TargetFrame=""
+			FrameNameInFramesetPage=""
+			RSID="5"
+			BusinessObject="RSAttribute"
+			Relationship="RecordSource(RecordSource)-RSAttribute(RSAttribute)"
+			RelnIsFromParent="True"
+			>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [ApplicationName] = [?ApplicationName] and [FormName] = [?FormName] and [BusinessObject] = [?BusinessObject] and [RSID] = [?RSID]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		</Transition>
+	</RecordSource>
+</Form>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	DTDVersion="05.05.12"
+	SurrId="0423940055.Tyler.0005"
+	CodedValuesList="False"
+	ImageReference=" "
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	XdaConnector="SQL"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	>
+	<Attributes>
+		<Attribute
+			Name="ReposInternalName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="PK_REPOSNAME"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="ReposInternalName"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+	<SingularCaption><![CDATA[*]]></SingularCaption>
+	<PluralCaption><![CDATA[*]]></PluralCaption>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<Description><![CDATA[Each repository has a unique name - this is the ROOT for the entire system.]]></Description>
+	<Comments><![CDATA[ ]]></Comments>
+</DataObject>

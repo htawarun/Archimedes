@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	SurrId="0417538787.tband.0000"
+	CodedValuesList="False"
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	ImageReference=" "
+	XdaConnector="SQL"
+	DTDVersion="05.05.12"
+	>
+	<CodedValuesList
+		DisplayAttribute=" "
+		StoredAttribute=" "
+	/>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<SingularCaption><![CDATA[*]]> </SingularCaption>
+	<PluralCaption><![CDATA[*]]> </PluralCaption>
+	<Description><![CDATA[QueryObject is like a view - it allows multiple datasources to be joined togehter it also allows projection or restriction of columns into the view.]]> </Description>
+	<Comments><![CDATA[ ]]> </Comments>
+	<Attributes>
+		<Attribute
+			Name="RepositoryName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Repository Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="QueryObjectName"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Query Object Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="SuperClass"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="Description"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Memo"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="DataObject_Cnt"
+			Persistent="True"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Count"
+				SourceDataObject="QueryDataObjects1(QueryDataObject)"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Count of DataObjects]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Reln_Cnt"
+			Persistent="True"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Count"
+				SourceDataObject="QueryJoinDataObjects(QueryJoinDataObject)"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Count of Relationships]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="RuntimeSql"
+			Persistent="True"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			>
+			<DataType
+				DataType="Memo"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Caption><![CDATA[Runtime SQL]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Gen_Lines_Cnt"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Default"
+				>
+				<DefaultValue><![CDATA[0]]></DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Generated Lines of Code]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="User_Line_Cnt"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Default"
+				>
+				<DefaultValue><![CDATA[0]]></DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[User Lines of Code]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Gen_Method_Cnt"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Default"
+				>
+				<DefaultValue><![CDATA[0]]></DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Generated Methods]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="User_Method_Cnt"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Default"
+				>
+				<DefaultValue><![CDATA[0]]></DefaultValue>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[User Methods]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Total_Line_Cnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ Gen_Lines_Cnt  +  User_Line_Cnt  ]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Total Lines of Code]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Total_Method_Cnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ Gen_Method_Cnt  +  User_Method_Cnt ]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Total Method Count]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Gen_Line_Pct"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Decimal"
+				Precision="10"
+				Scale="2"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ If ( Total_Line_Cnt  = 0) Then
+	$value = 0
+Else
+	$value = (Gen_Lines_Cnt  /  Total_Line_Cnt ) * 100
+End If ]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[% Generated Lines]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="User_Line_Pct"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Decimal"
+				Precision="10"
+				Scale="2"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ If ( Total_Line_Cnt  = 0) Then
+   $value = 0
+Else
+       $value = (User_Line_Cnt / Total_Line_Cnt ) * 100
+end if]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[% User Lines]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="Gen_Method_Pct"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Decimal"
+				Precision="10"
+				Scale="2"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ If ( Total_Method_Cnt = 0) Then
+   $value = 0
+Else
+  $value= (Gen_Method_Cnt  /  Total_Method_Cnt ) * 100
+end if]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[% Generated Methods]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="User_Method_Pct"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Decimal"
+				Precision="10"
+				Scale="2"
+			/>
+			<Derivation
+				DerivationType="Formula"
+				>
+				<Formula><![CDATA[ If ( Total_Method_Cnt = 0) Then
+   $value = 0
+Else
+  $value= (User_Method_Cnt / Total_Method_Cnt ) * 100
+end if]]></Formula>
+			</Derivation>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[% User Methods]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="InternalPathName"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="250"
+			/>
+		</Attribute>
+		<Attribute
+			Name="Attr_Cnt"
+			PreventUserUpdates="True"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="Integer"
+			/>
+			<Derivation
+				SourceDataObject="QueryAttr(QueryAttr)"
+				DerivationType="Count"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[Attribute Count]]></Caption>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="QueryObjPkey"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="RepositoryName"
+				Descending="False"
+			/>
+			<Index_Attribute
+				Name="QueryObjectName"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+</DataObject>

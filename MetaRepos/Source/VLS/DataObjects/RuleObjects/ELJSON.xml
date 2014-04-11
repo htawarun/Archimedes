@@ -1,0 +1,1784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport/1174&quot;,&quot;checksum&quot;:&quot;R:c0ab7b7722e9ec9d&quot;}">
+      <ApiKeys>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiKeys/1526&quot;,&quot;checksum&quot;:&quot;R:206670318b8bd364&quot;}">
+            <apikey>Sample1 Key</apikey>
+            <data null="true" />
+            <default_access>A</default_access>
+            <description null="true" />
+            <expiration null="true" />
+            <ident>1526</ident>
+            <logging>admini=OFF,buslog=FINE,depend=OFF,generl=OFF,persis=FINE,recomp=OFF,engine=FINER,resrcs=OFF,sysdbg=OFF</logging>
+            <name>Sample1</name>
+            <project_ident>1174</project_ident>
+            <status>A</status>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <user_identifier null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiKeys/1527&quot;,&quot;checksum&quot;:&quot;R:fff0559adea50fd0&quot;}">
+            <apikey>Sample2 Key</apikey>
+            <data null="true" />
+            <default_access />
+            <description null="true" />
+            <expiration null="true" />
+            <ident>1527</ident>
+            <logging null="true" />
+            <name>Sample2</name>
+            <project_ident>1174</project_ident>
+            <status>A</status>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <user_identifier null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiKeys/1528&quot;,&quot;checksum&quot;:&quot;R:fb405884fbd59af4&quot;}">
+            <apikey>Sample3 Key</apikey>
+            <data>maxAmount=200</data>
+            <default_access />
+            <description null="true" />
+            <expiration null="true" />
+            <ident>1528</ident>
+            <logging null="true" />
+            <name>Sample3</name>
+            <project_ident>1174</project_ident>
+            <status>A</status>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <user_identifier null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiKeys/1529&quot;,&quot;checksum&quot;:&quot;R:6d57f39dbb0da929&quot;}">
+            <apikey>A. Lincoln Key</apikey>
+            <data>maxAmount=49, userName="A. Lincoln"</data>
+            <default_access />
+            <description null="true" />
+            <expiration null="true" />
+            <ident>1529</ident>
+            <logging>admini=OFF,buslog=OFF,depend=OFF,generl=OFF,persis=FINE,recomp=OFF,engine=FINE,resrcs=OFF,sysdbg=OFF</logging>
+            <name>Lincoln, A</name>
+            <project_ident>1174</project_ident>
+            <status>A</status>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <user_identifier null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiKeys/1530&quot;,&quot;checksum&quot;:&quot;R:d66d11c2fe628825&quot;}">
+            <apikey>Guest Key</apikey>
+            <data null="true" />
+            <default_access />
+            <description null="true" />
+            <expiration null="true" />
+            <ident>1530</ident>
+            <logging>admini=OFF,buslog=OFF,depend=OFF,generl=OFF,persis=FINE,recomp=OFF,engine=FINE,resrcs=OFF,sysdbg=OFF</logging>
+            <name>Guest</name>
+            <project_ident>1174</project_ident>
+            <status>A</status>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <user_identifier null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiKeys/1531&quot;,&quot;checksum&quot;:&quot;R:75ad8827651d7cd0&quot;}">
+            <apikey>Admin Key</apikey>
+            <data null="true" />
+            <default_access>A</default_access>
+            <description null="true" />
+            <expiration null="true" />
+            <ident>1531</ident>
+            <logging>admini=OFF,buslog=FINE,depend=OFF,generl=OFF,persis=FINE,recomp=OFF,engine=FINER,resrcs=OFF,sysdbg=OFF</logging>
+            <name>Admin</name>
+            <project_ident>1174</project_ident>
+            <status>A</status>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <user_identifier null="true" />
+         </element>
+      </ApiKeys>
+      <ApiVersions>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions/1176&quot;,&quot;checksum&quot;:&quot;R:b12381feccc1252d&quot;}">
+            <Resources>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2465&quot;,&quot;checksum&quot;:&quot;R:3e993b3ac4ac7e69&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4938&quot;,&quot;checksum&quot;:&quot;R:966885819c554f86&quot;}">
+                        <code_type null="true" />
+                        <column_name>name</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4938</ident>
+                        <name>Name</name>
+                        <resource_ident>2465</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4939&quot;,&quot;checksum&quot;:&quot;R:fbe859ca3882db6b&quot;}">
+                        <code_type null="true" />
+                        <column_name>balance</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4939</ident>
+                        <name>Balance</name>
+                        <resource_ident>2465</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4940&quot;,&quot;checksum&quot;:&quot;R:afada1adc752b0b8&quot;}">
+                        <code_type null="true" />
+                        <column_name>credit_limit</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4940</ident>
+                        <name>CreditLimit</name>
+                        <resource_ident>2465</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident null="true" />
+                  <custom_class null="true" />
+                  <description>Small resource for test</description>
+                  <filter null="true" />
+                  <ident>2465</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition null="true" />
+                  <linked_ident null="true" />
+                  <links />
+                  <name>cust</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2465</root_ident>
+                  <sorting>name asc</sorting>
+                  <table_name>customers</table_name>
+                  <ts>2013-08-17T23:50:45.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2466&quot;,&quot;checksum&quot;:&quot;R:0ba09932eede9d6a&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4941&quot;,&quot;checksum&quot;:&quot;R:f6a5b7935a7815c2&quot;}">
+                        <code_type null="true" />
+                        <column_name>ident</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4941</ident>
+                        <name>OrderID</name>
+                        <resource_ident>2466</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4942&quot;,&quot;checksum&quot;:&quot;R:9b7e146dfaee0279&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount_total</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4942</ident>
+                        <name>AmountTotal</name>
+                        <resource_ident>2466</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4943&quot;,&quot;checksum&quot;:&quot;R:aab3e09862300124&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount_discounted</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4943</ident>
+                        <name>AmountDiscounted</name>
+                        <resource_ident>2466</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4944&quot;,&quot;checksum&quot;:&quot;R:744fb0aa51a1717b&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount_paid</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4944</ident>
+                        <name>AmountPaid</name>
+                        <resource_ident>2466</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4945&quot;,&quot;checksum&quot;:&quot;R:64c52f7a0620082e&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount_un_paid</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4945</ident>
+                        <name>AmountUnPaid</name>
+                        <resource_ident>2466</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4946&quot;,&quot;checksum&quot;:&quot;R:3bf3791ac3234323&quot;}">
+                        <code_type null="true" />
+                        <column_name>is_ready</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4946</ident>
+                        <name>IsReady</name>
+                        <resource_ident>2466</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4947&quot;,&quot;checksum&quot;:&quot;R:5a9d33d0bcda09ac&quot;}">
+                        <code_type null="true" />
+                        <column_name>placed_date</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4947</ident>
+                        <name>placed_date</name>
+                        <resource_ident>2466</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4948&quot;,&quot;checksum&quot;:&quot;R:0ebdd4a188038170&quot;}">
+                        <code_type null="true" />
+                        <column_name>customer_name</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4948</ident>
+                        <name>customer</name>
+                        <resource_ident>2466</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4949&quot;,&quot;checksum&quot;:&quot;R:7c68515ed4e8546b&quot;}">
+                        <code_type null="true" />
+                        <column_name>approving_officer</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4949</ident>
+                        <name>approvingOfficer</name>
+                        <resource_ident>2466</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2465</container_ident>
+                  <custom_class null="true" />
+                  <description />
+                  <filter>approving_officer &lt;&gt; 'G PO.4'</filter>
+                  <ident>2466</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition>customer_name = [name]</join_condition>
+                  <linked_ident null="true" />
+                  <links />
+                  <name>orders_c</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2465</root_ident>
+                  <sorting>placed_date asc</sorting>
+                  <table_name>orders</table_name>
+                  <ts>2013-08-17T23:50:45.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2467&quot;,&quot;checksum&quot;:&quot;R:d86fec2684e9f138&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4950&quot;,&quot;checksum&quot;:&quot;R:bc255f078216480f&quot;}">
+                        <code_type null="true" />
+                        <column_name>product_name</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4950</ident>
+                        <name>ProductName</name>
+                        <resource_ident>2467</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4951&quot;,&quot;checksum&quot;:&quot;R:cd9e4015a0b525f4&quot;}">
+                        <code_type null="true" />
+                        <column_name>quantity_ordered</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4951</ident>
+                        <name>QuantityOrdered</name>
+                        <resource_ident>2467</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4952&quot;,&quot;checksum&quot;:&quot;R:30c5cc7b8d62d6f2&quot;}">
+                        <code_type null="true" />
+                        <column_name>part_price</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4952</ident>
+                        <name>PartPrice</name>
+                        <resource_ident>2467</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4953&quot;,&quot;checksum&quot;:&quot;R:dc200ca890ced1a8&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4953</ident>
+                        <name>Amount</name>
+                        <resource_ident>2467</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2466</container_ident>
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2467</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition>order_ident = [ident]</join_condition>
+                  <linked_ident null="true" />
+                  <links />
+                  <name>items_o</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2465</root_ident>
+                  <sorting>product_name asc</sorting>
+                  <table_name>lineitems</table_name>
+                  <ts>2013-08-17T23:50:45.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2468&quot;,&quot;checksum&quot;:&quot;R:5cefb46e62382f5c&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4954&quot;,&quot;checksum&quot;:&quot;R:1446c1a8ef314960&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4954</ident>
+                        <name>Amount</name>
+                        <resource_ident>2468</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4955&quot;,&quot;checksum&quot;:&quot;R:d20f232f3be4bc33&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount_un_disbursed</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4955</ident>
+                        <name>AmtUnDisbursed</name>
+                        <resource_ident>2468</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4956&quot;,&quot;checksum&quot;:&quot;R:6e5860fb6d6908b5&quot;}">
+                        <code_type null="true" />
+                        <column_name>ident</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4956</ident>
+                        <name>PaymentId</name>
+                        <resource_ident>2468</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2465</container_ident>
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2468</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition>customer_name = [name]</join_condition>
+                  <linked_ident null="true" />
+                  <links />
+                  <name>payments_c</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2465</root_ident>
+                  <sorting>placed_date asc</sorting>
+                  <table_name>payments</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2469&quot;,&quot;checksum&quot;:&quot;R:9d055151df5a33b0&quot;}">
+                  <ResourceAttributes />
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2466</container_ident>
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2469</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition>order_ident = [ident]</join_condition>
+                  <linked_ident null="true" />
+                  <links />
+                  <name>payments_o</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2465</root_ident>
+                  <sorting null="true" />
+                  <table_name>payment_order_allocations</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2470&quot;,&quot;checksum&quot;:&quot;R:b80a7c398261c2ba&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4957&quot;,&quot;checksum&quot;:&quot;R:b97239ab16c9168d&quot;}">
+                        <code_type null="true" />
+                        <column_name>base_salary</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4957</ident>
+                        <name>Salary</name>
+                        <resource_ident>2470</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2466</container_ident>
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2470</ident>
+                  <is_collection>N</is_collection>
+                  <join_condition>name = [salesrep_name]</join_condition>
+                  <linked_ident null="true" />
+                  <links />
+                  <name>emp</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2465</root_ident>
+                  <sorting null="true" />
+                  <table_name>employees</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2471&quot;,&quot;checksum&quot;:&quot;R:e8faddbed1848229&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4958&quot;,&quot;checksum&quot;:&quot;R:2ea04c97d4690d5a&quot;}">
+                        <code_type null="true" />
+                        <column_name>budget</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4958</ident>
+                        <name>Budget</name>
+                        <resource_ident>2471</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4959&quot;,&quot;checksum&quot;:&quot;R:6262db6bf659b66e&quot;}">
+                        <code_type null="true" />
+                        <column_name>notes</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4959</ident>
+                        <name>Notes</name>
+                        <resource_ident>2471</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2470</container_ident>
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2471</ident>
+                  <is_collection>N</is_collection>
+                  <join_condition>name = [department_name]</join_condition>
+                  <linked_ident null="true" />
+                  <links />
+                  <name>dept_e_o</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2465</root_ident>
+                  <sorting null="true" />
+                  <table_name>departments</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2472&quot;,&quot;checksum&quot;:&quot;R:dc7595e0982dbcfb&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4960&quot;,&quot;checksum&quot;:&quot;R:f84f8cf3b6c459a6&quot;}">
+                        <code_type null="true" />
+                        <column_name>notes</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4960</ident>
+                        <name>ProductNotes</name>
+                        <resource_ident>2472</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4961&quot;,&quot;checksum&quot;:&quot;R:0c76345824de6821&quot;}">
+                        <code_type null="true" />
+                        <column_name>price</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4961</ident>
+                        <name>CurrentPrice</name>
+                        <resource_ident>2472</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2467</container_ident>
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2472</ident>
+                  <is_collection>N</is_collection>
+                  <join_condition>name = [product_name]</join_condition>
+                  <linked_ident null="true" />
+                  <links />
+                  <name>product_item</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2465</root_ident>
+                  <sorting null="true" />
+                  <table_name>products</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2473&quot;,&quot;checksum&quot;:&quot;R:48e7f608c877d7f4&quot;}">
+                  <ResourceAttributes />
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2472</container_ident>
+                  <custom_class null="true" />
+                  <description>drill down</description>
+                  <filter null="true" />
+                  <ident>2473</ident>
+                  <is_collection>N</is_collection>
+                  <join_condition>name = [product_name]</join_condition>
+                  <linked_ident>2474</linked_ident>
+                  <links />
+                  <name>product_detail_link</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2465</root_ident>
+                  <sorting null="true" />
+                  <table_name>products</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2474&quot;,&quot;checksum&quot;:&quot;R:56c54f883b27a705&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4962&quot;,&quot;checksum&quot;:&quot;R:06b3ed18df95c882&quot;}">
+                        <code_type null="true" />
+                        <column_name>name</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4962</ident>
+                        <name>ProductName</name>
+                        <resource_ident>2474</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident null="true" />
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2474</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition null="true" />
+                  <linked_ident null="true" />
+                  <links />
+                  <name>product_detail</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2474</root_ident>
+                  <sorting null="true" />
+                  <table_name>products</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2475&quot;,&quot;checksum&quot;:&quot;R:80a0bec5cc0a810d&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4963&quot;,&quot;checksum&quot;:&quot;R:d105d3be1075c681&quot;}">
+                        <code_type null="true" />
+                        <column_name>quantity_ordered</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4963</ident>
+                        <name>QuantityOrdered</name>
+                        <resource_ident>2475</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4964&quot;,&quot;checksum&quot;:&quot;R:ecaddef0fc1c1fd0&quot;}">
+                        <code_type null="true" />
+                        <column_name>part_price</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4964</ident>
+                        <name>PartPrice</name>
+                        <resource_ident>2475</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4965&quot;,&quot;checksum&quot;:&quot;R:a5e070acdb3b7ec1&quot;}">
+                        <code_type null="true" />
+                        <column_name>order_ident</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4965</ident>
+                        <name>FromOrder</name>
+                        <resource_ident>2475</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4966&quot;,&quot;checksum&quot;:&quot;R:2cf6abc3603ac29b&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4966</ident>
+                        <name>Amount</name>
+                        <resource_ident>2475</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2474</container_ident>
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2475</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition>product_name = [name]</join_condition>
+                  <linked_ident null="true" />
+                  <links />
+                  <name>product_item</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2474</root_ident>
+                  <sorting null="true" />
+                  <table_name>lineitems</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2476&quot;,&quot;checksum&quot;:&quot;R:4b7215f29a27268e&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4967&quot;,&quot;checksum&quot;:&quot;R:9581b7cef83bc729&quot;}">
+                        <code_type null="true" />
+                        <column_name>name</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4967</ident>
+                        <name>Name</name>
+                        <resource_ident>2476</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4968&quot;,&quot;checksum&quot;:&quot;R:81e7f14c1ab592fd&quot;}">
+                        <code_type null="true" />
+                        <column_name>base_salary</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4968</ident>
+                        <name>Salary</name>
+                        <resource_ident>2476</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident null="true" />
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2476</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition null="true" />
+                  <linked_ident null="true" />
+                  <links />
+                  <name>emp</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2476</root_ident>
+                  <sorting null="true" />
+                  <table_name>employees</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2477&quot;,&quot;checksum&quot;:&quot;R:9dc8fb19d7ac48e5&quot;}">
+                  <ResourceAttributes>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4969&quot;,&quot;checksum&quot;:&quot;R:c58893dc443e7b1f&quot;}">
+                        <code_type null="true" />
+                        <column_name>ident</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4969</ident>
+                        <name>OrderID</name>
+                        <resource_ident>2477</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4970&quot;,&quot;checksum&quot;:&quot;R:6ddd663729f05a71&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount_total</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4970</ident>
+                        <name>AmountTotal</name>
+                        <resource_ident>2477</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4971&quot;,&quot;checksum&quot;:&quot;R:b7383230efd798b1&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount_discounted</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4971</ident>
+                        <name>AmountDiscounted</name>
+                        <resource_ident>2477</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4972&quot;,&quot;checksum&quot;:&quot;R:2366ee179acb863b&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount_paid</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4972</ident>
+                        <name>AmountPaid</name>
+                        <resource_ident>2477</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4973&quot;,&quot;checksum&quot;:&quot;R:035e7319c986f84a&quot;}">
+                        <code_type null="true" />
+                        <column_name>amount_un_paid</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4973</ident>
+                        <name>AmountUnPaid</name>
+                        <resource_ident>2477</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                     <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources.ResourceAttributes/4974&quot;,&quot;checksum&quot;:&quot;R:b79782abb646a556&quot;}">
+                        <code_type null="true" />
+                        <column_name>is_ready</column_name>
+                        <description />
+                        <format null="true" />
+                        <formula null="true" />
+                        <ident>4974</ident>
+                        <name>IsReady</name>
+                        <resource_ident>2477</resource_ident>
+                        <ts>2013-08-17T23:02:31.000+0000</ts>
+                     </element>
+                  </ResourceAttributes>
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident>2476</container_ident>
+                  <custom_class null="true" />
+                  <description />
+                  <filter null="true" />
+                  <ident>2477</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition>salesrep_name = [name]</join_condition>
+                  <linked_ident null="true" />
+                  <links />
+                  <name>empOrders</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2476</root_ident>
+                  <sorting null="true" />
+                  <table_name>orders</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2478&quot;,&quot;checksum&quot;:&quot;R:6b1fe303c31b77b4&quot;}">
+                  <ResourceAttributes />
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text>select * from orders where ident not in 
+ (select _o.ident from orders _o  
+ join lineitems _l on _l.order_ident = _o.ident  
+ left join products _p on _p.name = _l.product_name 
+ where _p.is_secret = true)</code_text>
+                  <container_ident null="true" />
+                  <custom_class null="true" />
+                  <description>Illustrates Free SQL</description>
+                  <filter null="true" />
+                  <ident>2478</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition null="true" />
+                  <linked_ident null="true" />
+                  <links />
+                  <name>OrdersFreeSql</name>
+                  <resource_type_ident>2</resource_type_ident>
+                  <root_ident>2478</root_ident>
+                  <sorting null="true" />
+                  <table_name>orders</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2479&quot;,&quot;checksum&quot;:&quot;R:c5c84dd2e3740c8a&quot;}">
+                  <ResourceAttributes />
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text null="true" />
+                  <container_ident null="true" />
+                  <custom_class null="true" />
+                  <description>Small resource for test using Sample1</description>
+                  <filter null="true" />
+                  <ident>2479</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition null="true" />
+                  <linked_ident null="true" />
+                  <links />
+                  <name>CustOrdersSvc</name>
+                  <resource_type_ident>1</resource_type_ident>
+                  <root_ident>2479</root_ident>
+                  <sorting>name asc</sorting>
+                  <table_name>customers</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.ApiVersions.Resources/2480&quot;,&quot;checksum&quot;:&quot;R:cd6244f846618dc5&quot;}">
+                  <ResourceAttributes />
+                  <apiversion_ident>1176</apiversion_ident>
+                  <caching null="true" />
+                  <code_text>var restCaller = new com.kahuna.logic.lib.rest.RestCaller(this); 
+ var url = "http://localhost:8080/KahunaService/rest/abl/demo/demo1/purchaseorder";  
+ var key = containingRow.name;  
+ log.debug("..using key: " + key);  
+ url = url + "?filter=customer_name=%22" + key + "%22";   
+ url = url.replace(/ /g, "%20");  
+ var response = restCaller.get(url, null, {headers:{Authorization: "Kahuna demo_full:123"}} ); 
+ return response;</code_text>
+                  <container_ident>2479</container_ident>
+                  <custom_class null="true" />
+                  <description>Illustrates Java Script</description>
+                  <filter null="true" />
+                  <ident>2480</ident>
+                  <is_collection>Y</is_collection>
+                  <join_condition null="true" />
+                  <linked_ident null="true" />
+                  <links />
+                  <name>OrdersSvc</name>
+                  <resource_type_ident>3</resource_type_ident>
+                  <root_ident>2479</root_ident>
+                  <sorting null="true" />
+                  <table_name>orders</table_name>
+                  <ts>2013-08-17T23:50:46.000+0000</ts>
+               </element>
+            </Resources>
+            <comments />
+            <ident>1176</ident>
+            <links />
+            <name>v1</name>
+            <project_ident>1174</project_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+         </element>
+      </ApiVersions>
+      <DbaseSchemas>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.DbaseSchemas/1205&quot;,&quot;checksum&quot;:&quot;R:15cdf0811d360db1&quot;}">
+            <active>true</active>
+            <catalog_name>logic_sample</catalog_name>
+            <comments null="true" />
+            <conn_type null="true" />
+            <dbasetype_ident>1</dbasetype_ident>
+            <ident>1205</ident>
+            <name>Kahuna sample</name>
+            <password>2:WJmsUyRYNzNnXuqylTZh0sxtOO96FQEnTUnGxWSaIY6W/0Xd6UCJ0w==</password>
+            <port_num null="true" />
+            <project_ident>1174</project_ident>
+            <read_only>false</read_only>
+            <salt>6CA6RuU9rX9wSyb7VDrSgwf60GoGz3SleSrAPaTs</salt>
+            <schema_editable>false</schema_editable>
+            <schema_name null="true" />
+            <status>OK 387</status>
+            <ts>2013-08-17T23:53:05.000+0000</ts>
+            <url>jdbc:mysql://testdb.cvcnavw8kt2z.us-east-1.rds.amazonaws.com:3306/logic_sample</url>
+            <user_name>val_demo</user_name>
+         </element>
+      </DbaseSchemas>
+      <ProjectLibraries />
+      <ProjectOptions />
+      <Roles>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles/1350&quot;,&quot;checksum&quot;:&quot;R:44fe98ed6ee88243&quot;}">
+            <ApiKeyRoles>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.ApiKeyRoles/1464&quot;,&quot;checksum&quot;:&quot;R:f7ebf135af073c62&quot;}">
+                  <apikey_ident>1526</apikey_ident>
+                  <ident>1464</ident>
+                  <role_ident>1350</role_ident>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+            </ApiKeyRoles>
+            <PermissionData />
+            <TablePermissions>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1792&quot;,&quot;checksum&quot;:&quot;R:8ff13f82c3fcff3d&quot;}">
+                  <access_type>A</access_type>
+                  <column_names>*</column_names>
+                  <description />
+                  <ident>1792</ident>
+                  <name>Customers not Alpha</name>
+                  <predicate>name != "Alpha and Sons"</predicate>
+                  <role_ident>1350</role_ident>
+                  <table_name>customers</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+            </TablePermissions>
+            <default_permission>A</default_permission>
+            <description>All but Customer Alpha</description>
+            <ident>1350</ident>
+            <links />
+            <name>National administrator</name>
+            <project_ident>1174</project_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles/1351&quot;,&quot;checksum&quot;:&quot;R:ad341e51943b2928&quot;}">
+            <ApiKeyRoles>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.ApiKeyRoles/1465&quot;,&quot;checksum&quot;:&quot;R:2e2baddc60011fc1&quot;}">
+                  <apikey_ident>1527</apikey_ident>
+                  <ident>1465</ident>
+                  <role_ident>1351</role_ident>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+            </ApiKeyRoles>
+            <PermissionData />
+            <TablePermissions />
+            <default_permission>R</default_permission>
+            <description>Can read the entire project</description>
+            <ident>1351</ident>
+            <links />
+            <name>Read-only admin</name>
+            <project_ident>1174</project_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles/1352&quot;,&quot;checksum&quot;:&quot;R:250227f739d3746e&quot;}">
+            <ApiKeyRoles>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.ApiKeyRoles/1466&quot;,&quot;checksum&quot;:&quot;R:a254c81c8cf8d68c&quot;}">
+                  <apikey_ident>1528</apikey_ident>
+                  <ident>1466</ident>
+                  <role_ident>1352</role_ident>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.ApiKeyRoles/1467&quot;,&quot;checksum&quot;:&quot;R:34ee02185c25537c&quot;}">
+                  <apikey_ident>1529</apikey_ident>
+                  <ident>1467</ident>
+                  <role_ident>1352</role_ident>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+            </ApiKeyRoles>
+            <PermissionData>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.PermissionData/1116&quot;,&quot;checksum&quot;:&quot;R:034407f9cfd7a8ea&quot;}">
+                  <code_type>SQL</code_type>
+                  <description null="true" />
+                  <ident>1116</ident>
+                  <name>current_employee</name>
+                  <query>* from employees where name like '%Lincoln%'</query>
+                  <query_order>1</query_order>
+                  <required>true</required>
+                  <role_ident>1352</role_ident>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+            </PermissionData>
+            <TablePermissions>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1793&quot;,&quot;checksum&quot;:&quot;R:9e4a4f8b0a4bb39b&quot;}">
+                  <access_type>A</access_type>
+                  <column_names>name,balance,credit_limit</column_names>
+                  <description />
+                  <ident>1793</ident>
+                  <name>Access customers</name>
+                  <predicate>notes like '%@{current_employee.name}%'</predicate>
+                  <role_ident>1352</role_ident>
+                  <table_name>customers</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1794&quot;,&quot;checksum&quot;:&quot;R:4318b4447489c582&quot;}">
+                  <access_type>A</access_type>
+                  <column_names>customer_name, salesrep_name, amount_total,placed_date,item_count,approving_officer</column_names>
+                  <description />
+                  <ident>1794</ident>
+                  <name>Access orders</name>
+                  <predicate>amount_total &lt;= @{maxAmount}</predicate>
+                  <role_ident>1352</role_ident>
+                  <table_name>orders</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1795&quot;,&quot;checksum&quot;:&quot;R:3900f4f630eff422&quot;}">
+                  <access_type>A</access_type>
+                  <column_names>product_name,quantity_ordered,part_price,amount,order_ident</column_names>
+                  <description />
+                  <ident>1795</ident>
+                  <name>Access lineitems</name>
+                  <predicate>itemOrder.salesrep_name = '@{current_employee.name}'</predicate>
+                  <role_ident>1352</role_ident>
+                  <table_name>lineitems</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1796&quot;,&quot;checksum&quot;:&quot;R:4438124e471e2fd2&quot;}">
+                  <access_type>R</access_type>
+                  <column_names>*</column_names>
+                  <description />
+                  <ident>1796</ident>
+                  <name>Access payment_order_allocations</name>
+                  <predicate>allocationOrder.salesrep_name = '@{current_employee.name}'</predicate>
+                  <role_ident>1352</role_ident>
+                  <table_name>payment_order_allocations</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1797&quot;,&quot;checksum&quot;:&quot;R:e635b2e51e4b7362&quot;}">
+                  <access_type>R</access_type>
+                  <column_names>*</column_names>
+                  <description />
+                  <ident>1797</ident>
+                  <name>Access payments</name>
+                  <predicate null="true" />
+                  <role_ident>1352</role_ident>
+                  <table_name>payments</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1798&quot;,&quot;checksum&quot;:&quot;R:076ac15d9a6c3c0f&quot;}">
+                  <access_type>R</access_type>
+                  <column_names>*</column_names>
+                  <description />
+                  <ident>1798</ident>
+                  <name>Access products</name>
+                  <predicate>$.name != 'Shovel'</predicate>
+                  <role_ident>1352</role_ident>
+                  <table_name>products</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1799&quot;,&quot;checksum&quot;:&quot;R:102d81d756cb3051&quot;}">
+                  <access_type>R</access_type>
+                  <column_names>name,budget</column_names>
+                  <description />
+                  <ident>1799</ident>
+                  <name>Access depts</name>
+                  <predicate null="true" />
+                  <role_ident>1352</role_ident>
+                  <table_name>departments</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1800&quot;,&quot;checksum&quot;:&quot;R:ffec190702f5245d&quot;}">
+                  <access_type>R</access_type>
+                  <column_names>name,employee_type, department_name,notes</column_names>
+                  <description />
+                  <ident>1800</ident>
+                  <name>Access emps</name>
+                  <predicate null="true" />
+                  <role_ident>1352</role_ident>
+                  <table_name>employees</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+            </TablePermissions>
+            <default_permission>A</default_permission>
+            <description>Can access selected data</description>
+            <ident>1352</ident>
+            <links />
+            <name>Normal user</name>
+            <project_ident>1174</project_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles/1353&quot;,&quot;checksum&quot;:&quot;R:0be37ddea9548386&quot;}">
+            <ApiKeyRoles>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.ApiKeyRoles/1468&quot;,&quot;checksum&quot;:&quot;R:58179562ea758fd4&quot;}">
+                  <apikey_ident>1530</apikey_ident>
+                  <ident>1468</ident>
+                  <role_ident>1353</role_ident>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+            </ApiKeyRoles>
+            <PermissionData />
+            <TablePermissions>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.TablePermissions/1801&quot;,&quot;checksum&quot;:&quot;R:a01111d1d29c08f5&quot;}">
+                  <access_type>R</access_type>
+                  <column_names>*</column_names>
+                  <description />
+                  <ident>1801</ident>
+                  <name>No stealth orders</name>
+                  <predicate>ident not in (select _o.ident from orders _o  join lineitems _l on _l.order_ident = _o.ident left join products _p on _p.name = _l.product_name where _p.is_secret = true)</predicate>
+                  <role_ident>1353</role_ident>
+                  <table_name>orders</table_name>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+            </TablePermissions>
+            <default_permission>A</default_permission>
+            <description>No stealth bolts</description>
+            <ident>1353</ident>
+            <links />
+            <name>Guest</name>
+            <project_ident>1174</project_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles/1354&quot;,&quot;checksum&quot;:&quot;R:be0ace6d417fa50d&quot;}">
+            <ApiKeyRoles>
+               <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Roles.ApiKeyRoles/1469&quot;,&quot;checksum&quot;:&quot;R:d909302f95752a40&quot;}">
+                  <apikey_ident>1531</apikey_ident>
+                  <ident>1469</ident>
+                  <role_ident>1354</role_ident>
+                  <ts>2013-08-17T23:02:31.000+0000</ts>
+               </element>
+            </ApiKeyRoles>
+            <PermissionData />
+            <TablePermissions />
+            <default_permission>A</default_permission>
+            <description>Full permissions on the entire project</description>
+            <ident>1354</ident>
+            <links />
+            <name>System administrator</name>
+            <project_ident>1174</project_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+         </element>
+      </Roles>
+      <Rules>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1916&quot;,&quot;checksum&quot;:&quot;R:f5612bf5b28f0e2b&quot;}">
+            <active>true</active>
+            <attribute_name null="true" />
+            <auto_name>Customer.checkCredit as balance &lt;= credit_limit</auto_name>
+            <comments>PlaceOrder.CheckCredit</comments>
+            <entity_name>customers</entity_name>
+            <ident>1916</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.balance &lt;= row.credit_limit</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>5</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1917&quot;,&quot;checksum&quot;:&quot;R:49123f0bb20366c8&quot;}">
+            <active>true</active>
+            <attribute_name>balance</attribute_name>
+            <auto_name>Derive balance as sum(ordersList.amount_un_paid where is_ready = true)</auto_name>
+            <comments>Re-used on: PlaceOrder.CheckCredit; MakeOrderReady; Allocate-Payment; Delete Order;</comments>
+            <entity_name>customers</entity_name>
+            <ident>1917</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>ordersList</rule_text1>
+            <rule_text2>is_ready = true</rule_text2>
+            <rule_text3>amount_un_paid</rule_text3>
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>1</ruletype_ident>
+            <ts>2013-09-13T02:21:42.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1918&quot;,&quot;checksum&quot;:&quot;R:9440823e6949d640&quot;}">
+            <active>true</active>
+            <attribute_name>amount_paid</attribute_name>
+            <auto_name>Derive Orders.amount_paid as sum(payment_order_allocationsList.amount)</auto_name>
+            <comments>AllocatePayment</comments>
+            <entity_name>orders</entity_name>
+            <ident>1918</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>payment_order_allocationsList</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3>amount</rule_text3>
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>1</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1919&quot;,&quot;checksum&quot;:&quot;R:6b7a682ffcd76e0e&quot;}">
+            <active>true</active>
+            <attribute_name>amount_total</attribute_name>
+            <auto_name>Derive Orders.amount_total as sum(lineItemsList.amount)</auto_name>
+            <comments>PlaceOrder.CheckCredit; DeleteOrder</comments>
+            <entity_name>orders</entity_name>
+            <ident>1919</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>lineitemsList</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3>amount</rule_text3>
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>1</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1920&quot;,&quot;checksum&quot;:&quot;R:ccac7ff87be6c9f1&quot;}">
+            <active>true</active>
+            <attribute_name>amount_un_paid</attribute_name>
+            <auto_name>Derive Orders.amount_un_paid as amount_total - amount_paid</auto_name>
+            <comments>PlaceOrder.CheckCredit; DeleteOrder; AllocatePayment</comments>
+            <entity_name>orders</entity_name>
+            <ident>1920</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.amount_total - row.amount_paid</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1921&quot;,&quot;checksum&quot;:&quot;R:bc6eeeb51ca9613c&quot;}">
+            <active>true</active>
+            <attribute_name>item_count</attribute_name>
+            <auto_name>Derive Orders.item_count as count(lineItemsList)</auto_name>
+            <comments>Order.NoEmptyOrders</comments>
+            <entity_name>orders</entity_name>
+            <ident>1921</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>lineitemsList</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>2</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1922&quot;,&quot;checksum&quot;:&quot;R:1337dbacb26a8b42&quot;}">
+            <active>true</active>
+            <attribute_name>amount_discounted</attribute_name>
+            <auto_name>Derive amount_discounted as return row.amount_total *</auto_name>
+            <comments>PlaceOrder.CheckCredit; DeleteOrder</comments>
+            <entity_name>orders</entity_name>
+            <ident>1922</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.amount_total *  
+       row.customer.customer_level == "P" ? 0.95 : 1.00</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-08-18T00:02:52.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1923&quot;,&quot;checksum&quot;:&quot;R:0ecbfa19e9936ca8&quot;}">
+            <active>true</active>
+            <attribute_name null="true" />
+            <auto_name>Commit validation return row.item_count &gt; 0</auto_name>
+            <comments>PlaceOrder.NoEmptyOrders - commit events fire after all rows are processed (so, counts reflect all rows)</comments>
+            <entity_name>orders</entity_name>
+            <ident>1923</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.item_count &gt; 0</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>6</ruletype_ident>
+            <ts>2013-09-15T22:44:14.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1924&quot;,&quot;checksum&quot;:&quot;R:edb9185d4b921da9&quot;}">
+            <active>true</active>
+            <attribute_name>part_price</attribute_name>
+            <auto_name>Derive part_price as parentcopy(product.price)</auto_name>
+            <comments>PlaceOrder.CheckCredit
+
+Max is a duck</comments>
+            <entity_name>lineitems</entity_name>
+            <ident>1924</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>product</rule_text1>
+            <rule_text2>price</rule_text2>
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>4</ruletype_ident>
+            <ts>2013-09-15T23:07:51.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1925&quot;,&quot;checksum&quot;:&quot;R:45114dc88cb166bf&quot;}">
+            <active>true</active>
+            <attribute_name>amount</attribute_name>
+            <auto_name>Derive Lineitems.amount as part_price * quantity_ordered</auto_name>
+            <comments>PlaceOrder.CheckCredit;</comments>
+            <entity_name>lineitems</entity_name>
+            <ident>1925</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.part_price * row.quantity_ordered</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1926&quot;,&quot;checksum&quot;:&quot;R:580d1ecc0589e724&quot;}">
+            <active>true</active>
+            <attribute_name>is_ready</attribute_name>
+            <auto_name>Derive is_ready as return row.itemOrder.is_ready</auto_name>
+            <comments>MakeOrderReady;
+
+Set when order is_ready; this affects the product.quantity_ordered</comments>
+            <entity_name>lineitems</entity_name>
+            <ident>1926</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.itemOrder.is_ready</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-09-15T23:05:50.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1927&quot;,&quot;checksum&quot;:&quot;R:5f8ab8c4b94ba296&quot;}">
+            <active>true</active>
+            <attribute_name null="true" />
+            <auto_name>Event: if (logicContext.verb == "UPDA.null</auto_name>
+            <comments>Javascript test, illustrating
+* event
+* row / oldRow
+* logicContext
+* row updates
+* reusage logic libraries</comments>
+            <entity_name>employees</entity_name>
+            <ident>1927</ident>
+            <name>Audit, plus Test Javascript update of notes</name>
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3>insert,update,delete</prop3>
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>if (logicContext.verb == "UPDATE" &amp;&amp; row.base_salary != oldRow.base_salary) {
+  SysLogic.insertChildFrom("employee_audits", logicContext);
+  row.notes = "Hello from a JS rule for " + row.name;
+  logicContext.update(row);  // changed rows must be updated, for logic execution
+}</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>7</ruletype_ident>
+            <ts>2013-09-15T23:13:28.000+0000</ts>
+            <verbs />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1928&quot;,&quot;checksum&quot;:&quot;R:80b6caa525ac4a71&quot;}">
+            <active>true</active>
+            <attribute_name null="true" />
+            <auto_name>Event: if (logicContext.verb == "INSE.null</auto_name>
+            <comments>Allocate-Payment
+
+Allocate a provider Payment.amount to designated recipient Purchase Orders
+creating allocation Payment Purchaseorder Allocation objects (a Provider/Recipient Junction) for each such allocation.</comments>
+            <entity_name>payments</entity_name>
+            <ident>1928</ident>
+            <name>Allocate to orders, creating payment_order_allocations</name>
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3>insert</prop3>
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>if (logicContext.verb == "INSERT") {
+  SysLogic.allocateFromToUndisbursed(
+    logicContext, 
+    SysLogic.findWhere(
+      row.paymentCustomer.ordersList, 
+      "row.amount_un_paid &gt; 0", 
+      "placed_date a"), 
+    "payment_order_allocations",
+    "amount_un_disbursed"); 
+}</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>7</ruletype_ident>
+            <ts>2013-09-15T23:03:59.000+0000</ts>
+            <verbs />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1929&quot;,&quot;checksum&quot;:&quot;R:bf0c05a3e03bf485&quot;}">
+            <active>true</active>
+            <attribute_name>amount</attribute_name>
+            <auto_name>Derive amount as return Math.min(row.allocation</auto_name>
+            <comments>Allocate-Payment
+
+Compute amount as min of orders' amount_unPaid, and amount (initialized to the remaining amount from the payment)</comments>
+            <entity_name>payment_order_allocations</entity_name>
+            <ident>1929</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return Math.min(row.allocationOrder.amount_un_paid, row.amount)</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-09-15T23:03:04.000+0000</ts>
+            <verbs>INSERT</verbs>
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1930&quot;,&quot;checksum&quot;:&quot;R:ef7051664d48a5c6&quot;}">
+            <active>true</active>
+            <attribute_name>total_quantity_ordered</attribute_name>
+            <auto_name>Derive Product.total_quantity_ordered as sum(quantity_ordered)</auto_name>
+            <comments>MakeOrderReady</comments>
+            <entity_name>products</entity_name>
+            <ident>1930</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>lineitemsList</rule_text1>
+            <rule_text2>is_ready = true</rule_text2>
+            <rule_text3>quantity_ordered</rule_text3>
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>1</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1931&quot;,&quot;checksum&quot;:&quot;R:dfa35a46a54cf974&quot;}">
+            <active>true</active>
+            <attribute_name>is_reorder_required</attribute_name>
+            <auto_name>Derive is_reorder_required as return row.quantity_on_hand -</auto_name>
+            <comments>MakeOrderReady</comments>
+            <entity_name>products</entity_name>
+            <ident>1931</ident>
+            <name>Derive is_reorder_required as row.quantity_on_hand - row.total_quantity_ordered &lt; row.quantity_reorder</name>
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.quantity_on_hand - row.total_quantity_ordered &lt; row.quantity_reorder</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-08-18T00:10:30.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1932&quot;,&quot;checksum&quot;:&quot;R:612d7257cdf6c3e9&quot;}">
+            <active>true</active>
+            <attribute_name>budget_with_sub_department_budget</attribute_name>
+            <auto_name>Derive budget_with_sub_department_budget as return row.budget + row.sum_su</auto_name>
+            <comments>BudgetRollup</comments>
+            <entity_name>departments</entity_name>
+            <ident>1932</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.budget + row.sum_sub_department_budget</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-09-15T20:26:15.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1933&quot;,&quot;checksum&quot;:&quot;R:a4ca0594a4ce2a5d&quot;}">
+            <active>true</active>
+            <attribute_name>sum_sub_department_budget</attribute_name>
+            <auto_name>Derive sum_sub_department_budget as sum(departmentsList.budget_with_sub_department_budget)</auto_name>
+            <comments>BudgetRollup</comments>
+            <entity_name>departments</entity_name>
+            <ident>1933</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>departmentsList</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3>budget_with_sub_department_budget</rule_text3>
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>1</ruletype_ident>
+            <ts>2013-09-15T20:26:06.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1934&quot;,&quot;checksum&quot;:&quot;R:34b1276ec24209c6&quot;}">
+            <active>true</active>
+            <attribute_name>value</attribute_name>
+            <auto_name>Derive Product_billofmaterials.value as kit_number_required * price</auto_name>
+            <comments>BillOfMaterials.PriceRollup</comments>
+            <entity_name>product_billofmaterials</entity_name>
+            <ident>1934</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.kit_number_required * row.price</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1935&quot;,&quot;checksum&quot;:&quot;R:cf118252eee61160&quot;}">
+            <active>true</active>
+            <attribute_name>sum_components_value</attribute_name>
+            <auto_name>Derive Products.sum_components_value as sum(components.value)</auto_name>
+            <comments>BillOfMaterials.PriceRollup</comments>
+            <entity_name>products</entity_name>
+            <ident>1935</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>components</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3>value</rule_text3>
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>1</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1936&quot;,&quot;checksum&quot;:&quot;R:cb434b535b88ca4e&quot;}">
+            <active>true</active>
+            <attribute_name>price</attribute_name>
+            <auto_name>Derive Products.price as count_components &gt; 0 ? sum_components_value : price</auto_name>
+            <comments>BillOfMaterials.PriceRollup</comments>
+            <entity_name>products</entity_name>
+            <ident>1936</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.count_components &gt; 0 ? row.sum_components_value : row.price</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1937&quot;,&quot;checksum&quot;:&quot;R:2d1d1123cfc023ef&quot;}">
+            <active>true</active>
+            <attribute_name>count_components</attribute_name>
+            <auto_name>Derive products.count_components as count(components)</auto_name>
+            <comments>BillOfMaterials.PriceRollup, BillOfMaterials.Explosion</comments>
+            <entity_name>products</entity_name>
+            <ident>1937</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>components</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>2</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1938&quot;,&quot;checksum&quot;:&quot;R:6fd66e20886e757e&quot;}">
+            <active>true</active>
+            <attribute_name>quantity_ordered</attribute_name>
+            <auto_name>Derive lineitems.quantity_ordered as [kit_number_required * kitItem.quantity_ordered]</auto_name>
+            <comments>BillOfMaterials.Explosion</comments>
+            <entity_name>lineitems</entity_name>
+            <ident>1938</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>return row.kitItem != null ? row.kit_number_required * row.kitItem.quantity_ordered : row.quantity_ordered</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>3</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1939&quot;,&quot;checksum&quot;:&quot;R:5f0bc3a0c44f5f67&quot;}">
+            <active>true</active>
+            <attribute_name>kit_component_count</attribute_name>
+            <auto_name>Derive lineitems.kit_component_count as count(lineitemsList)</auto_name>
+            <comments>BillOfMaterials.Explosion</comments>
+            <entity_name>lineitems</entity_name>
+            <ident>1939</ident>
+            <name null="true" />
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4 null="true" />
+            <prop5 null="true" />
+            <rule_text1>lineitemsList</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>2</ruletype_ident>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+            <verbs null="true" />
+         </element>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Rules/1940&quot;,&quot;checksum&quot;:&quot;R:1daa9df093bef29d&quot;}">
+            <active>true</active>
+            <attribute_name null="true" />
+            <auto_name>Event:  if (logicContext.verb == "INS.null</auto_name>
+            <comments>BillOfMaterials.Explosion..  for kits, copy components to subItems
+
+You can insert debug code like this:
+ var isAKit = row.product.count_components &gt; 0;
+ log.error("!my product: " + row.product); 
+ log.error("!components: "  + isAKit + ", logicContext.verb: " + logicContext.verb); 
+ log.error("!kit_Item_ident: "  + row.kit_item_ident); 
+ log.error("!kitItem: "  + row.kitItem);</comments>
+            <entity_name>lineitems</entity_name>
+            <ident>1940</ident>
+            <name>Kit copies product.components to subItems</name>
+            <predicate null="true" />
+            <project_ident>1174</project_ident>
+            <prop1 null="true" />
+            <prop2 null="true" />
+            <prop3 null="true" />
+            <prop4>javascript</prop4>
+            <prop5 null="true" />
+            <rule_text1>if (logicContext.verb == "INSERT" &amp;&amp; row.product.count_components &gt; 0)  {
+   SysLogic.insertChildrenFrom("lineitems", row.product.components, logicContext); 
+ }</rule_text1>
+            <rule_text2 null="true" />
+            <rule_text3 null="true" />
+            <rule_text4 null="true" />
+            <rule_text5 null="true" />
+            <ruletype_ident>7</ruletype_ident>
+            <ts>2013-09-15T23:01:07.000+0000</ts>
+            <verbs>INSERT,</verbs>
+         </element>
+      </Rules>
+      <Users>
+         <element metadata="{&quot;href&quot;:&quot;https://eval.espressologic.com/rest/abl/admin/v2/ProjectExport.Users/1126&quot;,&quot;checksum&quot;:&quot;R:c0235171323713a4&quot;}">
+            <apikey_lifespan null="true" />
+            <data>deptNo=US Sales,email=alpha@test.com</data>
+            <email>alpha@test.com</email>
+            <fullname>Test user Alpha</fullname>
+            <ident>1126</ident>
+            <name>A. Lincoln</name>
+            <password_hash>E5SGhPcTVFC5py1cwxCiqsf5//MDU91sZ+6aZE/kkeRw05TgT6KY/UDiJdRuaj6Lfx54McpIx1j/562G8wfeDw==</password_hash>
+            <password_salt>TaR6ptZREkX0Rqqr5Rdd</password_salt>
+            <project_ident>1174</project_ident>
+            <roles>Normal user</roles>
+            <status>A</status>
+            <ts>2013-08-17T23:02:31.000+0000</ts>
+         </element>
+      </Users>
+      <account_ident>1061</account_ident>
+      <authprovider_ident>1054</authprovider_ident>
+      <comments null="true" />
+      <ident>1174</ident>
+      <links />
+      <name>kahuna sample - imported Sat Aug 17 23:50:44 UTC 2013</name>
+      <status>I</status>
+      <ts>2013-08-24T22:38:31.000+0000</ts>
+      <url_name>sample1376783444596</url_name>
+   </element>
+</root>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	DTDVersion="05.05.12"
+	SurrId="0444579108.Tyler.0001"
+	CodedValuesList="True"
+	ImageReference=" "
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	XdaConnector="SQL"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	>
+	<Attributes>
+		<Attribute
+			Name="TranformRule"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="15"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="RuleDescription"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="250"
+			/>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="PkeyValidTransform"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="TranformRule"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+	<SingularCaption><![CDATA[*]]></SingularCaption>
+	<PluralCaption><![CDATA[*]]></PluralCaption>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<CodedValuesList
+		StoredAttribute="TranformRule"
+		DisplayAttribute="RuleDescription"
+	/>
+	<Description><![CDATA[ ]]></Description>
+	<Comments><![CDATA[ ]]></Comments>
+</DataObject>

@@ -1,0 +1,7 @@
+PackageSource:C:\VERSAT~2\Client\lib\vfcORB55.jar,Common:True,Deployed:True
+PackageSource:C:\VERSAT~2\ORB\lib\vbjdev.jar,Common:True,Deployed:True
+PackageSource:C:\VERSAT~2\ORB\lib\vbjorb.jar,Common:True,Deployed:True
+PackageSource:C:\VERSAT~2\ORB\lib\vbdev.jar,Common:True,Deployed:True
+PackageSource:C:\VERSAT~2\Client\lib\VFCResource.properties,Common:True,Deployed:True
+Classpath:C:\Work\SliceNDice\SliceNDice\Lib\ClientApps\JavaApps\JavaSample.app,FileSpecification:*.class;*.gif,Recursive:True
+Classpath:C:\VERSAT~2\Client\lib,FileSpecification:*.class;*.gif,Recursive:True

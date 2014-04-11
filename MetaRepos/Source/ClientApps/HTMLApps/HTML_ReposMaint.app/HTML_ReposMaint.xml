@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Application SYSTEM "Application.dtd">
+<Application
+	SurrId="0429878456.Tyler.0010"
+	ZoomFactor="3"
+	TargetLanguage="HTML"
+	DefaultLogonUserId="sa"
+	ExecutionEnvironment="Browser"
+	AppletHeight="575"
+	AppletWidth="725"
+	ClassId="0526E823-DF30-4AA2-BA9A-C705B0E41B00"
+	SuppressDefaultLoginScreen="False"
+	InitialFramesetPage="FramesetPage"
+	StartupPageFrameName="Startup"
+	InitialFrameNameForStartupTrans="Display"
+	AppRepositoryVersion="05.05.15"
+	DeploySecurityInfo="False"
+	DTDVersion="05.05.12"
+	>
+	<ServerLocation><![CDATA[<localVLSServer>]]></ServerLocation>
+	<ApplicationArchetypesFolder><![CDATA[PDXSystemHTMLArchetypes]]></ApplicationArchetypesFolder>
+	<!-- APPLICATION FORMS -->
+	<Forms>
+		<Form>StartupPage</Form>
+		<Form>pReposName_Grid</Form>
+		<Form>pReposVersion_Grid</Form>
+		<Form>pRepository</Form>
+		<Form>pDataObject_Grid</Form>
+		<Form>pDataObject</Form>
+		<Form>pAttribute_Grid</Form>
+		<Form>pAttribute</Form>
+		<Form>pRelationship_Grid</Form>
+		<Form>FramesetPage</Form>
+		<Form>pQueryObject_Grid</Form>
+		<Form>pQueryObject</Form>
+		<Form>pAction_Grid</Form>
+		<Form>pAction</Form>
+		<Form>pConstraint_Grid</Form>
+		<Form>pConstraint</Form>
+		<Form>pApplication_Grid</Form>
+		<Form>pApplication</Form>
+		<Form>pForm_Grid</Form>
+		<Form>pRecordSource_Grid</Form>
+		<Form>pRSAttribute_Grid</Form>
+		<Form>pValidation</Form>
+		<Form>pDerivation</Form>
+		<Form>pIndexDO_Grid</Form>
+		<Form>pIndexAttr_Grid</Form>
+		<Form>pMethod_Grid</Form>
+		<Form>pGroups_Grid</Form>
+		<Form>pRelationshipRole_Grid</Form>
+	</Forms>
+	<SourceFiles>
+	</SourceFiles>
+</Application>

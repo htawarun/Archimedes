@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="Java"
+	Archetype="DialogBox"
+	PositionTop="257.8125"
+	PositionLeft="809.375"
+	PositionWidth="214.0625"
+	PositionHeight="54.6875"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="False"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	>
+	<FormCaption><![CDATA[RecordSource(s)]]></FormCaption>
+	<RecordSource
+		RSID="1"
+		Prefix="T1"
+		BusinessObject="RecordSource"
+		RelnIsFromParent="False"
+		DoesSourceAffectMe="False"
+		DoIAffectSource="False"
+		IsAddedAfterGen="False"
+		RsAttributesDefault="True"
+		ClassName="DataSource"
+		RecordSourceArchetype="Grid"
+		>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<RSAttributesMeta>
+			<DefaultAttributes>
+				<RSDefaultAttribute ID="1" Name="RepositoryName" />
+				<RSDefaultAttribute ID="2" Name="ApplicationName" />
+				<RSDefaultAttribute ID="3" Name="FormName" />
+				<RSDefaultAttribute ID="4" Name="Attr_Cnt" />
+				<RSDefaultAttribute ID="5" Name="BusinessObject" />
+				<RSDefaultAttribute ID="6" Name="PlacedAttrCnt" />
+				<RSDefaultAttribute ID="7" Name="DisplayedAttrCnt" />
+				<RSDefaultAttribute ID="8" Name="ScalarGrid" />
+				<RSDefaultAttribute ID="9" Name="AllowInsert" />
+				<RSDefaultAttribute ID="10" Name="AllowUpdate" />
+				<RSDefaultAttribute ID="11" Name="AllowDelete" />
+				<RSDefaultAttribute ID="12" Name="Relationship" />
+				<RSDefaultAttribute ID="13" Name="ClassName" />
+				<RSDefaultAttribute ID="14" Name="RSID" />
+				<RSDefaultAttribute ID="15" Name="TransitionCnt" />
+				<RSDefaultAttribute ID="16" Name="RecordSourceArchetype" />
+			</DefaultAttributes>
+			<GridAttributes>
+				<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ApplicationName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="FormName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="BusinessObject" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="PlacedAttrCnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="DisplayedAttrCnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ScalarGrid" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="AllowInsert" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="AllowUpdate" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="AllowDelete" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Relationship" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ClassName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RSID" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="TransitionCnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RecordSourceArchetype" Displayed="True" UnPlaced="False" />
+			</GridAttributes>
+		</RSAttributesMeta>
+		<Transition
+			FormTransNum="1"
+			Prefix="T2"
+			TargetFormName="fRSAttribute_Grid"
+			IsTargetInitialQueryMode="False"
+			IsTargetInitialAddMode="False"
+			IsVisibleAppline="True"
+			IsAddedAfterGen="False"
+			ClassName="VSFormNavigation"
+			RSID="2"
+			BusinessObject="RSAttribute"
+			Relationship="RecordSource(RecordSource)-RSAttribute(RSAttribute)"
+			RelnIsFromParent="True"
+			>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [ApplicationName] = [?ApplicationName] and [FormName] = [?FormName] and [BusinessObject] = [?BusinessObject] and [RSID] = [?RSID]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		</Transition>
+		<Transition
+			FormTransNum="1"
+			Prefix="T3"
+			TargetFormName="fTransition_Grid"
+			IsTargetInitialQueryMode="False"
+			IsTargetInitialAddMode="False"
+			IsVisibleAppline="True"
+			IsAddedAfterGen="False"
+			ClassName="PageNavigation"
+			RSID="3"
+			BusinessObject="Transition"
+			Relationship="RecordSource(RecordSource)-Transition(Transition)"
+			RelnIsFromParent="True"
+			>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [ApplicationName] = [?ApplicationName] and [FormName] = [?FormName] and [BusinessObject] = [?BusinessObject] and [RSID] = [?RSID]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		</Transition>
+	</RecordSource>
+	<FormLayout><![CDATA[BEGIN .VSForm fRecordSource_Grid
+  ImageFile = "BACKGROUND.GIF"
+  ClassName = "CoolVSForm"
+  BackColor = 0xc0c0c0
+Width=566
+  ImageDisplayStyle = Tiled
+  Title = "RecordSource(s)"
+  Enable = True
+  ForeColor = 0x000000
+  HelpURL = ""
+  ToolTip = ""
+  Visible = True
+  Tag = "_$$_"
+Height=492
+  AnchorForm = "NONE"
+    Style= "ModalPopup"
+  Name = "fRecordSource_Grid"
+  Extended = ""
+  DisplayTitleBar = True
+  BeginProperty VSFont 
+    FontName  = "Helvetica"
+    FontSize  = 12
+    FontStyleBold  = False
+    FontStyleItalic  = False
+  EndProperty 
+    BEGIN .VSImageButton btnSave
+      ImageFile = "blue_save.gif"
+Top=369
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+    DataSource = datT1RecordSource
+      BackColor = 0xebebeb
+Width=32
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Save Changes"
+      Visible = True
+      Tag = "_$$_"
+      Action = "db_saveAll"
+TabOrder = 0
+Height=32
+Left=336
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnSave"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnUndo
+      ImageFile = "blue_undo.gif"
+Top=369
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+    DataSource = datT1RecordSource
+      BackColor = 0xebebeb
+Width=32
+      Enable = False
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Undo Changes"
+      Visible = True
+      Tag = "_$$_"
+      Action = "db_undoResultSet"
+TabOrder = 1
+Height=32
+Left=369
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnUndo"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnDelete
+      ImageFile = "blue_delete.gif"
+Top=369
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+    DataSource = datT1RecordSource
+      BackColor = 0xebebeb
+Width=32
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Delete"
+      Visible = True
+      Tag = "_$$_"
+      Action = "db_delete"
+TabOrder = 2
+Height=32
+Left=437
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnDelete"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnAdd
+      ImageFile = "blue_new.gif"
+Top=369
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+    DataSource = datT1RecordSource
+      BackColor = 0xebebeb
+Width=32
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Add New"
+      Visible = True
+      Tag = "_$$_"
+      Action = "db_insert"
+TabOrder = 3
+Height=32
+Left=404
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnAdd"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSJavaDataControl datT1RecordSource
+Top=373
+      ClassName = "VSJavaDataControl"
+      RecordSourceProperties = ""
+      StatusBarText = ""
+      AllowInsert = True
+      BackColor = 0xffffff
+Width=150
+      AllowUpdate = True
+    RecordSource = 1,"T1RecordSource"
+      Enable = True
+      ForeColor = 0x000000
+      AllowDelete = True
+      HelpURL = ""
+      ToolTip = ""
+      Visible = False
+      Tag = "_$$_"
+      MaxRowsPerFetch = 16
+TabOrder = 4
+Height=27
+Left=16
+      SaveMode = "buffered"
+      TabStop = False
+      Extended = ""
+      Name = "datT1RecordSource"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "RecordSource"
+      END
+    BEGIN .VSGrid grdT1RecordSource
+      HiliteForeColor = 0xffffff
+Top=24
+      ClassName = "VSGrid"
+      DisplayHeader = True
+      BorderStyle = "PLAIN_BORDER"
+      DataSource = "datT1RecordSource"
+      BackColor = 0xffffff
+Width=450
+      DisplayGridLines = True
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+      RowHeaderBackColor = 0x004080
+      Columns = ""
+TabOrder = 5
+Height=343
+Left=19
+      ColumnHeaderBackColor = 0x004080
+      RowHeight = 20
+      RowHeaderForeColor = 0xebebeb
+      DisableBackColor = 0xffffff
+      BeginProperty VSHeaderFont
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      ColumnHeaderForeColor = 0xebebeb
+      TabStop = True
+      LineColor = 0xc0c0c0
+      DisableForeColor = 0xc0c0c0
+      Editable = True
+      Extended = ""
+      Name = "grdT1RecordSource"
+      RowHeaderWidth = 25
+      HiliteBackColor = 0x004080
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+    BEGIN .VSGridColumn "Repository Name"      
+      GridColumnLabel = "Repository Name"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 1
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "Application Name"      
+      GridColumnLabel = "Application Name"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 2
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "Form Name"      
+      GridColumnLabel = "Form Name"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 3
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "Number Of Attributes"      
+      GridColumnLabel = "Number Of Attributes"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 4
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "Business Object"      
+      GridColumnLabel = "Business Object"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 5
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "Placed Attrbiute Count"      
+      GridColumnLabel = "Placed Attrbiute Count"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 6
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "Displayed Attribute Count"      
+      GridColumnLabel = "Displayed Attribute Count"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 7
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "Scalar/Grid"      
+      GridColumnLabel = "Scalar/Grid"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 8
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "AllowInsert"      
+      GridColumnLabel = "AllowInsert"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 9
+ 	          GridColumnEditType = "VSChoice"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "AllowUpdate"      
+      GridColumnLabel = "AllowUpdate"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 10
+ 	          GridColumnEditType = "VSChoice"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "AllowDelete"      
+      GridColumnLabel = "AllowDelete"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 11
+ 	          GridColumnEditType = "VSChoice"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "Relationship"      
+      GridColumnLabel = "Relationship"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 12
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "ClassName"      
+      GridColumnLabel = "ClassName"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 13
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "RecordSource ID"      
+      GridColumnLabel = "RecordSource ID"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 14
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "TransitionCnt"      
+      GridColumnLabel = "TransitionCnt"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 15
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+    BEGIN .VSGridColumn "RecordSourceArchetype"      
+      GridColumnLabel = "RecordSourceArchetype"
+      GridColumnWidth = 0x4B
+    GridColumnDataField = 16
+ 	          GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnFormat = ""
+    GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+
+      END
+  BEGIN .VSImageButton VSImageButton1
+    ImageFile = ""
+Top=21
+    ClassName = "VSImageButton"
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+Width=60
+    ReportURL = ""
+    Enable = True
+    ForeColor = 0x0038bb
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$anchorTopRight$_"
+    Action = "ok"
+TabOrder = 6
+Height=31
+Left=493
+    AutoSize = False
+    TabStop = True
+    Border = "RAISED_BORDER"
+    Extended = ""
+    Name = "VSImageButton1"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 14
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Stretched
+    Label = "OK"
+    END
+  BEGIN .VSImageButton VSImageButton11
+    ImageFile = ""
+Top=59
+    ClassName = "VSImageButton"
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+Width=60
+    ReportURL = ""
+    Enable = True
+    ForeColor = 0x0038bb
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$anchorTopRight$_"
+    Action = "cancel"
+TabOrder = 7
+Height=31
+Left=493
+    AutoSize = False
+    TabStop = True
+    Border = "RAISED_BORDER"
+    Extended = ""
+    Name = "VSImageButton11"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 14
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Stretched
+    Label = "Cancel"
+    END
+  BEGIN .VSImageButton VSImageButton12
+    ImageFile = ""
+Top=98
+    ClassName = "VSImageButton"
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+Width=60
+    ReportURL = ""
+    Enable = True
+    ForeColor = 0x0038bb
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$anchorTopRight$_"
+    Action = "db_saveAll"
+TabOrder = 8
+Height=31
+Left=493
+    AutoSize = False
+    TabStop = True
+    Border = "RAISED_BORDER"
+    Extended = ""
+    Name = "VSImageButton12"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 14
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Stretched
+    Label = "Apply"
+    END
+    BEGIN .VSImageButton btnT2fRSAttribute_Grid
+      ImageFile = ""
+Top=418
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+           DataSource = datT1RecordSource
+      BackColor = 0xebebeb
+Width=74
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = "See RSAttribute(s)"
+      Visible = True
+      Tag = "_$$_"
+      Action = ""
+TabOrder = 9
+Height=32
+Left=12
+      AutoSize = False
+      TabStop = True
+      Border = "RAISED_BORDER"
+      Extended = ""
+      Name = "btnT2fRSAttribute_Grid"
+      AutoLabel = False
+     FormTransition = 20001,T2RSAttribute_fRSAttribute_Grid
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Stretched
+      Label = "RSAttribute(s)"
+      END
+    BEGIN .VSImageButton btnT3fTransition_Grid
+      ImageFile = ""
+Top=418
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+           DataSource = datT1RecordSource
+      BackColor = 0xebebeb
+Width=74
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = "See Transition(s)"
+      Visible = True
+      Tag = "_$$_"
+      Action = ""
+TabOrder = 10
+Height=32
+Left=86
+      AutoSize = False
+      TabStop = True
+      Border = "RAISED_BORDER"
+      Extended = ""
+      Name = "btnT3fTransition_Grid"
+      AutoLabel = False
+     FormTransition = 30001,T3Transition_fTransition_Grid
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Stretched
+      Label = "Transition(s)"
+      END
+  END
+]]></FormLayout>
+</Form>

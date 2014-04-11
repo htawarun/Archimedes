@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="HTML"
+	Archetype="Default"
+	PositionTop="225"
+	PositionLeft="5"
+	PositionWidth="202.5"
+	PositionHeight="55"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="False"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	ClassName="versata.pdx.html.VSPagePDX"
+	ObjectsRemovedFromLayout="False"
+	HTMLFileCheckSum="1202261285"
+	>
+	<FormCaption><![CDATA[Relationship(s)]]></FormCaption>
+	<ArchetypeExtendedProperties>
+		<Property
+			Name="Comments"
+			Value=""
+		/>
+		<Property
+			Name="CommentsTrailing"
+			Value=""
+		/>
+		<Property
+			Name="CrumbTrailEnabled"
+			Value="true"
+		/>
+		<Property
+			Name="CrumbTrailIncludesThisPage"
+			Value="true"
+		/>
+		<Property
+			Name="CrumbTrailRestartsHere"
+			Value="false"
+		/>
+		<Property
+			Name="CrumbTrailSeparator"
+			Value="&gt;"
+		/>
+		<Property
+			Name="ErrorStyle"
+			Value="Popup"
+		/>
+		<Property
+			Name="IncludeFooter"
+			Value="false"
+		/>
+		<Property
+			Name="IncludeHeader"
+			Value="false"
+		/>
+		<Property
+			Name="IncludeLeftBar"
+			Value="false"
+		/>
+		<Property
+			Name="IncludeRightBar"
+			Value="false"
+		/>
+		<Property
+			Name="ShowCancelButton"
+			Value="true"
+		/>
+		<Property
+			Name="ShowFormCaption"
+			Value="true"
+		/>
+		<Property
+			Name="ShowReturnButton"
+			Value="true"
+		/>
+		<Property
+			Name="TransitionsToHide"
+			Value=""
+		/>
+	</ArchetypeExtendedProperties>
+	<RecordSource
+		RSID="1"
+		Prefix="T1"
+		BusinessObject="Relationship"
+		RelnIsFromParent="False"
+		DoesSourceAffectMe="False"
+		DoIAffectSource="False"
+		IsAddedAfterGen="False"
+		RsAttributesDefault="False"
+		ClassName="versata.pdx.html.DataSourcePDX"
+		RecordSourceArchetype="Grid"
+		MaxGridRowCount="10"
+		FetchedBlockRowCount="16"
+		AllowDelete="False"
+		AllowInsert="False"
+		AllowUpdate="False"
+		SaveMode="Immediate"
+		PreFetchRowCount="False"
+		>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<RSAttributesMeta>
+			<DefaultAttributes>
+				<RSDefaultAttribute ID="1" Name="RepositoryName" />
+				<RSDefaultAttribute ID="2" Name="RelationshipName" />
+				<RSDefaultAttribute ID="3" Name="ParentDOName" />
+				<RSDefaultAttribute ID="4" Name="ParentRoleName" />
+				<RSDefaultAttribute ID="5" Name="ChildDOName" />
+				<RSDefaultAttribute ID="6" Name="ChildRoleName" />
+				<RSDefaultAttribute ID="7" Name="isEnforce" />
+				<RSDefaultAttribute ID="8" Name="ParentAttribute" />
+				<RSDefaultAttribute ID="9" Name="ChildAttribute" />
+				<RSDefaultAttribute ID="10" Name="RolePlayer_CNT" />
+			</DefaultAttributes>
+			<ScalerAttributes>
+				<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RelationshipName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ParentDOName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ParentRoleName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ChildDOName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ChildRoleName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="isEnforce" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ParentAttribute" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ChildAttribute" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RolePlayer_CNT" Displayed="True" UnPlaced="False" />
+			</ScalerAttributes>
+			<GridAttributes>
+				<RSAttribute Name="RelationshipName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ParentDOName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ChildDOName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="isEnforce" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RepositoryName" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="ParentRoleName" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="ChildRoleName" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="ParentAttribute" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="ChildAttribute" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="RolePlayer_CNT" Displayed="True" UnPlaced="False" />
+			</GridAttributes>
+		</RSAttributesMeta>
+		<ArchetypeExtendedProperties>
+			<Property
+				Name="AltRowColor"
+				Value="#EFEFEF"
+			/>
+			<Property
+				Name="Caption"
+				Value=""
+			/>
+			<Property
+				Name="Comments"
+				Value=""
+			/>
+			<Property
+				Name="CommentsTrailing"
+				Value="&lt;br&gt;"
+			/>
+			<Property
+				Name="Cond0HideRecSrc"
+				Value=""
+			/>
+			<Property
+				Name="Cond1"
+				Value=""
+			/>
+			<Property
+				Name="Cond1Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond2"
+				Value=""
+			/>
+			<Property
+				Name="Cond2Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond3"
+				Value=""
+			/>
+			<Property
+				Name="Cond3Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond4"
+				Value=""
+			/>
+			<Property
+				Name="Cond4Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond5"
+				Value=""
+			/>
+			<Property
+				Name="Cond5Actions"
+				Value=""
+			/>
+			<Property
+				Name="ConfirmDeleteMsg"
+				Value="Delete record?"
+			/>
+			<Property
+				Name="NoDataMessage"
+				Value="&lt;br&gt;&lt;center&gt;&lt;b&gt;No records found!&lt;/b&gt;&lt;/center&gt;&lt;br&gt;"
+			/>
+			<Property
+				Name="ShowHeader"
+				Value="true"
+			/>
+			<Property
+				Name="ShowRowCount"
+				Value="true"
+			/>
+			<Property
+				Name="ShowRowSelector"
+				Value="true"
+			/>
+			<Property
+				Name="SortableHeader"
+				Value="true"
+			/>
+			<Property
+				Name="TabCaption"
+				Value=""
+			/>
+			<Property
+				Name="TabGenerated"
+				Value="true"
+			/>
+			<Property
+				Name="TabImageHeight"
+				Value=""
+			/>
+			<Property
+				Name="TabImageOff"
+				Value=""
+			/>
+			<Property
+				Name="TabImageOn"
+				Value=""
+			/>
+			<Property
+				Name="TabImageWidth"
+				Value=""
+			/>
+			<Property
+				Name="UsePopupPicks"
+				Value="true"
+			/>
+		</ArchetypeExtendedProperties>
+		<Transition
+			FormTransNum="1"
+			Prefix="T2"
+			TargetFormName="pRelationshipRole_Grid"
+			IsTargetInitialQueryMode="False"
+			IsTargetInitialAddMode="False"
+			IsVisibleAppline="True"
+			IsAddedAfterGen="False"
+			FormTransCaption="Roles"
+			ClassName="PageNavigation"
+			TargetFramesetPage=""
+			TargetFrame=""
+			FrameNameInFramesetPage=""
+			RSID="2"
+			BusinessObject="RelationshipRole"
+			Relationship="Relationship(Relationship)-RelationshipRole(RelationshipRole)"
+			RelnIsFromParent="True"
+			>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [RelationshipName] = [?RelationshipName] and [ParentDOName] = [?ParentDOName] and [ChildDOName] = [?ChildDOName]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		</Transition>
+	</RecordSource>
+</Form>

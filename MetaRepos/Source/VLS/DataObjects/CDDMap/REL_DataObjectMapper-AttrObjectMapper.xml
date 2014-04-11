@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		ParentRoleName="DataObjectMapper"
+		ChildRoleName="AttrObjectMapper"
+		IsEnforce="True"
+		OnParentDelete="DeleteChildren"
+		>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="ProjectName"
+				ChildAttribute="ProjectName"
+			/>
+			<AttributePair
+				ParentAttribute="SourceRepositoryName"
+				ChildAttribute="SourceRepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="TargetRepositoryName"
+				ChildAttribute="TargetRepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="SourceDataObjectName"
+				ChildAttribute="SourceDataObjectName"
+			/>
+			<AttributePair
+				ParentAttribute="TargetDataObjectName"
+				ChildAttribute="TargetDataObjectName"
+			/>
+		</AttributePairs>
+		<AscendCaption><![CDATA[Data Object Mapper]]></AscendCaption>
+		<DescendCaption><![CDATA[Attribute Mapper]]></DescendCaption>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]></ErrPreventUpdateParent>
+		<ErrPreventDeleteParent><![CDATA[<System Supplied>]]></ErrPreventDeleteParent>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]></ErrPreventInsertOrUpdateChild>
+	</Relationship>
+</Relationships>

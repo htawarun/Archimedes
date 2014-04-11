@@ -1,0 +1,1395 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="Java"
+	Archetype="Default"
+	PositionTop="596.875"
+	PositionLeft="181.25"
+	PositionWidth="187.5"
+	PositionHeight="54.6875"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="False"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	>
+	<FormCaption><![CDATA[Relationship]]></FormCaption>
+	<RecordSource
+		RSID="1"
+		Prefix="T1"
+		BusinessObject="Relationship"
+		RelnIsFromParent="False"
+		DoesSourceAffectMe="False"
+		DoIAffectSource="False"
+		IsAddedAfterGen="False"
+		RsAttributesDefault="True"
+		ClassName="DataSource"
+		RecordSourceArchetype="Display"
+		>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<RSAttributesMeta>
+			<DefaultAttributes>
+				<RSDefaultAttribute ID="1" Name="RepositoryName" />
+				<RSDefaultAttribute ID="2" Name="RelationshipName" />
+				<RSDefaultAttribute ID="3" Name="ParentDOName" />
+				<RSDefaultAttribute ID="4" Name="ParentRoleName" />
+				<RSDefaultAttribute ID="5" Name="ChildDOName" />
+				<RSDefaultAttribute ID="6" Name="ChildRoleName" />
+				<RSDefaultAttribute ID="7" Name="isEnforce" />
+				<RSDefaultAttribute ID="8" Name="ParentAttribute" />
+				<RSDefaultAttribute ID="9" Name="ChildAttribute" />
+				<RSDefaultAttribute ID="10" Name="RolePlayer_CNT" />
+			</DefaultAttributes>
+			<ScalerAttributes>
+				<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RelationshipName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ParentDOName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ParentRoleName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ChildDOName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ChildRoleName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="isEnforce" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ParentAttribute" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ChildAttribute" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="RolePlayer_CNT" Displayed="True" UnPlaced="False" />
+			</ScalerAttributes>
+		</RSAttributesMeta>
+		<PickObject
+			RSID="2"
+			Prefix="T2"
+			BusinessObject="Repository"
+			Relationship="RelnReposiotry(Repository)-Relationships(Relationship)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="True"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="True"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+					<RSDefaultAttribute ID="3" Name="DataObject_Cnt" />
+					<RSDefaultAttribute ID="4" Name="Relationship_Cnt" />
+					<RSDefaultAttribute ID="5" Name="Attr_Cnt" />
+					<RSDefaultAttribute ID="6" Name="Action_Cnt" />
+					<RSDefaultAttribute ID="7" Name="Constraint_Cnt" />
+					<RSDefaultAttribute ID="8" Name="Java_App_Cnt" />
+					<RSDefaultAttribute ID="9" Name="HTML_App_Cnt" />
+					<RSDefaultAttribute ID="10" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="11" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="13" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="14" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="15" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="16" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="17" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="18" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="19" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="20" Name="Comments" />
+					<RSDefaultAttribute ID="21" Name="Other_File_Cnt" />
+					<RSDefaultAttribute ID="22" Name="Other_File_Lines" />
+					<RSDefaultAttribute ID="23" Name="Other_File_Method_Cnt" />
+					<RSDefaultAttribute ID="24" Name="QueryObject_Cnt" />
+					<RSDefaultAttribute ID="25" Name="JavaForm_Cnt" />
+					<RSDefaultAttribute ID="26" Name="HTML_Form_Cnt" />
+					<RSDefaultAttribute ID="27" Name="ReposInternalName" />
+					<RSDefaultAttribute ID="28" Name="RootDirectory" />
+					<RSDefaultAttribute ID="29" Name="Description" />
+					<RSDefaultAttribute ID="30" Name="Database" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RepositoryVersion" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Relationship_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Java_App_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="HTML_App_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Comments" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Other_File_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Other_File_Lines" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Other_File_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="QueryObject_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="JavaForm_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="HTML_Form_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ReposInternalName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RootDirectory" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Description" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Database" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+		<Transition
+			FormTransNum="1"
+			Prefix="T3"
+			TargetFormName="fRelationshipRole_Grid"
+			IsTargetInitialQueryMode="False"
+			IsTargetInitialAddMode="False"
+			IsVisibleAppline="True"
+			IsAddedAfterGen="False"
+			FormTransCaption="Roles"
+			ClassName="PageNavigation"
+			RSID="3"
+			BusinessObject="RelationshipRole"
+			Relationship="Relationship(Relationship)-RelationshipRole(RelationshipRole)"
+			RelnIsFromParent="True"
+			>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [RelationshipName] = [?RelationshipName] and [ParentDOName] = [?ParentDOName] and [ChildDOName] = [?ChildDOName]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		</Transition>
+	</RecordSource>
+	<FormLayout><![CDATA[BEGIN .VSForm fRelationship
+  ImageFile = "BACKGROUND.GIF"
+  ClassName = "CoolVSForm"
+  BackColor = 0xc0c0c0
+Width=517
+  ImageDisplayStyle = Tiled
+  Title = ""
+  Enable = True
+  ForeColor = 0x000000
+  HelpURL = ""
+  ToolTip = ""
+  Visible = True
+  Tag = "_$$_"
+Height=517
+  AnchorForm = "NONE"
+  Style = "Child"
+  Name = "fRelationship"
+  Extended = ""
+  DisplayTitleBar = False
+  BeginProperty VSFont 
+    FontName  = "Helvetica"
+    FontSize  = 12
+    FontStyleBold  = False
+    FontStyleItalic  = False
+  EndProperty 
+  BEGIN .VSImageButton btnMovePrev
+    ImageFile = "blue_move_previous.gif"
+Top=4
+    ClassName = "VSImageButton"
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+            DataSource = datT1Relationship
+    BackColor = 0xebebeb
+Width=32
+    ReportURL = ""
+    Enable = True
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Previous"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_previous"
+TabOrder = 0
+Height=32
+Left=36
+    AutoSize = False
+    TabStop = True
+    Border = "NO_BORDER"
+    Extended = ""
+    Name = "btnMovePrev"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveFirst
+    ImageFile = "blue_move_first.gif"
+Top=4
+    ClassName = "VSImageButton"
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+            DataSource = datT1Relationship
+    BackColor = 0xebebeb
+Width=32
+    ReportURL = ""
+    Enable = True
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move First"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_first"
+TabOrder = 1
+Height=32
+Left=1
+    AutoSize = False
+    TabStop = True
+    Border = "NO_BORDER"
+    Extended = ""
+    Name = "btnMoveFirst"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSLabel VSLabel11
+Top=4
+      ClassName = "VSLabel"
+	Opaque = False
+    StatusBarText = ""
+    Align = "CENTER"
+    DataSource = ""
+    BackColor = 0xebebeb
+Width=156
+    Enable = True
+    ForeColor = 0x0038bb
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+Height=42
+Left=73
+    DataField = 0
+    Extended = ""
+    Name = "VSLabel11"
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 26
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "Relationship"
+    END
+  BEGIN .VSImageButton btnMoveNext
+    ImageFile = "blue_move_next.gif"
+Top=4
+    ClassName = "VSImageButton"
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+            DataSource = datT1Relationship
+    BackColor = 0xebebeb
+Width=32
+    ReportURL = ""
+    Enable = True
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Next"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_next"
+TabOrder = 2
+Height=32
+Left=231
+    AutoSize = False
+    TabStop = True
+    Border = "NO_BORDER"
+    Extended = ""
+    Name = "btnMoveNext"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveLast
+    ImageFile = "blue_move_last.gif"
+Top=4
+    ClassName = "VSImageButton"
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+            DataSource = datT1Relationship
+    BackColor = 0xebebeb
+Width=32
+    ReportURL = ""
+    Enable = True
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Last"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_last"
+TabOrder = 3
+Height=32
+Left=266
+    AutoSize = False
+    TabStop = True
+    Border = "NO_BORDER"
+    Extended = ""
+    Name = "btnMoveLast"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+    BEGIN .VSImageButton btnSave
+      ImageFile = "blue_save.gif"
+Top=4
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+      DataSource = "(Current)"
+      BackColor = 0xebebeb
+Width=32
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Save Changes"
+      Visible = True
+      Tag = "_$$_"
+      Action = "db_saveAll"
+TabOrder = 4
+Height=32
+Left=393
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnSave"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnUndo
+      ImageFile = "blue_undo.gif"
+Top=4
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+      DataSource = "(Current)"
+      BackColor = 0xebebeb
+Width=32
+      Enable = False
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Undo Changes"
+      Visible = True
+      Tag = "_$$_"
+      Action = "db_undoResultSet"
+TabOrder = 5
+Height=32
+Left=427
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnUndo"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnDelete
+      ImageFile = "blue_delete.gif"
+Top=4
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+            DataSource = datT1Relationship
+      BackColor = 0xebebeb
+Width=32
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Delete"
+      Visible = True
+      Tag = "_$$_"
+      Action = "db_delete"
+TabOrder = 6
+Height=32
+Left=353
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnDelete"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnAdd
+      ImageFile = "blue_new.gif"
+Top=4
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+            DataSource = datT1Relationship
+      BackColor = 0xebebeb
+Width=32
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Add New"
+      Visible = True
+      Tag = "_$$_"
+      Action = "db_insert"
+TabOrder = 7
+Height=32
+Left=319
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnAdd"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+  BEGIN .VSImageButton VSImageButton2
+    ImageFile = ""
+Top=2
+    ClassName = "VSImageButton"
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+Width=18
+    ReportURL = ""
+    Enable = True
+    ForeColor = 0x0038bb
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$anchorTopRight$_"
+    Action = "ok"
+TabOrder = 8
+Height=16
+Left=497
+    AutoSize = False
+    TabStop = False
+    Border = "RAISED_BORDER"
+    Extended = ""
+    Name = "VSImageButton2"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Stretched
+    Label = "X"
+    END
+    BEGIN .VSImageButton btnQueryMode1
+      ImageFile = "blue_clear_query.gif"
+Top=149
+      ClassName = "VSImageButton"
+      ReportTarget = ""
+      StatusBarText = ""
+      FormTransitionProperties = ""
+      DataSource = "(Current)"
+      BackColor = 0xebebeb
+Width=32
+      ReportURL = ""
+      Enable = True
+      ForeColor = 0x000000
+      AutoToolTip = False
+      HelpURL = ""
+      ToolTip = "Clear Search"
+      Visible = True
+      Tag = "_$anchorTopRight$_"
+      Action = "db_clearQuery"
+TabOrder = 9
+Height=32
+Left=460
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnQueryMode1"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnEditSql
+      ImageFile = "blue_edit_query.gif"
+Top=220
+      ClassName = "VSImageButton"
+      ReportTarget = ""
+      StatusBarText = ""
+      FormTransitionProperties = ""
+      DataSource = "(Current)"
+      BackColor = 0xebebeb
+Width=32
+      ReportURL = ""
+      Enable = False
+      ForeColor = 0x000000
+      AutoToolTip = False
+      HelpURL = ""
+      ToolTip = "Edit SQL"
+      Visible = True
+      Tag = "_$anchorTopRight$_"
+      Action = "db_editSQL"
+TabOrder = 10
+Height=32
+Left=460
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnEditSql"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnCancelQuery
+      ImageFile = "blue_cancel_query.gif"
+Top=184
+      ClassName = "VSImageButton"
+      ReportTarget = ""
+      StatusBarText = ""
+      FormTransitionProperties = ""
+      DataSource = "(Current)"
+      BackColor = 0xebebeb
+Width=32
+      ReportURL = ""
+      Enable = False
+      ForeColor = 0x000000
+      AutoToolTip = False
+      HelpURL = ""
+      ToolTip = "Cancel Search"
+      Visible = True
+      Tag = "_$anchorTopRight$_"
+      Action = "db_cancelQuery"
+TabOrder = 11
+Height=32
+Left=460
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnCancelQuery"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnQueryMode
+      ImageFile = "blue_query.gif"
+Top=114
+      ClassName = "VSImageButton"
+      ReportTarget = ""
+      StatusBarText = ""
+      FormTransitionProperties = ""
+      DataSource = "(Current)"
+      BackColor = 0xebebeb
+Width=32
+      ReportURL = ""
+      Enable = True
+      ForeColor = 0x000000
+      AutoToolTip = False
+      HelpURL = ""
+      ToolTip = "Search Mode"
+      Visible = True
+      Tag = "_$anchorTopRight$_"
+      Action = "db_queryMode"
+TabOrder = 12
+Height=32
+Left=460
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnQueryMode"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSImageButton btnRunQuery
+      ImageFile = "blue_run_query.gif"
+Top=79
+      ClassName = "VSImageButton"
+      ReportTarget = ""
+      StatusBarText = ""
+      FormTransitionProperties = ""
+      DataSource = "(Current)"
+      BackColor = 0xebebeb
+Width=32
+      ReportURL = ""
+      Enable = True
+      ForeColor = 0x000000
+      AutoToolTip = False
+      HelpURL = ""
+      ToolTip = "Get Data"
+      Visible = True
+      Tag = "_$anchorTopRight$_"
+      Action = "db_runQuery"
+TabOrder = 13
+Height=32
+Left=460
+      AutoSize = False
+      TabStop = True
+      Border = "NO_BORDER"
+      Extended = ""
+      Name = "btnRunQuery"
+      AutoLabel = False
+      FormTransition = 0
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Centered
+      Label = ""
+      END
+    BEGIN .VSPickChoice pckT1RepositoryName
+Top=50
+      ClassName = "VSPickChoice"
+    StatusBarText = ""
+    DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=120
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Repository Name"
+      Visible = True
+      Tag = "_$$_"
+TabOrder = 14
+Height=20
+Left=113
+      PickObjectProperties = ""
+    DataField = 1,"RepositoryName"
+    PickObject = 2,"T2Repository"
+      TabStop = True
+      Extended = ""
+      Name = "pckT1RepositoryName"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      END
+    BEGIN .VSLabel lblT1RepositoryName
+Top=50
+      ClassName = "VSLabel"
+	Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1RepositoryName"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Repository Name"
+      END
+    BEGIN .VSLabel lblT1RelationshipName
+Top=75
+      ClassName = "VSLabel"
+      Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1RelationshipName"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Relationship Name"
+      END
+    BEGIN .VSTextField txtT1RelationshipName
+Top=74
+      ClassName = "VSTextField"
+    StatusBarText = ""
+      EchoChar = ""
+    DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+    Format = ""
+TabOrder = 15
+Height=20
+Left=113
+    DataField = 2,"RelationshipName"
+      TabStop = True
+      Editable = True
+      Extended = ""
+      Name = "txtT1RelationshipName"
+      Text = ""
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      END
+    BEGIN .VSLabel lblT1ParentDOName
+Top=103
+      ClassName = "VSLabel"
+      Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1ParentDOName"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Parent Data Object"
+      END
+    BEGIN .VSTextField txtT1ParentDOName
+Top=102
+      ClassName = "VSTextField"
+    StatusBarText = ""
+      EchoChar = ""
+    DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+    Format = ""
+TabOrder = 16
+Height=20
+Left=113
+    DataField = 3,"ParentDOName"
+      TabStop = True
+      Editable = True
+      Extended = ""
+      Name = "txtT1ParentDOName"
+      Text = ""
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      END
+    BEGIN .VSLabel lblT1ParentRoleName
+Top=131
+      ClassName = "VSLabel"
+      Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1ParentRoleName"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Parent Role Name"
+      END
+    BEGIN .VSTextField txtT1ParentRoleName
+Top=130
+      ClassName = "VSTextField"
+    StatusBarText = ""
+      EchoChar = ""
+    DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+    Format = ""
+TabOrder = 17
+Height=20
+Left=113
+    DataField = 4,"ParentRoleName"
+      TabStop = True
+      Editable = True
+      Extended = ""
+      Name = "txtT1ParentRoleName"
+      Text = ""
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      END
+    BEGIN .VSLabel lblT1ChildDOName
+Top=159
+      ClassName = "VSLabel"
+      Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1ChildDOName"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Child Data Object"
+      END
+    BEGIN .VSTextField txtT1ChildDOName
+Top=158
+      ClassName = "VSTextField"
+    StatusBarText = ""
+      EchoChar = ""
+    DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+    Format = ""
+TabOrder = 18
+Height=20
+Left=113
+    DataField = 5,"ChildDOName"
+      TabStop = True
+      Editable = True
+      Extended = ""
+      Name = "txtT1ChildDOName"
+      Text = ""
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      END
+    BEGIN .VSLabel lblT1ChildRoleName
+Top=187
+      ClassName = "VSLabel"
+      Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1ChildRoleName"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Child Role Name"
+      END
+    BEGIN .VSTextField txtT1ChildRoleName
+Top=186
+      ClassName = "VSTextField"
+    StatusBarText = ""
+      EchoChar = ""
+    DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+    Format = ""
+TabOrder = 19
+Height=20
+Left=113
+    DataField = 6,"ChildRoleName"
+      TabStop = True
+      Editable = True
+      Extended = ""
+      Name = "txtT1ChildRoleName"
+      Text = ""
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      END
+    BEGIN .VSCheckbox chkT1isEnforce
+Top=214
+      ClassName = "VSCheckbox"
+    StatusBarText = ""
+    DataSource = datT1Relationship
+      BackColor = 0xebebeb
+Width=20
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+TabOrder = 20
+Height=20
+Left=113
+    DataField = 7,"isEnforce"
+      TabStop = True
+      Extended = ""
+      Name = "chkT1isEnforce"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = ""
+      END
+    BEGIN .VSLabel lblT1isEnforce
+Top=215
+      ClassName = "VSLabel"
+	Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb	
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1isEnforce"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Is Relationship Enforced?"
+      END
+    BEGIN .VSLabel lblT1ParentAttribute
+Top=243
+      ClassName = "VSLabel"
+      Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1ParentAttribute"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Parent Attribute"
+      END
+    BEGIN .VSTextField txtT1ParentAttribute
+Top=242
+      ClassName = "VSTextField"
+    StatusBarText = ""
+      EchoChar = ""
+    DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+    Format = ""
+TabOrder = 21
+Height=20
+Left=113
+    DataField = 8,"ParentAttribute"
+      TabStop = True
+      Editable = True
+      Extended = ""
+      Name = "txtT1ParentAttribute"
+      Text = ""
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      END
+    BEGIN .VSLabel lblT1ChildAttribute
+Top=271
+      ClassName = "VSLabel"
+      Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1ChildAttribute"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Child Attribute"
+      END
+    BEGIN .VSTextField txtT1ChildAttribute
+Top=270
+      ClassName = "VSTextField"
+    StatusBarText = ""
+      EchoChar = ""
+    DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+    Format = ""
+TabOrder = 22
+Height=20
+Left=113
+    DataField = 9,"ChildAttribute"
+      TabStop = True
+      Editable = True
+      Extended = ""
+      Name = "txtT1ChildAttribute"
+      Text = ""
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      END
+    BEGIN .VSLabel lblT1RolePlayer_CNT
+Top=299
+      ClassName = "VSLabel"
+      Opaque = False
+      StatusBarText = ""
+      Align = "LEFT"
+      DataSource = ""
+      BackColor = 0xebebeb
+Width=102
+      Enable = True
+      ForeColor = 0x0038bb
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+Height=18
+Left=9
+      DataField = 0
+      Extended = ""
+      Name = "lblT1RolePlayer_CNT"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "RolePlayer_CNT"
+      END
+    BEGIN .VSTextField txtT1RolePlayer_CNT
+Top=298
+      ClassName = "VSTextField"
+    StatusBarText = ""
+      EchoChar = ""
+    DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=50
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = ""
+      Visible = True
+      Tag = "_$$_"
+    Format = ""
+TabOrder = 23
+Height=20
+Left=113
+    DataField = 10,"RolePlayer_CNT"
+      TabStop = True
+      Editable = True
+      Extended = ""
+      Name = "txtT1RolePlayer_CNT"
+      Text = ""
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      END
+    BEGIN .VSJavaDataControl datT1Relationship
+Top=433
+      ClassName = "VSJavaDataControl"
+      RecordSourceProperties = ""
+      StatusBarText = ""
+      AllowInsert = True
+      BackColor = 0xffffff
+Width=146
+      AllowUpdate = True
+    RecordSource = 1,"T1Relationship"
+      Enable = True
+      ForeColor = 0x000000
+      AllowDelete = True
+      HelpURL = ""
+      ToolTip = ""
+      Visible = False
+      Tag = "_$$_"
+      MaxRowsPerFetch = 16
+TabOrder = 24
+Height=25
+Left=179
+      SaveMode = "immediate"
+      TabStop = False
+      Extended = ""
+      Name = "datT1Relationship"
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      Label = "Relationship"
+      END
+    BEGIN .VSImageButton ibtT3fRelationshipRole_Grid
+     ImageFile = ""
+Top=459
+      ClassName = "VSImageButton"
+      ReportTarget = ""
+      StatusBarText = ""
+      FormTransitionProperties = ""
+           DataSource = datT1Relationship
+      BackColor = 0xffffff
+Width=61
+      ReportURL = ""
+      Enable = True
+      ForeColor = 0xffffff
+      AutoToolTip = False
+      HelpURL = ""
+      ToolTip = "Roles"
+      Visible = True
+      Tag = "_$$_"
+      Action = ""
+TabOrder = 25
+Height=50
+Left=15
+      AutoSize = False
+      TabStop = True
+      Border = "RAISED_BORDER"
+      Extended = ""
+      Name = "ibtT3fRelationshipRole_Grid"
+      AutoLabel = False
+     FormTransition = 30001,T3RelationshipRole_fRelationshipRole_Grid
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = True
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Stretched
+     Label = "Roles"
+     ForeColor = 0x0038bb
+      END
+  END
+
+]]></FormLayout>
+</Form>

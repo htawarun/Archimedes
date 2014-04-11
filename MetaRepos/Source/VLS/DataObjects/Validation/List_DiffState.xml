@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	DTDVersion="05.05.12"
+	SurrId="0445211779.Tyler.0006"
+	CodedValuesList="True"
+	ImageReference=" "
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	XdaConnector="SQL"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	>
+	<Attributes>
+		<Attribute
+			Name="DiffState"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="12"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+		<Attribute
+			Name="DiffDescription"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="PKeyDiffState"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="DiffState"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+	<SingularCaption><![CDATA[*]]></SingularCaption>
+	<PluralCaption><![CDATA[*]]></PluralCaption>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<CodedValuesList
+		StoredAttribute="DiffState"
+		DisplayAttribute="DiffDescription"
+	/>
+	<Description><![CDATA[ ]]></Description>
+	<Comments><![CDATA[ ]]></Comments>
+</DataObject>

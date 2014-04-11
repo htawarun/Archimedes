@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		ParentRoleName="SourceAttribute"
+		ChildRoleName="AttrObjectMapper"
+		IsEnforce="True"
+		CountReplicates="1"
+		>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="SourceRepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="DataObjectName"
+				ChildAttribute="SourceDataObjectName"
+			/>
+			<AttributePair
+				ParentAttribute="AttrName"
+				ChildAttribute="SourceAttrName"
+			/>
+		</AttributePairs>
+		<AscendCaption><![CDATA[Attribute]]></AscendCaption>
+		<DescendCaption><![CDATA[Attribute Mapper]]></DescendCaption>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]></ErrPreventUpdateParent>
+		<ErrPreventDeleteParent><![CDATA[<System Supplied>]]></ErrPreventDeleteParent>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]></ErrPreventInsertOrUpdateChild>
+	</Relationship>
+	<Relationship
+		ParentRoleName="TargetAttribute"
+		ChildRoleName="AttrObjectMapper_1"
+		IsEnforce="True"
+		CountReplicates="1"
+		>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="TargetRepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="DataObjectName"
+				ChildAttribute="TargetDataObjectName"
+			/>
+			<AttributePair
+				ParentAttribute="AttrName"
+				ChildAttribute="TargetAttrName"
+			/>
+		</AttributePairs>
+		<AscendCaption><![CDATA[Attribute]]></AscendCaption>
+		<DescendCaption><![CDATA[Attribute Mapper]]></DescendCaption>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]></ErrPreventUpdateParent>
+		<ErrPreventDeleteParent><![CDATA[<System Supplied>]]></ErrPreventDeleteParent>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]></ErrPreventInsertOrUpdateChild>
+	</Relationship>
+</Relationships>

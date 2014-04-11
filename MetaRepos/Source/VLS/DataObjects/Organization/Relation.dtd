@@ -1,0 +1,40 @@
+<!ELEMENT Relationships ( Relationship )* >
+<!ATTLIST Relationships
+	DTDVersion CDATA #REQUIRED
+>
+
+<!ELEMENT Relationship ( AttributePairs | AscendCaption | DescendCaption | ErrPreventInsertOrUpdateChild | ErrPreventDeleteParent | ErrPreventUpdateParent |ExtendedProperties |HiddenProperties )* >
+<!ATTLIST Relationship 
+
+	CountAggregates CDATA #IMPLIED
+	CountReplicates CDATA #IMPLIED
+	OnParentUpdate (PreventIfChildren|UpdateChildren) #IMPLIED
+	OnParentDelete (PreventIfChildren|DeleteChildren|NullChildrenForeignKey) #IMPLIED
+	IsEnforce (True|False) #REQUIRED 
+	OnChildInsertOrUpdate (PreventIfNoParent|InsertParentIfNone) #IMPLIED
+	ChildRoleName CDATA #IMPLIED
+	ParentRoleName CDATA #IMPLIED
+	ParentAttributeGroupInstance CDATA #IMPLIED
+	ChildAttributeGroupInstance CDATA #IMPLIED
+
+>
+
+<!ELEMENT AttributePairs (AttributePair)* >
+<!ELEMENT AttributePair EMPTY >
+<!ATTLIST AttributePair
+	ParentAttribute CDATA #REQUIRED
+	ChildAttribute CDATA #REQUIRED
+>
+<!ELEMENT AscendCaption (#PCDATA)> 
+<!ELEMENT DescendCaption (#PCDATA)>
+<!ELEMENT ErrPreventInsertOrUpdateChild (#PCDATA)>
+<!ELEMENT ErrPreventDeleteParent (#PCDATA)>
+<!ELEMENT ErrPreventUpdateParent (#PCDATA)>
+
+<!ELEMENT ExtendedProperties (Property)* >
+<!ELEMENT HiddenProperties (Property)* >
+<!ELEMENT Property EMPTY >
+<!ATTLIST Property 
+	Name CDATA #REQUIRED
+	Value CDATA #REQUIRED
+>

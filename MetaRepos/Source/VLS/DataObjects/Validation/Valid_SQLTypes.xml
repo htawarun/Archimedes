@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	DTDVersion="05.05.12"
+	SurrId="0444596735.Tyler.0006"
+	CodedValuesList="True"
+	ImageReference=" "
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	XdaConnector="SQL"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	>
+	<Attributes>
+		<Attribute
+			Name="SqlType"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="PkeySqlType"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="SqlType"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+	<SingularCaption><![CDATA[*]]></SingularCaption>
+	<PluralCaption><![CDATA[*]]></PluralCaption>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<CodedValuesList
+		StoredAttribute="SqlType"
+		DisplayAttribute="SqlType"
+	/>
+	<Description><![CDATA[ ]]></Description>
+	<Comments><![CDATA[ ]]></Comments>
+</DataObject>

@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  <title>Session Error</title>
+  <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+  <script language="javascript">
+<!--
+	function PutAtTop() {
+ 		if ( self != top ) {
+			if (self.location.href.indexOf("?") != -1) {
+				top.location.href = self.location.href + "&timeoutReload=true";
+			} else {
+				top.location.href = self.location.href + "?timeoutReload=true";
+			}
+		}
+	}
+
+	function refreshAndCloseIfInPopup() {
+		//if this window is a popup pick...
+		if (window.name.indexOf("popupPick_") == 0) {
+			//resubmit parent's form with original frame name
+			form = opener.document.forms[0];
+			opener.submitForm(form, "", form.frame_name.value);
+
+			//close self (the pick)
+			self.close();
+		}
+	}
+//-->
+  </script>
+  <style>
+    body {
+      background : #FFFFFF;
+    }
+    table.OuterPane {
+      background : #000000;
+    }
+    td.Caption {
+      font : bold 14pt Verdana, Arial, Helvetica, sans-serif;
+      color : #FFFFFF;
+      background : #000000;
+      text-align : center;
+    }
+    td.Message {
+      font : 11pt Verdana, Arial, Helvetica, sans-serif;
+      color : #000000;
+      background : #DFDFDF;
+      text-align : center;
+    }
+    input.button {
+    	font : 10pt Verdana, Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body target="_top" onload="refreshAndCloseIfInPopup(); PutAtTop();">
+
+<form onsubmit="timeout.action = self.location.href;" name="timeout" method="post">
+
+  <!-- outer table to center timeout table in both dirs (1 row, 1 col) -->
+  <table width="100%" height="100%"><tr><td valign="middle">
+  	<center>
+
+    <!-- inner table (2 rows, 1 col) -->
+    <table class="OuterPane" border="0" cellspacing="1" cellpadding="5">
+      <tr>
+        <td class="Caption">
+          Session Error Occurred
+        </td>
+      </tr>
+      <tr>
+        <td class="Message">
+        	<br>
+          Your session has timed out or the server did not respond.<br>
+          <br>
+          Please login again.<br>
+          <br>
+          <hr>
+          <input type="submit" value="Login" name="relogon" target="_top" class="button">
+        </td>
+      </tr>
+    </table>
+
+		</center>
+  </td></tr></table>
+
+</form>
+
+</body>
+</html>

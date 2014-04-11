@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE DataObject SYSTEM "DataObject.dtd">
+<DataObject
+	DTDVersion="05.05.12"
+	SurrId="0444579108.Tyler.0000"
+	CodedValuesList="False"
+	ImageReference=" "
+	IsRemoteAccessible="False"
+	UseQuotedIdentifiers="False"
+	XdaConnector="SQL"
+	SuperClass="DataObject"
+	LockMode="AllApplicableAttributes"
+	>
+	<Attributes>
+		<Attribute
+			Name="ProjectName"
+			PreventUserUpdates="False"
+			ValueRequired="True"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="50"
+			/>
+			<Derivation
+				DerivationType="None"
+			/>
+			<Validation
+				ValidationType="Condition"
+			/>
+			<Caption><![CDATA[CDD Project Name]]></Caption>
+		</Attribute>
+		<Attribute
+			Name="ProjectDescription"
+			PreventUserUpdates="False"
+			ValueRequired="False"
+			LayoutByDefault="True"
+			Persistent="True"
+			>
+			<DataType
+				DataType="VarChar"
+				Size="250"
+			/>
+		</Attribute>
+	</Attributes>
+	<Indexes>
+		<Index
+			Name="PkeyProject"
+			Primary="True"
+			Unique="True"
+			IgnoreNulls="False"
+			>
+			<Index_Attribute
+				Name="ProjectName"
+				Descending="False"
+			/>
+		</Index>
+	</Indexes>
+	<SingularCaption><![CDATA[Common Data Dictionary Project]]></SingularCaption>
+	<PluralCaption><![CDATA[CDD Projects]]></PluralCaption>
+	<VLSDeployment
+		DeploySecurityInfo="False"
+	/>
+	<Description><![CDATA[ Common Data Dictionary Mapping Project]]></Description>
+	<Comments><![CDATA[ Mapping must be dependent on specific version of objects (Data and Attributes).  ]]></Comments>
+</DataObject>

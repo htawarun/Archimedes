@@ -1,0 +1,7 @@
+"TranformRule","RuleDescription"
+"ASSERTEQ","ASSERT $ROW.COLA = $OTHROW.COLB"
+"ASSERTNULL","ASSERT $ROW IS NULL"
+"ASSERTNOTNULL","ASSERT $ROW IS NOT NULL"
+"ASSERTNE","ASSERT $ROW.COLA <> $OTHROW.COLB"
+"CUSTOM","Custom Transform"
+"NONE","No Transform Defined"

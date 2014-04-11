@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="Java"
+	Archetype="Startup"
+	PositionTop="20.3125"
+	PositionLeft="23.4375"
+	PositionWidth="187.5"
+	PositionHeight="54.6875"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="False"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	>
+	<FormCaption><![CDATA[StartupForm]]></FormCaption>
+	<Transition
+		FormTransNum="1"
+		Prefix="T1"
+		TargetFormName="fRepository"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		ClassName="PageNavigation"
+		RSID="1"
+		BusinessObject="Repository"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T2"
+		TargetFormName="fReposDiff"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		ClassName="PageNavigation"
+		RSID="5"
+		BusinessObject="ReposDiff"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T3"
+		TargetFormName="fOtherFile_Grid"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		ClassName="PageNavigation"
+		RSID="6"
+		BusinessObject="OtherFile"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T4"
+		TargetFormName="fReposName"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		ClassName="PageNavigation"
+		RSID="8"
+		BusinessObject="ReposName"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<Transition
+		FormTransNum="1"
+		Prefix="T5"
+		TargetFormName="fReposGroups"
+		IsTargetInitialQueryMode="False"
+		IsTargetInitialAddMode="False"
+		IsVisibleAppline="True"
+		IsAddedAfterGen="False"
+		ClassName="PageNavigation"
+		RSID="9"
+		BusinessObject="ReposName"
+		RelnIsFromParent="True"
+		>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+	</Transition>
+	<FormLayout><![CDATA[BEGIN .VSForm StartupForm
+  ImageFile = "paper10.gif"
+  ClassName = "VSForm"
+  BackColor = 0xc0c0c0
+Width=131
+  ImageDisplayStyle = Stretched
+  Title = ""
+  Enable = True
+  ForeColor = 0x000000
+  HelpURL = ""
+  ToolTip = ""
+  Visible = True
+  Tag = "_$$_"
+Height=533
+  AnchorForm = "LEFT"
+  Style = "Child"
+  Name = "StartupForm"
+  Extended = ""
+  DisplayTitleBar = False
+  BeginProperty VSFont 
+    FontName  = "Helvetica"
+    FontSize  = 12
+    FontStyleBold  = False
+    FontStyleItalic  = False
+  EndProperty 
+    BEGIN .VSImageButton ibtT1fRepository
+     ImageFile = ""
+Top=8
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+           DataSource = "(None)"
+      BackColor = 0xebebeb
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Repository"
+      Visible = True
+      Tag = "_$$_"
+      Action = ""
+TabOrder = 0
+Height=82
+Left=5
+      AutoSize = False
+      TabStop = True
+      Border = "RAISED_BORDER"
+      Extended = ""
+      Name = "ibtT1fRepository"
+      AutoLabel = False
+     FormTransition = 10001,T1Repository_fRepository
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Stretched
+     Label = "Repository"
+      END
+    BEGIN .VSImageButton ibtT2fReposDiff
+     ImageFile = ""
+Top=103
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+           DataSource = "(None)"
+      BackColor = 0xebebeb
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "ReposDiff"
+      Visible = True
+      Tag = "_$$_"
+      Action = ""
+TabOrder = 1
+Height=82
+Left=5
+      AutoSize = False
+      TabStop = True
+      Border = "RAISED_BORDER"
+      Extended = ""
+      Name = "ibtT2fReposDiff"
+      AutoLabel = False
+     FormTransition = 50001,T2ReposDiff_fReposDiff
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Stretched
+     Label = "ReposDiff"
+      END
+    BEGIN .VSImageButton ibtT3fOtherFile_Grid
+     ImageFile = ""
+Top=198
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+           DataSource = "(None)"
+      BackColor = 0xebebeb
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "OtherFile(s)"
+      Visible = True
+      Tag = "_$$_"
+      Action = ""
+TabOrder = 2
+Height=82
+Left=5
+      AutoSize = False
+      TabStop = True
+      Border = "RAISED_BORDER"
+      Extended = ""
+      Name = "ibtT3fOtherFile_Grid"
+      AutoLabel = False
+     FormTransition = 60001,T3OtherFile_fOtherFile_Grid
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Stretched
+     Label = "OtherFile(s)"
+      END
+    BEGIN .VSImageButton ibtT4fReposName
+     ImageFile = ""
+Top=293
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+           DataSource = "(None)"
+      BackColor = 0xebebeb
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Repository Version"
+      Visible = True
+      Tag = "_$$_"
+      Action = ""
+TabOrder = 3
+Height=82
+Left=5
+      AutoSize = False
+      TabStop = True
+      Border = "RAISED_BORDER"
+      Extended = ""
+      Name = "ibtT4fReposName"
+      AutoLabel = False
+     FormTransition = 80001,T4ReposName_fReposName
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Stretched
+     Label = "Repository Version"
+      END
+    BEGIN .VSImageButton ibtT5fReposGroups
+     ImageFile = ""
+Top=388
+      ClassName = "VSImageButton"
+      StatusBarText = ""
+      FormTransitionProperties = ""
+           DataSource = "(None)"
+      BackColor = 0xebebeb
+Width=114
+      Enable = True
+      ForeColor = 0x000000
+      HelpURL = ""
+      ToolTip = "Groups"
+      Visible = True
+      Tag = "_$$_"
+      Action = ""
+TabOrder = 4
+Height=82
+Left=5
+      AutoSize = False
+      TabStop = True
+      Border = "RAISED_BORDER"
+      Extended = ""
+      Name = "ibtT5fReposGroups"
+      AutoLabel = False
+     FormTransition = 90001,T5ReposName_fReposGroups
+      BeginProperty VSFont 
+        FontName  = "Helvetica"
+        FontSize  = 12
+        FontStyleBold  = False
+        FontStyleItalic  = False
+      EndProperty 
+      DisplayStyle = Stretched
+     Label = "Groups"
+      END
+  END
+]]></FormLayout>
+</Form>

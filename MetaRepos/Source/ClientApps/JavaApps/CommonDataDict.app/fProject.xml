@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="Java"
+	Archetype="Default"
+	PositionTop="86"
+	PositionLeft="30"
+	PositionWidth="188"
+	PositionHeight="55"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="True"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	>
+	<FormCaption><![CDATA[Common Data Dictionary Project]]></FormCaption>
+	<RecordSource
+		RSID="1"
+		Prefix="T1"
+		BusinessObject="Project"
+		RelnIsFromParent="False"
+		DoesSourceAffectMe="False"
+		DoIAffectSource="False"
+		IsAddedAfterGen="False"
+		RsAttributesDefault="False"
+		ClassName="DataSource"
+		RecordSourceArchetype="Display"
+		>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<RSAttributesMeta>
+			<DefaultAttributes>
+				<RSDefaultAttribute ID="1" Name="ProjectName" />
+				<RSDefaultAttribute ID="2" Name="ProjectDescription" />
+			</DefaultAttributes>
+			<ScalerAttributes>
+				<RSAttribute Name="ProjectName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ProjectDescription" Displayed="True" UnPlaced="False" />
+			</ScalerAttributes>
+		</RSAttributesMeta>
+		<RecordSource
+			RSID="2"
+			Prefix="T2"
+			BusinessObject="DataObjectMapper"
+			Relationship="Project(Project)-DataObjectMapper(DataObjectMapper)"
+			RelnIsFromParent="True"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="DataSource"
+			RecordSourceArchetype="Grid"
+			ParentAlias=""
+			ChildAlias=""
+			>
+			<ParameterizedWhereClause><![CDATA[ [ProjectName] = [?ProjectName]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="ProjectName" />
+					<RSDefaultAttribute ID="2" Name="SourceRepositoryName" />
+					<RSDefaultAttribute ID="3" Name="TargetRepositoryName" />
+					<RSDefaultAttribute ID="4" Name="SourceDataObjectName" />
+					<RSDefaultAttribute ID="5" Name="TargetDataObjectName" />
+				</DefaultAttributes>
+				<ScalerAttributes>
+					<RSAttribute Name="ProjectName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="SourceRepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="TargetRepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="SourceDataObjectName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="TargetDataObjectName" Displayed="True" UnPlaced="False" />
+				</ScalerAttributes>
+				<GridAttributes>
+					<RSAttribute Name="SourceRepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="SourceDataObjectName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="TargetRepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="TargetDataObjectName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ProjectName" Displayed="False" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+			<Transition
+				FormTransNum="1"
+				Prefix="T3"
+				TargetFormName="fDataObjectMapper"
+				IsTargetInitialQueryMode="False"
+				IsTargetInitialAddMode="False"
+				IsVisibleAppline="True"
+				IsAddedAfterGen="False"
+				FormTransCaption="Add/Edit"
+				ClassName="PageNavigation"
+				>
+			</Transition>
+		</RecordSource>
+	</RecordSource>
+	<FormLayout><![CDATA[BEGIN .VSForm fProject
+  ImageFile = "BACKGROUND.GIF"
+  ClassName = "CoolVSForm"
+  BackColor = 0xc0c0c0
+  Width = 517
+  ImageDisplayStyle = Tiled
+  Title = ""
+  Enable = True
+  ForeColor = 0x000000
+  HelpURL = ""
+  ToolTip = ""
+  Visible = True
+  Tag = "_$$_"
+  Height = 517
+  AnchorForm = "NONE"
+  Constraint = "null"
+  Layout = ""
+  Style = "Child"
+  Name = "fProject"
+  Extended = ""
+  DisplayTitleBar = False
+  BeginProperty VSFont 
+    FontName  = "Helvetica"
+    FontSize  = 12
+    FontStyleBold  = False
+    FontStyleItalic  = False
+  EndProperty 
+  BEGIN .VSImageButton btnMovePrev
+    ImageFile = "blue_move_previous.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Project"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Previous"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_previous"
+    TabOrder = 0
+    Height = 32
+    Left = 36
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMovePrev"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveFirst
+    ImageFile = "blue_move_first.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Project"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move First"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_first"
+    TabOrder = 1
+    Height = 32
+    Left = 1
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveFirst"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSLabel VSLabel11
+    Top = 61
+    ClassName = "VSLabel"
+    Opaque = False
+    StatusBarText = ""
+    BorderStyle = "NO_BORDER"
+    DataSource = ""
+    HorizAlign = "LEFT"
+    BackColor = 0xebebeb
+    Width = 156
+    Enable = True
+    VertTextPos = "BOTTOM"
+    DisplayedMnemonic = ""
+    ForeColor = 0x0038bb
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    Height = 89
+    Left = 318
+    DataField = 0
+    Icon = ""
+    Constraint = "null"
+    VertAlign = "CENTER"
+    HorizTextPos = "RIGHT"
+    Extended = ""
+    Name = "VSLabel11"
+    LabelFor = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 26
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "Common Data Dictionary Project"
+    END
+  BEGIN .VSImageButton btnMoveNext
+    ImageFile = "blue_move_next.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Project"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Next"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_next"
+    TabOrder = 2
+    Height = 32
+    Left = 231
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveNext"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveLast
+    ImageFile = "blue_move_last.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Project"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Last"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_last"
+    TabOrder = 3
+    Height = 32
+    Left = 266
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveLast"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnSave
+    ImageFile = "blue_save.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Save Changes"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_saveAll"
+    TabOrder = 4
+    Height = 32
+    Left = 393
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnSave"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnUndo
+    ImageFile = "blue_undo.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = False
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Undo Changes"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_undoResultSet"
+    TabOrder = 5
+    Height = 32
+    Left = 427
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnUndo"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnDelete
+    ImageFile = "blue_delete.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Project"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Delete"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_delete"
+    TabOrder = 6
+    Height = 32
+    Left = 353
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnDelete"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnAdd
+    ImageFile = "blue_new.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Project"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Add New"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_insert"
+    TabOrder = 7
+    Height = 32
+    Left = 319
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnAdd"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton VSImageButton2
+    ImageFile = ""
+    Top = 2
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 18
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x0038bb
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$anchorTopRight$_"
+    Action = "ok"
+    TabOrder = 8
+    Height = 16
+    Left = 497
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = False
+    Border = "RAISED_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "VSImageButton2"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Stretched
+    Label = "X"
+    END
+  BEGIN .VSImageButton btnSave1
+    ImageFile = "blue_save.gif"
+    Top = 433
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT2DataObjectMapper"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Save Changes"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_saveAll"
+    TabOrder = 9
+    Height = 32
+    Left = 358
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnSave1"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnUndo1
+    ImageFile = "blue_undo.gif"
+    Top = 433
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT2DataObjectMapper"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = False
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Undo Changes"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_undoResultSet"
+    TabOrder = 10
+    Height = 32
+    Left = 393
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnUndo1"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnDelete1
+    ImageFile = "blue_delete.gif"
+    Top = 433
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT2DataObjectMapper"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Delete"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_delete"
+    TabOrder = 11
+    Height = 32
+    Left = 464
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnDelete1"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnAdd1
+    ImageFile = "blue_new.gif"
+    Top = 433
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT2DataObjectMapper"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Add New"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_insert"
+    TabOrder = 12
+    Height = 32
+    Left = 429
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnAdd1"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSJavaDataControl datT2DataObjectMapper
+    Top = 436
+    ClassName = "VSJavaDataControl"
+    RecordSourceProperties = ""
+    StatusBarText = ""
+    AllowInsert = True
+    BackColor = 0xffffff
+    Width = 150
+    AllowUpdate = True
+    RecordSource = 2,"T2DataObjectMapper"
+    Enable = True
+    ForeColor = 0x000000
+    AllowDelete = True
+    HelpURL = ""
+    ToolTip = ""
+    Visible = False
+    Tag = "_$$_"
+    MaxRowsPerFetch = 16
+    TabOrder = 13
+    Height = 27
+    Left = 16
+    SaveMode = "buffered"
+    Constraint = "null"
+    TabStop = False
+    Extended = ""
+    Name = "datT2DataObjectMapper"
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "DataObjectMapper(s)"
+    END
+  BEGIN .VSGrid grdT2DataObjectMapper
+    RowSelectMode = "SINGLE_SELECTION"
+    HiliteForeColor = 0xffffff
+    Top = 235
+    ClassName = "VSGrid"
+    DisplayHeader = True
+    BorderStyle = "PLAIN_BORDER"
+    DataSource = "datT2DataObjectMapper"
+    BackColor = 0xffffff
+    Width = 480
+    RowSelectionAllowed = False
+    DisplayGridLines = True
+    Enable = True
+    ForeColor = 0x000000
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    RowHeaderBackColor = 0x004080
+    Columns = ""
+    TabOrder = 14
+    Height = 197
+    Left = 20
+    ColumnHeaderBackColor = 0x004080
+    ShowVerticalLines = True
+    RowHeight = 20
+    RowHeaderForeColor = 0xebebeb
+    DisableBackColor = 0xffffff
+    BeginProperty VSHeaderFont
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    ColumnHeaderForeColor = 0xebebeb
+    Constraint = "null"
+    TabStop = True
+    ColResizeMode = "AUTO_RESIZE_OFF"
+    LineColor = 0xc0c0c0
+    DisableForeColor = 0xc0c0c0
+    Editable = True
+    Extended = ""
+    Name = "grdT2DataObjectMapper"
+    RowHeaderWidth = 25
+    HiliteBackColor = 0x004080
+    ColumnHeaderHeight = 17
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    ShowStarRow = True
+    ShowHorizontalLines = True
+    BEGIN .VSGridColumn "Source Repository Name"      
+      GridColumnLabel = "Source Repository Name"
+      GridColumnWidth = 0x6F
+      GridColumnDataField = 2
+      GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnSortAllowed = True
+      GridColumnFormat = ""
+      GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+    BEGIN .VSGridColumn "Source DataObject Name"      
+      GridColumnLabel = "Source DataObject Name"
+      GridColumnWidth = 0x6F
+      GridColumnDataField = 4
+      GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnSortAllowed = True
+      GridColumnFormat = ""
+      GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+    BEGIN .VSGridColumn "Target Repository Name"      
+      GridColumnLabel = "Target Repository Name"
+      GridColumnWidth = 0x6C
+      GridColumnDataField = 3
+      GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnSortAllowed = True
+      GridColumnFormat = ""
+      GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+    BEGIN .VSGridColumn "Target DataObject Name"      
+      GridColumnLabel = "Target DataObject Name"
+      GridColumnWidth = 0x65
+      GridColumnDataField = 5
+      GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnSortAllowed = True
+      GridColumnFormat = ""
+      GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+    END
+  BEGIN .VSLabel lblT1ProjectName
+    Top = 67
+    ClassName = "VSLabel"
+    Opaque = False
+    StatusBarText = ""
+    BorderStyle = "NO_BORDER"
+    DataSource = ""
+    HorizAlign = "LEFT"
+    BackColor = 0xebebeb
+    Width = 102
+    Enable = True
+    VertTextPos = "BOTTOM"
+    DisplayedMnemonic = ""
+    ForeColor = 0x0038bb
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    Height = 18
+    Left = 14
+    DataField = 0
+    Icon = ""
+    Constraint = "null"
+    VertAlign = "CENTER"
+    HorizTextPos = "RIGHT"
+    Extended = ""
+    Name = "lblT1ProjectName"
+    LabelFor = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "CDD Project Name"
+    END
+  BEGIN .VSTextField txtT1ProjectName
+    Top = 68
+    ClassName = "VSTextField"
+    StatusBarText = ""
+    HorizAlign = "LEFT"
+    EchoChar = ""
+    DataSource = "datT1Project"
+    BackColor = 0xffffff
+    Width = 114
+    Enable = True
+    ForeColor = 0x000000
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    Format = ""
+    Columns = 0
+    TabOrder = 15
+    Height = 20
+    Left = 134
+    DataField = 1,"ProjectName"
+    Constraint = "null"
+    TabStop = True
+    Editable = True
+    DisplayMode = "Data/Query"
+    Extended = ""
+    Name = "txtT1ProjectName"
+    Text = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    END
+  BEGIN .VSLabel lblT1ProjectDescription
+    Top = 110
+    ClassName = "VSLabel"
+    Opaque = False
+    StatusBarText = ""
+    BorderStyle = "NO_BORDER"
+    DataSource = ""
+    HorizAlign = "LEFT"
+    BackColor = 0xebebeb
+    Width = 110
+    Enable = True
+    VertTextPos = "BOTTOM"
+    DisplayedMnemonic = ""
+    ForeColor = 0x0038bb
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    Height = 19
+    Left = 9
+    DataField = 0
+    Icon = ""
+    Constraint = "null"
+    VertAlign = "CENTER"
+    HorizTextPos = "RIGHT"
+    Extended = ""
+    Name = "lblT1ProjectDescription"
+    LabelFor = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "ProjectDescription"
+    END
+  BEGIN .VSTextField txtT1ProjectDescription
+    Top = 105
+    ClassName = "VSTextField"
+    StatusBarText = ""
+    HorizAlign = "LEFT"
+    EchoChar = ""
+    DataSource = "datT1Project"
+    BackColor = 0xffffff
+    Width = 166
+    Enable = True
+    ForeColor = 0x000000
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    Format = ""
+    Columns = 0
+    TabOrder = 16
+    Height = 73
+    Left = 131
+    DataField = 2,"ProjectDescription"
+    Constraint = "null"
+    TabStop = True
+    Editable = True
+    DisplayMode = "Data/Query"
+    Extended = ""
+    Name = "txtT1ProjectDescription"
+    Text = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    END
+  BEGIN .VSJavaDataControl datT1Project
+    Top = 214
+    ClassName = "VSJavaDataControl"
+    RecordSourceProperties = ""
+    StatusBarText = ""
+    AllowInsert = True
+    BackColor = 0xffffff
+    Width = 146
+    AllowUpdate = True
+    RecordSource = 1,"T1Project"
+    Enable = True
+    ForeColor = 0x000000
+    AllowDelete = True
+    HelpURL = ""
+    ToolTip = ""
+    Visible = False
+    Tag = "_$$_"
+    MaxRowsPerFetch = 16
+    TabOrder = 17
+    Height = 25
+    Left = 181
+    SaveMode = "immediate"
+    Constraint = "null"
+    TabStop = False
+    Extended = ""
+    Name = "datT1Project"
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "Common Data Dictionary Project"
+    END
+  BEGIN .VSImageButton ibtT3fDataObjectMapper
+    ImageFile = ""
+    Top = 459
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT2DataObjectMapper"
+    BackColor = 0xffffff
+    Width = 61
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x0038bb
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Add/Edit"
+    Visible = True
+    Tag = "_$$_"
+    Action = ""
+    TabOrder = 18
+    Height = 50
+    Left = 15
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "RAISED_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "ibtT3fDataObjectMapper"
+    AutoLabel = False
+    FormTransition = 20001,""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Stretched
+    Label = "Add/Edit"
+    END
+  END
+]]></FormLayout>
+</Form>

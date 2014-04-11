@@ -1,0 +1,48 @@
+<!ELEMENT Repository ( DataObjects | QueryObjects | ProcessModels | Relationships | References | JavaApplications  | HTMLApplications  | SourceFiles | Groups)* >
+<!ATTLIST Repository
+	UseQuotedIdentifiers (True|False) #IMPLIED
+	CustomJavaArchetypeDirectory CDATA #IMPLIED
+	CustomHTMLArchetypeDirectory CDATA #IMPLIED
+	RepositoryVersion CDATA #REQUIRED
+	DTDVersion CDATA #REQUIRED
+>
+
+<!ELEMENT DataObjects (DataObject)*>
+<!ELEMENT QueryObjects (QueryObject)*>
+<!ELEMENT ProcessModels (ProcessModel)*>
+<!ELEMENT Relationships (Relationship)*>
+<!ELEMENT JavaApplications (Application)*>
+<!ELEMENT HTMLApplications (Application)*>
+<!ELEMENT References (Reference)*>
+<!ELEMENT SourceFiles (SourceFile)*>
+
+<!ELEMENT DataObject (#PCDATA)>
+<!ELEMENT QueryObject (#PCDATA)>
+<!ELEMENT ProcessModel (#PCDATA)>
+<!ELEMENT Relationship (#PCDATA)>
+<!ELEMENT Application (#PCDATA)>
+
+<!ELEMENT Reference (FileName)*>
+<!ATTLIST Reference 
+	IsRemote (True|False) #REQUIRED
+	Type (VersataVLSClasses|JDKClasses|JavaBeans|CORBAObjects|COMWrapperObjects|JavaClasses|CommonClientandServerClasses|
+	ServerClasses|ORBClasses|JavaInterfaceFiles|SwingClasses|EnterpriseJavaBeans) #REQUIRED
+>
+
+<!ELEMENT FileName (#PCDATA)>
+<!ELEMENT Path (#PCDATA)>
+
+
+<!ELEMENT SourceFile (FileName | Path | ClassPath )*>
+<!ATTLIST SourceFile
+	FileType   (DataManager|Interface|Other) #REQUIRED
+	PackageName CDATA #IMPLIED
+	IsRemoteAccessible (True|False) #IMPLIED
+>
+<!ELEMENT ClassPath (#PCDATA)>
+
+<!ELEMENT Groups ( Group)*>
+<!ELEMENT Group ( Group)*>
+<!ATTLIST Group
+	Name   CDATA #REQUIRED
+>

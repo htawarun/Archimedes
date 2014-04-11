@@ -1,0 +1,14 @@
+
+
+public class RESTTest {//} extends TestCase {
+
+    public RESTTest() {
+        //constructor
+    }
+
+    public void main(String[] args) {
+        RESTTest rt = new RESTTest();
+
+    }
+
+}

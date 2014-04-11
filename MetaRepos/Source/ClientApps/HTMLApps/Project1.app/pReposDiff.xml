@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="HTML"
+	Archetype="Default"
+	PositionTop="140.625"
+	PositionLeft="25"
+	PositionWidth="150"
+	PositionHeight="43.75"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="False"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	ClassName="versata.pdx.html.VSPagePDX"
+	ObjectsRemovedFromLayout="False"
+	HTMLFileCheckSum="-1217323904"
+	>
+	<FormCaption><![CDATA[Repos Difference Report]]></FormCaption>
+	<ArchetypeExtendedProperties>
+		<Property
+			Name="Comments"
+			Value=""
+		/>
+		<Property
+			Name="CommentsTrailing"
+			Value=""
+		/>
+		<Property
+			Name="CrumbTrailEnabled"
+			Value="true"
+		/>
+		<Property
+			Name="CrumbTrailIncludesThisPage"
+			Value="true"
+		/>
+		<Property
+			Name="CrumbTrailRestartsHere"
+			Value="false"
+		/>
+		<Property
+			Name="CrumbTrailSeparator"
+			Value="&gt;"
+		/>
+		<Property
+			Name="ErrorStyle"
+			Value="Popup"
+		/>
+		<Property
+			Name="IncludeFooter"
+			Value="false"
+		/>
+		<Property
+			Name="IncludeHeader"
+			Value="false"
+		/>
+		<Property
+			Name="IncludeLeftBar"
+			Value="false"
+		/>
+		<Property
+			Name="IncludeRightBar"
+			Value="false"
+		/>
+		<Property
+			Name="ShowCancelButton"
+			Value="true"
+		/>
+		<Property
+			Name="ShowFormCaption"
+			Value="true"
+		/>
+		<Property
+			Name="ShowReturnButton"
+			Value="true"
+		/>
+		<Property
+			Name="TransitionsToHide"
+			Value=""
+		/>
+	</ArchetypeExtendedProperties>
+	<RecordSource
+		RSID="1"
+		Prefix="T1"
+		BusinessObject="ReposDiff"
+		RelnIsFromParent="False"
+		DoesSourceAffectMe="False"
+		DoIAffectSource="False"
+		IsAddedAfterGen="False"
+		RsAttributesDefault="False"
+		ClassName="versata.pdx.html.DataSourcePDX"
+		RecordSourceArchetype="Display"
+		MaxGridRowCount="10"
+		FetchedBlockRowCount="16"
+		AllowDelete="True"
+		AllowInsert="True"
+		AllowUpdate="True"
+		SaveMode="Immediate"
+		PreFetchRowCount="False"
+		>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<RSAttributesMeta>
+			<DefaultAttributes>
+				<RSDefaultAttribute ID="1" Name="ReposName1" />
+				<RSDefaultAttribute ID="2" Name="ReposName2" />
+				<RSDefaultAttribute ID="3" Name="Repos1Version" />
+				<RSDefaultAttribute ID="4" Name="Repos2Version" />
+				<RSDefaultAttribute ID="5" Name="Total_1_Line_Cnt" />
+				<RSDefaultAttribute ID="6" Name="Total_2_Line_Cnt" />
+				<RSDefaultAttribute ID="7" Name="Line_Cnt_Diff" />
+				<RSDefaultAttribute ID="8" Name="Line_Cnt_Pct" />
+				<RSDefaultAttribute ID="9" Name="Total_1_Method_Cnt" />
+				<RSDefaultAttribute ID="10" Name="Total_2_Method_Cnt" />
+				<RSDefaultAttribute ID="11" Name="Method_Cnt_Diff" />
+				<RSDefaultAttribute ID="12" Name="Method_Cnt_Pct" />
+				<RSDefaultAttribute ID="13" Name="User_1_Line_Cnt" />
+				<RSDefaultAttribute ID="14" Name="User_2_Line_Cnt" />
+				<RSDefaultAttribute ID="15" Name="User_Line_Cnt_Diff" />
+				<RSDefaultAttribute ID="16" Name="User_Line_Cnt_Pct" />
+				<RSDefaultAttribute ID="17" Name="Gen_1_Line_Cnt" />
+				<RSDefaultAttribute ID="18" Name="Gen_2_Line_Cnt" />
+				<RSDefaultAttribute ID="19" Name="Gen_Line_Cnt_Diff" />
+				<RSDefaultAttribute ID="20" Name="Gen_Line_Cnt_Pct" />
+				<RSDefaultAttribute ID="21" Name="DataObject_1_Cnt" />
+				<RSDefaultAttribute ID="22" Name="DataObject_2_Cnt" />
+				<RSDefaultAttribute ID="23" Name="DataObject_Diff" />
+				<RSDefaultAttribute ID="24" Name="DataObject_Pct" />
+				<RSDefaultAttribute ID="25" Name="QueryObject_1_Cnt" />
+				<RSDefaultAttribute ID="26" Name="QueryObject_2_Cnt" />
+				<RSDefaultAttribute ID="27" Name="QueryObject_Diff" />
+				<RSDefaultAttribute ID="28" Name="QueryObject_Pct" />
+				<RSDefaultAttribute ID="29" Name="JavaApp_1_Cnt" />
+				<RSDefaultAttribute ID="30" Name="JavaApp_2_Cnt" />
+				<RSDefaultAttribute ID="31" Name="JavaApp_Diff" />
+				<RSDefaultAttribute ID="32" Name="JavaApp_Pct" />
+				<RSDefaultAttribute ID="33" Name="HTMLApp_1_Cnt" />
+				<RSDefaultAttribute ID="34" Name="HTMLApp_2_Cnt" />
+				<RSDefaultAttribute ID="35" Name="HTMLApp_Diff" />
+				<RSDefaultAttribute ID="36" Name="HTMLApp_Pct" />
+			</DefaultAttributes>
+			<ScalerAttributes>
+				<RSAttribute Name="ReposName1" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ReposName2" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Repos1Version" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Repos2Version" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Total_1_Line_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Total_2_Line_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Line_Cnt_Diff" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Line_Cnt_Pct" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Total_1_Method_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Total_2_Method_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Method_Cnt_Diff" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Method_Cnt_Pct" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="User_1_Line_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="User_2_Line_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="User_Line_Cnt_Diff" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="User_Line_Cnt_Pct" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Gen_1_Line_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Gen_2_Line_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Gen_Line_Cnt_Diff" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Gen_Line_Cnt_Pct" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="DataObject_1_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="DataObject_2_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="DataObject_Diff" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="DataObject_Pct" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="QueryObject_1_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="QueryObject_2_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="QueryObject_Diff" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="QueryObject_Pct" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="JavaApp_1_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="JavaApp_2_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="JavaApp_Diff" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="JavaApp_Pct" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="HTMLApp_1_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="HTMLApp_2_Cnt" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="HTMLApp_Diff" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="HTMLApp_Pct" Displayed="True" UnPlaced="False" />
+			</ScalerAttributes>
+		</RSAttributesMeta>
+		<ArchetypeExtendedProperties>
+			<Property
+				Name="Caption"
+				Value="Compare 2 Repository Versions (write out difference report to c:/temp)"
+			/>
+			<Property
+				Name="Comments"
+				Value=""
+			/>
+			<Property
+				Name="CommentsTrailing"
+				Value="&lt;br&gt;"
+			/>
+			<Property
+				Name="Cond0HideRecSrc"
+				Value=""
+			/>
+			<Property
+				Name="Cond1"
+				Value=""
+			/>
+			<Property
+				Name="Cond1Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond1Fields"
+				Value=""
+			/>
+			<Property
+				Name="Cond1Transitions"
+				Value=""
+			/>
+			<Property
+				Name="Cond2"
+				Value=""
+			/>
+			<Property
+				Name="Cond2Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond2Fields"
+				Value=""
+			/>
+			<Property
+				Name="Cond2Transitions"
+				Value=""
+			/>
+			<Property
+				Name="Cond3"
+				Value=""
+			/>
+			<Property
+				Name="Cond3Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond3Fields"
+				Value=""
+			/>
+			<Property
+				Name="Cond3Transitions"
+				Value=""
+			/>
+			<Property
+				Name="Cond4"
+				Value=""
+			/>
+			<Property
+				Name="Cond4Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond4Fields"
+				Value=""
+			/>
+			<Property
+				Name="Cond4Transitions"
+				Value=""
+			/>
+			<Property
+				Name="Cond5"
+				Value=""
+			/>
+			<Property
+				Name="Cond5Actions"
+				Value=""
+			/>
+			<Property
+				Name="Cond5Fields"
+				Value=""
+			/>
+			<Property
+				Name="Cond5Transitions"
+				Value=""
+			/>
+			<Property
+				Name="ConfirmDeleteMsg"
+				Value="Delete record?"
+			/>
+			<Property
+				Name="FieldCaptionPosition"
+				Value="Left"
+			/>
+			<Property
+				Name="FieldMaxLength"
+				Value="50"
+			/>
+			<Property
+				Name="FieldsDisplayedTogether"
+				Value=""
+			/>
+			<Property
+				Name="MaxNumberOfRows"
+				Value="5"
+			/>
+			<Property
+				Name="RequiredCaptionPrefix"
+				Value=""
+			/>
+			<Property
+				Name="RequiredCaptionSuffix"
+				Value="*"
+			/>
+			<Property
+				Name="ShowRSActions"
+				Value="true"
+			/>
+			<Property
+				Name="StartNewColsFields"
+				Value=""
+			/>
+			<Property
+				Name="TabCaption"
+				Value=""
+			/>
+			<Property
+				Name="TabGenerated"
+				Value="true"
+			/>
+			<Property
+				Name="TabImageHeight"
+				Value=""
+			/>
+			<Property
+				Name="TabImageOff"
+				Value=""
+			/>
+			<Property
+				Name="TabImageOn"
+				Value=""
+			/>
+			<Property
+				Name="TabImageWidth"
+				Value=""
+			/>
+			<Property
+				Name="TabSheetsEnabled"
+				Value="true"
+			/>
+			<Property
+				Name="TabSheetsInitialRS"
+				Value=""
+			/>
+			<Property
+				Name="UsePopupPicks"
+				Value="true"
+			/>
+			<Property
+				Name="ZoomFromRS"
+				Value=""
+			/>
+		</ArchetypeExtendedProperties>
+		<PickObject
+			RSID="2"
+			Prefix="T2"
+			BusinessObject="Repository"
+			Relationship="ReposSource(Repository)-ReposDiff1(ReposDiff)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="True"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="True"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [RepositoryName] = [?ReposName1]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+					<RSDefaultAttribute ID="3" Name="DataObject_Cnt" />
+					<RSDefaultAttribute ID="4" Name="Relationship_Cnt" />
+					<RSDefaultAttribute ID="5" Name="Attr_Cnt" />
+					<RSDefaultAttribute ID="6" Name="Action_Cnt" />
+					<RSDefaultAttribute ID="7" Name="Constraint_Cnt" />
+					<RSDefaultAttribute ID="8" Name="Java_App_Cnt" />
+					<RSDefaultAttribute ID="9" Name="HTML_App_Cnt" />
+					<RSDefaultAttribute ID="10" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="11" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="13" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="14" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="15" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="16" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="17" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="18" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="19" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="20" Name="Comments" />
+					<RSDefaultAttribute ID="21" Name="Other_File_Cnt" />
+					<RSDefaultAttribute ID="22" Name="Other_File_Lines" />
+					<RSDefaultAttribute ID="23" Name="Other_File_Method_Cnt" />
+					<RSDefaultAttribute ID="24" Name="QueryObject_Cnt" />
+					<RSDefaultAttribute ID="25" Name="JavaForm_Cnt" />
+					<RSDefaultAttribute ID="26" Name="HTML_Form_Cnt" />
+					<RSDefaultAttribute ID="27" Name="ReposInternalName" />
+					<RSDefaultAttribute ID="28" Name="RootDirectory" />
+					<RSDefaultAttribute ID="29" Name="Description" />
+					<RSDefaultAttribute ID="30" Name="Database" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RepositoryVersion" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Relationship_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Java_App_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="HTML_App_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Comments" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Other_File_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Other_File_Lines" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Other_File_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="QueryObject_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="JavaForm_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="HTML_Form_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ReposInternalName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RootDirectory" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Description" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Database" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+		<PickObject
+			RSID="3"
+			Prefix="T3"
+			BusinessObject="Repository"
+			Relationship="ReposSource2(Repository)-ReposDiff2(ReposDiff)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="True"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="True"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [RepositoryName] = [?ReposName2]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+					<RSDefaultAttribute ID="3" Name="DataObject_Cnt" />
+					<RSDefaultAttribute ID="4" Name="Relationship_Cnt" />
+					<RSDefaultAttribute ID="5" Name="Attr_Cnt" />
+					<RSDefaultAttribute ID="6" Name="Action_Cnt" />
+					<RSDefaultAttribute ID="7" Name="Constraint_Cnt" />
+					<RSDefaultAttribute ID="8" Name="Java_App_Cnt" />
+					<RSDefaultAttribute ID="9" Name="HTML_App_Cnt" />
+					<RSDefaultAttribute ID="10" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="11" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="13" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="14" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="15" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="16" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="17" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="18" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="19" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="20" Name="Comments" />
+					<RSDefaultAttribute ID="21" Name="Other_File_Cnt" />
+					<RSDefaultAttribute ID="22" Name="Other_File_Lines" />
+					<RSDefaultAttribute ID="23" Name="Other_File_Method_Cnt" />
+					<RSDefaultAttribute ID="24" Name="QueryObject_Cnt" />
+					<RSDefaultAttribute ID="25" Name="JavaForm_Cnt" />
+					<RSDefaultAttribute ID="26" Name="HTML_Form_Cnt" />
+					<RSDefaultAttribute ID="27" Name="ReposInternalName" />
+					<RSDefaultAttribute ID="28" Name="RootDirectory" />
+					<RSDefaultAttribute ID="29" Name="Description" />
+					<RSDefaultAttribute ID="30" Name="Database" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RepositoryVersion" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Relationship_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Java_App_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="HTML_App_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Comments" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Other_File_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Other_File_Lines" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Other_File_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="QueryObject_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="JavaForm_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="HTML_Form_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ReposInternalName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RootDirectory" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Description" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Database" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+	</RecordSource>
+</Form>

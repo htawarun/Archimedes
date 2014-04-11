@@ -1,0 +1,45 @@
+<!ELEMENT Application ( ServerLocation | Description | ApplicationArchetypesFolder | Forms |  References | SourceFiles )*>
+<!ATTLIST Application 
+	SurrId CDATA #IMPLIED
+	ZoomFactor CDATA #IMPLIED
+	TargetLanguage (HTML|Java) #REQUIRED
+	DefaultLogonUserId CDATA #IMPLIED
+	ExecutionEnvironment (Applet|Browser|Application)  #IMPLIED
+	AppletHeight CDATA #IMPLIED 
+	AppletWidth CDATA #IMPLIED 
+	ClassId CDATA  #IMPLIED
+	CabVersion CDATA  #IMPLIED
+	SuppressDefaultLoginScreen (True|False)  #IMPLIED
+	InitialFramesetPage CDATA #IMPLIED
+	StartupPageFrameName CDATA #IMPLIED
+	InitialFrameNameForStartupTrans CDATA #IMPLIED
+	AppRepositoryVersion CDATA #IMPLIED
+	DeploySecurityInfo (True | False) #IMPLIED
+	DTDVersion CDATA #REQUIRED
+	isMDIApp (True|False) #IMPLIED
+>
+
+<!ELEMENT Forms (Form)*>
+<!ELEMENT References (Reference)*>
+<!ELEMENT SourceFiles (SourceFile)*>
+
+<!ELEMENT ServerLocation (#PCDATA )>
+<!ELEMENT Description (#PCDATA )>
+<!ELEMENT ApplicationArchetypesFolder (#PCDATA )>
+<!ELEMENT Form (#PCDATA )>
+
+<!ELEMENT Reference (FileName)*>
+<!ATTLIST Reference 
+	IsRemote (True|False) #REQUIRED
+	Type (VersataFoundationClasses|VersataVLSClasses|JDKClasses|JavaBeans|CORBAObjects|COMWrapperObjects|JavaClasses|CommonClientandServerClasses|
+	ClientClasses|ServerClasses|ORBClasses|JavaInterfaceFiles|SwingClasses|GennedComponentInterface|GennedEnterpriseBean|EnterpriseJavaBeans) #REQUIRED
+>
+<!ELEMENT FileName (#PCDATA)>
+<!ELEMENT Path (#PCDATA)>
+
+<!ELEMENT SourceFile (FileName | Path | ClassPath)*>
+<!ATTLIST SourceFile
+	PackageName CDATA #IMPLIED
+>
+<!ELEMENT ClassPath (#PCDATA)>
+

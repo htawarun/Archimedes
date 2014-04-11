@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="Java"
+	Archetype="Default"
+	PositionTop="153"
+	PositionLeft="295"
+	PositionWidth="188"
+	PositionHeight="55"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="True"
+	ObjectsUnusedByFormLayout="False"
+	External="False"
+	NoDataForm="False"
+	>
+	<FormCaption><![CDATA[QueryDiff]]></FormCaption>
+	<RecordSource
+		RSID="1"
+		Prefix="T1"
+		BusinessObject="ReposDiff"
+		RelnIsFromParent="False"
+		DoesSourceAffectMe="False"
+		DoIAffectSource="False"
+		IsAddedAfterGen="False"
+		RsAttributesDefault="False"
+		ClassName="DataSource"
+		RecordSourceArchetype="Display"
+		>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<RSAttributesMeta>
+			<DefaultAttributes>
+				<RSDefaultAttribute ID="1" Name="ReposName1" />
+				<RSDefaultAttribute ID="2" Name="ReposName2" />
+				<RSDefaultAttribute ID="3" Name="Repos1Version" />
+				<RSDefaultAttribute ID="4" Name="Repos2Version" />
+				<RSDefaultAttribute ID="5" Name="Total_1_Line_Cnt" />
+				<RSDefaultAttribute ID="6" Name="Total_2_Line_Cnt" />
+				<RSDefaultAttribute ID="7" Name="Line_Cnt_Diff" />
+				<RSDefaultAttribute ID="8" Name="Line_Cnt_Pct" />
+				<RSDefaultAttribute ID="9" Name="Total_1_Method_Cnt" />
+				<RSDefaultAttribute ID="10" Name="Total_2_Method_Cnt" />
+				<RSDefaultAttribute ID="11" Name="Method_Cnt_Diff" />
+				<RSDefaultAttribute ID="12" Name="Method_Cnt_Pct" />
+				<RSDefaultAttribute ID="13" Name="User_1_Line_Cnt" />
+				<RSDefaultAttribute ID="14" Name="User_2_Line_Cnt" />
+				<RSDefaultAttribute ID="15" Name="User_Line_Cnt_Diff" />
+				<RSDefaultAttribute ID="16" Name="User_Line_Cnt_Pct" />
+				<RSDefaultAttribute ID="17" Name="Gen_1_Line_Cnt" />
+				<RSDefaultAttribute ID="18" Name="Gen_2_Line_Cnt" />
+				<RSDefaultAttribute ID="19" Name="Gen_Line_Cnt_Diff" />
+				<RSDefaultAttribute ID="20" Name="Gen_Line_Cnt_Pct" />
+				<RSDefaultAttribute ID="21" Name="DataObject_1_Cnt" />
+				<RSDefaultAttribute ID="22" Name="DataObject_2_Cnt" />
+				<RSDefaultAttribute ID="23" Name="DataObject_Diff" />
+				<RSDefaultAttribute ID="24" Name="DataObject_Pct" />
+				<RSDefaultAttribute ID="25" Name="QueryObject_1_Cnt" />
+				<RSDefaultAttribute ID="26" Name="QueryObject_2_Cnt" />
+				<RSDefaultAttribute ID="27" Name="QueryObject_Diff" />
+				<RSDefaultAttribute ID="28" Name="QueryObject_Pct" />
+				<RSDefaultAttribute ID="29" Name="JavaApp_1_Cnt" />
+				<RSDefaultAttribute ID="30" Name="JavaApp_2_Cnt" />
+				<RSDefaultAttribute ID="31" Name="JavaApp_Diff" />
+				<RSDefaultAttribute ID="32" Name="JavaApp_Pct" />
+				<RSDefaultAttribute ID="33" Name="HTMLApp_1_Cnt" />
+				<RSDefaultAttribute ID="34" Name="HTMLApp_2_Cnt" />
+				<RSDefaultAttribute ID="35" Name="HTMLApp_Diff" />
+				<RSDefaultAttribute ID="36" Name="HTMLApp_Pct" />
+			</DefaultAttributes>
+			<ScalerAttributes>
+				<RSAttribute Name="ReposName1" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ReposName2" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="Repos1Version" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Repos2Version" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Total_1_Line_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Total_2_Line_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Line_Cnt_Diff" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Line_Cnt_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Total_1_Method_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Total_2_Method_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Method_Cnt_Diff" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Method_Cnt_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="User_1_Line_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="User_2_Line_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="User_Line_Cnt_Diff" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="User_Line_Cnt_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Gen_1_Line_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Gen_2_Line_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Gen_Line_Cnt_Diff" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="Gen_Line_Cnt_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="DataObject_1_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="DataObject_2_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="DataObject_Diff" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="DataObject_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="QueryObject_1_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="QueryObject_2_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="QueryObject_Diff" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="QueryObject_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="JavaApp_1_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="JavaApp_2_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="JavaApp_Diff" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="JavaApp_Pct" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="HTMLApp_1_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="HTMLApp_2_Cnt" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="HTMLApp_Diff" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="HTMLApp_Pct" Displayed="False" UnPlaced="False" />
+			</ScalerAttributes>
+		</RSAttributesMeta>
+		<RecordSource
+			RSID="2"
+			Prefix="QryAdd"
+			BusinessObject="ObjectDiff"
+			Relationship="ReposDiff(ReposDiff)-ObjectDiff(ObjectDiff)"
+			RelnIsFromParent="True"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="DataSource"
+			RecordSourceArchetype="Grid"
+			ParentAlias=""
+			ChildAlias=""
+			>
+			<ParameterizedWhereClause><![CDATA[ [ReposName1] = [?ReposName1] and [ReposName2] = [?ReposName2]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ObjectType = 'QRYOBJECT' AND DiffState = 'ADD' ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="ReposName1" />
+					<RSDefaultAttribute ID="2" Name="ReposName2" />
+					<RSDefaultAttribute ID="3" Name="ObjectName1" />
+					<RSDefaultAttribute ID="4" Name="ObjectName2" />
+					<RSDefaultAttribute ID="5" Name="ObjectType" />
+					<RSDefaultAttribute ID="6" Name="DiffComment" />
+					<RSDefaultAttribute ID="7" Name="Total_1_Line_Cnt" />
+					<RSDefaultAttribute ID="8" Name="Total_2_Line_Cnt" />
+					<RSDefaultAttribute ID="9" Name="Line_Cnt_Diff" />
+					<RSDefaultAttribute ID="10" Name="Total_1_Method_Cnt" />
+					<RSDefaultAttribute ID="11" Name="Total_2_Method_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Method_Cnt_Diff" />
+					<RSDefaultAttribute ID="13" Name="DiffState" />
+				</DefaultAttributes>
+				<ScalerAttributes>
+					<RSAttribute Name="ReposName1" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ReposName2" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectName1" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectName2" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectType" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DiffComment" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Line_Cnt_Diff" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Method_Cnt_Diff" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DiffState" Displayed="True" UnPlaced="False" />
+				</ScalerAttributes>
+				<GridAttributes>
+					<RSAttribute Name="ObjectName2" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectType" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DiffComment" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ReposName1" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="ReposName2" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="ObjectName1" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Line_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Line_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Line_Cnt_Diff" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Method_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Method_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Method_Cnt_Diff" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="DiffState" Displayed="False" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</RecordSource>
+		<RecordSource
+			RSID="3"
+			Prefix="QryRemoved"
+			BusinessObject="ObjectDiff"
+			Relationship="ReposDiff(ReposDiff)-ObjectDiff(ObjectDiff)"
+			RelnIsFromParent="True"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="DataSource"
+			RecordSourceArchetype="Grid"
+			ParentAlias=""
+			ChildAlias=""
+			>
+			<ParameterizedWhereClause><![CDATA[ [ReposName1] = [?ReposName1] and [ReposName2] = [?ReposName2]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[  ObjectType = 'QRYOBJECT' AND DiffState = 'DELETE' ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="ReposName1" />
+					<RSDefaultAttribute ID="2" Name="ReposName2" />
+					<RSDefaultAttribute ID="3" Name="ObjectName1" />
+					<RSDefaultAttribute ID="4" Name="ObjectName2" />
+					<RSDefaultAttribute ID="5" Name="ObjectType" />
+					<RSDefaultAttribute ID="6" Name="DiffComment" />
+					<RSDefaultAttribute ID="7" Name="Total_1_Line_Cnt" />
+					<RSDefaultAttribute ID="8" Name="Total_2_Line_Cnt" />
+					<RSDefaultAttribute ID="9" Name="Line_Cnt_Diff" />
+					<RSDefaultAttribute ID="10" Name="Total_1_Method_Cnt" />
+					<RSDefaultAttribute ID="11" Name="Total_2_Method_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Method_Cnt_Diff" />
+					<RSDefaultAttribute ID="13" Name="DiffState" />
+				</DefaultAttributes>
+				<ScalerAttributes>
+					<RSAttribute Name="ReposName1" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ReposName2" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectName1" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectName2" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectType" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DiffComment" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Line_Cnt_Diff" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Method_Cnt_Diff" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DiffState" Displayed="True" UnPlaced="False" />
+				</ScalerAttributes>
+				<GridAttributes>
+					<RSAttribute Name="ObjectName1" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ReposName1" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="ReposName2" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="ObjectName2" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="ObjectType" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="DiffComment" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Line_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Line_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Line_Cnt_Diff" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Method_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Method_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Method_Cnt_Diff" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="DiffState" Displayed="False" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</RecordSource>
+		<RecordSource
+			RSID="4"
+			Prefix="QuerySame"
+			BusinessObject="ObjectDiff"
+			Relationship="ReposDiff(ReposDiff)-ObjectDiff(ObjectDiff)"
+			RelnIsFromParent="True"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="DataSource"
+			RecordSourceArchetype="Grid"
+			ParentAlias=""
+			ChildAlias=""
+			>
+			<ParameterizedWhereClause><![CDATA[ [ReposName1] = [?ReposName1] and [ReposName2] = [?ReposName2]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ObjectType = 'QRYOBJECT' AND DiffState = 'SAME' ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="ReposName1" />
+					<RSDefaultAttribute ID="2" Name="ReposName2" />
+					<RSDefaultAttribute ID="3" Name="ObjectName1" />
+					<RSDefaultAttribute ID="4" Name="ObjectName2" />
+					<RSDefaultAttribute ID="5" Name="ObjectType" />
+					<RSDefaultAttribute ID="6" Name="DiffComment" />
+					<RSDefaultAttribute ID="7" Name="Total_1_Line_Cnt" />
+					<RSDefaultAttribute ID="8" Name="Total_2_Line_Cnt" />
+					<RSDefaultAttribute ID="9" Name="Line_Cnt_Diff" />
+					<RSDefaultAttribute ID="10" Name="Total_1_Method_Cnt" />
+					<RSDefaultAttribute ID="11" Name="Total_2_Method_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Method_Cnt_Diff" />
+					<RSDefaultAttribute ID="13" Name="DiffState" />
+				</DefaultAttributes>
+				<ScalerAttributes>
+					<RSAttribute Name="ReposName1" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ReposName2" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectName1" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectName2" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectType" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DiffComment" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Line_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Line_Cnt_Diff" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Method_Cnt" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="Method_Cnt_Diff" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DiffState" Displayed="True" UnPlaced="False" />
+				</ScalerAttributes>
+				<GridAttributes>
+					<RSAttribute Name="ObjectName1" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="DiffComment" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectType" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ReposName1" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="ReposName2" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="ObjectName2" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Line_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Line_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Line_Cnt_Diff" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_1_Method_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Total_2_Method_Cnt" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="Method_Cnt_Diff" Displayed="False" UnPlaced="False" />
+					<RSAttribute Name="DiffState" Displayed="False" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</RecordSource>
+	</RecordSource>
+	<FormLayout><![CDATA[BEGIN .VSForm fQueryDiff
+  ImageFile = "BACKGROUND.GIF"
+  ClassName = "CoolVSForm"
+  BackColor = 0xc0c0c0
+  Width = 517
+  ImageDisplayStyle = Tiled
+  Title = ""
+  Enable = True
+  ForeColor = 0x000000
+  HelpURL = ""
+  ToolTip = ""
+  Visible = True
+  Tag = "_$$_"
+  Height = 517
+  AnchorForm = "NONE"
+  Constraint = "null"
+  Layout = ""
+  Style = "Child"
+  Name = "fQueryDiff"
+  Extended = ""
+  DisplayTitleBar = False
+  BeginProperty VSFont 
+    FontName  = "Helvetica"
+    FontSize  = 12
+    FontStyleBold  = False
+    FontStyleItalic  = False
+  EndProperty 
+  BEGIN .VSImageButton btnMovePrev
+    ImageFile = "blue_move_previous.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1ReposDiff"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Previous"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_previous"
+    TabOrder = 0
+    Height = 32
+    Left = 36
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMovePrev"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveFirst
+    ImageFile = "blue_move_first.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1ReposDiff"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move First"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_first"
+    TabOrder = 1
+    Height = 32
+    Left = 1
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveFirst"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSLabel VSLabel11
+    Top = 4
+    ClassName = "VSLabel"
+    Opaque = False
+    StatusBarText = ""
+    BorderStyle = "NO_BORDER"
+    DataSource = ""
+    HorizAlign = "LEFT"
+    BackColor = 0xebebeb
+    Width = 156
+    Enable = True
+    VertTextPos = "BOTTOM"
+    DisplayedMnemonic = ""
+    ForeColor = 0x0038bb
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    Height = 42
+    Left = 73
+    DataField = 0
+    Icon = ""
+    Constraint = "null"
+    VertAlign = "CENTER"
+    HorizTextPos = "RIGHT"
+    Extended = ""
+    Name = "VSLabel11"
+    LabelFor = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 26
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "QueryDiff"
+    END
+  BEGIN .VSImageButton btnMoveNext
+    ImageFile = "blue_move_next.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1ReposDiff"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Next"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_next"
+    TabOrder = 2
+    Height = 32
+    Left = 231
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveNext"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveLast
+    ImageFile = "blue_move_last.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1ReposDiff"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Last"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_last"
+    TabOrder = 3
+    Height = 32
+    Left = 266
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveLast"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnSave
+    ImageFile = "blue_save.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Save Changes"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_saveAll"
+    TabOrder = 4
+    Height = 32
+    Left = 393
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnSave"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnUndo
+    ImageFile = "blue_undo.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = False
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Undo Changes"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_undoResultSet"
+    TabOrder = 5
+    Height = 32
+    Left = 427
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnUndo"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnDelete
+    ImageFile = "blue_delete.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1ReposDiff"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Delete"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_delete"
+    TabOrder = 6
+    Height = 32
+    Left = 353
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnDelete"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnAdd
+    ImageFile = "blue_new.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1ReposDiff"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Add New"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_insert"
+    TabOrder = 7
+    Height = 32
+    Left = 319
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnAdd"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton VSImageButton2
+    ImageFile = ""
+    Top = 2
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 18
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "CENTER"
+    ForeColor = 0x0038bb
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$anchorTopRight$_"
+    Action = "ok"
+    TabOrder = 8
+    Height = 16
+    Left = 497
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "CENTER"
+    TabStop = False
+    Border = "RAISED_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "VSImageButton2"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Stretched
+    Label = "X"
+    END
+  BEGIN .VSTab tabT1ReposDiff
+    Top = 155
+    ClassName = "VSTab"
+    BackColor = 0xebebeb
+    Width = 498
+    Enable = True
+    ForeColor = 0x0038bb
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    TabOrder = 9
+    Height = 330
+    Left = 6
+    TabPlacement = "TOP"
+    Constraint = "null"
+    TabStop = True
+    Extended = ""
+    Name = "tabT1ReposDiff"
+    Tabs = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    BEGIN .VSTabSheet "QryAddObject Differences"
+      TabSheetIcon = ""
+              BEGIN .VSJavaDataControl datQryAddObjectDiff
+          Top = 194
+          ClassName = "VSJavaDataControl"
+          RecordSourceProperties = ""
+          StatusBarText = ""
+          AllowInsert = True
+          BackColor = 0xffffff
+          Width = 150
+          AllowUpdate = True
+          RecordSource = 2,"QryAddObjectDiff"
+          Enable = True
+          ForeColor = 0x000000
+          AllowDelete = True
+          HelpURL = ""
+          ToolTip = ""
+          Visible = False
+          Tag = "_$$_"
+          MaxRowsPerFetch = 16
+          TabOrder = 10
+          Height = 27
+          Left = 3
+          SaveMode = "buffered"
+          Constraint = "null"
+          TabStop = False
+          Extended = ""
+          Name = "datQryAddObjectDiff"
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = False
+            FontStyleItalic  = False
+          EndProperty 
+          Label = "QryAddObject Differences"
+          END
+        BEGIN .VSGrid grdQryAddObjectDiff
+          RowSelectMode = "SINGLE_SELECTION"
+          HiliteForeColor = 0xffffff
+          Top = 26
+          ClassName = "VSGrid"
+          DisplayHeader = True
+          BorderStyle = "PLAIN_BORDER"
+          DataSource = "datQryAddObjectDiff"
+          BackColor = 0xffffff
+          Width = 480
+          RowSelectionAllowed = False
+          DisplayGridLines = True
+          Enable = True
+          ForeColor = 0x000000
+          HelpURL = ""
+          ToolTip = ""
+          Visible = True
+          Tag = "_$$_"
+          RowHeaderBackColor = 0x004080
+          Columns = ""
+          TabOrder = 11
+          Height = 283
+          Left = 7
+          ColumnHeaderBackColor = 0x004080
+          ShowVerticalLines = True
+          RowHeight = 20
+          RowHeaderForeColor = 0xebebeb
+          DisableBackColor = 0xffffff
+          BeginProperty VSHeaderFont
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = False
+            FontStyleItalic  = False
+          EndProperty 
+          ColumnHeaderForeColor = 0xebebeb
+          Constraint = "null"
+          TabStop = True
+          ColResizeMode = "AUTO_RESIZE_OFF"
+          LineColor = 0xc0c0c0
+          DisableForeColor = 0xc0c0c0
+          Editable = True
+          Extended = ""
+          Name = "grdQryAddObjectDiff"
+          RowHeaderWidth = 25
+          HiliteBackColor = 0x004080
+          ColumnHeaderHeight = 17
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = False
+            FontStyleItalic  = False
+          EndProperty 
+          ShowStarRow = True
+          ShowHorizontalLines = True
+          BEGIN .VSGridColumn "ObjectName2"            
+            GridColumnLabel = "ObjectName2"
+            GridColumnWidth = 0xBA
+            GridColumnDataField = 4
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "ObjectType"            
+            GridColumnLabel = "ObjectType"
+            GridColumnWidth = 0x4B
+            GridColumnDataField = 5
+            GridColumnEditType = "VSChoice"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          BEGIN .VSGridColumn "DiffComment"            
+            GridColumnLabel = "DiffComment"
+            GridColumnWidth = 0x9B
+            GridColumnDataField = 6
+            GridColumnEditType = "VSTextField"
+            GridColumnControlStyle = ""
+            JUSTIFY = "JUSTIFY_LEFT"
+            VALIGN = "VALIGN_CENTER"
+            GRIDCOLUMNBACKCOLOR = "0xffffff"
+            GRIDCOLUMNFORECOLOR = "0x000000"
+            GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+            GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+            GridColumnEnable = True
+            GridColumnSortAllowed = True
+            GridColumnFormat = ""
+            GridColumnPickObject = 0
+                    ENDGRIDCOLUMN
+          END
+        ENDTABSHEET
+      BEGIN .VSTabSheet "QryRemovedObject Differences"
+        TabSheetIcon = ""
+                  BEGIN .VSJavaDataControl datQryRemovedObjectDiff
+            Top = 194
+            ClassName = "VSJavaDataControl"
+            RecordSourceProperties = ""
+            StatusBarText = ""
+            AllowInsert = True
+            BackColor = 0xffffff
+            Width = 150
+            AllowUpdate = True
+            RecordSource = 3,"QryRemovedObjectDiff"
+            Enable = True
+            ForeColor = 0x000000
+            AllowDelete = True
+            HelpURL = ""
+            ToolTip = ""
+            Visible = False
+            Tag = "_$$_"
+            MaxRowsPerFetch = 16
+            TabOrder = 12
+            Height = 27
+            Left = 3
+            SaveMode = "buffered"
+            Constraint = "null"
+            TabStop = False
+            Extended = ""
+            Name = "datQryRemovedObjectDiff"
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            Label = "QryRemovedObject Differences"
+            END
+          BEGIN .VSGrid grdQryRemovedObjectDiff
+            RowSelectMode = "SINGLE_SELECTION"
+            HiliteForeColor = 0xffffff
+            Top = 25
+            ClassName = "VSGrid"
+            DisplayHeader = True
+            BorderStyle = "PLAIN_BORDER"
+            DataSource = "datQryRemovedObjectDiff"
+            BackColor = 0xffffff
+            Width = 480
+            RowSelectionAllowed = False
+            DisplayGridLines = True
+            Enable = True
+            ForeColor = 0x000000
+            HelpURL = ""
+            ToolTip = ""
+            Visible = True
+            Tag = "_$$_"
+            RowHeaderBackColor = 0x004080
+            Columns = ""
+            TabOrder = 13
+            Height = 280
+            Left = 7
+            ColumnHeaderBackColor = 0x004080
+            ShowVerticalLines = True
+            RowHeight = 20
+            RowHeaderForeColor = 0xebebeb
+            DisableBackColor = 0xffffff
+            BeginProperty VSHeaderFont
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            ColumnHeaderForeColor = 0xebebeb
+            Constraint = "null"
+            TabStop = True
+            ColResizeMode = "AUTO_RESIZE_OFF"
+            LineColor = 0xc0c0c0
+            DisableForeColor = 0xc0c0c0
+            Editable = True
+            Extended = ""
+            Name = "grdQryRemovedObjectDiff"
+            RowHeaderWidth = 25
+            HiliteBackColor = 0x004080
+            ColumnHeaderHeight = 17
+            BeginProperty VSFont 
+              FontName  = "Helvetica"
+              FontSize  = 12
+              FontStyleBold  = False
+              FontStyleItalic  = False
+            EndProperty 
+            ShowStarRow = True
+            ShowHorizontalLines = True
+            BEGIN .VSGridColumn "ObjectName1"              
+              GridColumnLabel = "ObjectName1"
+              GridColumnWidth = 0x4B
+              GridColumnDataField = 3
+              GridColumnEditType = "VSTextField"
+              GridColumnControlStyle = ""
+              JUSTIFY = "JUSTIFY_LEFT"
+              VALIGN = "VALIGN_CENTER"
+              GRIDCOLUMNBACKCOLOR = "0xffffff"
+              GRIDCOLUMNFORECOLOR = "0x000000"
+              GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+              GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+              GridColumnEnable = True
+              GridColumnSortAllowed = True
+              GridColumnFormat = ""
+              GridColumnPickObject = 0
+                        ENDGRIDCOLUMN
+            END
+          ENDTABSHEET
+        BEGIN .VSTabSheet "Object Differences"
+          TabSheetIcon = ""
+                      BEGIN .VSJavaDataControl datT2ObjectDiff
+              Top = 194
+              ClassName = "VSJavaDataControl"
+              RecordSourceProperties = ""
+              StatusBarText = ""
+              AllowInsert = True
+              BackColor = 0xffffff
+              Width = 150
+              AllowUpdate = True
+              RecordSource = 4,"T2ObjectDiff"
+              Enable = True
+              ForeColor = 0x000000
+              AllowDelete = True
+              HelpURL = ""
+              ToolTip = ""
+              Visible = False
+              Tag = "_$$_"
+              MaxRowsPerFetch = 16
+              TabOrder = 14
+              Height = 27
+              Left = 3
+              SaveMode = "buffered"
+              Constraint = "null"
+              TabStop = False
+              Extended = ""
+              Name = "datT2ObjectDiff"
+              BeginProperty VSFont 
+                FontName  = "Helvetica"
+                FontSize  = 12
+                FontStyleBold  = False
+                FontStyleItalic  = False
+              EndProperty 
+              Label = "Object Differences"
+              END
+            BEGIN .VSGrid grdT2ObjectDiff
+              RowSelectMode = "SINGLE_SELECTION"
+              HiliteForeColor = 0xffffff
+              Top = 25
+              ClassName = "VSGrid"
+              DisplayHeader = True
+              BorderStyle = "PLAIN_BORDER"
+              DataSource = "datT2ObjectDiff"
+              BackColor = 0xffffff
+              Width = 480
+              RowSelectionAllowed = False
+              DisplayGridLines = True
+              Enable = True
+              ForeColor = 0x000000
+              HelpURL = ""
+              ToolTip = ""
+              Visible = True
+              Tag = "_$$_"
+              RowHeaderBackColor = 0x004080
+              Columns = ""
+              TabOrder = 15
+              Height = 282
+              Left = 7
+              ColumnHeaderBackColor = 0x004080
+              ShowVerticalLines = True
+              RowHeight = 20
+              RowHeaderForeColor = 0xebebeb
+              DisableBackColor = 0xffffff
+              BeginProperty VSHeaderFont
+                FontName  = "Helvetica"
+                FontSize  = 12
+                FontStyleBold  = False
+                FontStyleItalic  = False
+              EndProperty 
+              ColumnHeaderForeColor = 0xebebeb
+              Constraint = "null"
+              TabStop = True
+              ColResizeMode = "AUTO_RESIZE_OFF"
+              LineColor = 0xc0c0c0
+              DisableForeColor = 0xc0c0c0
+              Editable = True
+              Extended = ""
+              Name = "grdT2ObjectDiff"
+              RowHeaderWidth = 25
+              HiliteBackColor = 0x004080
+              ColumnHeaderHeight = 17
+              BeginProperty VSFont 
+                FontName  = "Helvetica"
+                FontSize  = 12
+                FontStyleBold  = False
+                FontStyleItalic  = False
+              EndProperty 
+              ShowStarRow = True
+              ShowHorizontalLines = True
+              BEGIN .VSGridColumn "ObjectName1"                
+                GridColumnLabel = "ObjectName1"
+                GridColumnWidth = 0xA6
+                GridColumnDataField = 3
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "DiffComment"                
+                GridColumnLabel = "DiffComment"
+                GridColumnWidth = 0xB6
+                GridColumnDataField = 6
+                GridColumnEditType = "VSTextField"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              BEGIN .VSGridColumn "ObjectType"                
+                GridColumnLabel = "ObjectType"
+                GridColumnWidth = 0x4B
+                GridColumnDataField = 5
+                GridColumnEditType = "VSChoice"
+                GridColumnControlStyle = ""
+                JUSTIFY = "JUSTIFY_LEFT"
+                VALIGN = "VALIGN_CENTER"
+                GRIDCOLUMNBACKCOLOR = "0xffffff"
+                GRIDCOLUMNFORECOLOR = "0x000000"
+                GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+                GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+                GridColumnEnable = True
+                GridColumnSortAllowed = True
+                GridColumnFormat = ""
+                GridColumnPickObject = 0
+                            ENDGRIDCOLUMN
+              END
+            ENDTABSHEET
+          END
+        BEGIN .VSLabel lblT1ReposName1
+          Top = 61
+          ClassName = "VSLabel"
+          Opaque = False
+          StatusBarText = ""
+          BorderStyle = "NO_BORDER"
+          DataSource = ""
+          HorizAlign = "LEFT"
+          BackColor = 0xebebeb
+          Width = 102
+          Enable = True
+          VertTextPos = "BOTTOM"
+          DisplayedMnemonic = ""
+          ForeColor = 0x0038bb
+          HelpURL = ""
+          ToolTip = ""
+          Visible = True
+          Tag = "_$$_"
+          Height = 18
+          Left = 16
+          DataField = 0
+          Icon = ""
+          Constraint = "null"
+          VertAlign = "CENTER"
+          HorizTextPos = "RIGHT"
+          Extended = ""
+          Name = "lblT1ReposName1"
+          LabelFor = ""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = True
+            FontStyleItalic  = False
+          EndProperty 
+          Label = "ReposName1"
+          END
+        BEGIN .VSTextField txtT1ReposName1
+          Top = 60
+          ClassName = "VSTextField"
+          StatusBarText = ""
+          HorizAlign = "LEFT"
+          EchoChar = ""
+          DataSource = "datT1ReposDiff"
+          BackColor = 0xffffff
+          Width = 114
+          Enable = True
+          ForeColor = 0x000000
+          HelpURL = ""
+          ToolTip = ""
+          Visible = True
+          Tag = "_$$_"
+          Format = ""
+          Columns = 0
+          TabOrder = 16
+          Height = 20
+          Left = 120
+          DataField = 1,"ReposName1"
+          Constraint = "null"
+          TabStop = True
+          Editable = True
+          DisplayMode = "Data/Query"
+          Extended = ""
+          Name = "txtT1ReposName1"
+          Text = ""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = False
+            FontStyleItalic  = False
+          EndProperty 
+          END
+        BEGIN .VSLabel lblT1ReposName2
+          Top = 89
+          ClassName = "VSLabel"
+          Opaque = False
+          StatusBarText = ""
+          BorderStyle = "NO_BORDER"
+          DataSource = ""
+          HorizAlign = "LEFT"
+          BackColor = 0xebebeb
+          Width = 102
+          Enable = True
+          VertTextPos = "BOTTOM"
+          DisplayedMnemonic = ""
+          ForeColor = 0x0038bb
+          HelpURL = ""
+          ToolTip = ""
+          Visible = True
+          Tag = "_$$_"
+          Height = 18
+          Left = 16
+          DataField = 0
+          Icon = ""
+          Constraint = "null"
+          VertAlign = "CENTER"
+          HorizTextPos = "RIGHT"
+          Extended = ""
+          Name = "lblT1ReposName2"
+          LabelFor = ""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = True
+            FontStyleItalic  = False
+          EndProperty 
+          Label = "ReposName2"
+          END
+        BEGIN .VSTextField txtT1ReposName2
+          Top = 88
+          ClassName = "VSTextField"
+          StatusBarText = ""
+          HorizAlign = "LEFT"
+          EchoChar = ""
+          DataSource = "datT1ReposDiff"
+          BackColor = 0xffffff
+          Width = 114
+          Enable = True
+          ForeColor = 0x000000
+          HelpURL = ""
+          ToolTip = ""
+          Visible = True
+          Tag = "_$$_"
+          Format = ""
+          Columns = 0
+          TabOrder = 17
+          Height = 20
+          Left = 120
+          DataField = 2,"ReposName2"
+          Constraint = "null"
+          TabStop = True
+          Editable = True
+          DisplayMode = "Data/Query"
+          Extended = ""
+          Name = "txtT1ReposName2"
+          Text = ""
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = False
+            FontStyleItalic  = False
+          EndProperty 
+          END
+        BEGIN .VSJavaDataControl datT1ReposDiff
+          Top = 115
+          ClassName = "VSJavaDataControl"
+          RecordSourceProperties = ""
+          StatusBarText = ""
+          AllowInsert = True
+          BackColor = 0xffffff
+          Width = 146
+          AllowUpdate = True
+          RecordSource = 1,"T1ReposDiff"
+          Enable = True
+          ForeColor = 0x000000
+          AllowDelete = True
+          HelpURL = ""
+          ToolTip = ""
+          Visible = False
+          Tag = "_$$_"
+          MaxRowsPerFetch = 16
+          TabOrder = 18
+          Height = 25
+          Left = 171
+          SaveMode = "immediate"
+          Constraint = "null"
+          TabStop = False
+          Extended = ""
+          Name = "datT1ReposDiff"
+          BeginProperty VSFont 
+            FontName  = "Helvetica"
+            FontSize  = 12
+            FontStyleBold  = False
+            FontStyleItalic  = False
+          EndProperty 
+          Label = "ReposDiff"
+          END
+        END
+      ]]></FormLayout>
+</Form>

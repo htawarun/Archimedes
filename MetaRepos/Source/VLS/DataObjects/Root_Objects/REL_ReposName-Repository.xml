@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		ParentRoleName="ReposName"
+		ChildRoleName="Repository"
+		IsEnforce="True"
+		OnChildInsertOrUpdate="InsertParentIfNone"
+		>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="ReposInternalName"
+				ChildAttribute="ReposInternalName"
+			/>
+		</AttributePairs>
+		<AscendCaption><![CDATA[ReposName]]></AscendCaption>
+		<DescendCaption><![CDATA[Repository(s)]]></DescendCaption>
+		<ErrPreventUpdateParent><![CDATA[<System Supplied>]]></ErrPreventUpdateParent>
+		<ErrPreventDeleteParent><![CDATA[<System Supplied>]]></ErrPreventDeleteParent>
+		<ErrPreventInsertOrUpdateChild><![CDATA[<System Supplied>]]></ErrPreventInsertOrUpdateChild>
+	</Relationship>
+</Relationships>

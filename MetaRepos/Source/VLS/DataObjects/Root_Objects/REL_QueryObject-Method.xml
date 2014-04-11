@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Relationships SYSTEM "Relation.dtd">
+<Relationships
+	DTDVersion="05.05.12"
+	>
+	<Relationship
+		ParentRoleName="ThisQueryObject"
+		ChildRoleName="QueryMethods"
+		IsEnforce="False"
+		OnParentDelete="DeleteChildren"
+		>
+		<AttributePairs>
+			<AttributePair
+				ParentAttribute="RepositoryName"
+				ChildAttribute="RepositoryName"
+			/>
+			<AttributePair
+				ParentAttribute="QueryObjectName"
+				ChildAttribute="ObjectName"
+			/>
+		</AttributePairs>
+		<AscendCaption><![CDATA[QueryObject]]></AscendCaption>
+		<DescendCaption><![CDATA[User Methods]]></DescendCaption>
+		<ErrPreventUpdateParent><![CDATA[]]></ErrPreventUpdateParent>
+		<ErrPreventDeleteParent><![CDATA[]]></ErrPreventDeleteParent>
+		<ErrPreventInsertOrUpdateChild><![CDATA[]]></ErrPreventInsertOrUpdateChild>
+	</Relationship>
+</Relationships>

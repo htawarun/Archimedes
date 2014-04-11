@@ -1,0 +1,70 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+  <title>Select</title>
+  <base href="#default">
+  <script language="javascript" src="images/PDXPopupPickScript.js">
+<!--
+-->
+  </script>
+  <link rel="stylesheet" type="text/css" href="images/style.css">
+  <script LANGUAGE="JavaScript" vsscript="true">
+<!--
+-->
+  </script>
+</head>
+
+<body>
+
+<form action="this" method="post" vsform="true" name="PickDataSource">
+
+  <table class="PageHeader" width="100%" border="0" cellspacing="0" cellpadding="2">
+    <tr>
+      <td class="PageLogo" width="5%"><img src="images/pick_logo.gif"></td>
+      <td class="PageCaption" width="95%">Select</td>
+    </tr>
+  </table>
+
+  <table class="JadeError" width="100%" border="0" cellspacing="0" cellpadding="2">
+    <tr>
+      <td class="JadeError"><vserror vsclass="versata.pdx.html.PopupErrorElement" onscreen="false"></td>
+    </tr>
+  </table>
+
+  <table class="RecSrcAll" width="100%">
+    <tr>
+      <td class="RecSrcAll">
+
+        <table class="RecSrcGrid" width="100%" border="0" cellspacing="1" cellpadding="2" vsds="PickDataSource">
+          <tr vsheader="true">
+            <td class="GridToolbarNav" width="5%" nowrap><a class="GridToolbarNav" href="this" vsaction="cancel" name="pickcancel" vspickaccept="false" onclick="javascript:closePickWindow(document.forms[0], this);">Cancel</a></td>
+            <td class="RecSrcGridHeader" nowrap><vstext value="columnName"></td>
+          </tr>
+          <tr vsprototyperow="true">
+            <td class="GridToolbarNav" width="5%" nowrap><a class="GridToolbarNav" href="this" vspickaccept="true" vsaction="acceptpick" value="PickDataSourcevscurrency" onclick="javascript:closePickWindow(document.forms[0], this);">Select</a></td>
+            <td class="GridAttrField" nowrap align="right"><vstext name="txtPickDataSourceNum"></td>
+          </tr>
+        </table>
+
+        <table class="RecSrcGridToolbar" width="100%" border="0" cellspacing="1" cellpadding="2">
+          <tr>
+            <td class="GridToolbarNav" width="5%" nowrap>
+              <a class="GridToolbarNav" href="this" vsds="PickDataSource" vsaction="firstpage" name="PickDataSourcefirstpage">&lt;&lt;</a>&nbsp;
+              <a class="GridToolbarNav" href="this" vsds="PickDataSource" vsaction="prevpage" name="PickDataSourceprevpage">&nbsp;&lt;&nbsp;</a>&nbsp;
+              <a class="GridToolbarNav" href="this" vsds="PickDataSource" vsaction="nextpage" name="PickDataSourcenextpage">&nbsp;&gt;&nbsp;</a>&nbsp;
+              <a class="GridToolbarNav" href="this" vsds="PickDataSource" vsaction="lastpage" name="PickDataSourcelastpage">&gt;&gt;</a>
+            </td>
+            <td class="RecSrcGridQueryStatus" width="5%" nowrap><vsquerystatus vsds="PickDataSource"></td>
+            <td class="GridToolbarTrans" width="90%" nowrap>&nbsp;</td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</form>
+
+</body>
+</html>

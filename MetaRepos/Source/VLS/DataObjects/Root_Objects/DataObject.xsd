@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="DataObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CodedValuesList"/>
+        <xs:element ref="VLSDeployment"/>
+        <xs:element ref="SingularCaption"/>
+        <xs:element ref="PluralCaption"/>
+        <xs:element ref="Description"/>
+        <xs:element ref="Comments"/>
+        <xs:element ref="Attributes"/>
+        <xs:element ref="Indexes"/>
+      </xs:sequence>
+      <xs:attribute name="CodedValuesList" use="required" type="xs:NCName"/>
+      <xs:attribute name="DTDVersion" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="ImageReference" use="required"/>
+      <xs:attribute name="IsRemoteAccessible" use="required" type="xs:NCName"/>
+      <xs:attribute name="LockMode" use="required" type="xs:NCName"/>
+      <xs:attribute name="SuperClass" use="required" type="xs:NCName"/>
+      <xs:attribute name="SurrId" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="UseQuotedIdentifiers" use="required" type="xs:NCName"/>
+      <xs:attribute name="XdaConnector" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CodedValuesList">
+    <xs:complexType>
+      <xs:attribute name="DisplayAttribute" use="required"/>
+      <xs:attribute name="StoredAttribute" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VLSDeployment">
+    <xs:complexType>
+      <xs:attribute name="DeploySecurityInfo" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SingularCaption" type="xs:string"/>
+  <xs:element name="PluralCaption" type="xs:string"/>
+  <xs:element name="Description" type="xs:string"/>
+  <xs:element name="Comments">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Attributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Attribute"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Attribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DataType"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="Derivation"/>
+          <xs:element ref="Validation"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="Caption"/>
+      </xs:sequence>
+      <xs:attribute name="LayoutByDefault" use="required" type="xs:NCName"/>
+      <xs:attribute name="Name" use="required" type="xs:NCName"/>
+      <xs:attribute name="Persistent" use="required" type="xs:NCName"/>
+      <xs:attribute name="PreventUserUpdates" use="required" type="xs:NCName"/>
+      <xs:attribute name="ValueRequired" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataType">
+    <xs:complexType>
+      <xs:attribute name="DataType" use="required" type="xs:NCName"/>
+      <xs:attribute name="Precision" type="xs:integer"/>
+      <xs:attribute name="Scale" type="xs:integer"/>
+      <xs:attribute name="Size" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Derivation">
+    <xs:complexType>
+      <xs:choice minOccurs="0">
+        <xs:element ref="DefaultValue"/>
+        <xs:element ref="Formula"/>
+        <xs:element ref="QualificationExpression"/>
+      </xs:choice>
+      <xs:attribute name="DerivationType" use="required" type="xs:NCName"/>
+      <xs:attribute name="SourceDataObject"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DefaultValue" type="xs:boolean"/>
+  <xs:element name="Formula" type="xs:string"/>
+  <xs:element name="QualificationExpression" type="xs:string"/>
+  <xs:element name="Validation">
+    <xs:complexType>
+      <xs:attribute name="ValidationType" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caption" type="xs:string"/>
+  <xs:element name="Indexes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Index"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Index">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Index_Attribute"/>
+      </xs:sequence>
+      <xs:attribute name="IgnoreNulls" use="required" type="xs:NCName"/>
+      <xs:attribute name="Name" use="required" type="xs:NCName"/>
+      <xs:attribute name="Primary" use="required" type="xs:NCName"/>
+      <xs:attribute name="Unique" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Index_Attribute">
+    <xs:complexType>
+      <xs:attribute name="Descending" use="required" type="xs:NCName"/>
+      <xs:attribute name="Name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

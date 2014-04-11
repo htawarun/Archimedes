@@ -1,0 +1,2 @@
+References=
+VLSComponentsClassPath=C:/Microgeneral/Dice/SliceNDice_JavaFiles/Classes/

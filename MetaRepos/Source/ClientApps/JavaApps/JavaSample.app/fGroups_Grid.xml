@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Form SYSTEM "Form.dtd">
+<Form
+	DTDVersion="05.05.12"
+	TargetLanguage="Java"
+	Archetype="Default"
+	PositionTop="201"
+	PositionLeft="10"
+	PositionWidth="188"
+	PositionHeight="55"
+	IsAddedAfterGen="False"
+	HasCustomFormLayout="True"
+	ObjectsUnusedByFormLayout="True"
+	External="False"
+	NoDataForm="False"
+	>
+	<FormCaption><![CDATA[Groups]]></FormCaption>
+	<RecordSource
+		RSID="1"
+		Prefix="T1"
+		BusinessObject="Groups"
+		RelnIsFromParent="False"
+		DoesSourceAffectMe="False"
+		DoIAffectSource="False"
+		IsAddedAfterGen="False"
+		RsAttributesDefault="False"
+		ClassName="DataSource"
+		RecordSourceArchetype="Grid"
+		>
+		<ParameterizedWhereClause><![CDATA[ ]]></ParameterizedWhereClause>
+		<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+		<OrderByClause><![CDATA[ ]]></OrderByClause>
+		<RSAttributesMeta>
+			<DefaultAttributes>
+				<RSDefaultAttribute ID="1" Name="GroupName" />
+				<RSDefaultAttribute ID="2" Name="ParentGroupName" />
+				<RSDefaultAttribute ID="3" Name="RepositoryName" />
+				<RSDefaultAttribute ID="4" Name="ParentRepositoryName" />
+				<RSDefaultAttribute ID="5" Name="OwnerID" />
+			</DefaultAttributes>
+			<ScalerAttributes>
+				<RSAttribute Name="GroupName" Displayed="True" UnPlaced="False" />
+				<RSAttribute Name="ParentGroupName" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="RepositoryName" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="ParentRepositoryName" Displayed="False" UnPlaced="False" />
+				<RSAttribute Name="OwnerID" Displayed="False" UnPlaced="False" />
+			</ScalerAttributes>
+			<GridAttributes>
+				<RSAttribute Name="GroupName" Displayed="True" UnPlaced="True" />
+				<RSAttribute Name="ParentGroupName" Displayed="True" UnPlaced="True" />
+				<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="True" />
+				<RSAttribute Name="ParentRepositoryName" Displayed="True" UnPlaced="True" />
+				<RSAttribute Name="OwnerID" Displayed="True" UnPlaced="True" />
+			</GridAttributes>
+		</RSAttributesMeta>
+		<PickObject
+			RSID="2"
+			Prefix="T2"
+			BusinessObject="Groups"
+			Relationship="MyGroup(Groups)-Groups(Groups)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [RepositoryName] = [?ParentRepositoryName] and [GroupName] = [?ParentGroupName]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="GroupName" />
+					<RSDefaultAttribute ID="2" Name="ParentGroupName" />
+					<RSDefaultAttribute ID="3" Name="RepositoryName" />
+					<RSDefaultAttribute ID="4" Name="ParentRepositoryName" />
+					<RSDefaultAttribute ID="5" Name="OwnerID" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="GroupName" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="ParentGroupName" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="ParentRepositoryName" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="OwnerID" Displayed="True" UnPlaced="True" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+		<PickObject
+			RSID="3"
+			Prefix="T3"
+			BusinessObject="Repository"
+			Relationship="Repository1(Repository)-Groups(Groups)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="RepositoryName" />
+					<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+					<RSDefaultAttribute ID="3" Name="DataObject_Cnt" />
+					<RSDefaultAttribute ID="4" Name="Relationship_Cnt" />
+					<RSDefaultAttribute ID="5" Name="Attr_Cnt" />
+					<RSDefaultAttribute ID="6" Name="Action_Cnt" />
+					<RSDefaultAttribute ID="7" Name="Constraint_Cnt" />
+					<RSDefaultAttribute ID="8" Name="Java_App_Cnt" />
+					<RSDefaultAttribute ID="9" Name="HTML_App_Cnt" />
+					<RSDefaultAttribute ID="10" Name="Gen_Lines_Cnt" />
+					<RSDefaultAttribute ID="11" Name="User_Line_Cnt" />
+					<RSDefaultAttribute ID="12" Name="Gen_Method_Cnt" />
+					<RSDefaultAttribute ID="13" Name="User_Method_Cnt" />
+					<RSDefaultAttribute ID="14" Name="Total_Line_Cnt" />
+					<RSDefaultAttribute ID="15" Name="Total_Method_Cnt" />
+					<RSDefaultAttribute ID="16" Name="Gen_Line_Pct" />
+					<RSDefaultAttribute ID="17" Name="User_Line_Pct" />
+					<RSDefaultAttribute ID="18" Name="Gen_Method_Pct" />
+					<RSDefaultAttribute ID="19" Name="User_Method_Pct" />
+					<RSDefaultAttribute ID="20" Name="Comments" />
+					<RSDefaultAttribute ID="21" Name="Other_File_Cnt" />
+					<RSDefaultAttribute ID="22" Name="Other_File_Lines" />
+					<RSDefaultAttribute ID="23" Name="Other_File_Method_Cnt" />
+					<RSDefaultAttribute ID="24" Name="QueryObject_Cnt" />
+					<RSDefaultAttribute ID="25" Name="JavaForm_Cnt" />
+					<RSDefaultAttribute ID="26" Name="HTML_Form_Cnt" />
+					<RSDefaultAttribute ID="27" Name="ReposInternalName" />
+					<RSDefaultAttribute ID="28" Name="RootDirectory" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="RepositoryVersion" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="DataObject_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Relationship_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Java_App_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="HTML_App_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Comments" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Other_File_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Other_File_Lines" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Other_File_Method_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="QueryObject_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="JavaForm_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="HTML_Form_Cnt" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="ReposInternalName" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="RootDirectory" Displayed="True" UnPlaced="True" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+		<PickObject
+			RSID="4"
+			Prefix="T4"
+			BusinessObject="Owner"
+			Relationship="Owner(Owner)-Group(Groups)"
+			RelnIsFromParent="False"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="Pick"
+			OnScreenPick="False"
+			>
+			<FKeyParamsClause><![CDATA[ [OwnerID] = [?OwnerID]]]></FKeyParamsClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="OwnerID" />
+					<RSDefaultAttribute ID="2" Name="OwnerName" />
+					<RSDefaultAttribute ID="3" Name="Email" />
+					<RSDefaultAttribute ID="4" Name="Phone" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="OwnerID" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="OwnerName" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Email" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="Phone" Displayed="True" UnPlaced="True" />
+				</GridAttributes>
+			</RSAttributesMeta>
+		</PickObject>
+		<RecordSource
+			RSID="5"
+			Prefix="T5"
+			BusinessObject="Object_JN_Group"
+			Relationship="Group(Groups)-DataObject_JN_Groups1(Object_JN_Group)"
+			RelnIsFromParent="True"
+			DoesSourceAffectMe="False"
+			DoIAffectSource="False"
+			IsAddedAfterGen="False"
+			RsAttributesDefault="False"
+			ClassName="DataSource"
+			RecordSourceArchetype="Grid"
+			ParentAlias=""
+			ChildAlias=""
+			>
+			<ParameterizedWhereClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [GroupName] = [?GroupName]]]></ParameterizedWhereClause>
+			<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+			<OrderByClause><![CDATA[ ]]></OrderByClause>
+			<RSAttributesMeta>
+				<DefaultAttributes>
+					<RSDefaultAttribute ID="1" Name="GroupName" />
+					<RSDefaultAttribute ID="2" Name="RepositoryName" />
+					<RSDefaultAttribute ID="3" Name="ObjectName" />
+					<RSDefaultAttribute ID="4" Name="ObjectType" />
+				</DefaultAttributes>
+				<GridAttributes>
+					<RSAttribute Name="GroupName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="True" />
+					<RSAttribute Name="ObjectName" Displayed="True" UnPlaced="False" />
+					<RSAttribute Name="ObjectType" Displayed="True" UnPlaced="False" />
+				</GridAttributes>
+			</RSAttributesMeta>
+			<PickObject
+				RSID="6"
+				Prefix="T6"
+				BusinessObject="DataObject"
+				Relationship="DataObject1(DataObject)-DataObject_JN_Groups(Object_JN_Group)"
+				RelnIsFromParent="False"
+				DoesSourceAffectMe="False"
+				DoIAffectSource="False"
+				IsAddedAfterGen="False"
+				RsAttributesDefault="False"
+				ClassName="Pick"
+				OnScreenPick="False"
+				>
+				<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [DataObjectName] = [?ObjectName]]]></FKeyParamsClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<RSAttributesMeta>
+					<DefaultAttributes>
+						<RSDefaultAttribute ID="1" Name="RepositoryName" />
+						<RSDefaultAttribute ID="2" Name="DataObjectName" />
+						<RSDefaultAttribute ID="3" Name="isCodedValueList" />
+						<RSDefaultAttribute ID="4" Name="SuperClass" />
+						<RSDefaultAttribute ID="5" Name="SingularCaption" />
+						<RSDefaultAttribute ID="6" Name="PluralCaption" />
+						<RSDefaultAttribute ID="7" Name="Description" />
+						<RSDefaultAttribute ID="8" Name="Attr_Cnt" />
+						<RSDefaultAttribute ID="9" Name="Constraint_Cnt" />
+						<RSDefaultAttribute ID="10" Name="Action_Cnt" />
+						<RSDefaultAttribute ID="11" Name="ParentReln_Cnt" />
+						<RSDefaultAttribute ID="12" Name="ChildReln_Cnt" />
+						<RSDefaultAttribute ID="13" Name="CountQueryObj" />
+						<RSDefaultAttribute ID="14" Name="Gen_Lines_Cnt" />
+						<RSDefaultAttribute ID="15" Name="User_Line_Cnt" />
+						<RSDefaultAttribute ID="16" Name="Gen_Method_Cnt" />
+						<RSDefaultAttribute ID="17" Name="User_Method_Cnt" />
+						<RSDefaultAttribute ID="18" Name="Total_Line_Cnt" />
+						<RSDefaultAttribute ID="19" Name="Total_Method_Cnt" />
+						<RSDefaultAttribute ID="20" Name="Gen_Line_Pct" />
+						<RSDefaultAttribute ID="21" Name="User_Line_Pct" />
+						<RSDefaultAttribute ID="22" Name="Gen_Method_Pct" />
+						<RSDefaultAttribute ID="23" Name="User_Method_Pct" />
+						<RSDefaultAttribute ID="24" Name="InternalPathName" />
+					</DefaultAttributes>
+					<GridAttributes>
+						<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="DataObjectName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="isCodedValueList" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="SuperClass" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="SingularCaption" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="PluralCaption" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Description" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Attr_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Constraint_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Action_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="ParentReln_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="ChildReln_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="CountQueryObj" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="InternalPathName" Displayed="True" UnPlaced="True" />
+					</GridAttributes>
+				</RSAttributesMeta>
+			</PickObject>
+			<PickObject
+				RSID="7"
+				Prefix="T7"
+				BusinessObject="QueryDataObject"
+				Relationship="QueryDataObject(QueryDataObject)-Object_JN_Group(Object_JN_Group)"
+				RelnIsFromParent="False"
+				DoesSourceAffectMe="False"
+				DoIAffectSource="False"
+				IsAddedAfterGen="False"
+				RsAttributesDefault="False"
+				ClassName="Pick"
+				OnScreenPick="False"
+				>
+				<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [QueryObjectName] = [?ObjectName]]]></FKeyParamsClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<RSAttributesMeta>
+					<DefaultAttributes>
+						<RSDefaultAttribute ID="1" Name="RepositoryName" />
+						<RSDefaultAttribute ID="2" Name="QueryObjectName" />
+						<RSDefaultAttribute ID="3" Name="DataObjectName" />
+						<RSDefaultAttribute ID="4" Name="Alias" />
+					</DefaultAttributes>
+					<GridAttributes>
+						<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="QueryObjectName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="DataObjectName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Alias" Displayed="True" UnPlaced="True" />
+					</GridAttributes>
+				</RSAttributesMeta>
+			</PickObject>
+			<PickObject
+				RSID="8"
+				Prefix="T8"
+				BusinessObject="Application"
+				Relationship="Application(Application)-Object_JN_Group(Object_JN_Group)"
+				RelnIsFromParent="False"
+				DoesSourceAffectMe="False"
+				DoIAffectSource="False"
+				IsAddedAfterGen="False"
+				RsAttributesDefault="False"
+				ClassName="Pick"
+				OnScreenPick="False"
+				>
+				<FKeyParamsClause><![CDATA[ [RepositoryName] = [?RepositoryName] and [ApplicationName] = [?ObjectName]]]></FKeyParamsClause>
+				<AdditionalWhereClause><![CDATA[ ]]></AdditionalWhereClause>
+				<OrderByClause><![CDATA[ ]]></OrderByClause>
+				<RSAttributesMeta>
+					<DefaultAttributes>
+						<RSDefaultAttribute ID="1" Name="RepositoryName" />
+						<RSDefaultAttribute ID="2" Name="RepositoryVersion" />
+						<RSDefaultAttribute ID="3" Name="Form_Cnt" />
+						<RSDefaultAttribute ID="4" Name="ApplicationName" />
+						<RSDefaultAttribute ID="5" Name="isJava" />
+						<RSDefaultAttribute ID="6" Name="Gen_Lines_Cnt" />
+						<RSDefaultAttribute ID="7" Name="User_Line_Cnt" />
+						<RSDefaultAttribute ID="8" Name="Gen_Method_Cnt" />
+						<RSDefaultAttribute ID="9" Name="User_Method_Cnt" />
+						<RSDefaultAttribute ID="10" Name="Total_Line_Cnt" />
+						<RSDefaultAttribute ID="11" Name="Total_Method_Cnt" />
+						<RSDefaultAttribute ID="12" Name="Gen_Line_Pct" />
+						<RSDefaultAttribute ID="13" Name="User_Line_Pct" />
+						<RSDefaultAttribute ID="14" Name="Gen_Method_Pct" />
+						<RSDefaultAttribute ID="15" Name="User_Method_Pct" />
+					</DefaultAttributes>
+					<GridAttributes>
+						<RSAttribute Name="RepositoryName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="RepositoryVersion" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Form_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="ApplicationName" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="isJava" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Gen_Lines_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="User_Line_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Gen_Method_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="User_Method_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Total_Line_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Total_Method_Cnt" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Gen_Line_Pct" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="User_Line_Pct" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="Gen_Method_Pct" Displayed="True" UnPlaced="True" />
+						<RSAttribute Name="User_Method_Pct" Displayed="True" UnPlaced="True" />
+					</GridAttributes>
+				</RSAttributesMeta>
+			</PickObject>
+		</RecordSource>
+	</RecordSource>
+	<FormLayout><![CDATA[BEGIN .VSForm fGroups_Grid
+  ImageFile = "BACKGROUND.GIF"
+  ClassName = "CoolVSForm"
+  BackColor = 0xc0c0c0
+  Width = 680
+  ImageDisplayStyle = Tiled
+  Title = ""
+  Enable = True
+  ForeColor = 0x000000
+  HelpURL = ""
+  ToolTip = ""
+  Visible = True
+  Tag = "_$$_"
+  Height = 517
+  AnchorForm = "NONE"
+  Constraint = "null"
+  Layout = ""
+  Style = "Child"
+  Name = "fGroups_Grid"
+  Extended = ""
+  DisplayTitleBar = False
+  BeginProperty VSFont 
+    FontName  = "Helvetica"
+    FontSize  = 12
+    FontStyleBold  = False
+    FontStyleItalic  = False
+  EndProperty 
+  BEGIN .VSTree VSTree1
+    Top = 76
+    ClassName = "VSTree"
+    BackColor = 0xffffff
+    Width = 210
+    Enable = True
+    ForeColor = 0x000000
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = ""
+    TabOrder = 8
+    Height = 285
+    Left = 11
+    RowHeight = 0
+    Constraint = "null"
+    TabStop = True
+    Nodes = ""
+    Extended = ""
+    Name = "VSTree1"
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    BEGIN .VSTreeNode VSTreeNode1
+      DataSource = "datT1Groups"
+      CloseImage = ""
+      OpenImage = ""
+      DataField = 1,"GroupName"
+      Name = "VSTreeNode1"
+      Label = "VSTreeNode1"
+      END
+    END
+  BEGIN .VSImageButton btnMovePrev
+    ImageFile = "blue_move_previous.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Groups"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Previous"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_previous"
+    TabOrder = 0
+    Height = 32
+    Left = 36
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMovePrev"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveFirst
+    ImageFile = "blue_move_first.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Groups"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move First"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_first"
+    TabOrder = 1
+    Height = 32
+    Left = 1
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveFirst"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSLabel VSLabel11
+    Top = 4
+    ClassName = "VSLabel"
+    Opaque = False
+    StatusBarText = ""
+    BorderStyle = "NO_BORDER"
+    DataSource = ""
+    HorizAlign = "LEFT"
+    BackColor = 0xebebeb
+    Width = 156
+    Enable = True
+    VertTextPos = "BOTTOM"
+    DisplayedMnemonic = ""
+    ForeColor = 0x0038bb
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    Height = 42
+    Left = 73
+    DataField = 0
+    Icon = ""
+    Constraint = "null"
+    VertAlign = "CENTER"
+    HorizTextPos = "RIGHT"
+    Extended = ""
+    Name = "VSLabel11"
+    LabelFor = ""
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 26
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "Groups"
+    END
+  BEGIN .VSImageButton btnMoveNext
+    ImageFile = "blue_move_next.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Groups"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Next"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_next"
+    TabOrder = 2
+    Height = 32
+    Left = 231
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveNext"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton btnMoveLast
+    ImageFile = "blue_move_last.gif"
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "datT1Groups"
+    BackColor = 0xebebeb
+    Width = 32
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x000000
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = "Move Last"
+    Visible = True
+    Tag = "_$$_"
+    Action = "db_last"
+    TabOrder = 3
+    Height = 32
+    Left = 266
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = True
+    Border = "NO_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "btnMoveLast"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Centered
+    Label = ""
+    END
+  BEGIN .VSImageButton VSImageButton2
+    ImageFile = ""
+    Top = 4
+    ClassName = "VSImageButton"
+    Opaque = True
+    BorderPainted = True
+    ReportTarget = ""
+    StatusBarText = ""
+    FormTransitionProperties = ""
+    DataSource = "(Current)"
+    BackColor = 0xebebeb
+    Width = 18
+    ReportURL = ""
+    Enable = True
+    VertTextPos = "BOTTOM"
+    ForeColor = 0x0038bb
+    AutoToolTip = False
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$anchorTopRight$_"
+    Action = "ok"
+    TabOrder = 4
+    Height = 16
+    Left = 655
+    AutoSize = False
+    Constraint = "null"
+    HorizTextPos = "RIGHT"
+    TabStop = False
+    Border = "RAISED_BORDER"
+    Mnemonic = ""
+    Extended = ""
+    Name = "VSImageButton2"
+    AutoLabel = False
+    FormTransition = 0
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = True
+      FontStyleItalic  = False
+    EndProperty 
+    DisplayStyle = Stretched
+    Label = "X"
+    END
+  BEGIN .VSJavaDataControl datT1Groups
+    Top = 404
+    ClassName = "VSJavaDataControl"
+    RecordSourceProperties = ""
+    StatusBarText = ""
+    AllowInsert = True
+    BackColor = 0xffffff
+    Width = 150
+    AllowUpdate = True
+    RecordSource = 1,"T1Groups"
+    Enable = True
+    ForeColor = 0x000000
+    AllowDelete = True
+    HelpURL = ""
+    ToolTip = ""
+    Visible = False
+    Tag = "_$$_"
+    MaxRowsPerFetch = 16
+    TabOrder = 7
+    Height = 27
+    Left = 7
+    SaveMode = "buffered"
+    Constraint = "null"
+    TabStop = False
+    Extended = ""
+    Name = "datT1Groups"
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "Groups"
+    END
+  BEGIN .VSJavaDataControl datT5Object_JN_Group
+    Top = 314
+    ClassName = "VSJavaDataControl"
+    RecordSourceProperties = ""
+    StatusBarText = ""
+    AllowInsert = True
+    BackColor = 0xffffff
+    Width = 150
+    AllowUpdate = True
+    RecordSource = 5,"T5Object_JN_Group"
+    Enable = True
+    ForeColor = 0x000000
+    AllowDelete = True
+    HelpURL = ""
+    ToolTip = ""
+    Visible = False
+    Tag = "_$$_"
+    MaxRowsPerFetch = 16
+    TabOrder = 5
+    Height = 27
+    Left = 245
+    SaveMode = "buffered"
+    Constraint = "null"
+    TabStop = False
+    Extended = ""
+    Name = "datT5Object_JN_Group"
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    Label = "DataObject_JN_Group(s)"
+    END
+  BEGIN .VSGrid grdT5Object_JN_Group
+    RowSelectMode = "SINGLE_SELECTION"
+    HiliteForeColor = 0xffffff
+    Top = 76
+    ClassName = "VSGrid"
+    DisplayHeader = True
+    BorderStyle = "PLAIN_BORDER"
+    DataSource = "datT5Object_JN_Group"
+    BackColor = 0xffffff
+    Width = 435
+    RowSelectionAllowed = False
+    DisplayGridLines = True
+    Enable = True
+    ForeColor = 0x000000
+    HelpURL = ""
+    ToolTip = ""
+    Visible = True
+    Tag = "_$$_"
+    RowHeaderBackColor = 0x004080
+    Columns = ""
+    TabOrder = 6
+    Height = 405
+    Left = 224
+    ColumnHeaderBackColor = 0x004080
+    ShowVerticalLines = True
+    RowHeight = 20
+    RowHeaderForeColor = 0xebebeb
+    DisableBackColor = 0xffffff
+    BeginProperty VSHeaderFont
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    ColumnHeaderForeColor = 0xebebeb
+    Constraint = "null"
+    TabStop = True
+    ColResizeMode = "AUTO_RESIZE_OFF"
+    LineColor = 0xc0c0c0
+    DisableForeColor = 0xc0c0c0
+    Editable = True
+    Extended = ""
+    Name = "grdT5Object_JN_Group"
+    RowHeaderWidth = 25
+    HiliteBackColor = 0x004080
+    ColumnHeaderHeight = 17
+    BeginProperty VSFont 
+      FontName  = "Helvetica"
+      FontSize  = 12
+      FontStyleBold  = False
+      FontStyleItalic  = False
+    EndProperty 
+    ShowStarRow = True
+    ShowHorizontalLines = True
+    BEGIN .VSGridColumn "GroupName"      
+      GridColumnLabel = "GroupName"
+      GridColumnWidth = 0x7D
+      GridColumnDataField = 1
+      GridColumnEditType = "VSTextField"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnSortAllowed = True
+      GridColumnFormat = ""
+      GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+    BEGIN .VSGridColumn "ObjectName"      
+      GridColumnLabel = "ObjectName"
+      GridColumnWidth = 0x9F
+      GridColumnDataField = 3
+      GridColumnEditType = "VSPickChoice"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnSortAllowed = True
+      GridColumnFormat = ""
+      GridColumnPickObject = 6
+        ENDGRIDCOLUMN
+    BEGIN .VSGridColumn "ObjectType"      
+      GridColumnLabel = "ObjectType"
+      GridColumnWidth = 0x4B
+      GridColumnDataField = 4
+      GridColumnEditType = "VSChoice"
+      GridColumnControlStyle = ""
+      JUSTIFY = "JUSTIFY_LEFT"
+      VALIGN = "VALIGN_CENTER"
+      GRIDCOLUMNBACKCOLOR = "0xffffff"
+      GRIDCOLUMNFORECOLOR = "0x000000"
+      GRIDCOLUMNHILITEBACKCOLOR = "0x800000"
+      GRIDCOLUMNHILITEFORECOLOR = "0xffffff"
+      GridColumnEnable = True
+      GridColumnSortAllowed = True
+      GridColumnFormat = ""
+      GridColumnPickObject = 0
+        ENDGRIDCOLUMN
+    END
+  END
+]]></FormLayout>
+</Form>
