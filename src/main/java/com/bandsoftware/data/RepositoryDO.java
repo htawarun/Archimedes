@@ -44,9 +44,9 @@ public class RepositoryDO extends BusinessObjectDO {
 
     public void setRepositoryVersion(String repositoryVersion) {
         // do not set this twice
-        if(repositoryVersion != null){
+        if (repositoryVersion != null) {
             this.RepositoryVersion = repositoryVersion;
-             setAttrValue("RepositoryVersion", repositoryVersion);
+            setAttrValue("RepositoryVersion", repositoryVersion);
         }
     }
 

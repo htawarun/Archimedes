@@ -87,10 +87,10 @@ public class BSDField {
         if (Value == null && ParentName != null) {
             return ("[" + ParentName + "]");
         }
-        if(Value instanceof Boolean){
-            v = (((Boolean) Value).booleanValue())?"1":"0";
+        if (Value instanceof Boolean) {
+            v = (((Boolean) Value).booleanValue()) ? "1" : "0";
         }
-        return v ;
+        return v;
     }
 
     /**

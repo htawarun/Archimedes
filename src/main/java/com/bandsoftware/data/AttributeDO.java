@@ -424,18 +424,20 @@ public class AttributeDO extends BusinessObjectDO {
         //  sb.append(this.getDefault);
         return sb.toString();
     }
+
     //override the parent to include these children
-    public void recursiveReposVersion(String repositoryVersion){
+    public void recursiveReposVersion(String repositoryVersion) {
 
         for (DerivationDO dervDO : this.getDerivations()) {
-            db(dervDO.getName() + " BO NAME: "+ dervDO.getBOName());
+            db(dervDO.getName() + " BO NAME: " + dervDO.getBOName());
             dervDO.setAttrValue("RepositoryVersion", repositoryVersion);
         }
-        for(ValidationDO valDO : this.getValidations()){
-            db(valDO.getName() + " BO NAME: "+ valDO.getBOName());
+        for (ValidationDO valDO : this.getValidations()) {
+            db(valDO.getName() + " BO NAME: " + valDO.getBOName());
             valDO.setAttrValue("RepositoryVersion", repositoryVersion);
         }
     }
+
     public boolean isValidation_Sum_Or_Fomrula() {
         Enumeration e = getDerivations().elements();
         if (e.hasMoreElements()) {
@@ -465,6 +467,7 @@ public class AttributeDO extends BusinessObjectDO {
 
         return dt;
     }
+
     // Public method to append attribute information to DICE Script
     public void write(String dataObjectAbbr, StringBuffer sb) {
         if (ValueRequired) {

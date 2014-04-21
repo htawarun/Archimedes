@@ -118,14 +118,16 @@ public class ApplicationDO extends BusinessObjectDO {
     public void addForm(FormDO form) {
         this.forms.addElement(form);
     }
+
     //override the parent to include these children
-    public void recursiveReposVersion(String repositoryVersion){
+    public void recursiveReposVersion(String repositoryVersion) {
 
         for (FormDO aForm : this.getForms()) {
-            db(aForm.getName() + " BO NAME: "+ aForm.getBOName());
+            db(aForm.getName() + " BO NAME: " + aForm.getBOName());
             aForm.setAttrValue("RepositoryVersion", repositoryVersion);
         }
     }
+
     public void write(String dataObjectAbbr, StringBuffer sb) {
         //    if (ValueRequired) {
         //        sb.append("  ASSERT " + dataObjectAbbr + "." + AttrName + " IS NOT NULL");

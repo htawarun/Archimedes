@@ -13,9 +13,7 @@ import com.datachannel.xml.om.Document;
 import com.datachannel.xml.om.IXMLDOMNamedNodeMap;
 import com.datachannel.xml.om.IXMLDOMNode;
 import com.datachannel.xml.om.IXMLDOMNodeList;
-import com.sun.javafx.collections.transformation.SortedList;
 
-import javax.swing.*;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -326,9 +324,9 @@ public class DataObjectDO extends BusinessObjectDO {
 
     public List<AttributeDO> findAttributeList() {
         List<AttributeDO> attrList = new Vector<AttributeDO>();
-         Enumeration e = this.findChildren("Attribute");
-        while(e.hasMoreElements()){
-            attrList.add((AttributeDO)e.nextElement());
+        Enumeration e = this.findChildren("Attribute");
+        while (e.hasMoreElements()) {
+            attrList.add((AttributeDO) e.nextElement());
         }
         return attrList;
     }
@@ -336,8 +334,8 @@ public class DataObjectDO extends BusinessObjectDO {
     public List<ConstraintDO> findConstraintsList() {
         List<ConstraintDO> constraintList = new Vector<ConstraintDO>();
         Enumeration e = this.findChildren("Constraints");
-        while(e.hasMoreElements()){
-            constraintList.add((ConstraintDO)e.nextElement());
+        while (e.hasMoreElements()) {
+            constraintList.add((ConstraintDO) e.nextElement());
         }
         return constraintList;
     }
@@ -345,8 +343,8 @@ public class DataObjectDO extends BusinessObjectDO {
     public List<ActionDO> findActionList() {
         List<ActionDO> actionDOList = new Vector<ActionDO>();
         Enumeration e = this.findChildren("Constraints");
-        while(e.hasMoreElements()){
-            actionDOList.add((ActionDO)e.nextElement());
+        while (e.hasMoreElements()) {
+            actionDOList.add((ActionDO) e.nextElement());
         }
         return actionDOList;
     }

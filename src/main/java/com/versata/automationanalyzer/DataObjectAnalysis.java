@@ -94,11 +94,11 @@ public class DataObjectAnalysis extends BusinessObjectAnalysis {
             dboDocument.setParserClassName("com.datachannel.xml.tokenizer.parser.XMLDOMParser");
             dboDocument.load(sourceFile);
             addDataObject(dboDocument);
+            addAttributes(dboDocument);
             addConstraints(dboDocument);
             addActions(dboDocument);
             addDerivations(dboDocument);
             addValidations(dboDocument);
-            addAttributes(dboDocument);
 
         } catch (Exception e) {
             errors.add("Error while counting rules for object " + name + " : " + e.getMessage());

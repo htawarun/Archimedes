@@ -205,7 +205,7 @@ public class RecordSourceDO extends BusinessObjectDO {
     }
 
     public void setAllowDelete(String allowDelete) {
-        setAttrValue("AllowDelete", "True".equals(allowDelete)?"1":"0");
+        setAttrValue("AllowDelete", "True".equals(allowDelete) ? "1" : "0");
         AllowDelete = allowDelete;
     }
 
@@ -214,7 +214,7 @@ public class RecordSourceDO extends BusinessObjectDO {
     }
 
     public void setAllowUpdate(String allowUpdate) {
-        setAttrValue("AllowUpdate", "True".equals(allowUpdate)?"1":"0");
+        setAttrValue("AllowUpdate", "True".equals(allowUpdate) ? "1" : "0");
         AllowUpdate = allowUpdate;
     }
 
@@ -223,7 +223,7 @@ public class RecordSourceDO extends BusinessObjectDO {
     }
 
     public void setAllowInsert(String allowInsert) {
-        setAttrValue("AllowInsert", "True".equals(allowInsert)?"1":"0");
+        setAttrValue("AllowInsert", "True".equals(allowInsert) ? "1" : "0");
         AllowInsert = allowInsert;
     }
 

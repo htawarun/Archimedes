@@ -1,5 +1,7 @@
 package com.bandsoftware.data;
 
+import com.bandsoftware.beans.EspressoRuleBean;
+
 import java.util.*;
 
 /**
@@ -25,27 +27,36 @@ public class EspressoRuleObject extends BSDDataObject {
 
 
     public enum RULE_TYPES {
-        SUM("1"),
-        COUNT("2"),
-        FORMULA("3"),
-        PARENT_COPY("4"),
-        VALIDATION("5"),
-        COMMIT_VALIDATION("6"),
-        EVENT("7"),
-        EARLY_EVENT("8"),
-        COMMIT_EVENT("9"),
-        MIN("10"),
-        MAX("11"),
-        PARENT_REPLICATE("12");
+        SUM(1),
+        COUNT(2),
+        FORMULA(3),
+        PARENT_COPY(4),
+        VALIDATION(5),
+        COMMIT_VALIDATION(6),
+        EVENT(7),
+        EARLY_EVENT(8),
+        COMMIT_EVENT(9),
+        MIN(11),
+        MAX(12),
+        PARENT_REPLICATE(13);
 
-        private String projectIdent; //rule type
+        private int ruleIdent; //rule type
 
-        private RULE_TYPES(String t) {
-            projectIdent = t;
+        private RULE_TYPES(int t) {
+            ruleIdent = t;
         }
 
-        public String getProjectIdent() {
-            return projectIdent;
+        public int getRuleIdent() {
+            return ruleIdent;
+        }
+
+        public static String ruleName(int ident) {
+            for (RULE_TYPES rt : RULE_TYPES.values()) {
+                if (rt.getRuleIdent() == ident) {
+                    return rt.name();
+                }
+            }
+            return null;
         }
     }
 
@@ -101,15 +112,16 @@ public class EspressoRuleObject extends BSDDataObject {
         newRule = newRule.replaceAll("NE", " != ");
         newRule = newRule.replaceAll(" IS NULL", " == null");
         newRule = newRule.replaceAll(" IS NOT NULL", " != null");
-        newRule = newRule.replaceAll("\\$value  =", "return ");
-        newRule = newRule.replaceAll("\\$value =", "return ");
+        newRule = newRule.replaceAll("\\$value  =", " return ");
+        newRule = newRule.replaceAll("\\$value =", " return ");
         newRule = newRule.replaceAll(" and ", " && ");
         newRule = newRule.replaceAll(" or ", "|| ");
         newRule = newRule.replaceAll(" AND ", " && ");
         newRule = newRule.replaceAll(" OR ", "|| ");
         /* move this to string tokens*/
+        newRule = newRule.replaceAll("If ", "if ");
         newRule = newRule.replaceAll(" else ", " } else { ");
-        newRule = newRule.replaceAll("Else", " } else { ");
+        newRule = newRule.replaceAll("Else ", " } else { ");
         //newRule = newRule.replaceAll("else \\{ if", " } else if ");
         newRule = newRule.replaceAll("end if", " }");
         newRule = newRule.replaceAll("End If", " }");
@@ -145,7 +157,7 @@ public class EspressoRuleObject extends BSDDataObject {
         while (st.hasMoreElements()) {
 
             token = (String) st.nextToken();
-            if (attrNameList.contains(token)){
+            if (attrNameList.contains(token)) {
                 for (String attrName : attrNameList) {
                     if (token.equalsIgnoreCase(attrName)) {
                         sb.append("row." + token);
@@ -262,7 +274,7 @@ public class EspressoRuleObject extends BSDDataObject {
                     addSemicolonToRule.append(" ");
 
                 } else {
-                    if((token.equals("{") || token.equals("}")) && !commentSection){
+                    if ((token.equals("{") || token.equals("}")) && !commentSection) {
                         startSpecialEqualsCase = false;
                         addSemicolonToRule.append(token);
                         addSemicolonToRule.append("\n");
@@ -405,14 +417,16 @@ public class EspressoRuleObject extends BSDDataObject {
         }
         return ans;
     }
+
     public void setAttrList(Enumeration<String> attrList) {
         if (attrList != null) {
-            while ( attrList.hasMoreElements()) {
+            while (attrList.hasMoreElements()) {
                 String name = (String) attrList.nextElement();
                 setAttr(name, name);
             }
         }
     }
+
     public void setAttrList(List<String> attrList) {
         if (attrList != null) {
             for (String name : attrList) {

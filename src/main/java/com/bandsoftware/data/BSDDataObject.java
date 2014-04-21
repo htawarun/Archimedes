@@ -11,7 +11,10 @@ package com.bandsoftware.data;
 */
 
 import java.io.PrintStream;
-import java.util.*;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Vector;
 
 
 public class BSDDataObject {
@@ -20,10 +23,10 @@ public class BSDDataObject {
     public String queryObjectName;                      // Used only if Query Object instead of Business Object
     public boolean WhereUsedAware = true;               // only sends messages to where used objects
     public Vector<BSDDataObject> usedBy = null;                        // each object contains a collection of WhereUsedDO objects
-    private Hashtable<String,Object> attrList = new Hashtable();       // List of Attributes
+    private Hashtable<String, Object> attrList = new Hashtable();       // List of Attributes
     private Vector<BSDDataObject> myChildren = new Vector();           // List of Child BSDDataObjects
     private BSDDataObject myParent = null;              // Link to parent BSDDataObject
-    private Hashtable<String,String> keys = new Hashtable();           //primary keys
+    private Hashtable<String, String> keys = new Hashtable();           //primary keys
 
 
     public BSDDataObject() {
@@ -93,8 +96,9 @@ public class BSDDataObject {
     }
 
     public void setAttrValue(String name, boolean value) {
-        attrList.put(name, (value)?"1":"0");
+        attrList.put(name, (value) ? "1" : "0");
     }
+
     public void setAttrValue(String name, String value) {
         if (value != null)
             attrList.put(name, value);
@@ -129,7 +133,7 @@ public class BSDDataObject {
         myParent = eop;
     }
 
-    public Hashtable<String,String> getKeys() {
+    public Hashtable<String, String> getKeys() {
         return keys;
     }
 
@@ -256,19 +260,21 @@ public class BSDDataObject {
 
     /**
      * walk the tree up until find no parent or dataobject
+     *
      * @return
      */
-    public DataObjectDO getDataObjectRoot(){
+    public DataObjectDO getDataObjectRoot() {
         DataObjectDO dataObjectRoot = null;
-        if(this instanceof DataObjectDO) {
+        if (this instanceof DataObjectDO) {
             return (DataObjectDO) this;
         } else {
-            if(myParent != null){
+            if (myParent != null) {
                 return myParent.getDataObjectRoot();
             }
         }
         return dataObjectRoot;
     }
+
     public void testString() {
         //print attrNames, values and children
         PrintStream anOutputStream = System.out;
@@ -482,14 +488,14 @@ public class BSDDataObject {
         BSDDataObject child;
         while (myChildren.hasMoreElements()) {
             thisChildObject = (BSDDataObject) myChildren.nextElement();
-            db(thisChildObject.getName() + " BO NAME: "+ thisChildObject.getBOName());
+            db(thisChildObject.getName() + " BO NAME: " + thisChildObject.getBOName());
             thisChildObject.setAttrValue("RepositoryVersion", repositoryVersion);
             // walk the tree down for each object and call this method again
             Enumeration<BSDDataObject> children = thisChildObject.getChildren();
             while (children.hasMoreElements()) {
                 child = (BSDDataObject) children.nextElement();
                 child.setAttrValue("RepositoryVersion", repositoryVersion);
-                db(child.getName() + " BO NAME: "+ child.getBOName());
+                db(child.getName() + " BO NAME: " + child.getBOName());
                 child.recursiveReposVersion(repositoryVersion);
             }
         }

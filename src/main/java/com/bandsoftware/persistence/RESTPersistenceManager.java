@@ -11,12 +11,12 @@ package com.bandsoftware.persistence;
  *
 */
 
+import com.bandsoftware.beans.EspressoRuleBean;
 import com.bandsoftware.data.*;
 import com.bandsoftware.exception.BSDException;
 import org.apache.log4j.Logger;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.*;
 
 
@@ -76,9 +76,10 @@ public class RESTPersistenceManager extends RESTServicesManager {
         this.repositoryDO = rootRepositoryDataObject;
     }
 
-    public void setRepositoryVersion(String version){
+    public void setRepositoryVersion(String version) {
         this.repositoryVersion = version;
     }
+
     //The EOPEvent class will translate the event code into a specific
     //class name that will get the runInbound/runOutbound message.  This will
     //take the VXML processor and use it to insert, update, delete, query, etc the VLS interface
@@ -88,7 +89,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
         try {
             persistAll();
         } catch (Exception ex) {
-            log.error(ex.getMessage(),ex);
+            log.error(ex.getMessage(), ex);
             throw new Exception(ex);
         } finally {
             close();
@@ -124,18 +125,18 @@ public class RESTPersistenceManager extends RESTServicesManager {
     /*============================================================================*/
     public void persistAll() throws Exception {
         persistRepos();
-      //  persistRules();
+        //  persistRules();
     }
 
     private void persistRules() {
-        for(EspressoRuleBean bean : allEsprssoRules){
+        for (EspressoRuleBean bean : allEsprssoRules) {
             try {
-                if(bean.getIdent() != null){
+                if (bean.getRuletype_ident() > 0) {
                     insertRule(bean);
                     break; //only do 1 for testing
                 }
             } catch (Exception e) {
-                log.error(e.getMessage(),e);
+                log.error(e.getMessage(), e);
             }
         }
     }
@@ -208,8 +209,8 @@ public class RESTPersistenceManager extends RESTServicesManager {
             if (validationDO.getValidationType() != null) {
                 //val.testString();
                 insert(validationDO);
-                if(!"CodedValuesList".equals(validationDO.getValidationType())){
-                    ruleObject = createNewRuleObject(validationDO,validationDO.getDataObjectName(),attr.getAttrName());
+                if (!"CodedValuesList".equals(validationDO.getValidationType())) {
+                    ruleObject = createNewRuleObject(validationDO, validationDO.getDataObjectName(), attr.getAttrName());
                     validationDO.createEspressoRule(ruleObject);
                 }
             }
@@ -224,10 +225,10 @@ public class RESTPersistenceManager extends RESTServicesManager {
             //derv.testString();
             try {
                 insert(derivationDO);
-                this.ruleObject = createNewRuleObject(derivationDO, derivationDO.getDataObjectName(),attr.getAttrName());
-               derivationDO.createEspressoRule(ruleObject);
+                this.ruleObject = createNewRuleObject(derivationDO, derivationDO.getDataObjectName(), attr.getAttrName());
+                derivationDO.createEspressoRule(ruleObject);
             } catch (Exception ex) {
-                log.error(ex.getMessage(),ex); // try catch and keep running
+                log.error(ex.getMessage(), ex); // try catch and keep running
             }
         }
     }
@@ -240,9 +241,9 @@ public class RESTPersistenceManager extends RESTServicesManager {
             if (actionDO.getActionToPerform() != null) {
                 //act.testString();
                 insert(actionDO);
-                this.ruleObject = createNewRuleObject(actionDO,actionDO.getDataObjectName(),null);
+                this.ruleObject = createNewRuleObject(actionDO, actionDO.getDataObjectName(), null);
                 //ruleObject.createEvent(actionDO.getCondition(),"INSERTING,UPDATING","");
-               // ruleObject.setComments(actionDO.getActionName() +" : "+actionDO.getActionToPerform());
+                // ruleObject.setComments(actionDO.getActionName() +" : "+actionDO.getActionToPerform());
             }
         }
     }
@@ -326,7 +327,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
             reln.testString();
             if (businessObjectDO != null)
                 businessObjectDO.testString();
-            log.error(ex.getMessage(),ex);
+            log.error(ex.getMessage(), ex);
         }
     }
 
@@ -339,6 +340,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
             persistQueryDataObjects(qryDO);
         }
     }
+
     private void persistQueryJoins(BSDDataObject root) {
         QueryObjectDO qryDO;
         Enumeration e = root.findChildren("QueryObject");
@@ -367,7 +369,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
         Enumeration e = qryDO.findChildren("QueryJoinDataObject");
         while (e.hasMoreElements()) {
             qryJNDO = (QueryJoinDataObjectDO) e.nextElement();
-            qryJNDO.setRelationshipName(qryJNDO.getLeftDataObjectName()+"_JN_"+qryJNDO.getRightDataObjectName());
+            qryJNDO.setRelationshipName(qryJNDO.getLeftDataObjectName() + "_JN_" + qryJNDO.getRightDataObjectName());
             insert(qryJNDO);
         }
     }
@@ -381,7 +383,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
                 insert(applicationDO);
                 persistForms(applicationDO);
             } catch (Exception ex) {
-                log.error(ex.getMessage(),ex); //skip this app
+                log.error(ex.getMessage(), ex); //skip this app
             }
         }
     }
@@ -471,7 +473,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
             try {
                 insert(otherFileDO);
             } catch (Exception ex) {
-                log.error(ex.getMessage(),ex); //skip this file
+                log.error(ex.getMessage(), ex); //skip this file
             }
         }
     }
@@ -479,16 +481,16 @@ public class RESTPersistenceManager extends RESTServicesManager {
     //========================================================================================
     public HashMap<String, BSDField> getHashMap(BSDDataObject bsdDataObject) {
         HashMap map = new HashMap();
-        if(bsdDataObject.getParent() == null){
+        if (bsdDataObject.getParent() == null) {
             //fix unlinked objects
-            bsdDataObject.setAttrValue("RepositoryVersion",this.repositoryVersion);
+            bsdDataObject.setAttrValue("RepositoryVersion", this.repositoryVersion);
         }
         Enumeration e = bsdDataObject.getAttrList(); // list of named attributes
         Enumeration keys = getKeyAttrs(bsdDataObject);
         while (e.hasMoreElements()) {
             String attrName = (String) e.nextElement();
             BSDField f = new BSDField(attrName, bsdDataObject.getAttrValue(attrName));
-            if (containsKey(keys, attrName)){
+            if (containsKey(keys, attrName)) {
                 map.put(attrName, f);
             }
         }
@@ -504,7 +506,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
         //	String str = (String) e.nextElement();
         //	db("Protected ATTR NAME = " + str);
         //}
-       // db("VLSPersistence Instance " + getProcessor());
+        // db("VLSPersistence Instance " + getProcessor());
         return null;//getProtectedAttrs(bo_name);
     }
 
@@ -534,59 +536,62 @@ public class RESTPersistenceManager extends RESTServicesManager {
 
     public void setAttrs(BSDDataObject bsdDataObject, BSDDataObject row) {
         //VSMetaColumn Mc = null;
-       // VSQueryColumnDefinition qc = null;
-       // VSMetaQuery Mq = getSession().getMetaQuery(bsdDataObject.getName());
+        // VSQueryColumnDefinition qc = null;
+        // VSMetaQuery Mq = getSession().getMetaQuery(bsdDataObject.getName());
         Enumeration e = null;//Mq.getQueryColumns();
         while (e != null && e.hasMoreElements()) {
-           // qc = (VSQueryColumnDefinition) e.nextElement();
-           // String attrName = (String) qc.getMetaColumn().getName();
-           // VSData d = row.getData(attrName);
+            // qc = (VSQueryColumnDefinition) e.nextElement();
+            // String attrName = (String) qc.getMetaColumn().getName();
+            // VSData d = row.getData(attrName);
             //bsdDataObject.setAttrValue(attrName, d.getString());
         }
     }
-    public void insertRoot(RepositoryDO rootDataObject){
+
+    public void insertRoot(RepositoryDO rootDataObject) {
         //insertParentIfNone(rootDataObject);
         rootDataObject.recursiveReposVersion(this.repositoryVersion);
         insert(rootDataObject);
     }
+
     /*
     this is to replace the rule insertParentIfNone only if REST server does not provide rule
     */
-    private void insertParentIfNone(BSDDataObject rootDataObject){
+    private void insertParentIfNone(BSDDataObject rootDataObject) {
 
         BSDDataObject reposName = new BSDDataObject("ReposName");
-        reposName.setAttr("RepositoryInternalName",rootDataObject.getAttrValue("ReposInternalName"));
+        reposName.setAttr("RepositoryInternalName", rootDataObject.getAttrValue("ReposInternalName"));
 
         BSDDataObject reposVersion = new BSDDataObject("ReposVersion");
-        reposVersion.setAttr("Version",rootDataObject.getAttrValue("RepositoryVersion"));
+        reposVersion.setAttr("Version", rootDataObject.getAttrValue("RepositoryVersion"));
 
         insert(reposName);
         insert(reposVersion);
         //end InsertParentifNone
 
     }
+
     public void insert(BSDDataObject bsdDataObject) {
         if (bsdDataObject == null) {
             return;
         }
         try {
             raiseBeforeInsert(bsdDataObject);
-            if(!testModeBypassInsert){
-              insertData(bsdDataObject.getQueryName(), getHashMap(bsdDataObject));
+            if (!testModeBypassInsert) {
+                insertData(bsdDataObject.getQueryName(), getHashMap(bsdDataObject));
             }
 
             // setHashMap(ht, bsdDataObject); // after insert we get back pkeys and calculated values!
             raiseAfterInsert(bsdDataObject);
         } catch (Exception ex) {
-            log.error(ex.getMessage(),ex);
-            throw new BSDException("Insert of DataObject :" + bsdDataObject.businessObjectName + " failed", ex);
+            log.error(ex.getMessage(), ex);
+            //throw new BSDException("Insert of DataObject :" + bsdDataObject.businessObjectName + " failed", ex);
         }
     }
 
     // Utility function to let caller know if insert succeeded or failed
     public boolean tryInsert(BSDDataObject obj) {
         try {
-            if(!testModeBypassInsert){
+            if (!testModeBypassInsert) {
                 insert(obj);
             }
         } catch (Exception ex) {
@@ -630,7 +635,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
         BSDDataObject row = null;
 
         try {
-            HashMap<?,?> ht = getHashMap(bsdDataObject);
+            HashMap<?, ?> ht = getHashMap(bsdDataObject);
             //VSResultSet rs = QueryBusinessObject(bsdDataObject.getName(),where);
             row = getBusinessObjectRow(bsdDataObject.getQueryName(), where);
             //if(rs != null){
@@ -650,11 +655,11 @@ public class RESTPersistenceManager extends RESTServicesManager {
     // and then allow the system to build clones using the class loader.
     // this should hook to this objects parent so be sure to create the linked clone and then remove
     public void queryBuild(BSDDataObject parentObject, String query_name, String bo_name, String where) {
-        HashMap<?,?> rs = new HashMap<Object, Object>();
+        HashMap<?, ?> rs = new HashMap<Object, Object>();
         BSDDataObject newEOP = null;
         try {
             rs = findAllBusinessObjects(query_name, where);
-            BSDDataObject row = null ;
+            BSDDataObject row = null;
             while (rs != null && !rs.isEmpty()) {
                 String className = _classpath + bo_name;
                 Class c = Class.forName(className);
@@ -778,8 +783,8 @@ public class RESTPersistenceManager extends RESTServicesManager {
 
     }
 
-    private EspressoRuleObjectImpl createNewRuleObject(BSDDataObject dataObject,String doNme,String attrName){
-        EspressoRuleObjectImpl ruleObject = new EspressoRuleObjectImpl(doNme,attrName);
+    private EspressoRuleObjectImpl createNewRuleObject(BSDDataObject dataObject, String doNme, String attrName) {
+        EspressoRuleObjectImpl ruleObject = new EspressoRuleObjectImpl(doNme, attrName);
         List<String> attributeNameList = getDataObjectAttrNames(dataObject);
         ruleObject.setAttrList(attributeNameList);
         allEsprssoRules.add(ruleObject.getRuleBean());
@@ -788,13 +793,14 @@ public class RESTPersistenceManager extends RESTServicesManager {
 
     /**
      * find the root dataobject and ask for the child attributes by name
+     *
      * @param dataObject
      * @return
      */
     private List<String> getDataObjectAttrNames(BSDDataObject dataObject) {
         List<String> names = new Vector<String>();
         DataObjectDO dataObjectRoot = dataObject.getDataObjectRoot();
-        for(AttributeDO attributeDO : dataObjectRoot.findAttributeList()){
+        for (AttributeDO attributeDO : dataObjectRoot.findAttributeList()) {
             names.add(attributeDO.getAttrName());
         }
         return names;
@@ -802,8 +808,8 @@ public class RESTPersistenceManager extends RESTServicesManager {
 
     public void db(String msg) {
         //System.out.println(msg);
-        if(log.isDebugEnabled()){
-            log.debug("RESTPersistenceManager Message: "+msg);
+        if (log.isDebugEnabled()) {
+            log.debug("RESTPersistenceManager Message: " + msg);
         }
     }
 }

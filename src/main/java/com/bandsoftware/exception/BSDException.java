@@ -56,7 +56,7 @@ public class BSDException extends RuntimeException {
 
     public BSDException(int msgNum, String argMessage, Exception ex) {
         super(argMessage);
-        init("",argMessage, ex);
+        init("", argMessage, ex);
         setMessageNum(msgNum);
     }
 
@@ -103,7 +103,7 @@ public class BSDException extends RuntimeException {
         }
         if (object != null) {
             if (object instanceof Throwable) {
-                buf.append('\n').append((Throwable)object).toString();
+                buf.append('\n').append((Throwable) object).toString();
             }
             // if its anything else, just print it
             else {

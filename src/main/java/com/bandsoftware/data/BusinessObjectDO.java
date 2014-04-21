@@ -342,7 +342,7 @@ public class BusinessObjectDO extends BSDDataObject {
     }
 
     //loop through all relns that claim this object as
-    private Hashtable<String,RelationshipDO> findAllChildRelationships() {
+    private Hashtable<String, RelationshipDO> findAllChildRelationships() {
         RepositoryDO reposDO = getReposDO();
         Hashtable relnHT = new Hashtable();
         if (reposDO != null) {

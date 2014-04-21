@@ -157,11 +157,12 @@ public class DerivationDO extends BusinessObjectDO {
 
     /**
      * from metadata roleName(ObjectName) - need to split apart
+     *
      * @param sourceDataObject
      */
     public void setSourceDataObject(String sourceDataObject) {
-        int idx = (sourceDataObject.indexOf("(") > 0)?sourceDataObject.indexOf("("):sourceDataObject.length();
-        String relnDO = sourceDataObject.substring(0,idx);
+        int idx = (sourceDataObject.indexOf("(") > 0) ? sourceDataObject.indexOf("(") : sourceDataObject.length();
+        String relnDO = sourceDataObject.substring(0, idx);
         String realDO = sourceDataObject.substring(idx + 1, sourceDataObject.length() - 1);
         setAttrValue("SourceDataObject", realDO);
         setRelationshipRole(relnDO);
@@ -241,9 +242,10 @@ public class DerivationDO extends BusinessObjectDO {
         sb.append(")");
         return sb.toString();
     }
+
     public void transformRules(StringBuffer sb) {
 
-        write("",sb);
+        write("", sb);
     }
 
     public void write(String abbr, StringBuffer sb) {
@@ -511,25 +513,25 @@ public class DerivationDO extends BusinessObjectDO {
     }
 
     public void setRelationshipRole(String relationshipRole) {
-        setAttrValue("RelationshipRole",relationshipRole);
+        setAttrValue("RelationshipRole", relationshipRole);
         this.relationshipRole = relationshipRole;
     }
 
-    public void createEspressoRule(EspressoRuleObjectImpl ruleObject){
-        if(getDerivationType().equals("Sum")){
+    public void createEspressoRule(EspressoRuleObjectImpl ruleObject) {
+        if (getDerivationType().equals("Sum")) {
             ruleObject.setAttrList(getAttrList());
             ruleObject.createSum(getSourceDataObject(), getQualificationExpression(), getSourceAttr());
         } else {
-            if(getDerivationType().equals("Count")){
+            if (getDerivationType().equals("Count")) {
                 ruleObject.setAttrList(getAttrList());
                 ruleObject.createCount(getSourceDataObject(), getQualificationExpression());
             } else {
-                if(getDerivationType().equals("Formula")){
+                if (getDerivationType().equals("Formula")) {
                     ruleObject.setAttrList(getAttrList());
                     ruleObject.createFormula(getFormula());
                 } else {
-                    if(getDerivationType().equals("ParentReplicate")){
-                        ruleObject.createParentReplicate(null, relationshipRole);
+                    if (getDerivationType().equals("ParentReplicate")) {
+                        ruleObject.createParentCopy(relationshipRole, this.SourceAttr);
                     } else {
                         ruleObject = null;
                     }

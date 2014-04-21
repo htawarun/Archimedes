@@ -1,8 +1,10 @@
 package com.bandsoftware.persistence;
 
 
+import com.bandsoftware.beans.EspressoRuleBean;
+import com.bandsoftware.beans.LogonBean;
+import com.bandsoftware.beans.RuleTypeBean;
 import com.bandsoftware.data.BSDDataObject;
-import com.bandsoftware.data.EspressoRuleBean;
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -21,11 +23,16 @@ import org.codehaus.jackson.node.ObjectNode;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
 /**
+ * REST Service Manage to get,put, and post to Espresso Logic REST service
+ * change the archimedes.properties file
  * Created by Tyler on 3/31/14.
  */
 
@@ -44,19 +51,18 @@ public class RESTServicesManager {
     // Result: https://eval.espressologic.com/rest/valJune18/demo/v1/
     protected static String MY_API_KEY = "demo_full";
     protected static String API_KEY = "Espresso " + MY_API_KEY + ":123";
-    protected static String RULE_HEADER_API_KEY = "Espresso AkYraatF51TR:123";
+
     private final static Header API_KEY_HEADER = new BasicHeader("Authorization", API_KEY);
-    private final static Header RULE_API_KEY_HEADER = new BasicHeader("Authorization", RULE_HEADER_API_KEY);
     private static Logger log = Logger.getLogger(RESTPersistenceManager.class.getName());
-    private static String ADMIN_API_KEY;
+    private static String ADMIN_API_KEY = null;
     //http://bandrepo.my.espressologic.com/rest/abl/admin/v2/AllRules/1008
-    private static String  ADMIN_VERSION  = "v2/";
-    private static String ADMINPW = "AkYraatF51TR";
-    private static String ADMINUSER = "admin";
-    private static String ADMIN_RULE_BASE_URL = SERVER + "rest/abl/admin/" +  ADMIN_VERSION ;
+    private static String ADMIN_VERSION = "v2/";
+    private static String ADMINPW = null;
+    private static String ADMINUSER = null;
+    private static String ADMIN_RULE_BASE_URL = SERVER + "rest/abl/admin/";
+
     public RESTServicesManager() {
         initProperties();
-
     }
 
     private void initProperties() {
@@ -67,52 +73,52 @@ public class RESTServicesManager {
         FileInputStream fis = null;
         try {
             fis = new FileInputStream("Archimedes.properties");
-            if(fis != null){
+            if (fis != null) {
                 properties.load(fis);
                 LOCAL_BASE_URL = (String) properties.get("LOCAL_BASE_URL");
                 SERVER = (String) properties.get("REST_SERVER");
-                ACCOUNT =(String) properties.get("ACCOUNT");
+                ACCOUNT = (String) properties.get("ACCOUNT");
                 PROJECT = (String) properties.get("PROJECT");
-                MY_API_KEY =(String) properties.get("MY_API_KEY");
+                MY_API_KEY = (String) properties.get("MY_API_KEY");
                 API_KEY = (String) properties.get("API_KEY");
                 API_VERSION = (String) properties.get("API_VERSION");
                 ADMIN_VERSION = (String) properties.get("ADMIN_VERSION");
                 ADMINUSER = (String) properties.get("ADMINUSER");
-                ADMINPW = (String)properties.get("ADMINPW");
+                ADMINPW = (String) properties.get("ADMINPW");
             }
 
         } catch (Exception ex) {
-            log.error(ex.getMessage(),ex);
+            log.error(ex.getMessage(), ex);
         } finally {
-            if(fis != null) {
-                try{
+            if (fis != null) {
+                try {
                     fis.close();
-                } catch (Exception e){
+                } catch (Exception e) {
                     ;//tcb
                 }
             }
         }
     }
 
-     public static String insertData(String name, HashMap<String,BSDField> map) throws Exception {
-         ObjectMapper mapper = new ObjectMapper();
-         ObjectNode newNode = new ObjectNode(nodeFactory);
-         String json =  mapper.writeValueAsString(map);
-         JsonNode jnode = mapper.readTree(json);
-         log.debug("InsertData >> "+ name+ ": json "+json);
-         JsonNode result = post(name, jnode);
-         return null;
-     }
-
-    public static String insertUpdateData(String name, HashMap<String,BSDField> map, HashMap<String,BSDField> fieldMap) throws Exception{
+    public static String insertData(String name, HashMap<String, BSDField> map) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
-        String json =  mapper.writeValueAsString(map);
+        // ObjectNode newNode = new ObjectNode(nodeFactory);
+        String json = mapper.writeValueAsString(map);
+        JsonNode jnode = mapper.readTree(json);
+        log.debug("InsertData >> " + name + ": json " + json);
+        JsonNode result = post(name, jnode);
+        return null;
+    }
+
+    public static String insertUpdateData(String name, HashMap<String, BSDField> map, HashMap<String, BSDField> fieldMap) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        String json = mapper.writeValueAsString(map);
         //need to do a get first to see if it exists and then post as update or insert
-        log.debug(name +" insertUpdateData :" + json);
+        log.debug(name + " insertUpdateData :" + json);
         return json;
     }
 
-    public static BSDDataObject getBusinessObjectRow(String queryName, String where) throws Exception{
+    public static BSDDataObject getBusinessObjectRow(String queryName, String where) throws Exception {
         //do a JSON GET
         String resource = queryName + "/" + where;
         log.debug("getBusinessObjectRow :" + resource);
@@ -120,13 +126,14 @@ public class RESTServicesManager {
 
     }
 
-    public static HashMap findAllBusinessObjects(String queryName, String where) throws Exception{
+    public static HashMap findAllBusinessObjects(String queryName, String where) throws Exception {
         //do a JSON GET
         String resource = queryName + "/" + where;
         log.debug("findAllBusinessObjects :" + resource);
         return null;//get(resource);
 
     }
+
     /**
      * Send a GET request to Espresso Logic REST service
      *
@@ -138,7 +145,7 @@ public class RESTServicesManager {
         HttpGet get = new HttpGet(BASE_URL + resource);
         get.addHeader(API_KEY_HEADER);
         HttpResponse response = client.execute(get);
-        return parseResponse(response);
+        return validateReturnStatusCode(parseResponse(response));
     }
 
     /**
@@ -154,7 +161,7 @@ public class RESTServicesManager {
         entity.setContentType("application/json");
         put.setEntity(entity);
         HttpResponse response = client.execute(put);
-        return parseResponse(response);
+        return validateReturnStatusCode(parseResponse(response));
     }
 
     /**
@@ -170,7 +177,7 @@ public class RESTServicesManager {
         entity.setContentType("application/json");
         post.setEntity(entity);
         HttpResponse response = client.execute(post);
-        return parseResponse(response);
+        return validateReturnStatusCode(parseResponse(response));
     }
 
     protected static JsonNode delete(JsonNode object) throws Exception {
@@ -179,7 +186,7 @@ public class RESTServicesManager {
         HttpDelete delete = new HttpDelete(objectUrl + "?checksum=" + checksum);
         delete.addHeader(API_KEY_HEADER);
         HttpResponse response = client.execute(delete);
-        return parseResponse(response);
+        return validateReturnStatusCode(parseResponse(response));
     }
 
     /**
@@ -196,66 +203,151 @@ public class RESTServicesManager {
 
         ObjectMapper mapper = new ObjectMapper();
         JsonNode inData = mapper.readTree(sb.toString());
-        if (inData.get("statusCode").asInt() != 201){
-            throw new RuntimeException("REST Error Code: " + inData.get("statusCode") + " message " + inData.get("errorMessage")) ;
+
+        return inData;
+    }
+
+    private static JsonNode validateReturnStatusCode(JsonNode inData) {
+        assert inData != null;
+        //accepted and success
+        if (inData.get("statusCode").asInt() != 201 && inData.get("statusCode").asInt() != 200) {
+            throw new RuntimeException("REST Error Code: " + inData.get("statusCode") + " message " + inData.get("errorMessage"));
         }
         return inData;
     }
 
+    /**
+     * get a list of existing rules
+     * @return
+     * @throws Exception
+     */
+    public static JsonNode getAllRules() throws Exception {
+
+        HttpGet get = new HttpGet(ADMIN_RULE_BASE_URL + ADMIN_VERSION + "/AllRules");
+        get.addHeader(getAuthentication());
+        HttpResponse response = client.execute(get);
+        JsonNode jsonNode = parseResponse(response);
+        // validateReturnStatusCode(jsonNode);
+        return jsonNode;
+    }
+
+     public static void deleteAllRules() throws Exception{
+       JsonNode jsonNodes = getAllRules();
+         for(JsonNode jsonNode : jsonNodes){
+             deleteRule(jsonNode);
+         }
+     }
+
+    public static boolean deleteRule(JsonNode jsonNode) throws Exception{
+        //bandrepo.my.espressologic.com/rest/abl/admin/v2/AllRules/1144?checksum=A:e82ef435ab767a8c
+        String ident = jsonNode.get("ident").asText();
+        String checksum = jsonNode.get("@metadata").get("checksum").asText();
+        HttpDelete delete = new HttpDelete(ADMIN_RULE_BASE_URL + ADMIN_VERSION + "/AllRules/"+ident+"?checksum="+checksum);
+
+        delete.addHeader(getAuthentication());
+        HttpResponse response = client.execute(delete);
+        validateReturnStatusCode(parseResponse(response));
+        return true;
+    }
+    private static int getProject() throws Exception {
+        //http://bandrepo.my.espressologic.com/rest/abl/admin/projects
+        HttpGet get = new HttpGet(ADMIN_RULE_BASE_URL + ADMIN_VERSION + "/AllProjects");
+        get.addHeader(getAuthentication());
+        HttpResponse response = client.execute(get);
+        JsonNode jsonNode = parseResponse(response);
+        // validateReturnStatusCode(jsonNode);
+        return 200;
+    }
+
+    /**
+     * this method uses Espresso Logic authentication to get the internal Admin API KEY
+     *
+     * @return
+     * @throws Exception
+     */
     private static Header getAuthentication() throws Exception {
-        String uri = ADMIN_RULE_BASE_URL+ "@authentication";
-        String json = "{\"username\" : \""+
-                ADMINUSER +
-                "\", \"password\" : \""+
-                ADMINPW +
-                "\"}"; // this is the admin logon
-        //get()
-        /* RESPONSE
-        {
-        "apikey": "NyX3kDQJc3CDJVA28cSVwaJc5SwMFg",
-        "expiration": "9999-12-31-23:59:59.000+0000",
-        "lastLoginTs": "2014-04-10T13:09:13.000+0000",
-        "lastLoginIP": "71.47.148.175"
-
-         */
-
-
-
-
+        String uri = ADMIN_RULE_BASE_URL + ADMIN_VERSION + "/@authentication";
         if(ADMIN_API_KEY == null){
-             ADMIN_API_KEY = "Espresso NyX3kDQJc3CDJVA28cSVwaJc5SwMFg:1";
+            JsonNode apikey = getEspressoLogicAdminAPIKey(uri);
+             ADMIN_API_KEY = "Espresso " + apikey.asText() + ":1";
         }
-        //{"username":"admin","password":"AkYraatF51TR"}
-        //{"username" : "admin", "password" : "AkYraatF51TR"}
-        String key = "{\"username\":\"admin\",\"password\":\"AkYraatF51TR\"}";
+
         Header header = new BasicHeader("Authorization", ADMIN_API_KEY);
+        return header;
+    }
+
+    private static JsonNode getEspressoLogicAdminAPIKey(String uri) throws Exception {
+        LogonBean logon = new LogonBean(ADMINUSER, ADMINPW);
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode node = mapper.convertValue(json, JsonNode.class);
-        StringEntity entity = new StringEntity(node.toString());
+        JsonNode jsonNode = mapper.convertValue(logon, JsonNode.class);
+        StringEntity entity = new StringEntity(jsonNode.toString());
         entity.setContentType("application/json");
         HttpPost post = new HttpPost(uri);
         post.setEntity(entity);
-        log.debug("postAdmin >> "+  ": json "+node);
+        log.debug("postAdmin >> " + ": json " + jsonNode);
         HttpResponse response = client.execute(post);
         JsonNode resp = parseResponse(response);
-        return header;
-    }
-    public static JsonNode insertRule(EspressoRuleBean bean) throws Exception {
-        String resource =  ADMIN_RULE_BASE_URL + "/AllRules";
-        return postAdmin(resource ,"" );
+        return resp.get("apikey");
     }
 
-    private static JsonNode postAdmin(String resource,String json) throws Exception {
-
-        HttpPost post = new HttpPost(resource);
-        post.addHeader(getAuthentication());
+    /**
+     * insert a new Espresso Logic Bean using the admin account
+     *
+     * @param bean
+     * @return
+     * @throws Exception
+     */
+    public static boolean insertRule(EspressoRuleBean bean) throws Exception {
+        String resource = ADMIN_RULE_BASE_URL + ADMIN_VERSION + "/AllRules";
+        bean.setProject_ident(getProject());
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode node = mapper.convertValue(json, JsonNode.class);
-        StringEntity entity = new StringEntity(node.toString());
+        JsonNode node = mapper.convertValue(bean, JsonNode.class);
+        ((ObjectNode) node).remove("auth_Name");//not sure where this came from?
+        ((ObjectNode) node).remove("ident");//not needed
+        postAdmin(resource, node);
+        return true;
+    }
+
+    /**
+     * special post to use the Admin authentication account
+     *
+     * @param resource
+     * @param node
+     * @return
+     * @throws Exception
+     */
+    private static void postAdmin(String resource, JsonNode node) throws Exception {
+        Header header = getAuthentication();
+        postBasicRule(resource, node, header);
+    }
+
+    private static boolean postBasicRule(String resource, JsonNode node, Header header) throws Exception {
+
+        StringEntity entity = new StringEntity(createEspressoNode(node).toString());
         entity.setContentType("application/json");
+        HttpPost post = new HttpPost(resource);
+        post.addHeader(header);
         post.setEntity(entity);
-        log.debug("postAdmin >> "+  ": json "+node);
         HttpResponse response = client.execute(post);
-        return parseResponse(response);
+        validateReturnStatusCode(parseResponse(response));
+        return true;
+    }
+
+    private static JsonNode createEspressoNode(JsonNode node) throws IOException {
+        String entityName = node.get("entity_name").asText();
+        String attrName = node.get("attribute_name").asText();
+        int ruletype_ident = node.get("ruletype_ident").asInt();
+        int project = node.get("project_ident").asInt();
+        JsonNode ruleTypeNode = createRuleTypeBean(ruletype_ident);
+        //((ObjectNode) node).put("RuleType", ruleTypeNode);
+       // new EspressoBean(entityName, attrName, ruletype_ident, project != 0 ? project : 200);
+        return node;
+    }
+
+    private static JsonNode createRuleTypeBean(int ruletype_ident) throws IOException {
+        RuleTypeBean ruleTypeBean = new RuleTypeBean(ruletype_ident);
+        ObjectMapper mapper = new ObjectMapper();
+        String json = mapper.writeValueAsString(ruleTypeBean);
+        return mapper.readTree(json);
     }
 }

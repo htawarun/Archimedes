@@ -12,7 +12,6 @@ package com.bandsoftware.data;
 
 import com.datachannel.xml.om.IXMLDOMNamedNodeMap;
 import com.datachannel.xml.om.IXMLDOMNode;
-import com.datachannel.xml.om.IXMLDOMNodeList;
 
 public class QueryJoinDataObjectDO extends BusinessObjectDO {
     private String RepositoryName;
@@ -106,7 +105,7 @@ public class QueryJoinDataObjectDO extends BusinessObjectDO {
 
     public void setRelationshipName(String relationshipName) {
         RelationshipName = relationshipName;
-        setAttrValue("RelationshipName",relationshipName);
+        setAttrValue("RelationshipName", relationshipName);
     }
 
     public void write(String dataObjectAbbr, StringBuffer sb) {

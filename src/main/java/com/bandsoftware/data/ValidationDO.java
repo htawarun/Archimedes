@@ -193,7 +193,7 @@ public class ValidationDO extends BusinessObjectDO {
         return qt + abbr + "." + AttrName + qt;
     }
 
-    public void createEspressoRule(EspressoRuleObjectImpl ruleObject){
+    public void createEspressoRule(EspressoRuleObjectImpl ruleObject) {
         ruleObject.createValidation(getWhereClause(), getDescription());
     }
 }

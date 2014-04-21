@@ -2,6 +2,7 @@
  * Created by Tyler on 4/4/14.
  */
 
+import com.bandsoftware.beans.EspressoRuleBean;
 import com.bandsoftware.data.*;
 import org.junit.*;
 
@@ -14,7 +15,7 @@ import static org.junit.Assert.assertTrue;
 public class TransformTest {
 
     EspressoRuleObjectImpl ruleObjectImpl;
-    EspressoRuleBean ruleObject;
+    EspressoRuleBean ruleBean;
 
 
 
@@ -27,30 +28,30 @@ public class TransformTest {
        // super.setUp();
 
         ruleObjectImpl = new EspressoRuleObjectImpl("DataObject","AttributeName");
-        ruleObject = ruleObjectImpl.getRuleBean();
+        ruleBean = ruleObjectImpl.getRuleBean();
     }
 
     @Test
     public void testSum(){
 
         ruleObjectImpl.createSum("relnName","where","childAttr");
-        assertTrue(ruleObject.getProjectIdent().equals(EspressoRuleObject.RULE_TYPES.SUM.getProjectIdent()));
+        assertTrue(ruleBean.getRuletype_ident() == (EspressoRuleObject.RULE_TYPES.SUM.getRuleIdent()));
 
     }
 
     @Test
     public void testSumWhereNull(){
         ruleObjectImpl.createSum("relnName",null,"childAttr");
-        assertTrue(ruleObject.getProjectIdent().equals(EspressoRuleObject.RULE_TYPES.SUM.getProjectIdent()));
-        assertNull(ruleObject.getRuleText2());
+        assertTrue(ruleBean.getRuletype_ident()== (EspressoRuleObject.RULE_TYPES.SUM.getRuleIdent()));
+        assertNull(ruleBean.getRule_text2());
     }
 
     @Test
     public void testSumWhereContainsValue(){
         String where = "$value = a + b";
         ruleObjectImpl.createSum("relnName", where, "childAttr");
-        assertTrue(ruleObject.getRuleText2().startsWith("return "));
-        String autoName = ruleObject.getAutoName();
+        assertTrue(ruleBean.getRule_text2().startsWith("return "));
+        String autoName = ruleBean.getName();
         //TO DO - fix the quotes around variables (non-numeric)
         //compare("Derive AttributeName as sum(relnName.childAttr) where return \"a\" + \"b\" ; ", autoName);
         compare("Derive AttributeName as sum(relnName.childAttr) where return a + b ",autoName);
@@ -63,8 +64,8 @@ public class TransformTest {
         ruleObjectImpl.setAttr("apple","apple");
         ruleObjectImpl.setAttr("banana","banana");
         ruleObjectImpl.createSum("relnName",where,"childAttr");
-        String autoName = ruleObject.getAutoName();
-        assertTrue(ruleObject.getRuleText2().startsWith("return "));
+        String autoName = ruleBean.getName();
+        assertTrue(ruleBean.getRule_text2().startsWith("return "));
         compare("Derive AttributeName as sum(relnName.childAttr) where return row.apple + row.banana ", autoName);
     }
 
@@ -76,8 +77,8 @@ public class TransformTest {
         ruleObjectImpl.setAttr("apple","apple");
         ruleObjectImpl.setAttr("banana","banana");
         ruleObjectImpl.createSum("relnName",where,"childAttr");
-        String autoName = ruleObject.getAutoName();
-        assertTrue(ruleObject.getRuleText2().startsWith("return "));
+        String autoName = ruleBean.getName();
+        assertTrue(ruleBean.getRule_text2().startsWith("return "));
         compare("Derive AttributeName as sum(relnName.childAttr) where return row.apple + row.banana ", autoName);
     }
     @Test
@@ -88,8 +89,8 @@ public class TransformTest {
         ruleObjectImpl.setAttr("apple","apple");
         ruleObjectImpl.setAttr("banana","banana");
         ruleObjectImpl.createSum("relnName",where,"childAttr");
-        String autoName = ruleObject.getAutoName();
-        assertTrue(ruleObject.getRuleText2().startsWith("if "));
+        String autoName = ruleBean.getName();
+        assertTrue(ruleBean.getRule_text2().startsWith("if "));
         String expectedResult = "Derive AttributeName as sum(relnName.childAttr) where if ( row.apple + row.banana ) > 100 {\n" +
                 "return 1 } else { return 2 } ";
         compare(expectedResult, autoName);
@@ -105,7 +106,7 @@ public class TransformTest {
         ruleObjectImpl.setAttr("MaxCreditLimit", "MaxCreditLimit");
         ruleObjectImpl.setAttr("CreditLimit", "CreditLimit");
         ruleObjectImpl.createFormula(where);
-        String autoName = ruleObject.getAutoName();
+        String autoName = ruleBean.getName();
        // assertTrue(autoName.startsWith("if "));
         String expected = "Derive {AttributeName} as {if ( ( ( logicContext.verb == UPDATE && row.CreditLimit === oldRow.CreditLimit ) || row.CreditLimit == null ) && ( logicContext.verb == INSERT || ( ( oldRow.MaxCreditLimit != row.MaxCreditLimit ) && ( oldRow.MaxCreditLimit === row.CreditLimit ) ) ) ) {\n" +
                 "return row.MaxCreditLimit } }";
@@ -132,8 +133,8 @@ EndIf
         ruleObjectImpl.setAttr("Total_Method_Cnt","Total_Method_Cnt");
 
         ruleObjectImpl.createSum("relnName",where,"childAttr");
-        String autoName = ruleObject.getAutoName();
-        assertTrue(ruleObject.getRuleText2().startsWith("If "));
+        String autoName = ruleBean.getName();
+        assertTrue(ruleBean.getRule_text2().startsWith("If "));
         compare("Derive AttributeName as sum(relnName.childAttr) where If ( row.Total_Method_Cnt === 0 ) {\n" +
                 "return 0 } ",autoName);
     }
@@ -146,8 +147,8 @@ EndIf
         ruleObjectImpl.setAttr("Total_Method_Cnt","Total_Method_Cnt");
 
         ruleObjectImpl.createSum("relnName",where,"childAttr");
-        String autoName = ruleObject.getAutoName();
-        assertTrue(ruleObject.getRuleText2().startsWith("If "));
+        String autoName = ruleBean.getName();
+        assertTrue(ruleBean.getRule_text2().startsWith("If "));
         String expected = "Derive AttributeName as sum(relnName.childAttr) where If ( row.Total_Method_Cnt === 0 ) {\n"+
                 "return getValue1 ( ) } else { return getValue2 ( ) } ";
         compare(expected,autoName);
@@ -161,8 +162,8 @@ EndIf
         ruleObjectImpl.setAttr("Total_Method_Cnt","Total_Method_Cnt");
 
         ruleObjectImpl.createSum("relnName",where,"childAttr");
-        String autoName = ruleObject.getAutoName();
-        assertTrue(ruleObject.getRuleText2().startsWith("If "));
+        String autoName = ruleBean.getName();
+        assertTrue(ruleBean.getRule_text2().startsWith("If "));
         compare("Derive AttributeName as sum(relnName.childAttr) "+
                 "where If ( row.Total_Method_Cnt != oldRow.Total_Method_Cnt ) {\n" +
                 "return 1 } else { return 2 } ",autoName);
@@ -175,9 +176,9 @@ EndIf
         ruleObjectImpl.setAttr("isJava","isJava");
 
         ruleObjectImpl.createCount("relnName", where);
-        String autoName = ruleObject.getAutoName();
-        assertTrue(ruleObject.getRuleText2().startsWith("return "));
-        compare("Derive {AttributeName} as count(relnName} where return row.isJava = 1 /* Yes */ ",autoName);
+        String autoName = ruleBean.getName();
+        assertTrue(ruleBean.getRule_text2().startsWith("return "));
+        compare("Derive {AttributeName} as count(relnName}   where return row.isJava = 1 /* Yes */ ",autoName);
     }
     private void compare(String expectedResult, String actual){
         System.out.println(actual);

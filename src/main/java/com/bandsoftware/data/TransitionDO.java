@@ -11,7 +11,6 @@ package com.bandsoftware.data;
 
 import com.datachannel.xml.om.IXMLDOMNamedNodeMap;
 import com.datachannel.xml.om.IXMLDOMNode;
-import com.datachannel.xml.om.IXMLDOMNodeList;
 
 public class TransitionDO extends BusinessObjectDO {
     private String RepositoryName;

@@ -2,10 +2,12 @@
  * Created by Tyler on 4/2/14.
  */
 
+import com.bandsoftware.beans.EspressoRuleBean;
 import com.bandsoftware.data.*;
 import com.bandsoftware.persistence.RESTPersistenceManager;
 import com.versata.automationanalyzer.DataObjectAnalysis;
 import com.versata.automationanalyzer.RepositoryAnalysis;
+import org.codehaus.jackson.JsonNode;
 import org.junit.*;
 
 import java.io.File;
@@ -19,6 +21,7 @@ public class AnalysisTest extends RESTClientServices {
     private File repFile;
     private RepositoryAnalysis repAnalysis = null;
     private static String fullPath = "../MetaRepos/Source/metarepos.xml";
+    private static String VersataPath = "C:\\Versata\\VLS-5.6-WebSphere\\Samples\\SampDB1\\Source\\SampDB1.xml";
 
     @BeforeClass
     public static void setUpClass() throws Exception {
@@ -89,20 +92,25 @@ public class AnalysisTest extends RESTClientServices {
         RESTPersistenceManager rpm = new RESTPersistenceManager(RepositoryAnalysis.repos);
         try {
             rpm.StartInbound();
+            rpm.getAllRules();
+            System.out.println("Delete All Rules Start");
+            rpm.deleteAllRules();
 
             RepositoryDO root = rpm.getRootRepositoryDataObject();
             List<EspressoRuleBean> beans = rpm.allEsprssoRules;
+            System.out.println("Start Insert of Rules...");
             for(EspressoRuleBean bean: beans){
-                if(bean.getAutoName() != null){
+                if(bean.getName() != null && bean.getRuletype_ident() > 0){
                     sb.append("DO: [ ");
-                    sb.append(bean.getEntityName());
+                    sb.append(bean.getEntity_name());
                     sb.append( "] AttrName: [");
-                    sb.append(bean.getAttributeName());
+                    sb.append(bean.getAttribute_name());
                     sb.append("] : ");
-                    sb.append(bean.getAutoName());
-                    System.out.println(sb.toString());
-                    sb = new StringBuffer();
+                    sb.append(bean.getName());
+                    //System.out.println(sb.toString());
+                    //sb = new StringBuffer();
                     rpm.insertRule(bean);
+                    sb.append("\n");
                 }
             }
         } catch (Exception e) {

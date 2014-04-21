@@ -14,6 +14,7 @@ package com.bandsoftware.data;
 import com.datachannel.xml.om.IXMLDOMNode;
 
 public class ConstraintDO extends BusinessObjectDO {
+    public static final String CONSTRAINTS = "Constraints";//renamed for mysql
     private String RepositoryName;
     private String DataObjectName;
     private String ConstraintName;
@@ -24,11 +25,11 @@ public class ConstraintDO extends BusinessObjectDO {
 
 
     public ConstraintDO() {
-        super("Constraints");
+        super(CONSTRAINTS);
     }
 
     public ConstraintDO(String reposName, String doName, IXMLDOMNode childNode) {
-        super("Constraint");
+        super(CONSTRAINTS);
         setRepositoryName(reposName);
         setDataObjectName(doName);
         //setConstraintName(constraintName);
@@ -36,7 +37,7 @@ public class ConstraintDO extends BusinessObjectDO {
     }
 
     public ConstraintDO(String reposName, String doName, String constraintName) {
-        super("Constraint");
+        super(CONSTRAINTS);
         setRepositoryName(reposName);
         setDataObjectName(doName);
         setConstraintName(constraintName);
@@ -122,14 +123,14 @@ public class ConstraintDO extends BusinessObjectDO {
     }
 
     public void set_Condiiton(String _Condiiton) {
-        setAttrValue("Condition", _Condiiton);
+        setAttrValue("Conditions", _Condiiton);
         this._Condiiton = _Condiiton;
     }
 
     public void write(String abbr, StringBuffer sb) {
         sb.append("//Contraint Name: " + ConstraintName);
         sb.append("\n");
-        sb.append("//Condiiton: " + _Condiiton);
+        sb.append("//Condiitons: " + _Condiiton);
         sb.append("\n");
         sb.append("//Error Msg: " + ErrorMessage);
         sb.append("\n");
