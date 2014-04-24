@@ -14,6 +14,7 @@ package com.bandsoftware.persistence;
 import com.bandsoftware.beans.EspressoRuleBean;
 import com.bandsoftware.data.*;
 import com.bandsoftware.exception.BSDException;
+import com.bandsoftware.tools.RESTServicesManager;
 import org.apache.log4j.Logger;
 
 import java.text.SimpleDateFormat;
@@ -287,11 +288,15 @@ public class RESTPersistenceManager extends RESTServicesManager {
     }
 
     private void persistRelns(DataObjectDO dataObj) {
-        RelationshipDO reln;
+        RelationshipDO relationshipDO;
         Enumeration e = dataObj.getParentReln().elements();
         while (e.hasMoreElements()) {
-            reln = (RelationshipDO) e.nextElement();
-            insert(reln);
+            relationshipDO = (RelationshipDO) e.nextElement();
+            insert(relationshipDO);
+            if("InsertParentIfNone".equalsIgnoreCase(relationshipDO.getOnChildInsertOrUpdate())){
+                this.ruleObject = createNewRuleObject(relationshipDO, relationshipDO.getChildDOName(), null);
+                relationshipDO.createEspressoRule(ruleObject);
+            }
         }
     }
 
@@ -321,7 +326,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
             businessObjectDO.setAttrValue("RepositoryVersion", this.repositoryVersion);
             businessObjectDO.setAttrValue("DataObjectName", doName);
             businessObjectDO.setAttrValue("RelationshipName", reln.getRelationshipName());
-            businessObjectDO.setAttrValue("IsParentRole", isParentRole == true ? "true" : "false");
+            businessObjectDO.setAttrValue("isParentRole", isParentRole == true ? true:false);
             insert(businessObjectDO);
         } catch (Exception ex) {
             reln.testString();
@@ -479,11 +484,11 @@ public class RESTPersistenceManager extends RESTServicesManager {
     }
 
     //========================================================================================
-    public HashMap<String, BSDField> getHashMap(BSDDataObject bsdDataObject) {
+    public Map<String, BSDField> getHashMap(BSDDataObject bsdDataObject) {
         HashMap map = new HashMap();
         if (bsdDataObject.getParent() == null) {
             //fix unlinked objects
-            bsdDataObject.setAttrValue("RepositoryVersion", this.repositoryVersion);
+           // bsdDataObject.setAttrValue("RepositoryVersion", this.repositoryVersion);
         }
         Enumeration e = bsdDataObject.getAttrList(); // list of named attributes
         Enumeration keys = getKeyAttrs(bsdDataObject);
@@ -526,7 +531,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
     // After an insert - we get the new values so let's update the attribute
     // cool thing here is that we have ALL the attributes after insert (not just the modeled attributes)
     // can now use getAttrList and getAttrName(aName)
-    public void setHashMap(HashMap<String, BSDField> map, BSDDataObject bsdDataObject) {
+    public void setHashMap(Map<String, BSDField> map, BSDDataObject bsdDataObject) {
         Set<String> keys = map.keySet();
         for (String key : keys) {
             BSDField f = (BSDField) map.get(key);
@@ -548,8 +553,8 @@ public class RESTPersistenceManager extends RESTServicesManager {
     }
 
     public void insertRoot(RepositoryDO rootDataObject) {
-        //insertParentIfNone(rootDataObject);
         rootDataObject.recursiveReposVersion(this.repositoryVersion);
+        insertParentIfNone(rootDataObject);
         insert(rootDataObject);
     }
 
@@ -559,12 +564,17 @@ public class RESTPersistenceManager extends RESTServicesManager {
     private void insertParentIfNone(BSDDataObject rootDataObject) {
 
         BSDDataObject reposName = new BSDDataObject("ReposName");
-        reposName.setAttr("RepositoryInternalName", rootDataObject.getAttrValue("ReposInternalName"));
+        String version = rootDataObject.getAttrValue("RepositoryVersion");
+        String repoName = rootDataObject.getAttrValue("ReposInternalName");
+        reposName.setAttr("ReposInternalName", repoName);
+        reposName.removeAttr("RepositoryVersion");
 
         BSDDataObject reposVersion = new BSDDataObject("ReposVersion");
-        reposVersion.setAttr("Version", rootDataObject.getAttrValue("RepositoryVersion"));
+        reposVersion.setAttr("Version", version);
+        reposVersion.removeAttr("RepositoryInternalName");
 
         insert(reposName);
+
         insert(reposVersion);
         //end InsertParentifNone
 
@@ -602,7 +612,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
 
     // update all children by doing multiple inserts
     public void insertAll(Enumeration e) {
-        BSDDataObject bsdDataObject = null;
+        BSDDataObject bsdDataObject;
         while (e.hasMoreElements()) {
             bsdDataObject = (BSDDataObject) e.nextElement();
             insert(bsdDataObject);
@@ -613,7 +623,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
         if (bsdDataObject == null) return;
         try {
             raiseBeforeUpdate(bsdDataObject);
-            HashMap<String, BSDField> map = getHashMap(bsdDataObject);
+            Map<String, BSDField> map = getHashMap(bsdDataObject);
             insertUpdateData(bsdDataObject.getQueryName(), map, getKeys(bsdDataObject));
             setHashMap(map, bsdDataObject); // after update we get back calculated values!
             raiseAfterUpdate(bsdDataObject);
@@ -623,7 +633,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
     }
 
     public void updateAll(Enumeration e) {
-        BSDDataObject bsdDataObject = null;
+        BSDDataObject bsdDataObject;
         while (e.hasMoreElements()) {
             bsdDataObject = (BSDDataObject) e.nextElement();
             update(bsdDataObject);
@@ -635,7 +645,7 @@ public class RESTPersistenceManager extends RESTServicesManager {
         BSDDataObject row = null;
 
         try {
-            HashMap<?, ?> ht = getHashMap(bsdDataObject);
+            Map<String, BSDField> ht = getHashMap(bsdDataObject);
             //VSResultSet rs = QueryBusinessObject(bsdDataObject.getName(),where);
             row = getBusinessObjectRow(bsdDataObject.getQueryName(), where);
             //if(rs != null){
@@ -800,8 +810,10 @@ public class RESTPersistenceManager extends RESTServicesManager {
     private List<String> getDataObjectAttrNames(BSDDataObject dataObject) {
         List<String> names = new Vector<String>();
         DataObjectDO dataObjectRoot = dataObject.getDataObjectRoot();
-        for (AttributeDO attributeDO : dataObjectRoot.findAttributeList()) {
-            names.add(attributeDO.getAttrName());
+        if(dataObjectRoot != null){
+            for (AttributeDO attributeDO : dataObjectRoot.findAttributeList()) {
+                names.add(attributeDO.getAttrName());
+            }
         }
         return names;
     }

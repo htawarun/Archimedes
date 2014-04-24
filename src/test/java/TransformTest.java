@@ -79,7 +79,7 @@ public class TransformTest {
         ruleObjectImpl.createSum("relnName",where,"childAttr");
         String autoName = ruleBean.getName();
         assertTrue(ruleBean.getRule_text2().startsWith("return "));
-        compare("Derive AttributeName as sum(relnName.childAttr) where return row.apple + row.banana ", autoName);
+        compare("Derive AttributeName as sum(relnNameList.childAttr) where return row.apple + row.banana ", autoName);
     }
     @Test
     public void testSumIfStatements(){
@@ -134,8 +134,8 @@ EndIf
 
         ruleObjectImpl.createSum("relnName",where,"childAttr");
         String autoName = ruleBean.getName();
-        assertTrue(ruleBean.getRule_text2().startsWith("If "));
-        compare("Derive AttributeName as sum(relnName.childAttr) where If ( row.Total_Method_Cnt === 0 ) {\n" +
+        assertTrue(ruleBean.getRule_text2().startsWith("if "));
+        compare("Derive AttributeName as sum(relnNameList.childAttr) where if ( row.Total_Method_Cnt === 0 ) {\n" +
                 "return 0 } ",autoName);
     }
 
@@ -148,8 +148,8 @@ EndIf
 
         ruleObjectImpl.createSum("relnName",where,"childAttr");
         String autoName = ruleBean.getName();
-        assertTrue(ruleBean.getRule_text2().startsWith("If "));
-        String expected = "Derive AttributeName as sum(relnName.childAttr) where If ( row.Total_Method_Cnt === 0 ) {\n"+
+        assertTrue(ruleBean.getRule_text2().startsWith("if "));
+        String expected = "Derive AttributeName as sum(relnName.childAttr) where if ( row.Total_Method_Cnt === 0 ) {\n"+
                 "return getValue1 ( ) } else { return getValue2 ( ) } ";
         compare(expected,autoName);
     }
@@ -178,7 +178,7 @@ EndIf
         ruleObjectImpl.createCount("relnName", where);
         String autoName = ruleBean.getName();
         assertTrue(ruleBean.getRule_text2().startsWith("return "));
-        compare("Derive {AttributeName} as count(relnName}   where return row.isJava = 1 /* Yes */ ",autoName);
+        compare("Derive {AttributeName} as count(relnNameList}   where return row.isJava = 1 /* Yes */ ",autoName);
     }
     private void compare(String expectedResult, String actual){
         System.out.println(actual);

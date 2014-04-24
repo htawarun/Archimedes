@@ -11,10 +11,7 @@ package com.bandsoftware.data;
 */
 
 import java.io.PrintStream;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.Vector;
+import java.util.*;
 
 
 public class BSDDataObject {
@@ -100,8 +97,9 @@ public class BSDDataObject {
     }
 
     public void setAttrValue(String name, String value) {
-        if (value != null)
+        if (value != null){
             attrList.put(name, value);
+        }
     }
 
     public Enumeration getAttrList() {
@@ -172,15 +170,9 @@ public class BSDDataObject {
 
     //need to remove attributes from attrList
     public void removeAttr(String removeAttrName) {
-        Hashtable newList = new Hashtable();
-        String attrName;
-        Enumeration e = getAttrList();
-        while (e.hasMoreElements()) {
-            attrName = (String) e.nextElement();
-            if (!attrName.equals(removeAttrName))
-                newList.put(attrName, getAttrValue(attrName));
+        if(attrList.containsKey(removeAttrName)){
+            attrList.remove(removeAttrName);
         }
-        attrList = newList;
     }
 
     // abstract method implement in subclass
@@ -486,6 +478,7 @@ public class BSDDataObject {
         Enumeration<BSDDataObject> myChildren = this.getChildren();
         BSDDataObject thisChildObject;
         BSDDataObject child;
+        this.setAttrValue("RepositoryVersion", repositoryVersion);
         while (myChildren.hasMoreElements()) {
             thisChildObject = (BSDDataObject) myChildren.nextElement();
             db(thisChildObject.getName() + " BO NAME: " + thisChildObject.getBOName());

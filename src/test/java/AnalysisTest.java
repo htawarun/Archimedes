@@ -91,11 +91,13 @@ public class AnalysisTest extends RESTClientServices {
 
         RESTPersistenceManager rpm = new RESTPersistenceManager(RepositoryAnalysis.repos);
         try {
+            //RESTPersistenceManager.testModeBypassInsert = false; // change to true to live test inserts
             rpm.StartInbound();
-            rpm.getAllRules();
-            System.out.println("Delete All Rules Start");
-            rpm.deleteAllRules();
-
+            if(!RESTPersistenceManager.testModeBypassInsert){
+                rpm.getAllRules();
+                System.out.println("Delete All Rules Start");
+                rpm.deleteAllRules();
+            }
             RepositoryDO root = rpm.getRootRepositoryDataObject();
             List<EspressoRuleBean> beans = rpm.allEsprssoRules;
             System.out.println("Start Insert of Rules...");
@@ -109,12 +111,17 @@ public class AnalysisTest extends RESTClientServices {
                     sb.append(bean.getName());
                     //System.out.println(sb.toString());
                     //sb = new StringBuffer();
-                    rpm.insertRule(bean);
+                   // RESTPersistenceManager.testModeBypassInsert = false; //test
+                    if(!RESTPersistenceManager.testModeBypassInsert){
+                      rpm.insertRule(bean);
+                    }
                     sb.append("\n");
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Error "+e.getMessage());
+            System.exit(0);
         }
         System.out.println(sb.toString());
     }

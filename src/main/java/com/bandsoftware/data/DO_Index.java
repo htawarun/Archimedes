@@ -61,7 +61,7 @@ public class DO_Index extends BusinessObjectDO {
     }
 
     public void setPrimary(boolean primary) {
-        setAttrValue("PrimaryIndx", primary == true ? "1" : "0");
+        setAttrValue("PrimaryIndx", primary == true ? true:false);
         Primary = primary;
     }
 
@@ -70,7 +70,7 @@ public class DO_Index extends BusinessObjectDO {
     }
 
     public void setUnique(boolean unique) {
-        setAttrValue("UniqueIndx", unique == true ? "1" : "0");
+        setAttrValue("UniqueIndx", unique == true ?  true:false);
         Unique = unique;
     }
 
@@ -88,7 +88,7 @@ public class DO_Index extends BusinessObjectDO {
     }
 
     public void setIgnoreNulls(boolean ignoreNulls) {
-        setAttrValue("IgnoreNulls", ignoreNulls == true ? "1" : "0");
+        setAttrValue("IgnoreNulls", ignoreNulls == true ?  true:false);
         IgnoreNulls = ignoreNulls;
     }
 

@@ -286,7 +286,7 @@ public class AttributeDO extends BusinessObjectDO {
     }
 
     public void setPersistent(boolean persistent) {
-        setAttrValue("Persistent", persistent == true ? "1" : "0");
+        setAttrValue("Persistent", persistent == true ?true: false);
         Persistent = persistent;
     }
 
@@ -295,7 +295,7 @@ public class AttributeDO extends BusinessObjectDO {
     }
 
     public void setPreventUserUpdate(boolean preventUserUpdate) {
-        setAttrValue("PreventUserUpdate", preventUserUpdate == true ? "1" : "0");
+        setAttrValue("PreventUserUpdate", preventUserUpdate == true ? true: false);
         PreventUserUpdate = preventUserUpdate;
     }
 
@@ -304,7 +304,7 @@ public class AttributeDO extends BusinessObjectDO {
     }
 
     public void setValueRequired(boolean valueRequired) {
-        setAttrValue("ValueRequired", valueRequired == true ? "1" : "0");
+        setAttrValue("ValueRequired", valueRequired == true ? true: false);
         ValueRequired = valueRequired;
     }
 
@@ -344,7 +344,7 @@ public class AttributeDO extends BusinessObjectDO {
     }
 
     public void setPrecision(int precision) {
-        setAttrValue("Precision", precision);
+        setAttrValue("Precision1", precision);
         Precision = precision;
     }
 

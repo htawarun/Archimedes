@@ -59,7 +59,7 @@ public class OtherFileDO extends BusinessObjectDO {
     }
 
     public void setFileName(String fName) {
-        setAttrValue("FileName", fName);
+        setAttrValue("OtherFileName", fName);
         FileName = fName;
     }
 

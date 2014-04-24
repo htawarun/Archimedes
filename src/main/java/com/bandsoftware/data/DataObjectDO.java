@@ -184,7 +184,7 @@ public class DataObjectDO extends BusinessObjectDO {
     }
 
     public void setSuperClass(String superClass) {
-        setAttrValue("SuperClass", superClass);
+        setAttrValue("SuperClassName", superClass);
         SuperClass = superClass;
     }
 

@@ -1,10 +1,12 @@
-package com.bandsoftware.persistence;
+package com.bandsoftware.tools;
 
 
 import com.bandsoftware.beans.EspressoRuleBean;
 import com.bandsoftware.beans.LogonBean;
 import com.bandsoftware.beans.RuleTypeBean;
 import com.bandsoftware.data.BSDDataObject;
+import com.bandsoftware.persistence.BSDField;
+import com.bandsoftware.persistence.RESTPersistenceManager;
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -25,10 +27,10 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.Map;
 import java.util.Properties;
+import java.util.TreeMap;
 
 /**
  * REST Service Manage to get,put, and post to Espresso Logic REST service
@@ -100,17 +102,16 @@ public class RESTServicesManager {
         }
     }
 
-    public static String insertData(String name, HashMap<String, BSDField> map) throws Exception {
-        ObjectMapper mapper = new ObjectMapper();
-        // ObjectNode newNode = new ObjectNode(nodeFactory);
-        String json = mapper.writeValueAsString(map);
-        JsonNode jnode = mapper.readTree(json);
+    public static String insertData(String name, Map<String, BSDField> map) throws Exception {
+        ConvertMapToJson convertMapToJson = new ConvertMapToJson(map).invoke();
+        String json = convertMapToJson.getJson();
+        JsonNode jnode = convertMapToJson.getJnode();
         log.debug("InsertData >> " + name + ": json " + json);
         JsonNode result = post(name, jnode);
         return null;
     }
 
-    public static String insertUpdateData(String name, HashMap<String, BSDField> map, HashMap<String, BSDField> fieldMap) throws Exception {
+    public static String insertUpdateData(String name, Map<String, BSDField> map, HashMap<String, BSDField> fieldMap) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(map);
         //need to do a get first to see if it exists and then post as update or insert
@@ -141,7 +142,7 @@ public class RESTServicesManager {
      * @return JsonNode response
      * @throws Exception
      */
-    protected static JsonNode get(String resource) throws Exception {
+    public static JsonNode get(String resource) throws Exception {
         HttpGet get = new HttpGet(BASE_URL + resource);
         get.addHeader(API_KEY_HEADER);
         HttpResponse response = client.execute(get);
@@ -149,6 +150,8 @@ public class RESTServicesManager {
     }
 
     /**
+     * HttpPut using JsonNode - returns JsonNode with status and summary
+     *
      * @param resource
      * @param object
      * @return
@@ -218,6 +221,7 @@ public class RESTServicesManager {
 
     /**
      * get a list of existing rules
+     *
      * @return
      * @throws Exception
      */
@@ -231,24 +235,25 @@ public class RESTServicesManager {
         return jsonNode;
     }
 
-     public static void deleteAllRules() throws Exception{
-       JsonNode jsonNodes = getAllRules();
-         for(JsonNode jsonNode : jsonNodes){
-             deleteRule(jsonNode);
-         }
-     }
+    public static void deleteAllRules() throws Exception {
+        JsonNode jsonNodes = getAllRules();
+        for (JsonNode jsonNode : jsonNodes) {
+            deleteRule(jsonNode);
+        }
+    }
 
-    public static boolean deleteRule(JsonNode jsonNode) throws Exception{
+    public static boolean deleteRule(JsonNode jsonNode) throws Exception {
         //bandrepo.my.espressologic.com/rest/abl/admin/v2/AllRules/1144?checksum=A:e82ef435ab767a8c
         String ident = jsonNode.get("ident").asText();
         String checksum = jsonNode.get("@metadata").get("checksum").asText();
-        HttpDelete delete = new HttpDelete(ADMIN_RULE_BASE_URL + ADMIN_VERSION + "/AllRules/"+ident+"?checksum="+checksum);
+        HttpDelete delete = new HttpDelete(ADMIN_RULE_BASE_URL + ADMIN_VERSION + "/AllRules/" + ident + "?checksum=" + checksum);
 
         delete.addHeader(getAuthentication());
         HttpResponse response = client.execute(delete);
         validateReturnStatusCode(parseResponse(response));
         return true;
     }
+
     private static int getProject() throws Exception {
         //http://bandrepo.my.espressologic.com/rest/abl/admin/projects
         HttpGet get = new HttpGet(ADMIN_RULE_BASE_URL + ADMIN_VERSION + "/AllProjects");
@@ -267,9 +272,9 @@ public class RESTServicesManager {
      */
     private static Header getAuthentication() throws Exception {
         String uri = ADMIN_RULE_BASE_URL + ADMIN_VERSION + "/@authentication";
-        if(ADMIN_API_KEY == null){
+        if (ADMIN_API_KEY == null) {
             JsonNode apikey = getEspressoLogicAdminAPIKey(uri);
-             ADMIN_API_KEY = "Espresso " + apikey.asText() + ":1";
+            ADMIN_API_KEY = "Espresso " + apikey.asText() + ":1";
         }
 
         Header header = new BasicHeader("Authorization", ADMIN_API_KEY);
@@ -340,7 +345,7 @@ public class RESTServicesManager {
         int project = node.get("project_ident").asInt();
         JsonNode ruleTypeNode = createRuleTypeBean(ruletype_ident);
         //((ObjectNode) node).put("RuleType", ruleTypeNode);
-       // new EspressoBean(entityName, attrName, ruletype_ident, project != 0 ? project : 200);
+        // new EspressoBean(entityName, attrName, ruletype_ident, project != 0 ? project : 200);
         return node;
     }
 
@@ -349,5 +354,34 @@ public class RESTServicesManager {
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(ruleTypeBean);
         return mapper.readTree(json);
+    }
+
+    private static class ConvertMapToJson {
+        private Map<String, BSDField> map;
+        private String json;
+        private JsonNode jnode;
+
+        public ConvertMapToJson(Map<String, BSDField> map) {
+            this.map = map;
+        }
+
+        public String getJson() {
+            return json;
+        }
+
+        public JsonNode getJnode() {
+            return jnode;
+        }
+
+        public ConvertMapToJson invoke() throws IOException {
+            ObjectMapper mapper = new ObjectMapper();
+            Map<String, String> fieldMap = new TreeMap<String, String>();
+            for (BSDField f : map.values()) {
+                fieldMap.put(f.getName(), f.getValue());
+            }
+            json = mapper.writeValueAsString(fieldMap);
+            jnode = mapper.readTree(json);
+            return this;
+        }
     }
 }

@@ -12,6 +12,7 @@ package com.bandsoftware.data;
 import com.datachannel.xml.om.IXMLDOMNamedNodeMap;
 import com.datachannel.xml.om.IXMLDOMNode;
 import com.datachannel.xml.om.IXMLDOMNodeList;
+import sun.beans.editors.BooleanEditor;
 
 import java.util.Enumeration;
 import java.util.Vector;
@@ -25,7 +26,7 @@ public class ApplicationDO extends BusinessObjectDO {
     private String TargetLanguage;
     private IXMLDOMNodeList childNodes;
     private IXMLDOMNode childNode;
-    private String isJava;
+    private boolean isJava;
     private Vector<FormDO> forms = new Vector<FormDO>();
 
     public ApplicationDO() {
@@ -135,13 +136,13 @@ public class ApplicationDO extends BusinessObjectDO {
         //   }
     }
 
-    public String isJava() {
+    public boolean isJava() {
         return isJava;
     }
 
     public void setIsJava(String java) {
-        setAttrValue("isJava", "True".equals(java) ? "1" : "0");
-        isJava = java;
+        setAttrValue("isJava", "True".equals(java) ? true: false);
+        this.isJava = "True".equals(java) ? true : false;
     }
 
     public String getCaption() {

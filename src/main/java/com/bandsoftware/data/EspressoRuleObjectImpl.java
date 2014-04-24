@@ -113,7 +113,7 @@ public class EspressoRuleObjectImpl extends EspressoRuleObject {
      * Create parent @{rule_text2} if it does not exist.', 'create a parent if it does not exist',
      *
      * @param code
-     * @param reln
+     * @param reln (we have parent and child role names and attributes for doc purposes)
      */
     public void createParentReplicate(String code, String reln) {
         ruleBean.setRuletype_ident(RULE_TYPES.PARENT_REPLICATE.getRuleIdent());

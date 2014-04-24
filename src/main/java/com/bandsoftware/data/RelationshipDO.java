@@ -260,4 +260,9 @@ public class RelationshipDO extends BusinessObjectDO {
         setAttrValue("errPreventInsertOrUpdateChild", stripReplace(errPreventInsertOrUpdateChild));
         ErrPreventInsertOrUpdateChild = errPreventInsertOrUpdateChild;
     }
+    public void createEspressoRule(EspressoRuleObjectImpl ruleObject) {
+        if("InsertParentIfNone".equalsIgnoreCase(this.OnChildInsertOrUpdate)){
+            ruleObject.createParentReplicate("",getRelationshipName());
+        }
+    }
 }

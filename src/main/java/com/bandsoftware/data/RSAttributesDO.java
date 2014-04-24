@@ -23,9 +23,9 @@ public class RSAttributesDO extends BusinessObjectDO {
     private String Caption;
     private String Comments;
     private String TargetLanguage;
-    private String isScalar; //scalar or grid??
-    private String isPlaced;
-    private String isDisplayed;
+    private boolean isScalar; //scalar or grid??
+    private boolean isPlaced;
+    private boolean isDisplayed;
     private IXMLDOMNamedNodeMap nnodeMap;
 
 
@@ -136,31 +136,31 @@ public class RSAttributesDO extends BusinessObjectDO {
         TargetLanguage = targetLanguage;
     }
 
-    public String getScalar() {
+    public boolean getScalar() {
         return isScalar;
     }
 
     public void setScalar(String scalar) {
-        setAttrValue("isScalar", "False".equals(scalar) ? "0" : "1");
-        isScalar = scalar;
+        setAttrValue("isScalar", "False".equals(scalar) ?false:true);
+        isScalar =  "False".equals(scalar) ?false:true;
     }
 
-    public String getPlaced() {
+    public boolean getPlaced() {
         return isPlaced;
     }
 
     public void setPlaced(String placed) {
-        setAttrValue("isPlaced", "False".equals(placed) ? "0" : "1");
-        isPlaced = placed;
+        setAttrValue("isPlaced", "False".equals(placed) ? false:true);
+        isPlaced = "False".equals(placed) ? false:true;
     }
 
-    public String getDisplayed() {
+    public boolean getDisplayed() {
         return isDisplayed;
     }
 
     public void setDisplayed(String displayed) {
-        setAttrValue("isDisplayed", "False".equals(displayed) ? "0" : "1");
-        isDisplayed = displayed;
+        setAttrValue("isDisplayed", "False".equals(displayed) ? false:true);
+        isDisplayed = "False".equals(displayed) ? false:true;
     }
 
     public void write(String dataObjectAbbr, StringBuffer sb) {

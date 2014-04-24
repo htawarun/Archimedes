@@ -13,6 +13,7 @@ package com.bandsoftware.data;
 import com.datachannel.xml.om.IXMLDOMNode;
 
 import java.util.Enumeration;
+import java.util.List;
 import java.util.Vector;
 
 public class DerivationDO extends BusinessObjectDO {
@@ -531,12 +532,26 @@ public class DerivationDO extends BusinessObjectDO {
                     ruleObject.createFormula(getFormula());
                 } else {
                     if (getDerivationType().equals("ParentReplicate")) {
-                        ruleObject.createParentCopy(relationshipRole, this.SourceAttr);
+                        ruleObject.createParentCopy(findRealRelnFromRole(relationshipRole), this.SourceAttr);
                     } else {
                         ruleObject = null;
                     }
                 }
             }
         }
+    }
+
+    private String findRealRelnFromRole(String relationshipRole) {
+        String relationshipName = relationshipRole;
+        RelationshipDO aRelationshipDO;
+       Enumeration e =  getDataObjectRoot().getParent().findChildren("Relationship");
+        while( e.hasMoreElements()){
+            aRelationshipDO = (RelationshipDO) e.nextElement();
+            if(aRelationshipDO.getParentRoleName().equalsIgnoreCase(relationshipRole)){
+                relationshipName = aRelationshipDO.getRelationshipName();
+                break;
+            }
+        }
+        return relationshipName;
     }
 }

@@ -105,7 +105,7 @@ public class ActionDO extends BusinessObjectDO {
     }
 
     public void setCondition(String condition) {
-        setAttrValue("Condition", condition);
+        setAttrValue("Conditions", condition);
         Condition = condition;
     }
 

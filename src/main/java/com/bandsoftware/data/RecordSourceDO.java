@@ -23,9 +23,9 @@ public class RecordSourceDO extends BusinessObjectDO {
     private String Description;
     private String Caption;
     private String Comments;
-    private String AllowInsert;
-    private String AllowUpdate;
-    private String AllowDelete;
+    private boolean AllowInsert;
+    private boolean AllowUpdate;
+    private boolean AllowDelete;
     private String ClassName;
     private String TargetLanguage;
     private String Relationship;
@@ -200,31 +200,31 @@ public class RecordSourceDO extends BusinessObjectDO {
         ClassName = className;
     }
 
-    public String getAllowDelete() {
+    public boolean getAllowDelete() {
         return AllowDelete;
     }
 
     public void setAllowDelete(String allowDelete) {
-        setAttrValue("AllowDelete", "True".equals(allowDelete) ? "1" : "0");
-        AllowDelete = allowDelete;
+        setAttrValue("AllowDelete", "True".equals(allowDelete) ?  true:false);
+        AllowDelete =  "True".equals(allowDelete) ?  true:false;
     }
 
-    public String getAllowUpdate() {
+    public boolean getAllowUpdate() {
         return AllowUpdate;
     }
 
     public void setAllowUpdate(String allowUpdate) {
-        setAttrValue("AllowUpdate", "True".equals(allowUpdate) ? "1" : "0");
-        AllowUpdate = allowUpdate;
+        setAttrValue("AllowUpdate", "True".equals(allowUpdate) ?  true:false);
+        AllowUpdate =  "True".equals(allowUpdate) ?  true:false;
     }
 
-    public String getAllowInsert() {
+    public boolean getAllowInsert() {
         return AllowInsert;
     }
 
     public void setAllowInsert(String allowInsert) {
-        setAttrValue("AllowInsert", "True".equals(allowInsert) ? "1" : "0");
-        AllowInsert = allowInsert;
+        setAttrValue("AllowInsert", "True".equals(allowInsert) ?  true:false);
+        AllowInsert =  "True".equals(allowInsert) ?  true:false;
     }
 
     public String getComments() {
